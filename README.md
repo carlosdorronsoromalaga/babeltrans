@@ -48,8 +48,12 @@ lanzar `construir.py`. Los pocos rótulos que no venían de la web vieja
 
 ## Qué cambia respecto a la original
 
-- **Diseño nuevo**, con los colores del logo original (el azul del globo y el
-  dorado de la barra) y un logo redibujado en vectorial.
+- **Diseño nuevo, pensado para un traductor** (detalle en
+  [`docs/DISENO.md`](docs/DISENO.md)): la portada es una edición paralela con la
+  frase de la propia web en los cuatro idiomas, los servicios se presentan
+  como entradas de diccionario y las páginas interiores tienen forma de página
+  de libro, con notas al margen. Tinta azul sobre papel y el rojo del corrector.
+  Tipografías Literata y Public Sans, alojadas en la propia web (licencia OFL).
 - **Se ve bien en el móvil.** La vieja tenía una «versión móvil» aparte.
 - **Las mismas direcciones (URL).** `es/servicios-traducciones.html` sigue
   siendo `es/servicios-traducciones.html`: Google y los enlaces de otras webs
@@ -63,8 +67,8 @@ lanzar `construir.py`. Los pocos rótulos que no venían de la web vieja
   las fotos de 110 px y el pase de diapositivas.
 - **SEO básico**: `sitemap.xml`, `robots.txt`, etiquetas `hreflang` entre los 4
   idiomas, descripción por página y dirección canónica.
-- **Sin cookies ni servicios de terceros** (ni Google Fonts ni analítica), así
-  que no hace falta banner de cookies.
+- **Sin cookies ni servicios de terceros**: las fuentes están en la propia web
+  y no hay analítica, así que no hace falta banner de cookies.
 
 ## Pendiente de revisar con Martijn
 

@@ -54,3 +54,29 @@ UI = {
 RETOQUES = {
     "TraduccioneS": "Traducciones",
 }
+
+# Las entradas de diccionario de los servicios (ver docs/DISENO.md). Palabra
+# con su silabeo, pronunciación (AFI) y categoría, como en un diccionario de
+# cada idioma. Las acepciones son la propia lista de servicios de la web.
+ENTRADAS = {
+    "es": {"traduccion": ("tra·duc·ción", "/tɾa.ðukˈθjon/", "f."),
+           "interpretacion": ("in·ter·pre·ta·ción", "/in.teɾ.pɾe.taˈθjon/", "f.")},
+    "en": {"traduccion": ("trans·la·tion", "/trænsˈleɪʃ(ə)n/", "n."),
+           "interpretacion": ("in·ter·pret·ing", "/ɪnˈtɜːprɪtɪŋ/", "n.")},
+    "de": {"traduccion": ("Über·set·zung", "/yːbɐˈzɛtsʊŋ/", "f."),
+           "interpretacion": ("Dol·met·schen", "/ˈdɔlmɛtʃn̩/", "n.")},
+    "nl": {"traduccion": ("ver·ta·ling", "/vərˈtaːlɪŋ/", "de"),
+           "interpretacion": ("tol·ken", "/ˈtɔlkə(n)/", "ww.")},
+}
+
+# Rótulos nuevos de la v2
+UI2 = {
+    "es": {"ver": "Ver el servicio", "en_seccion": "En esta sección", "metodo": "Cómo trabajamos",
+           "herramientas": "Herramientas", "llame": "Llámenos o escríbanos"},
+    "en": {"ver": "See the service", "en_seccion": "In this section", "metodo": "How we work",
+           "herramientas": "Tools", "llame": "Call or write to us"},
+    "de": {"ver": "Zum Angebot", "en_seccion": "In diesem Bereich", "metodo": "Wie wir arbeiten",
+           "herramientas": "Werkzeuge", "llame": "Rufen Sie uns an oder schreiben Sie uns"},
+    "nl": {"ver": "Bekijk de dienst", "en_seccion": "In dit onderdeel", "metodo": "Zo werken wij",
+           "herramientas": "Werktuigen", "llame": "Bel of mail ons"},
+}

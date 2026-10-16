@@ -15,7 +15,7 @@ Uso:  python3 scripts/construir.py        (solo biblioteca estándar)
 import datetime, html, json, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from textos_ui import UI, RETOQUES  # noqa: E402
+from textos_ui import UI, UI2, ENTRADAS, RETOQUES  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -82,39 +82,26 @@ def nombre_pagina(d, pid):
 
 
 # --------------------------------------------------------------- piezas
+# Diseño v2: ver docs/DISENO.md. Sin iconos ni tarjetas: el texto manda.
 
-ICONOS = {
-    "globo": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
-    "edificio": '<path d="M4 21V5l8-3v19M12 21V9l8 3v9M2 21h20M7 8h2M7 12h2M7 16h2M15 14h2M15 17h2"/>',
-    "matraz": '<path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3M7 15h10"/>',
-    "balanza": '<path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/>',
-    "pantalla": '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9h6M7 12h10"/>',
-    "candado": '<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
-    "micro": '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/>',
-    "pluma": '<path d="M20 4c-6 0-12 4-14 12l-2 4 4-2c8-2 12-8 12-14z"/><path d="M6 16l6-6"/>',
-    "apreton": '<path d="M2 12l5-5 4 2 3-2 3 1 5 4-5 5-3-2-2 2-3-1-2-2z"/><path d="M11 9l-3 3 2 2 3-3"/>',
-    "birrete": '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/>',
-    "engranaje": '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>',
-    "personas": '<circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14c3 0 6 2 6 5"/>',
-    "telefono": '<path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/>',
-    "sobre": '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
-    "flecha": '<path d="M5 12h14M13 6l6 6-6 6"/>',
-    "check": '<path d="M5 12l5 5 9-10"/>',
-    "documento": '<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
-}
+def sin_tags(t):
+    return re.sub(r"<[^>]+>", "", t).strip()
 
 
-def icono(nombre, clase="ico"):
-    return (f'<svg class="{clase}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
-            f'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
-            f'{ICONOS[nombre]}</svg>')
+def caso(t):
+    """«MetHOdologIE:», «ARBEITSWEISE:», «tools:» -> «Methodologie», «Arbeitsweise», «Tools».
+
+    Eran mayúsculas y minúsculas de adorno de Joomla (una letra de otro color),
+    no parte del texto. Solo se toca si el texto está claramente roto.
+    """
+    t = t.strip().rstrip(":").strip()
+    if re.search(r"[a-zäöüéíóú][A-ZÄÖÜ]", t) or (t.isupper() and len(t) > 3) or t[:1].islower():
+        return t[:1].upper() + t[1:].lower()
+    return t
 
 
-LOGO = ('<svg class="logo-globo" viewBox="0 0 40 40" aria-hidden="true">'
-        '<circle cx="20" cy="20" r="18" fill="var(--tinta)"/>'
-        '<g fill="none" stroke="var(--acento)" stroke-width="1.4">'
-        '<ellipse cx="20" cy="20" rx="7.5" ry="18"/><path d="M2 20h36M5 11h30M5 29h30"/></g>'
-        '<circle cx="20" cy="20" r="18" fill="none" stroke="var(--acento)" stroke-width="1.4"/></svg>')
+def home_url(d):
+    return "/" if d["idioma"] == "es" else url(d["paginas"]["home"]["ruta"])
 
 
 def bloques_html(bloques, lang, pid):
@@ -126,15 +113,18 @@ def bloques_html(bloques, lang, pid):
             continue
         cont = enlaces(retoca(re.sub(r"\s*<br>\s*(</a>)?\s*$", r"\1", cont)))
         cont = re.sub(r"<br>\s*</a>", "</a>", cont)
-        texto = re.sub(r"<[^>]+>", "", cont).strip()
+        texto = sin_tags(cont)
         if tipo == "cita" or (tipo == "h3" and texto[:1] in "\"“"):
             if pid == "quienes" and lang != "es":
                 # En los otros idiomas esta frase estaba SIN traducir y en blanco
                 # sobre blanco (era el pie de una foto): nadie la veía.
                 continue
-            sal.append(f'<blockquote class="cita"><p>{texto.strip(chr(34) + "“”")}</p></blockquote>')
+            sal.append(f'<blockquote class="cita"><p>{esc(texto.strip(chr(34) + "“”"))}</p></blockquote>')
         elif tipo == "h3":
-            sal.append(f"<h2>{cont}</h2>")
+            if "<a " in cont:
+                sal.append(f"<h2>{cont}</h2>")
+            else:
+                sal.append(f"<h2>{esc(caso(texto))}</h2>")
         else:
             sal.append(f"<p>{cont}</p>")
     return "\n".join(sal)
@@ -150,7 +140,7 @@ def menu_html(d, actual):
                           f'{esc(h["texto"])}</a></li>' for h in it["hijos"])
             items.append(f'<li{cls}><a href="{url(it["ruta"])}">{esc(it["texto"])}</a>'
                          f'<button class="sub-abrir" aria-expanded="false" aria-label="{esc(it["texto"])}">'
-                         f'<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'
+                         f'<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>'
                          f'</button><ul class="sub">{sub}</ul></li>')
         else:
             items.append(f'<li{cls}><a href="{url(it["ruta"])}"'
@@ -158,25 +148,25 @@ def menu_html(d, actual):
     return "".join(items)
 
 
+def ruta_en(todo, l, pid):
+    return "/" if (l == "es" and pid == "home") else url(todo[l]["paginas"][pid]["ruta"])
+
+
 def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
     d = todo[lang]
     ui = UI[lang]
     ruta = d["paginas"][pid]["ruta"]
     tel, mail = contacto(d)
-    alternas = "".join(
-        f'<link rel="alternate" hreflang="{l}" href="{DOMINIO}{url(todo[l]["paginas"][pid]["ruta"]) if not (l == "es" and pid == "home") else "/"}">'
-        for l in IDIOMAS)
+    alternas = "".join(f'<link rel="alternate" hreflang="{l}" href="{DOMINIO}{ruta_en(todo, l, pid)}">'
+                       for l in IDIOMAS)
     idiomas = "".join(
-        f'<li><a href="{url(todo[l]["paginas"][pid]["ruta"]) if not (l == "es" and pid == "home") else "/"}" hreflang="{l}" lang="{l}"'
-        f'{" aria-current=true" if l == lang else ""} title="{UI[l]["idioma"]}">{l.upper()}</a></li>'
+        f'<li><a href="{ruta_en(todo, l, pid)}" hreflang="{l}" lang="{l}"'
+        f'{" aria-current=true" if l == lang else ""} title="{UI[l]["idioma"]}">{l}</a></li>'
         for l in IDIOMAS)
     pie_links = "".join(f'<li><a href="{url(x["ruta"])}">{esc(x["texto"])}</a></li>' for x in d["pie"])
-    servicios = "".join(
-        f'<li><a href="{url(d["paginas"][p]["ruta"])}">{esc(nombre_pagina(d, p))}</a></li>'
-        for p in ("traduccion", "interpretacion", "metodologia", "quienes", "colaboradores"))
     copy = d["paginas"]["home"]["home"]["copyright"].replace("2024", str(ANIO))
-    canon = DOMINIO + ("/" if pid == "home" and lang == "es" else url(ruta))
-    tel_html = (f'<a href="tel:{tel}">{icono("telefono")}<span>{tel_bonito(tel)}</span></a>' if tel else "")
+    canon = DOMINIO + ruta_en(todo, lang, pid)
+    lema = '<span class="marca-lema">Expertos en Traducción e Interpretación</span>' if lang == "es" else ""
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -189,60 +179,36 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
 <meta property="og:title" content="{esc(titulo)}">
 <meta property="og:description" content="{esc(descripcion)}">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0f2a44">
+<meta name="theme-color" content="#fcfcfa">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fuentes/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/estilos.css">
 <script src="/web.js" defer></script>
 </head>
 <body class="{clase}">
 <a class="saltar" href="#contenido">{ui["saltar"]}</a>
-<div class="barra-sup">
-  <div class="envoltorio barra-sup-in">
-    <div class="barra-contacto">
-      {tel_html}
-      <a href="mailto:{mail}">{icono("sobre")}<span>{mail}</span></a>
-    </div>
-    <ul class="idiomas" aria-label="{ui["idiomas"]}">{idiomas}</ul>
-  </div>
-</div>
 <header class="cabecera">
-  <div class="envoltorio cabecera-in">
-    <a class="marca" href="{url(d["paginas"]["home"]["ruta"]) if lang != "es" else "/"}" aria-label="Babel Translations">
-      {LOGO}<span class="marca-txt"><strong>Babel</strong> Translations</span>
-    </a>
-    <button class="menu-abrir" aria-expanded="false" aria-controls="nav">
-      <span class="hamb" aria-hidden="true"></span><span class="vh">{ui["menu"]}</span>
-    </button>
-    <nav id="nav" class="nav" aria-label="{ui["menu"]}">
-      <ul class="nav-lista">{menu_html(d, ruta)}</ul>
-    </nav>
+  <div class="env cabecera-in">
+    <a class="marca" href="{home_url(d)}"><span class="marca-nombre">Babel <i>Translations</i></span>{lema}</a>
+    <button class="menu-abrir" aria-expanded="false" aria-controls="nav">{ui["menu"]}</button>
+    <div class="nav-caja" id="nav">
+      <nav class="nav" aria-label="{ui["menu"]}"><ul class="nav-lista">{menu_html(d, ruta)}</ul></nav>
+      <ul class="idiomas" aria-label="{ui["idiomas"]}">{idiomas}</ul>
+    </div>
   </div>
 </header>
 <main id="contenido">
 {cuerpo}
 </main>
 <footer class="pie">
-  <div class="envoltorio pie-rejilla">
-    <div class="pie-marca">
-      <a class="marca marca-clara" href="{url(d["paginas"]["home"]["ruta"]) if lang != "es" else "/"}">{LOGO}<span class="marca-txt"><strong>Babel</strong> Translations</span></a>
-      <p>{esc(d["paginas"]["home"]["home"]["titulos"][0] if lang != "nl" else d["paginas"]["home"]["home"]["titulos"][1].rstrip(":"))}</p>
-    </div>
-    <div>
-      <h2 class="pie-tit">{ui["servicios"]}</h2>
-      <ul class="pie-lista">{servicios}</ul>
-    </div>
-    <div>
-      <h2 class="pie-tit">{ui["contacto"]}</h2>
-      <ul class="pie-lista pie-contacto">
-        {f'<li>{tel_html}</li>' if tel else ''}
-        <li><a href="mailto:{mail}">{icono("sobre")}<span>{mail}</span></a></li>
-        <li><a href="{url(d["paginas"]["contacto"]["ruta"])}">{icono("flecha")}<span>{esc(nombre_pagina(d, "contacto"))}</span></a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="envoltorio pie-legal">
-    <p>{esc(copy)}</p>
-    <ul>{pie_links}</ul>
+  <div class="env pie-in">
+    <p class="pie-marca">Babel <i>Translations</i></p>
+    <address class="pie-contacto">
+      {f'<a href="tel:{tel}">{tel_bonito(tel)}</a>' if tel else ''}
+      <a href="mailto:{mail}">{mail}</a>
+    </address>
+    <ul class="pie-legal">{pie_links}</ul>
+    <p class="pie-copy">{esc(copy)}</p>
   </div>
 </footer>
 </body>
@@ -250,129 +216,173 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
 """
 
 
-def cabecera_pagina(d, pid, titulo, ui):
-    """Banda de título con la miga de pan."""
-    p = d["paginas"][pid]
-    miga = [f'<a href="{url(d["paginas"]["home"]["ruta"]) if d["idioma"] != "es" else "/"}">{ui["inicio"]}</a>']
+def seccion_de(d, pid):
+    """El elemento del menú al que pertenece la página (para las notas al margen)."""
+    ruta = d["paginas"][pid]["ruta"]
     for it in d["menu"]:
-        if any(h["ruta"] == p["ruta"] for h in it["hijos"]):
-            miga.append(f'<a href="{url(it["ruta"])}">{esc(it["texto"])}</a>')
-    return (f'<section class="cab-pagina"><div class="envoltorio">'
-            f'<nav class="miga" aria-label="breadcrumb">{" <span aria-hidden=true>/</span> ".join(miga)}</nav>'
-            f'<h1>{esc(retoca(titulo))}</h1></div></section>')
+        if it["ruta"] == ruta or any(h["ruta"] == ruta for h in it["hijos"]):
+            return it
+    return None
 
 
-def aside(d, ui, tel, mail):
-    """Columna lateral de las páginas interiores: pedir presupuesto."""
-    P = d["paginas"]
-    return f"""<aside class="lateral">
-  <div class="tarjeta-cta">
-    <h2>{esc(nombre_pagina(d, "presupuesto"))}</h2>
-    <ul class="cta-enlaces">
-      <li><a href="{url(P["presupuesto-traduccion"]["ruta"])}">{icono("documento")}<span>{esc(nombre_pagina(d, "presupuesto-traduccion"))}</span></a></li>
-      <li><a href="{url(P["presupuesto-interpretacion"]["ruta"])}">{icono("micro")}<span>{esc(nombre_pagina(d, "presupuesto-interpretacion"))}</span></a></li>
-    </ul>
-    <div class="cta-contacto">
-      {f'<a href="tel:{tel}">{icono("telefono")}<span>{tel_bonito(tel)}</span></a>' if tel else ''}
-      <a href="mailto:{mail}">{icono("sobre")}<span>{mail}</span></a>
-    </div>
-  </div>
-</aside>"""
+def cabecera_pagina(d, pid, titulo, sub=""):
+    sec = seccion_de(d, pid)
+    cab = (f'<a class="cabecera-seccion" href="{url(sec["ruta"])}">{esc(sec["texto"])}</a>'
+           if sec and sec["ruta"] != d["paginas"][pid]["ruta"] else "")
+    return (f'<header class="titulo-pagina"><div class="env libro">'
+            f'<div class="margen">{cab}</div>'
+            f'<div><h1>{esc(retoca(titulo))}</h1>{sub}</div></div></header>')
+
+
+def notas_margen(d, pid, con_presupuesto=True, con_contacto=True):
+    """Notas al margen: las páginas hermanas y cómo pedir presupuesto."""
+    lang = d["idioma"]; P = d["paginas"]; ui2 = UI2[lang]
+    tel, mail = contacto(d)
+    sal = []
+    sec = seccion_de(d, pid)
+    if sec and sec["hijos"]:
+        items = [sec] + sec["hijos"]
+        lis = "".join(
+            f'<li><a href="{url(x["ruta"])}"{" aria-current=page" if x["ruta"] == P[pid]["ruta"] else ""}>{esc(x["texto"])}</a></li>'
+            for x in items)
+        sal.append(f'<nav class="nota" aria-label="{esc(ui2["en_seccion"])}"><ul class="nota-lista">{lis}</ul></nav>')
+    tel_html = f'<a href="tel:{tel}">{tel_bonito(tel)}</a><br>' if tel else ""
+    if con_presupuesto:
+        sal.append(f'''<div class="nota">
+  <p class="nota-tit">{esc(nombre_pagina(d, "presupuesto"))}</p>
+  <ul class="nota-lista">
+    <li><a href="{url(P["presupuesto-traduccion"]["ruta"])}">{esc(nombre_pagina(d, "presupuesto-traduccion"))}</a></li>
+    <li><a href="{url(P["presupuesto-interpretacion"]["ruta"])}">{esc(nombre_pagina(d, "presupuesto-interpretacion"))}</a></li>
+  </ul>
+  {f'<p class="nota-contacto">{tel_html}<a href="mailto:{mail}">{mail}</a></p>' if con_contacto else ''}
+</div>''')
+    return "\n".join(sal)
 
 
 def descripcion_de(bloques, por_defecto):
     for t, c in bloques:
         if t == "p":
-            txt = re.sub(r"<[^>]+>", "", c).strip()
+            txt = sin_tags(c)
             if len(txt) > 60:
                 return txt[:155].rsplit(" ", 1)[0] + ("…" if len(txt) > 155 else "")
     return por_defecto
 
 
-def primer_parrafo(d, pid):
+def parrafos(d, pid):
+    """Los párrafos de una página, partidos también por los <br> de Joomla."""
+    sal = []
     for t, c in d["paginas"][pid]["bloques"]:
         if t == "p":
-            return re.sub(r"<[^>]+>", "", c).strip()
-    return ""
+            sal += [x.strip() for x in c.split("<br>") if sin_tags(x)]
+    return sal
+
+
+def primer_parrafo(d, pid):
+    p = parrafos(d, pid)
+    return sin_tags(p[0]) if p else ""
+
+
+def entrada(todo, lang, pid, titulo_como="h3", completa=True):
+    """Un servicio como entrada de diccionario."""
+    d = todo[lang]; P = d["paginas"]
+    palabra, afi, cat = ENTRADAS[lang][pid]
+    lista = next((c for t, c in P[pid]["bloques"] if t == "ul"), [])
+    acep = []
+    for x in lista:
+        x = sin_tags(retoca(x))
+        if ":" in x and x.index(":") < 60:
+            a, b = x.split(":", 1)
+            acep.append(f"<li><b>{esc(a.strip())}.</b> {esc(b.strip())}</li>")
+        else:
+            acep.append(f"<li>{esc(x)}</li>")
+    definicion = primer_parrafo(d, pid)
+    return f"""<article class="entrada">
+  <{titulo_como} class="entrada-palabra"><a href="{url(P[pid]["ruta"])}">{esc(palabra)}</a></{titulo_como}>
+  <p class="entrada-gram"><span class="afi">{esc(afi)}</span> <i>{esc(cat)}</i></p>
+  <p class="entrada-def">{esc(definicion)}</p>
+  {f'<ol class="acepciones">{"".join(acep)}</ol>' if completa and acep else ''}
+  <a class="enlace" href="{url(P[pid]["ruta"])}">{esc(retoca(P[pid]["titulo"]))}</a>
+</article>"""
 
 
 # --------------------------------------------------------------- tipos de página
 
-HUBS = {"servicios": [("traduccion", "pluma"), ("interpretacion", "micro")],
-        "presupuesto": [("presupuesto-traduccion", "documento"), ("presupuesto-interpretacion", "micro")],
-        "trabaja": [("como-traductor", "pluma"), ("como-interprete", "micro")]}
+HUBS = {"servicios": ["traduccion", "interpretacion"],
+        "presupuesto": ["presupuesto-traduccion", "presupuesto-interpretacion"],
+        "trabaja": ["como-traductor", "como-interprete"]}
 
 
 def pag_hub(todo, lang, pid):
-    """Páginas que en la original eran solo dos enlaces: ahora, dos tarjetas."""
-    d = todo[lang]; ui = UI[lang]; P = d["paginas"]
-    titulos = [re.sub(r"<[^>]+>", "", c).strip() for t, c in P[pid]["bloques"]]
-    tarjetas = []
-    for i, (destino, ic) in enumerate(HUBS[pid]):
-        txt = primer_parrafo(d, destino) if destino in ("traduccion", "interpretacion") else ""
-        tit = titulos[i] if i < len(titulos) else nombre_pagina(d, destino)
-        tarjetas.append(
-            f'<a class="tarjeta tarjeta-grande" href="{url(P[destino]["ruta"])}">{icono(ic, "ico ico-grande")}'
-            f'<h2>{esc(tit)}</h2>{f"<p>{esc(txt)}</p>" if txt else ""}'
-            f'<span class="mas">{ui["leer"] if txt else nombre_pagina(d, destino)} {icono("flecha")}</span></a>')
+    """Páginas que en la original eran solo dos enlaces."""
+    d = todo[lang]; P = d["paginas"]
     titulo = nombre_pagina(d, pid)
-    cuerpo = cabecera_pagina(d, pid, titulo, ui) + \
-        f'<section class="seccion"><div class="envoltorio rejilla-2">{"".join(tarjetas)}</div></section>'
-    return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations",
-                  descripcion_de([], titulo + " · Babel Translations"))
+    if pid == "servicios":
+        dentro = f'<div class="entradas">{"".join(entrada(todo, lang, x, "h2") for x in HUBS[pid])}</div>'
+    else:
+        titulos = [sin_tags(c) for t, c in P[pid]["bloques"]]
+        enl = "".join(
+            f'<li><a href="{url(P[x]["ruta"])}">{esc(titulos[i] if i < len(titulos) else nombre_pagina(d, x))}</a></li>'
+            for i, x in enumerate(HUBS[pid]))
+        dentro = f'<ul class="indice">{enl}</ul>'
+    cuerpo = cabecera_pagina(d, pid, titulo) + f"""
+<section class="env libro cuerpo-pagina">
+  <aside class="margen">{notas_margen(d, pid, pid != "presupuesto")}</aside>
+  <div>{dentro}</div>
+</section>"""
+    return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations", f"{titulo} · Babel Translations")
 
 
 def pag_articulo(todo, lang, pid):
-    d = todo[lang]; ui = UI[lang]; p = d["paginas"][pid]
-    tel, mail = contacto(d)
+    d = todo[lang]; p = d["paginas"][pid]
     titulo = p["titulo"] or nombre_pagina(d, pid)
+    sub = ""
+    if pid in ("traduccion", "interpretacion"):
+        palabra, afi, cat = ENTRADAS[lang][pid]
+        sub = f'<p class="entrada-gram titulo-gram">{esc(palabra)} <span class="afi">{esc(afi)}</span> <i>{esc(cat)}</i></p>'
     legal = pid in ("aviso-legal", "privacidad")
-    cuerpo = cabecera_pagina(d, pid, titulo, ui) + f"""
-<section class="seccion">
-  <div class="envoltorio {"legal" if legal else "con-lateral"}">
-    <article class="prosa">
+    cuerpo = cabecera_pagina(d, pid, titulo, sub) + f"""
+<section class="env libro cuerpo-pagina">
+  <aside class="margen">{"" if legal else notas_margen(d, pid)}</aside>
+  <article class="prosa{" prosa-legal" if legal else ""}">
 {bloques_html(p["bloques"], lang, pid)}
-    </article>
-    {"" if legal else aside(d, ui, tel, mail)}
-  </div>
+  </article>
 </section>"""
     return pagina(todo, lang, pid, cuerpo, f"{retoca(titulo)} · Babel Translations",
                   descripcion_de(p["bloques"], retoca(titulo)))
 
 
-def campo_html(c, i, ui, privacidad_url):
+def campo_html(c, ui, privacidad_url):
     nombre = c["nombre"]
     obligatorio = nombre.lower() in ("nombre", "persona", "mail", "privacidad")
     req = " required" if obligatorio else ""
-    marca = f' <span class="req" title="{ui["obligatorio"]}">*</span>' if obligatorio else ""
+    marca = f'<abbr class="req" title="{ui["obligatorio"]}">*</abbr>' if obligatorio else ""
     ide = f"f-{nombre.lower()}"
     etiqueta = esc(c["etiqueta"] or nombre.replace("_", " "))
     tipo = c["tipo"]
     if tipo == "checkbox":
         txt = re.sub(r"(Pol[ií]tica de privacidad|Privacy policy|Datenschutz\w*|Privacyverklaring|privacybeleid)",
                      lambda m: f'<a href="{privacidad_url}" target="_blank">{m.group(1)}</a>', etiqueta, flags=re.I)
-        return (f'<div class="campo campo-ancho campo-check"><input type="checkbox" id="{ide}" name="{nombre}" value="Sí"{req}>'
-                f'<label for="{ide}">{txt}{marca}</label></div>')
+        return (f'<div class="campo ancho campo-check"><input type="checkbox" id="{ide}" name="{nombre}" value="Sí"{req}>'
+                f'<label for="{ide}">{txt} {marca}</label></div>')
     if tipo == "textarea":
-        return (f'<div class="campo campo-ancho"><label for="{ide}">{etiqueta}{marca}</label>'
+        return (f'<div class="campo ancho"><label for="{ide}">{etiqueta} {marca}</label>'
                 f'<textarea id="{ide}" name="{nombre}" rows="5"{req}></textarea></div>')
     if tipo == "select":
         # "Seleccione tipo" es un rótulo, no una respuesta: va con valor vacío
         vacio = ' value=""'
         ops = "".join(f'<option{vacio if j == 0 and len(c["opciones"]) > 2 else ""}>{esc(o)}</option>'
                       for j, o in enumerate(c["opciones"]))
-        return (f'<div class="campo"><label for="{ide}">{etiqueta}{marca}</label>'
+        return (f'<div class="campo"><label for="{ide}">{etiqueta} {marca}</label>'
                 f'<select id="{ide}" name="{nombre}">{ops}</select></div>')
     if tipo == "file":
-        return (f'<div class="campo campo-ancho"><label for="{ide}">{etiqueta}</label>'
-                f'<label class="archivo"><input type="file" id="{ide}" name="{nombre}[]" multiple>'
-                f'{icono("documento")}<span data-vacio="{ui["elegir_archivo"]}">{ui["elegir_archivo"]}</span></label></div>')
+        return (f'<div class="campo ancho"><label for="{ide}">{etiqueta}</label>'
+                f'<input class="archivo" type="file" id="{ide}" name="{nombre}[]" multiple></div>')
     html_tipo = "email" if nombre.lower() == "mail" else "tel" if nombre.lower() == "telefono" else \
         "date" if nombre.lower() in ("fecha", "fecha_entrega") else "text"
     auto = {"nombre": "name", "persona": "name", "mail": "email", "telefono": "tel", "pais": "country-name",
             "poblacion": "address-level2", "empresa": "organization", "cp": "postal-code",
             "direccion": "street-address", "apellidos": "family-name"}.get(nombre.lower(), "off")
-    return (f'<div class="campo"><label for="{ide}">{etiqueta}{marca}</label>'
+    return (f'<div class="campo"><label for="{ide}">{etiqueta} {marca}</label>'
             f'<input type="{html_tipo}" id="{ide}" name="{nombre}" autocomplete="{auto}"{req}></div>')
 
 
@@ -381,165 +391,176 @@ def pag_formulario(todo, lang, pid):
     tel, mail = contacto(d)
     titulo = nombre_pagina(d, pid)
     intro = [t for t in f["intro"] if not t.startswith("BABELTRANS")]
-    campos = "\n".join(campo_html(c, i, ui, url(d["paginas"]["privacidad"]["ruta"])) for i, c in enumerate(f["campos"]))
+    campos = "\n".join(campo_html(c, ui, url(d["paginas"]["privacidad"]["ruta"])) for c in f["campos"])
     gracias = f["gracias"] if f["gracias"] and not (lang != "es" and f["gracias"].startswith("Gracias")) else ui["enviado"]
     boton = f["boton"] if not (lang != "es" and f["boton"] == "Enviar") else ui["enviar"]
-    cuerpo = cabecera_pagina(d, pid, titulo, ui) + f"""
-<section class="seccion">
-  <div class="envoltorio con-lateral">
-    <div>
-      {"".join(f'<p class="intro">{esc(t)}</p>' for t in intro)}
-      <div class="aviso aviso-ok" role="status" hidden data-aviso="ok">{icono("check")}<p>{esc(gracias)}</p></div>
-      <div class="aviso aviso-error" role="alert" hidden data-aviso="error"><p>{esc(ui["error"])} <a href="mailto:{mail}">{mail}</a></p></div>
-      <form class="formulario" action="/enviar.php" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="_formulario" value="{esc(titulo)}">
-        <input type="hidden" name="_idioma" value="{lang}">
-        <input type="hidden" name="_volver" value="{url(p["ruta"])}">
-        <div class="trampa" aria-hidden="true"><label>Web <input type="text" name="_web" tabindex="-1" autocomplete="off"></label></div>
-        <div class="rejilla-campos">
+    margen = notas_margen(d, pid, pid not in ("presupuesto-traduccion", "presupuesto-interpretacion"),
+                          con_contacto=pid != "contacto")
+    if pid in ("presupuesto-traduccion", "presupuesto-interpretacion", "contacto"):
+        margen += (f'<div class="nota"><p class="nota-contacto">'
+                   f'{f"<a href=tel:{tel}>{tel_bonito(tel)}</a><br>" if tel else ""}<a href="mailto:{mail}">{mail}</a></p></div>'
+                   if pid != "contacto" else "")
+    cuerpo = cabecera_pagina(d, pid, titulo) + f"""
+<section class="env libro cuerpo-pagina">
+  <aside class="margen">{margen}</aside>
+  <div class="columna-form">
+    {"".join(f'<p class="entradilla">{esc(t)}</p>' for t in intro)}
+    {f'<p class="contacto-grande"><a href="tel:{tel}">{tel_bonito(tel)}</a><a href="mailto:{mail}">{mail}</a></p>' if pid == "contacto" else ""}
+    <div class="aviso aviso-ok" role="status" hidden data-aviso="ok"><p>{esc(gracias)}</p></div>
+    <div class="aviso aviso-error" role="alert" hidden data-aviso="error"><p>{esc(ui["error"])} <a href="mailto:{mail}">{mail}</a></p></div>
+    <form class="formulario" action="/enviar.php" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="_formulario" value="{esc(titulo)}">
+      <input type="hidden" name="_idioma" value="{lang}">
+      <input type="hidden" name="_volver" value="{url(p["ruta"])}">
+      <div class="trampa" aria-hidden="true"><label>Web <input type="text" name="_web" tabindex="-1" autocomplete="off"></label></div>
+      <div class="campos">
 {campos}
-        </div>
-        <button class="boton boton-acento" type="submit">{esc(boton)} {icono("flecha")}</button>
-      </form>
-    </div>
-    {aside(d, ui, tel, mail) if pid != "contacto" else aside_contacto(d, ui, tel, mail)}
+      </div>
+      <button class="boton" type="submit">{esc(boton)}</button>
+    </form>
   </div>
 </section>"""
     return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations",
                   intro[0][:155] if intro else f"{titulo} · Babel Translations")
 
 
-def aside_contacto(d, ui, tel, mail):
-    return f"""<aside class="lateral">
-  <div class="tarjeta-cta">
-    <h2>BABELTRANS</h2>
-    <div class="cta-contacto cta-contacto-grande">
-      {f'<a href="tel:{tel}">{icono("telefono")}<span>{tel_bonito(tel)}</span></a>' if tel else ''}
-      <a href="mailto:{mail}">{icono("sobre")}<span>{mail}</span></a>
-    </div>
-  </div>
-</aside>"""
-
-
 def pag_mapa(todo, lang, pid):
-    d = todo[lang]; ui = UI[lang]
+    d = todo[lang]
     items = []
     for it in d["menu"]:
         sub = "".join(f'<li><a href="{url(h["ruta"])}">{esc(h["texto"])}</a></li>' for h in it["hijos"])
         items.append(f'<li><a href="{url(it["ruta"])}">{esc(it["texto"])}</a>{f"<ul>{sub}</ul>" if sub else ""}</li>')
     titulo = d["paginas"][pid]["titulo"] or nombre_pagina(d, pid)
-    cuerpo = cabecera_pagina(d, pid, titulo, ui) + \
-        f'<section class="seccion"><div class="envoltorio legal"><ul class="mapa">{"".join(items)}</ul></div></section>'
+    cuerpo = cabecera_pagina(d, pid, titulo) + \
+        f'<section class="env libro cuerpo-pagina"><div class="margen"></div><ul class="mapa">{"".join(items)}</ul></section>'
     return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations", titulo)
 
 
 def pag_home(todo, lang):
-    d = todo[lang]; ui = UI[lang]; P = d["paginas"]; h = P["home"]["home"]
+    d = todo[lang]; ui = UI[lang]; ui2 = UI2[lang]; P = d["paginas"]; h = P["home"]["home"]
     tel, mail = contacto(d)
     titulos = h["titulos"]
-    if lang == "nl":
-        # La portada holandesa tenía el título principal sin traducir (en
-        # castellano); el subtítulo sí estaba en holandés y hace de título.
-        h1, sub = titulos[1].rstrip(":"), ""
-    else:
-        h1 = titulos[0]
-        sub = titulos[1].rstrip(":") if len(titulos) > 1 and titulos[1] != "Babeltrans" else ""
+    # La portada holandesa tenía el título principal sin traducir (en
+    # castellano); su subtítulo sí estaba en holandés y hace de título.
+    h1 = titulos[1].rstrip(":") if lang == "nl" else titulos[0]
+    intro_lista = titulos[1].rstrip(":") if lang != "nl" and len(titulos) > 1 and titulos[1] != "Babeltrans" else ""
     confid = next((x for x in h["fuertes"] if x.isupper() and len(x) > 12), "")
-    iconos_lista = ["edificio", "matraz", "balanza", "pantalla"]
-    especialidades = "".join(
-        f'<li class="espec">{icono(iconos_lista[i % 4], "ico ico-espec")}<span>{esc(t.rstrip(". …").rstrip("."))}…</span></li>'
-        for i, t in enumerate(h["lista"]))
-    frases = h["frases"][:3]
-    destinos = [("interpretacion", "micro"), ("traduccion", "pluma"), ("mediacion", "apreton")]
-    pilares = "".join(
-        f'<a class="pilar" href="{url(P[dest]["ruta"])}">{icono(ic, "ico ico-pilar")}'
-        f'<p>{esc(frases[i])}</p><span class="mas">{ui["leer"]} {icono("flecha")}</span></a>'
-        for i, (dest, ic) in enumerate(destinos) if i < len(frases))
-    servicios = ""
-    for dest, ic in (("traduccion", "pluma"), ("interpretacion", "micro")):
-        lista = next((c for t, c in P[dest]["bloques"] if t == "ul"), [])
-        items = "".join(f"<li>{icono('check')}<span>{esc(re.split(r':', re.sub(r'<[^>]+>', '', x))[0])}</span></li>"
-                        for x in lista[:5])
-        servicios += (f'<article class="servicio">{icono(ic, "ico ico-grande")}'
-                      f'<h3>{esc(retoca(P[dest]["titulo"]))}</h3><p>{esc(primer_parrafo(d, dest))}</p>'
-                      f'<ul class="mini-lista">{items}</ul>'
-                      f'<a class="boton boton-linea" href="{url(P[dest]["ruta"])}">{ui["leer"]} {icono("flecha")}</a></article>')
-    cita_colab = next((re.sub(r"<[^>]+>", "", c).strip('"“” ') for t, c in P["colaboradores"]["bloques"]
-                       if re.sub(r"<[^>]+>", "", c).strip()[:1] in "\"“"), "")
-    colab_txt = primer_parrafo(d, "colaboradores")
-    metod = primer_parrafo(d, "metodologia").split("<br>")[0]
-    metod = re.split(r"(?<=\.)\s", re.sub(r"<[^>]+>", "", metod))[0]
-    form_txt = primer_parrafo(d, "formacion")
-    quienes = primer_parrafo(d, "quienes")
-    anio = re.search(r"(19|20)\d\d", " ".join(re.sub(r"<[^>]+>", "", c) for t, c in P["quienes"]["bloques"] if t == "p"))
+    confid = confid[:1] + confid[1:].lower()
+
+    # La edición paralela: la misma frase de la web en los cuatro idiomas,
+    # empezando por el de la página. Cada línea lleva a ese idioma.
+    orden = [lang] + [l for l in IDIOMAS if l != lang]
+    paralelo = "".join(
+        f'<li{" class=actual" if l == lang else ""}><a href="{ruta_en(todo, l, "home")}" hreflang="{l}" lang="{l}"'
+        f'{" aria-current=true" if l == lang else ""}><span class="codigo">{l}</span>'
+        f'<span class="frase">{esc(todo[l]["paginas"]["home"]["home"]["frases"][1])}</span></a></li>'
+        for l in orden)
+
+    q = [sin_tags(x) for x in parrafos(d, "quienes")]
+    lema = q[0] if q else ""
+    resto_quienes = q[1] if len(q) > 1 else ""
+    cita_q = next((c for t, c in P["quienes"]["bloques"] if t == "cita"), "") if lang == "es" else ""
+
+    met = P["metodologia"]["bloques"]
+    listas = [c for t, c in met if t == "ul"]
+    pasos = "".join(f"<li>{esc(sin_tags(x))}</li>" for x in (listas[0] if listas else []))
+    herramientas = "".join(f"<li>{esc(sin_tags(x).rstrip('.'))}</li>" for x in (listas[1] if len(listas) > 1 else []))
+    met_intro = parrafos(d, "metodologia")
+    met_intro = sin_tags(met_intro[1]) if len(met_intro) > 1 else ""
+
+    cita_colab = next((sin_tags(c).strip('"“” ') for t, c in P["colaboradores"]["bloques"]
+                       if sin_tags(c)[:1] in "\"“"), "")
+    campos = "".join(f"<li>{esc(t.rstrip('.… ').rstrip('.'))}</li>" for t in h["lista"])
 
     cuerpo = f"""
-<section class="hero">
-  <div class="hero-fondo" aria-hidden="true"></div>
-  <div class="envoltorio hero-in">
-    <div class="hero-txt">
-      {f'<p class="antetitulo">{icono("candado")} {esc(confid)}</p>' if confid else ''}
+<section class="portada">
+  <div class="env portada-in">
+    <div class="portada-txt">
       <h1>{esc(h1)}</h1>
-      {f'<p class="hero-sub">{esc(sub)}</p>' if sub else ''}
-      <div class="hero-botones">
-        <a class="boton boton-acento" href="{url(P["presupuesto"]["ruta"])}">{esc(nombre_pagina(d, "presupuesto"))} {icono("flecha")}</a>
-        {f'<a class="boton boton-claro" href="tel:{tel}">{icono("telefono")} {tel_bonito(tel)}</a>' if tel else f'<a class="boton boton-claro" href="mailto:{mail}">{icono("sobre")} {mail}</a>'}
+      <p class="portada-lema">{esc(lema)}</p>
+      <div class="botones">
+        <a class="boton" href="{url(P["presupuesto"]["ruta"])}">{esc(nombre_pagina(d, "presupuesto"))}</a>
+        {f'<a class="boton boton-sec" href="tel:{tel}">{tel_bonito(tel)}</a>' if tel else f'<a class="boton boton-sec" href="mailto:{mail}">{mail}</a>'}
       </div>
     </div>
-    <ul class="especialidades">{especialidades}</ul>
+    <figure class="paralelo">
+      <ul>{paralelo}</ul>
+    </figure>
   </div>
 </section>
 
-<section class="seccion seccion-pilares">
-  <div class="envoltorio pilares">{pilares}</div>
+<section class="bloque">
+  <div class="env libro">
+    <p class="margen nota-margen">{esc(confid)}.</p>
+    <div>
+      {f'<h2 class="vh">{esc(intro_lista)}</h2>' if intro_lista else ''}
+      <ul class="campos-lista">{campos}</ul>
+    </div>
+  </div>
 </section>
 
-<section class="seccion">
-  <div class="envoltorio">
-    <div class="quienes">
-      {f'<div class="sello"><span class="sello-txt">{ui["desde"]}</span><span class="sello-anio">{anio.group(0)}</span></div>' if anio else ''}
+<section class="bloque bloque-calco">
+  <div class="env libro">
+    <h2 class="margen tit-margen"><a href="{url(P["servicios"]["ruta"])}">{esc(nombre_pagina(d, "servicios"))}</a></h2>
+    <div class="entradas">{entrada(todo, lang, "traduccion")}{entrada(todo, lang, "interpretacion")}</div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="env libro">
+    <h2 class="margen tit-margen"><a href="{url(P["quienes"]["ruta"])}">{esc(nombre_pagina(d, "quienes"))}</a></h2>
+    <div class="prosa">
+      <p class="grande">{esc(resto_quienes)}</p>
+      {f'<blockquote class="cita"><p>{esc(cita_q)}</p></blockquote>' if cita_q else ''}
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="env libro">
+    <h2 class="margen tit-margen"><a href="{url(P["metodologia"]["ruta"])}">{esc(nombre_pagina(d, "metodologia"))}</a></h2>
+    <div class="metodo">
       <div>
-        <h2 class="tit-seccion">{esc(nombre_pagina(d, "quienes"))}</h2>
-        <p class="destacado">{esc(re.sub(r"<[^>]+>", "", quienes))}</p>
-        <a class="enlace-mas" href="{url(P["quienes"]["ruta"])}">{ui["leer"]} {icono("flecha")}</a>
+        <p class="metodo-intro">{esc(met_intro)}</p>
+        <ol class="pasos">{pasos}</ol>
+      </div>
+      {f'<div class="herramientas"><h3>{esc(ui2["herramientas"])}</h3><ul>{herramientas}</ul></div>' if herramientas else ''}
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="env libro">
+    <div class="margen"></div>
+    <div class="dos">
+      <div>
+        <h2 class="tit-pequeno"><a href="{url(P["colaboradores"]["ruta"])}">{esc(nombre_pagina(d, "colaboradores"))}</a></h2>
+        {f'<blockquote class="cita cita-pequena"><p>{esc(cita_colab)}</p></blockquote>' if cita_colab else ''}
+        <p>{esc(primer_parrafo(d, "colaboradores"))}</p>
+      </div>
+      <div>
+        <h2 class="tit-pequeno"><a href="{url(P["formacion"]["ruta"])}">{esc(P["formacion"]["titulo"])}</a></h2>
+        <p>{esc(primer_parrafo(d, "formacion"))}</p>
+        <a class="enlace" href="{url(P["formacion"]["ruta"])}">{esc(ui["leer"])}</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="seccion seccion-suave">
-  <div class="envoltorio">
-    <h2 class="tit-seccion tit-centro">{esc(nombre_pagina(d, "servicios"))}</h2>
-    <div class="rejilla-2">{servicios}</div>
-  </div>
-</section>
-
-<section class="seccion">
-  <div class="envoltorio rejilla-3">
-    <a class="tarjeta" href="{url(P["colaboradores"]["ruta"])}">{icono("personas", "ico ico-grande")}
-      <h3>{esc(nombre_pagina(d, "colaboradores"))}</h3>
-      {f'<p class="cita-mini">“{esc(cita_colab)}”</p>' if cita_colab else ''}
-      <p>{esc(colab_txt)}</p><span class="mas">{ui["leer"]} {icono("flecha")}</span></a>
-    <a class="tarjeta" href="{url(P["metodologia"]["ruta"])}">{icono("engranaje", "ico ico-grande")}
-      <h3>{esc(nombre_pagina(d, "metodologia"))}</h3><p>{esc(metod)}</p>
-      <span class="mas">{ui["leer"]} {icono("flecha")}</span></a>
-    <a class="tarjeta" href="{url(P["formacion"]["ruta"])}">{icono("birrete", "ico ico-grande")}
-      <h3>{esc(P["formacion"]["titulo"])}</h3><p>{esc(re.sub(r"<[^>]+>", "", form_txt))}</p>
-      <span class="mas">{ui["leer"]} {icono("flecha")}</span></a>
-  </div>
-</section>
-
-<section class="banda-cta">
-  <div class="envoltorio banda-cta-in">
-    <h2>{esc(nombre_pagina(d, "presupuesto"))}</h2>
-    <div class="banda-botones">
-      <a class="boton boton-acento" href="{url(P["presupuesto-traduccion"]["ruta"])}">{icono("documento")} {esc(nombre_pagina(d, "presupuesto-traduccion"))}</a>
-      <a class="boton boton-claro" href="{url(P["presupuesto-interpretacion"]["ruta"])}">{icono("micro")} {esc(nombre_pagina(d, "presupuesto-interpretacion"))}</a>
+<section class="final">
+  <div class="env libro">
+    <h2 class="margen tit-margen">{esc(ui2["llame"])}</h2>
+    <div>
+      <p class="contacto-grande">{f'<a href="tel:{tel}">{tel_bonito(tel)}</a>' if tel else ''}<a href="mailto:{mail}">{mail}</a></p>
+      <ul class="indice indice-pequeno">
+        <li><a href="{url(P["presupuesto-traduccion"]["ruta"])}">{esc(nombre_pagina(d, "presupuesto-traduccion"))}</a></li>
+        <li><a href="{url(P["presupuesto-interpretacion"]["ruta"])}">{esc(nombre_pagina(d, "presupuesto-interpretacion"))}</a></li>
+      </ul>
     </div>
   </div>
 </section>"""
     titulo = f"Babel Translations · {h1}"
-    return pagina(todo, lang, "home", cuerpo, titulo, re.sub(r"<[^>]+>", "", quienes)[:155], "es-home")
+    return pagina(todo, lang, "home", cuerpo, titulo, lema[:155], "portada-pagina")
 
 
 # --------------------------------------------------------------- redirecciones
@@ -595,7 +616,11 @@ def main():
         shutil.rmtree(SALIDA)
     os.makedirs(SALIDA)
     for f in os.listdir(PLANT):
-        shutil.copy(os.path.join(PLANT, f), os.path.join(SALIDA, f))
+        origen = os.path.join(PLANT, f)
+        if os.path.isdir(origen):
+            shutil.copytree(origen, os.path.join(SALIDA, f))
+        else:
+            shutil.copy(origen, os.path.join(SALIDA, f))
     urls = []
     for lang in IDIOMAS:
         d = todo[lang]

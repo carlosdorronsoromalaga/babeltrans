@@ -10,124 +10,134 @@
 <meta property="og:title" content="Babel Translations · Technische und fachkundige Übersetzungen">
 <meta property="og:description" content="BABELTRANS ist ein globaler Dienstleister im Linguistikbereich, spezialisiert auf das Übersetzen und Dolmetschen.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0f2a44">
+<meta name="theme-color" content="#fcfcfa">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fuentes/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/estilos.css">
 <script src="/web.js" defer></script>
 </head>
-<body class="es-home">
+<body class="portada-pagina">
 <a class="saltar" href="#contenido">Zum Inhalt springen</a>
-<div class="barra-sup">
-  <div class="envoltorio barra-sup-in">
-    <div class="barra-contacto">
-      <a href="tel:+34913147919"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>+34 91 314 79 19</span></a>
-      <a href="mailto:info@babeltrans.es"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@babeltrans.es</span></a>
-    </div>
-    <ul class="idiomas" aria-label="Sprachen"><li><a href="/" hreflang="es" lang="es" title="Español">ES</a></li><li><a href="/en.html" hreflang="en" lang="en" title="English">EN</a></li><li><a href="/de.html" hreflang="de" lang="de" aria-current=true title="Deutsch">DE</a></li><li><a href="/nl.html" hreflang="nl" lang="nl" title="Nederlands">NL</a></li></ul>
-  </div>
-</div>
 <header class="cabecera">
-  <div class="envoltorio cabecera-in">
-    <a class="marca" href="/de.html" aria-label="Babel Translations">
-      <svg class="logo-globo" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--tinta)"/><g fill="none" stroke="var(--acento)" stroke-width="1.4"><ellipse cx="20" cy="20" rx="7.5" ry="18"/><path d="M2 20h36M5 11h30M5 29h30"/></g><circle cx="20" cy="20" r="18" fill="none" stroke="var(--acento)" stroke-width="1.4"/></svg><span class="marca-txt"><strong>Babel</strong> Translations</span>
-    </a>
-    <button class="menu-abrir" aria-expanded="false" aria-controls="nav">
-      <span class="hamb" aria-hidden="true"></span><span class="vh">Menü</span>
-    </button>
-    <nav id="nav" class="nav" aria-label="Menü">
-      <ul class="nav-lista"><li><a href="/">Home</a></li><li><a href="/de/wer-sind-wir.html">Wer sind wir</a><button class="sub-abrir" aria-expanded="false" aria-label="Wer sind wir"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><ul class="sub"><li><a href="/de/wer-sind-wir/unsere-mitarbeiter.html">Unsere Mitarbeiter</a></li><li><a href="/de/wer-sind-wir/arbeiten-sie-mit-uns.html">Arbeiten Sie mit uns</a></li></ul></li><li><a href="/de/dienste.html">Dienste</a><button class="sub-abrir" aria-expanded="false" aria-label="Dienste"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><ul class="sub"><li><a href="/de/dienste/uebersetzungen.html">Übersetzungen</a></li><li><a href="/de/dienste/dolmetschen.html">Dolmetschen</a></li></ul></li><li><a href="/de/arbeitsweise-und-werkzeuge.html">Arbeitsweise und Werkzeuge</a></li><li><a href="/de/kostenvoranschlag.html">Kostenvoranschlag</a><button class="sub-abrir" aria-expanded="false" aria-label="Kostenvoranschlag"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><ul class="sub"><li><a href="/de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html">Kostenvoranschlag Übersetzen</a></li><li><a href="/de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html">Kostenvoranschlag Dolmetschen</a></li></ul></li><li><a href="/de/kontakt.html">Kontakt</a></li><li><a href="/de/cv-ingles.html">CV</a></li><li><a href="/de/cp-ingles-aleman.html">CP</a></li></ul>
-    </nav>
+  <div class="env cabecera-in">
+    <a class="marca" href="/de.html"><span class="marca-nombre">Babel <i>Translations</i></span></a>
+    <button class="menu-abrir" aria-expanded="false" aria-controls="nav">Menü</button>
+    <div class="nav-caja" id="nav">
+      <nav class="nav" aria-label="Menü"><ul class="nav-lista"><li><a href="/">Home</a></li><li><a href="/de/wer-sind-wir.html">Wer sind wir</a><button class="sub-abrir" aria-expanded="false" aria-label="Wer sind wir"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button><ul class="sub"><li><a href="/de/wer-sind-wir/unsere-mitarbeiter.html">Unsere Mitarbeiter</a></li><li><a href="/de/wer-sind-wir/arbeiten-sie-mit-uns.html">Arbeiten Sie mit uns</a></li></ul></li><li><a href="/de/dienste.html">Dienste</a><button class="sub-abrir" aria-expanded="false" aria-label="Dienste"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button><ul class="sub"><li><a href="/de/dienste/uebersetzungen.html">Übersetzungen</a></li><li><a href="/de/dienste/dolmetschen.html">Dolmetschen</a></li></ul></li><li><a href="/de/arbeitsweise-und-werkzeuge.html">Arbeitsweise und Werkzeuge</a></li><li><a href="/de/kostenvoranschlag.html">Kostenvoranschlag</a><button class="sub-abrir" aria-expanded="false" aria-label="Kostenvoranschlag"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button><ul class="sub"><li><a href="/de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html">Kostenvoranschlag Übersetzen</a></li><li><a href="/de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html">Kostenvoranschlag Dolmetschen</a></li></ul></li><li><a href="/de/kontakt.html">Kontakt</a></li><li><a href="/de/cv-ingles.html">CV</a></li><li><a href="/de/cp-ingles-aleman.html">CP</a></li></ul></nav>
+      <ul class="idiomas" aria-label="Sprachen"><li><a href="/" hreflang="es" lang="es" title="Español">es</a></li><li><a href="/en.html" hreflang="en" lang="en" title="English">en</a></li><li><a href="/de.html" hreflang="de" lang="de" aria-current=true title="Deutsch">de</a></li><li><a href="/nl.html" hreflang="nl" lang="nl" title="Nederlands">nl</a></li></ul>
+    </div>
   </div>
 </header>
 <main id="contenido">
 
-<section class="hero">
-  <div class="hero-fondo" aria-hidden="true"></div>
-  <div class="envoltorio hero-in">
-    <div class="hero-txt">
-      <p class="antetitulo"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> DISKRETION GARANTIERT</p>
+<section class="portada">
+  <div class="env portada-in">
+    <div class="portada-txt">
       <h1>Technische und fachkundige Übersetzungen</h1>
-      <p class="hero-sub">Hervorragende technische und fachkundige Übersetzungen</p>
-      <div class="hero-botones">
-        <a class="boton boton-acento" href="/de/kostenvoranschlag.html">Kostenvoranschlag <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="boton boton-claro" href="tel:+34913147919"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg> +34 91 314 79 19</a>
+      <p class="portada-lema">BABELTRANS ist ein globaler Dienstleister im Linguistikbereich, spezialisiert auf das Übersetzen und Dolmetschen.</p>
+      <div class="botones">
+        <a class="boton" href="/de/kostenvoranschlag.html">Kostenvoranschlag</a>
+        <a class="boton boton-sec" href="tel:+34913147919">+34 91 314 79 19</a>
       </div>
     </div>
-    <ul class="especialidades"><li class="espec"><svg class="ico ico-espec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5l8-3v19M12 21V9l8 3v9M2 21h20M7 8h2M7 12h2M7 16h2M15 14h2M15 17h2"/></svg><span>Architektur, Gebäudetechnik, Konstruktion, Industrie…</span></li><li class="espec"><svg class="ico ico-espec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3M7 15h10"/></svg><span>Wissenschaftliche und medizinische Texte, Operations-Anleitungen, Handbücher…</span></li><li class="espec"><svg class="ico ico-espec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg><span>Gesetzetexte, Verordnungen, eidesstattliche und beglaubigte Übersetzungen…</span></li><li class="espec"><svg class="ico ico-espec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9h6M7 12h10"/></svg><span>Webseiten, Marketing und Werbung, Unternehmensbroschuren, Jahresberichte…</span></li></ul>
+    <figure class="paralelo">
+      <ul><li class=actual><a href="/de.html" hreflang="de" lang="de" aria-current=true><span class="codigo">de</span><span class="frase">Alles wirklich Herausragende ist übersetzbar</span></a></li><li><a href="/" hreflang="es" lang="es"><span class="codigo">es</span><span class="frase">Todo lo verdaderamente excelente es traducible</span></a></li><li><a href="/en.html" hreflang="en" lang="en"><span class="codigo">en</span><span class="frase">All that is truly excellent can be translated</span></a></li><li><a href="/nl.html" hreflang="nl" lang="nl"><span class="codigo">nl</span><span class="frase">Alles wat werkelijk uitmuntend is, kan worden vertaald</span></a></li></ul>
+    </figure>
   </div>
 </section>
 
-<section class="seccion seccion-pilares">
-  <div class="envoltorio pilares"><a class="pilar" href="/de/dienste/dolmetschen.html"><svg class="ico ico-pilar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg><p>Die Übersetzung ist eine der besten Bestätigungen der Sprache</p><span class="mas">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="pilar" href="/de/dienste/uebersetzungen.html"><svg class="ico ico-pilar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4c-6 0-12 4-14 12l-2 4 4-2c8-2 12-8 12-14z"/><path d="M6 16l6-6"/></svg><p>Alles wirklich Herausragende ist übersetzbar</p><span class="mas">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="pilar" href="/de/home/71.html"><svg class="ico ico-pilar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12l5-5 4 2 3-2 3 1 5 4-5 5-3-2-2 2-3-1-2-2z"/><path d="M11 9l-3 3 2 2 3-3"/></svg><p>Wir nehmen mass damit unsere Kunden wachsen können</p><span class="mas">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+<section class="bloque">
+  <div class="env libro">
+    <p class="margen nota-margen">Diskretion garantiert.</p>
+    <div>
+      <h2 class="vh">Hervorragende technische und fachkundige Übersetzungen</h2>
+      <ul class="campos-lista"><li>Architektur, Gebäudetechnik, Konstruktion, Industrie</li><li>Wissenschaftliche und medizinische Texte, Operations-Anleitungen, Handbücher</li><li>Gesetzetexte, Verordnungen, eidesstattliche und beglaubigte Übersetzungen</li><li>Webseiten, Marketing und Werbung, Unternehmensbroschuren, Jahresberichte</li></ul>
+    </div>
+  </div>
 </section>
 
-<section class="seccion">
-  <div class="envoltorio">
-    <div class="quienes">
-      <div class="sello"><span class="sello-txt">seit</span><span class="sello-anio">1999</span></div>
+<section class="bloque bloque-calco">
+  <div class="env libro">
+    <h2 class="margen tit-margen"><a href="/de/dienste.html">Dienste</a></h2>
+    <div class="entradas"><article class="entrada">
+  <h3 class="entrada-palabra"><a href="/de/dienste/uebersetzungen.html">Über·set·zung</a></h3>
+  <p class="entrada-gram"><span class="afi">/yːbɐˈzɛtsʊŋ/</span> <i>f.</i></p>
+  <p class="entrada-def">Die Übersetzung ist eine der Künste, die am meisten Einsatz und Talent bedarf, da auch der einfachste Text voll mit Zweideutigkeiten sein kann.</p>
+  <ol class="acepciones"><li><b>Geschäftlich.</b> Webseiten, Angebote, Bestellungen, Flyer.</li><li><b>Wirtschaftlich.</b> Berichte, Jahresabschlussberichte.</li><li><b>Juristisch.</b> alle Arten von juristischen Dokumenten.</li><li><b>Technisch-wissenschaftlich.</b> Ingenieurwesen, Kraftfahrzeugwesen, Gebrauchsanweisungen, Gesundheitswesen, wissenschaftliche Dokumente.</li><li><b>Vereidigte Übersetzungen.</b> (Geburts)Urkunde, Zeugnisse, Vollmächte, Auszeichnungen.</li></ol>
+  <a class="enlace" href="/de/dienste/uebersetzungen.html">Übersetzungen</a>
+</article><article class="entrada">
+  <h3 class="entrada-palabra"><a href="/de/dienste/dolmetschen.html">Dol·met·schen</a></h3>
+  <p class="entrada-gram"><span class="afi">/ˈdɔlmɛtʃn̩/</span> <i>n.</i></p>
+  <p class="entrada-def">Das Dolmetschen ist eine komplexe Arbeit, die grossen Einsatz und Erfahrung erfordert, um gute Resultate zu erzielen.</p>
+  <ol class="acepciones"><li><b>Konsekutivdolmetschen.</b> Pressekonferenzen, Geschäftstreffen, Verhandlungen, Vermittlungen.</li><li><b>Simultanübersetzung.</b> Seminare, Tagungen und Konferenzen.</li><li><b>Audiokonferenz und Videokonferenz.</b> Business-Konferenzen mit Partnern, Lieferanten, usw.</li><li><b>Vereidigt.</b> Notare, Gerichte, Prozesse.</li><li><b>Audio.</b> Sprecherrollen, Tonstudios.</li></ol>
+  <a class="enlace" href="/de/dienste/dolmetschen.html">Dolmetschen</a>
+</article></div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="env libro">
+    <h2 class="margen tit-margen"><a href="/de/wer-sind-wir.html">Wer sind wir</a></h2>
+    <div class="prosa">
+      <p class="grande">Unsere langjährige berufliche Erfahrung -seit 1999 bieten wir bereits Übersetzungsdienstleistungen an- hat uns in eine führende Position als strategischer Partner bei der Internationalisierung von vielen spanischen Unternehmen ermöglicht.</p>
+      
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="env libro">
+    <h2 class="margen tit-margen"><a href="/de/arbeitsweise-und-werkzeuge.html">Arbeitsweise und Werkzeuge</a></h2>
+    <div class="metodo">
       <div>
-        <h2 class="tit-seccion">Wer sind wir</h2>
-        <p class="destacado">BABELTRANS ist ein globaler Dienstleister im Linguistikbereich, spezialisiert auf das Übersetzen und Dolmetschen.</p>
-        <a class="enlace-mas" href="/de/wer-sind-wir.html">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="metodo-intro">Jeder Auftrag wird exklusiv bearbeitet. Dazu nehmen wir uns die nötige Zeit und arbeiten mit den richtigen Werkzeugen.</p>
+        <ol class="pasos"><li>Jeder Auftrag wird zunächst analysiert, bevor er (gemäß der konkreten Vorstellungen des Kunden) einem Mitarbeiter zugeteilt wird.</li><li>Jeder Auftrag wird nochmals von einem zweiten Mitarbeiter überprüft.</li><li>Layout entsprechend dem Original oder gemäß der Vorstellung des Kunden.</li></ol>
+      </div>
+      <div class="herramientas"><h3>Werkzeuge</h3><ul><li>Übersetzungstools zur Identifizierung von Sprachstrukturen und analogen Terminologien</li><li>Fachglossare</li><li>Verwendung des vom Kunden bevorzugten Wortschatzes</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="env libro">
+    <div class="margen"></div>
+    <div class="dos">
+      <div>
+        <h2 class="tit-pequeno"><a href="/de/wer-sind-wir/unsere-mitarbeiter.html">Unsere Mitarbeiter</a></h2>
+        <blockquote class="cita cita-pequena"><p>Sprache ist kein Instinkt, sondern ein kultureller Prozess</p></blockquote>
+        <p>Unser Team besteht aus Linguistikexperten der verschiedenen Bereiche des Übersetzens sowie des Dolmetschens.</p>
+      </div>
+      <div>
+        <h2 class="tit-pequeno"><a href="/de/home/72.html">Beratung Spanisch-Training</a></h2>
+        <p>Bei BABELTRANS bieten wir kostenlose Spracheinstufungstests an und stellen ein auf die Ausbildungsbedürfnisse Ihrere Führungskräfte ausgerichtetes Sprachtraining zusammen.</p>
+        <a class="enlace" href="/de/home/72.html">Weiterlesen</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="seccion seccion-suave">
-  <div class="envoltorio">
-    <h2 class="tit-seccion tit-centro">Dienste</h2>
-    <div class="rejilla-2"><article class="servicio"><svg class="ico ico-grande" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4c-6 0-12 4-14 12l-2 4 4-2c8-2 12-8 12-14z"/><path d="M6 16l6-6"/></svg><h3>Übersetzungen</h3><p>Die Übersetzung ist eine der Künste, die am meisten Einsatz und Talent bedarf, da auch der einfachste Text voll mit Zweideutigkeiten sein kann.</p><ul class="mini-lista"><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Geschäftlich</span></li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Wirtschaftlich</span></li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Juristisch</span></li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Technisch-wissenschaftlich</span></li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Vereidigte Übersetzungen</span></li></ul><a class="boton boton-linea" href="/de/dienste/uebersetzungen.html">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="servicio"><svg class="ico ico-grande" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg><h3>Dolmetschen</h3><p>Das Dolmetschen ist eine komplexe Arbeit, die grossen Einsatz und Erfahrung erfordert, um gute Resultate zu erzielen.</p><ul class="mini-lista"><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Konsekutivdolmetschen</span></li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Simultanübersetzung</span></li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Audiokonferenz und Videokonferenz</span></li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Vereidigt</span></li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Audio</span></li></ul><a class="boton boton-linea" href="/de/dienste/dolmetschen.html">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article></div>
-  </div>
-</section>
-
-<section class="seccion">
-  <div class="envoltorio rejilla-3">
-    <a class="tarjeta" href="/de/wer-sind-wir/unsere-mitarbeiter.html"><svg class="ico ico-grande" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14c3 0 6 2 6 5"/></svg>
-      <h3>Unsere Mitarbeiter</h3>
-      <p class="cita-mini">“Sprache ist kein Instinkt, sondern ein kultureller Prozess”</p>
-      <p>Unser Team besteht aus Linguistikexperten der verschiedenen Bereiche des Übersetzens sowie des Dolmetschens.</p><span class="mas">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-    <a class="tarjeta" href="/de/arbeitsweise-und-werkzeuge.html"><svg class="ico ico-grande" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
-      <h3>Arbeitsweise und Werkzeuge</h3><p>Bereits seit 1999 bietet BABELTRANS im Bereich Übersetzung und Dolmetschen seine Dienste an.</p>
-      <span class="mas">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-    <a class="tarjeta" href="/de/home/72.html"><svg class="ico ico-grande" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/></svg>
-      <h3>Beratung Spanisch-Training</h3><p>Bei BABELTRANS bieten wir kostenlose Spracheinstufungstests an und stellen ein auf die Ausbildungsbedürfnisse Ihrere Führungskräfte ausgerichtetes Sprachtraining zusammen.</p>
-      <span class="mas">Weiterlesen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-  </div>
-</section>
-
-<section class="banda-cta">
-  <div class="envoltorio banda-cta-in">
-    <h2>Kostenvoranschlag</h2>
-    <div class="banda-botones">
-      <a class="boton boton-acento" href="/de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg> Kostenvoranschlag Übersetzen</a>
-      <a class="boton boton-claro" href="/de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg> Kostenvoranschlag Dolmetschen</a>
+<section class="final">
+  <div class="env libro">
+    <h2 class="margen tit-margen">Rufen Sie uns an oder schreiben Sie uns</h2>
+    <div>
+      <p class="contacto-grande"><a href="tel:+34913147919">+34 91 314 79 19</a><a href="mailto:info@babeltrans.es">info@babeltrans.es</a></p>
+      <ul class="indice indice-pequeno">
+        <li><a href="/de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html">Kostenvoranschlag Übersetzen</a></li>
+        <li><a href="/de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html">Kostenvoranschlag Dolmetschen</a></li>
+      </ul>
     </div>
   </div>
 </section>
 </main>
 <footer class="pie">
-  <div class="envoltorio pie-rejilla">
-    <div class="pie-marca">
-      <a class="marca marca-clara" href="/de.html"><svg class="logo-globo" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--tinta)"/><g fill="none" stroke="var(--acento)" stroke-width="1.4"><ellipse cx="20" cy="20" rx="7.5" ry="18"/><path d="M2 20h36M5 11h30M5 29h30"/></g><circle cx="20" cy="20" r="18" fill="none" stroke="var(--acento)" stroke-width="1.4"/></svg><span class="marca-txt"><strong>Babel</strong> Translations</span></a>
-      <p>Technische und fachkundige Übersetzungen</p>
-    </div>
-    <div>
-      <h2 class="pie-tit">Dienste</h2>
-      <ul class="pie-lista"><li><a href="/de/dienste/uebersetzungen.html">Übersetzungen</a></li><li><a href="/de/dienste/dolmetschen.html">Dolmetschen</a></li><li><a href="/de/arbeitsweise-und-werkzeuge.html">Arbeitsweise und Werkzeuge</a></li><li><a href="/de/wer-sind-wir.html">Wer sind wir</a></li><li><a href="/de/wer-sind-wir/unsere-mitarbeiter.html">Unsere Mitarbeiter</a></li></ul>
-    </div>
-    <div>
-      <h2 class="pie-tit">Kontakt</h2>
-      <ul class="pie-lista pie-contacto">
-        <li><a href="tel:+34913147919"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>+34 91 314 79 19</span></a></li>
-        <li><a href="mailto:info@babeltrans.es"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@babeltrans.es</span></a></li>
-        <li><a href="/de/kontakt.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Kontakt</span></a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="envoltorio pie-legal">
-    <p>Copyright © 2026 babeltrans. Alle Rechte vorbehalten.</p>
-    <ul><li><a href="/de/rechtliche-hinweise.html">Rechtliche Hinweise</a></li><li><a href="/de/datenschutz.html">Datenschutz</a></li><li><a href="/de/sitemap.html">Sitemap</a></li></ul>
+  <div class="env pie-in">
+    <p class="pie-marca">Babel <i>Translations</i></p>
+    <address class="pie-contacto">
+      <a href="tel:+34913147919">+34 91 314 79 19</a>
+      <a href="mailto:info@babeltrans.es">info@babeltrans.es</a>
+    </address>
+    <ul class="pie-legal"><li><a href="/de/rechtliche-hinweise.html">Rechtliche Hinweise</a></li><li><a href="/de/datenschutz.html">Datenschutz</a></li><li><a href="/de/sitemap.html">Sitemap</a></li></ul>
+    <p class="pie-copy">Copyright © 2026 babeltrans. Alle Rechte vorbehalten.</p>
   </div>
 </footer>
 </body>

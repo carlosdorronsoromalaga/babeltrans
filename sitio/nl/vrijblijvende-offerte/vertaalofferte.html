@@ -10,103 +10,66 @@
 <meta property="og:title" content="Vertaalofferte · Babel Translations">
 <meta property="og:description" content="Vertaalofferte · Babel Translations">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0f2a44">
+<meta name="theme-color" content="#fcfcfa">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fuentes/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/estilos.css">
 <script src="/web.js" defer></script>
 </head>
 <body class="">
 <a class="saltar" href="#contenido">Naar de inhoud</a>
-<div class="barra-sup">
-  <div class="envoltorio barra-sup-in">
-    <div class="barra-contacto">
-      
-      <a href="mailto:info@babeltrans.es"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@babeltrans.es</span></a>
-    </div>
-    <ul class="idiomas" aria-label="Talen"><li><a href="/es/solicite-presupuesto-traduccion/presupuesto-traduccion.html" hreflang="es" lang="es" title="Español">ES</a></li><li><a href="/en/request-a-quote/translation-quote.html" hreflang="en" lang="en" title="English">EN</a></li><li><a href="/de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html" hreflang="de" lang="de" title="Deutsch">DE</a></li><li><a href="/nl/vrijblijvende-offerte/vertaalofferte.html" hreflang="nl" lang="nl" aria-current=true title="Nederlands">NL</a></li></ul>
-  </div>
-</div>
 <header class="cabecera">
-  <div class="envoltorio cabecera-in">
-    <a class="marca" href="/nl.html" aria-label="Babel Translations">
-      <svg class="logo-globo" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--tinta)"/><g fill="none" stroke="var(--acento)" stroke-width="1.4"><ellipse cx="20" cy="20" rx="7.5" ry="18"/><path d="M2 20h36M5 11h30M5 29h30"/></g><circle cx="20" cy="20" r="18" fill="none" stroke="var(--acento)" stroke-width="1.4"/></svg><span class="marca-txt"><strong>Babel</strong> Translations</span>
-    </a>
-    <button class="menu-abrir" aria-expanded="false" aria-controls="nav">
-      <span class="hamb" aria-hidden="true"></span><span class="vh">Menu</span>
-    </button>
-    <nav id="nav" class="nav" aria-label="Menu">
-      <ul class="nav-lista"><li><a href="/">Home</a></li><li><a href="/nl/over-ons.html">Over ons</a><button class="sub-abrir" aria-expanded="false" aria-label="Over ons"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><ul class="sub"><li><a href="/nl/over-ons/onze-medewerkers.html">Onze medewerkers</a></li><li><a href="/nl/over-ons/bij-ons-werken.html">Bij ons werken</a></li></ul></li><li><a href="/nl/onze-diensten.html">Onze diensten</a><button class="sub-abrir" aria-expanded="false" aria-label="Onze diensten"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><ul class="sub"><li><a href="/nl/onze-diensten/vertalen.html">Vertalen</a></li><li><a href="/nl/onze-diensten/tolken.html">Tolken</a></li></ul></li><li><a href="/nl/methodologie-en-werktuigen.html">Methodologie en werktuigen</a></li><li class="activo"><a href="/nl/vrijblijvende-offerte.html">Vrijblijvende offerte</a><button class="sub-abrir" aria-expanded="false" aria-label="Vrijblijvende offerte"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><ul class="sub"><li><a href="/nl/vrijblijvende-offerte/vertaalofferte.html" aria-current=page>Vertaalofferte</a></li><li><a href="/nl/vrijblijvende-offerte/tolkofferte.html">Tolkofferte</a></li></ul></li><li><a href="/nl/contact.html">Contact</a></li><li><a href="/nl/vertalen-cv.html">CV vertalen</a></li><li><a href="/nl/cp-ingles-aleman.html">CP</a></li></ul>
-    </nav>
+  <div class="env cabecera-in">
+    <a class="marca" href="/nl.html"><span class="marca-nombre">Babel <i>Translations</i></span></a>
+    <button class="menu-abrir" aria-expanded="false" aria-controls="nav">Menu</button>
+    <div class="nav-caja" id="nav">
+      <nav class="nav" aria-label="Menu"><ul class="nav-lista"><li><a href="/">Home</a></li><li><a href="/nl/over-ons.html">Over ons</a><button class="sub-abrir" aria-expanded="false" aria-label="Over ons"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button><ul class="sub"><li><a href="/nl/over-ons/onze-medewerkers.html">Onze medewerkers</a></li><li><a href="/nl/over-ons/bij-ons-werken.html">Bij ons werken</a></li></ul></li><li><a href="/nl/onze-diensten.html">Onze diensten</a><button class="sub-abrir" aria-expanded="false" aria-label="Onze diensten"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button><ul class="sub"><li><a href="/nl/onze-diensten/vertalen.html">Vertalen</a></li><li><a href="/nl/onze-diensten/tolken.html">Tolken</a></li></ul></li><li><a href="/nl/methodologie-en-werktuigen.html">Methodologie en werktuigen</a></li><li class="activo"><a href="/nl/vrijblijvende-offerte.html">Vrijblijvende offerte</a><button class="sub-abrir" aria-expanded="false" aria-label="Vrijblijvende offerte"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button><ul class="sub"><li><a href="/nl/vrijblijvende-offerte/vertaalofferte.html" aria-current=page>Vertaalofferte</a></li><li><a href="/nl/vrijblijvende-offerte/tolkofferte.html">Tolkofferte</a></li></ul></li><li><a href="/nl/contact.html">Contact</a></li><li><a href="/nl/vertalen-cv.html">CV vertalen</a></li><li><a href="/nl/cp-ingles-aleman.html">CP</a></li></ul></nav>
+      <ul class="idiomas" aria-label="Talen"><li><a href="/es/solicite-presupuesto-traduccion/presupuesto-traduccion.html" hreflang="es" lang="es" title="Español">es</a></li><li><a href="/en/request-a-quote/translation-quote.html" hreflang="en" lang="en" title="English">en</a></li><li><a href="/de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html" hreflang="de" lang="de" title="Deutsch">de</a></li><li><a href="/nl/vrijblijvende-offerte/vertaalofferte.html" hreflang="nl" lang="nl" aria-current=true title="Nederlands">nl</a></li></ul>
+    </div>
   </div>
 </header>
 <main id="contenido">
-<section class="cab-pagina"><div class="envoltorio"><nav class="miga" aria-label="breadcrumb"><a href="/nl.html">Home</a> <span aria-hidden=true>/</span> <a href="/nl/vrijblijvende-offerte.html">Vrijblijvende offerte</a></nav><h1>Vertaalofferte</h1></div></section>
-<section class="seccion">
-  <div class="envoltorio con-lateral">
-    <div>
-      
-      <div class="aviso aviso-ok" role="status" hidden data-aviso="ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><p>Bedankt voor uw bericht.</p></div>
-      <div class="aviso aviso-error" role="alert" hidden data-aviso="error"><p>Het formulier kon niet worden verzonden. Probeer het opnieuw of schrijf naar <a href="mailto:info@babeltrans.es">info@babeltrans.es</a></p></div>
-      <form class="formulario" action="/enviar.php" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="_formulario" value="Vertaalofferte">
-        <input type="hidden" name="_idioma" value="nl">
-        <input type="hidden" name="_volver" value="/nl/vrijblijvende-offerte/vertaalofferte.html">
-        <div class="trampa" aria-hidden="true"><label>Web <input type="text" name="_web" tabindex="-1" autocomplete="off"></label></div>
-        <div class="rejilla-campos">
-<div class="campo"><label for="f-nombre">Voor -en achternaam <span class="req" title="verplicht">*</span></label><input type="text" id="f-nombre" name="Nombre" autocomplete="name" required></div>
-<div class="campo"><label for="f-empresa">Naam van onderneming</label><input type="text" id="f-empresa" name="Empresa" autocomplete="organization"></div>
-<div class="campo"><label for="f-pais">Land</label><input type="text" id="f-pais" name="Pais" autocomplete="country-name"></div>
-<div class="campo"><label for="f-poblacion">Plaats</label><input type="text" id="f-poblacion" name="poblacion" autocomplete="address-level2"></div>
-<div class="campo"><label for="f-mail">E-mail <span class="req" title="verplicht">*</span></label><input type="email" id="f-mail" name="Mail" autocomplete="email" required></div>
-<div class="campo"><label for="f-telefono">Telefono</label><input type="tel" id="f-telefono" name="Telefono" autocomplete="tel"></div>
-<div class="campo campo-ancho"><label for="f-adjuntar_documento">Documenten uploaden</label><label class="archivo"><input type="file" id="f-adjuntar_documento" name="adjuntar_documento[]" multiple><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg><span data-vacio="Bestand toevoegen">Bestand toevoegen</span></label></div>
-<div class="campo"><label for="f-idioma_partida">Brontaal</label><input type="text" id="f-idioma_partida" name="Idioma_partida" autocomplete="off"></div>
-<div class="campo"><label for="f-idioma_destino">Doeltaal</label><input type="text" id="f-idioma_destino" name="Idioma_destino" autocomplete="off"></div>
-<div class="campo"><label for="f-fecha_entrega">Gewenste leverdatum</label><input type="date" id="f-fecha_entrega" name="Fecha_entrega" autocomplete="off"></div>
-<div class="campo campo-ancho"><label for="f-comentarios">Opmerkingen</label><textarea id="f-comentarios" name="Comentarios" rows="5"></textarea></div>
-<div class="campo campo-ancho campo-check"><input type="checkbox" id="f-privacidad" name="Privacidad" value="Sí" required><label for="f-privacidad">Ik ga akkoord met de <a href="/nl/privacyverklaring.html" target="_blank">Privacyverklaring</a> <span class="req" title="verplicht">*</span></label></div>
-        </div>
-        <button class="boton boton-acento" type="submit">Vrijblijvende Offerte <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      </form>
-    </div>
-    <aside class="lateral">
-  <div class="tarjeta-cta">
-    <h2>Vrijblijvende offerte</h2>
-    <ul class="cta-enlaces">
-      <li><a href="/nl/vrijblijvende-offerte/vertaalofferte.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg><span>Vertaalofferte</span></a></li>
-      <li><a href="/nl/vrijblijvende-offerte/tolkofferte.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg><span>Tolkofferte</span></a></li>
-    </ul>
-    <div class="cta-contacto">
-      
-      <a href="mailto:info@babeltrans.es"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@babeltrans.es</span></a>
-    </div>
-  </div>
-</aside>
+<header class="titulo-pagina"><div class="env libro"><div class="margen"><a class="cabecera-seccion" href="/nl/vrijblijvende-offerte.html">Vrijblijvende offerte</a></div><div><h1>Vertaalofferte</h1></div></div></header>
+<section class="env libro cuerpo-pagina">
+  <aside class="margen"><nav class="nota" aria-label="In dit onderdeel"><ul class="nota-lista"><li><a href="/nl/vrijblijvende-offerte.html">Vrijblijvende offerte</a></li><li><a href="/nl/vrijblijvende-offerte/vertaalofferte.html" aria-current=page>Vertaalofferte</a></li><li><a href="/nl/vrijblijvende-offerte/tolkofferte.html">Tolkofferte</a></li></ul></nav><div class="nota"><p class="nota-contacto"><a href="mailto:info@babeltrans.es">info@babeltrans.es</a></p></div></aside>
+  <div class="columna-form">
+    
+    
+    <div class="aviso aviso-ok" role="status" hidden data-aviso="ok"><p>Bedankt voor uw bericht.</p></div>
+    <div class="aviso aviso-error" role="alert" hidden data-aviso="error"><p>Het formulier kon niet worden verzonden. Probeer het opnieuw of schrijf naar <a href="mailto:info@babeltrans.es">info@babeltrans.es</a></p></div>
+    <form class="formulario" action="/enviar.php" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="_formulario" value="Vertaalofferte">
+      <input type="hidden" name="_idioma" value="nl">
+      <input type="hidden" name="_volver" value="/nl/vrijblijvende-offerte/vertaalofferte.html">
+      <div class="trampa" aria-hidden="true"><label>Web <input type="text" name="_web" tabindex="-1" autocomplete="off"></label></div>
+      <div class="campos">
+<div class="campo"><label for="f-nombre">Voor -en achternaam <abbr class="req" title="verplicht">*</abbr></label><input type="text" id="f-nombre" name="Nombre" autocomplete="name" required></div>
+<div class="campo"><label for="f-empresa">Naam van onderneming </label><input type="text" id="f-empresa" name="Empresa" autocomplete="organization"></div>
+<div class="campo"><label for="f-pais">Land </label><input type="text" id="f-pais" name="Pais" autocomplete="country-name"></div>
+<div class="campo"><label for="f-poblacion">Plaats </label><input type="text" id="f-poblacion" name="poblacion" autocomplete="address-level2"></div>
+<div class="campo"><label for="f-mail">E-mail <abbr class="req" title="verplicht">*</abbr></label><input type="email" id="f-mail" name="Mail" autocomplete="email" required></div>
+<div class="campo"><label for="f-telefono">Telefono </label><input type="tel" id="f-telefono" name="Telefono" autocomplete="tel"></div>
+<div class="campo ancho"><label for="f-adjuntar_documento">Documenten uploaden</label><input class="archivo" type="file" id="f-adjuntar_documento" name="adjuntar_documento[]" multiple></div>
+<div class="campo"><label for="f-idioma_partida">Brontaal </label><input type="text" id="f-idioma_partida" name="Idioma_partida" autocomplete="off"></div>
+<div class="campo"><label for="f-idioma_destino">Doeltaal </label><input type="text" id="f-idioma_destino" name="Idioma_destino" autocomplete="off"></div>
+<div class="campo"><label for="f-fecha_entrega">Gewenste leverdatum </label><input type="date" id="f-fecha_entrega" name="Fecha_entrega" autocomplete="off"></div>
+<div class="campo ancho"><label for="f-comentarios">Opmerkingen </label><textarea id="f-comentarios" name="Comentarios" rows="5"></textarea></div>
+<div class="campo ancho campo-check"><input type="checkbox" id="f-privacidad" name="Privacidad" value="Sí" required><label for="f-privacidad">Ik ga akkoord met de <a href="/nl/privacyverklaring.html" target="_blank">Privacyverklaring</a> <abbr class="req" title="verplicht">*</abbr></label></div>
+      </div>
+      <button class="boton" type="submit">Vrijblijvende Offerte</button>
+    </form>
   </div>
 </section>
 </main>
 <footer class="pie">
-  <div class="envoltorio pie-rejilla">
-    <div class="pie-marca">
-      <a class="marca marca-clara" href="/nl.html"><svg class="logo-globo" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--tinta)"/><g fill="none" stroke="var(--acento)" stroke-width="1.4"><ellipse cx="20" cy="20" rx="7.5" ry="18"/><path d="M2 20h36M5 11h30M5 29h30"/></g><circle cx="20" cy="20" r="18" fill="none" stroke="var(--acento)" stroke-width="1.4"/></svg><span class="marca-txt"><strong>Babel</strong> Translations</span></a>
-      <p>Technische en gespecialiseerde vertalingen van hoogwaardige kwaliteit</p>
-    </div>
-    <div>
-      <h2 class="pie-tit">Diensten</h2>
-      <ul class="pie-lista"><li><a href="/nl/onze-diensten/vertalen.html">Vertalen</a></li><li><a href="/nl/onze-diensten/tolken.html">Tolken</a></li><li><a href="/nl/methodologie-en-werktuigen.html">Methodologie en werktuigen</a></li><li><a href="/nl/over-ons.html">Over ons</a></li><li><a href="/nl/over-ons/onze-medewerkers.html">Onze medewerkers</a></li></ul>
-    </div>
-    <div>
-      <h2 class="pie-tit">Contact</h2>
-      <ul class="pie-lista pie-contacto">
-        
-        <li><a href="mailto:info@babeltrans.es"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@babeltrans.es</span></a></li>
-        <li><a href="/nl/contact.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Contact</span></a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="envoltorio pie-legal">
-    <p>Copyright © 2026 babeltrans. Alle rechten voorbehouden.</p>
-    <ul><li><a href="/nl/disclaimer.html">Disclaimer</a></li><li><a href="/nl/privacyverklaring.html">Privacyverklaring</a></li><li><a href="/nl/sitemap.html">Sitemap</a></li></ul>
+  <div class="env pie-in">
+    <p class="pie-marca">Babel <i>Translations</i></p>
+    <address class="pie-contacto">
+      
+      <a href="mailto:info@babeltrans.es">info@babeltrans.es</a>
+    </address>
+    <ul class="pie-legal"><li><a href="/nl/disclaimer.html">Disclaimer</a></li><li><a href="/nl/privacyverklaring.html">Privacyverklaring</a></li><li><a href="/nl/sitemap.html">Sitemap</a></li></ul>
+    <p class="pie-copy">Copyright © 2026 babeltrans. Alle rechten voorbehouden.</p>
   </div>
 </footer>
 </body>

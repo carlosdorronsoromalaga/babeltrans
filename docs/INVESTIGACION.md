@@ -21,6 +21,17 @@ clientes (y sus documentos) a un tercero fuera de la UE y tienen límites en el
 plan gratuito. El hosting ya tiene PHP y correo, así que basta un `enviar.php`
 propio.
 
+**Diseño (v2).** En GitHub, las plantillas de «translation agency» (la mejor
+tenía 4 estrellas) y las editoriales de html5up y sus versiones para
+Hugo/Astro son genéricas: habrían devuelto la web a lo mismo que se quería
+dejar atrás. Lo que sí sirvió fue la guía `frontend-design` de anthropics/skills,
+que enumera los tics de las webs generadas (crema con terracota, el kit de
+tarjetas con sombra, etiquetas en mayúsculas, flechas → y animaciones en cada
+bloque) y propone sacar el diseño del vocabulario del propio oficio. De ahí
+sale `DISENO.md`.
+
 **Fuentes.** Google Fonts se descartó: incrustarlo en una web europea manda la
-IP del visitante a Google (sentencia del LG München, 20/01/2022). Se usan
-fuentes del sistema.
+IP del visitante a Google (sentencia del LG München, 20/01/2022). Literata y
+Public Sans (OFL) se alojan en `plantilla/fuentes/`: se bajaron de
+`@fontsource-variable` en jsDelivr, solo el juego de caracteres latino, que
+cubre castellano, inglés, alemán y holandés. Pesan 250 KB entre las tres.
