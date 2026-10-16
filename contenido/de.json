@@ -1,0 +1,1136 @@
+{
+ "idioma": "de",
+ "paginas": {
+  "home": {
+   "ruta": "de.html",
+   "fuente": "de.html",
+   "titulo": "",
+   "titulo_html": "babeltrans",
+   "home": {
+    "titulos": [
+     "Technische und fachkundige Übersetzungen",
+     "Hervorragende technische und fachkundige Übersetzungen:",
+     "Babeltrans"
+    ],
+    "lista": [
+     "Architektur, Gebäudetechnik, Konstruktion, Industrie...",
+     "Wissenschaftliche und medizinische Texte, Operations-Anleitungen, Handbücher...",
+     "Gesetzetexte, Verordnungen, eidesstattliche und beglaubigte Übersetzungen...",
+     "Webseiten, Marketing und Werbung, Unternehmensbroschuren, Jahresberichte..."
+    ],
+    "fuertes": [
+     "Hervorragende technische und fachkundige Übersetzungen:",
+     "Architektur, Gebäudetechnik, Konstruktion, Industrie...",
+     "Wissenschaftliche und medizinische Texte, Operations-Anleitungen, Handbücher...",
+     "Gesetzetexte, Verordnungen, eidesstattliche und beglaubigte Übersetzungen...",
+     "Webseiten, Marketing und Werbung, Unternehmensbroschuren, Jahresberichte...",
+     "DISKRETION GARANTIERT",
+     "Die Übersetzung ist eine der besten Bestätigungen der Sprache",
+     "Alles wirklich Herausragende ist übersetzbar",
+     "Wir nehmen mass damit unsere Kunden wachsen können"
+    ],
+    "frases": [
+     "Die Übersetzung ist eine der besten Bestätigungen der Sprache",
+     "Alles wirklich Herausragende ist übersetzbar",
+     "Wir nehmen mass damit unsere Kunden wachsen können"
+    ],
+    "derecha": [
+     "Kostenvoranschlag",
+     "Kontakt",
+     "Kostenvoranschlag für Übersetzungen",
+     "Kostenvoranschlag für Dolmetschen",
+     "Vorname:",
+     "Telefon:",
+     "Email:",
+     "Bemerkungen:",
+     "Nummer eingeben:",
+     "Dienste",
+     "Dolmetschen",
+     "Das Dolmetschen ist eine komplexe Arbeit, die grossen Einsatz und Erfahrung erfordert, um gute Res...",
+     "Übersetzungen",
+     "Die Übersetzung ist eine der Künste, die am meisten Einsatz und Talent bedarf, da auch der...",
+     "Campañas"
+    ],
+    "modulos": [
+     {
+      "titulo": "Unsere Mitarbeiter",
+      "texto": [
+       "Profi-Qualität ..."
+      ]
+     },
+     {
+      "titulo": "Unsere Mitarbeiter",
+      "texto": [
+       "Profi-Qualität ..."
+      ]
+     },
+     {
+      "titulo": "Beratung Spanish-Training",
+      "texto": []
+     },
+     {
+      "titulo": "Beratung Spanish-Training",
+      "texto": []
+     },
+     {
+      "titulo": "Definieren Sie Ihre Bedürfnisse",
+      "texto": [
+       "Maßgeschneiderte Seminare in Englisch",
+       "Je größer die Sicherheit, desto besser das Ergebnis"
+      ]
+     },
+     {
+      "titulo": "Definieren Sie Ihre Bedürfnisse",
+      "texto": [
+       "Maßgeschneiderte Seminare in Englisch",
+       "Je größer die Sicherheit, desto besser das Ergebnis"
+      ]
+     },
+     {
+      "titulo": "Methodik und Werkzeuge",
+      "texto": [
+       "Wir passen uns Ihren Wünschen an ..."
+      ]
+     },
+     {
+      "titulo": "Methodik und Werkzeuge",
+      "texto": [
+       "Wir passen uns Ihren Wünschen an ..."
+      ]
+     }
+    ],
+    "copyright": "Copyright © 2024 babeltrans. Alle Rechte vorbehalten."
+   }
+  },
+  "quienes": {
+   "ruta": "de/wer-sind-wir.html",
+   "fuente": "de/wer-sind-wir.html",
+   "titulo": "Wer sind wir",
+   "titulo_html": "Wer sind wir - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "<strong>BABELTRANS</strong> ist ein globaler Dienstleister im Linguistikbereich, spezialisiert auf das Übersetzen und Dolmetschen."
+    ],
+    [
+     "p",
+     "Unsere langjährige berufliche Erfahrung -seit 1999 bieten wir bereits Übersetzungsdienstleistungen an- hat uns in eine führende Position als strategischer Partner bei der Internationalisierung von vielen spanischen Unternehmen ermöglicht."
+    ],
+    [
+     "p",
+     "<strong>BABELTRANS</strong> zeigt eine große Sensibilität für Sprache. Alle unsere Mitarbeiter sind Experten die nur in ihre Muttersprache übersetzen, um bei jedem Projekt die Nuancen ihrer Kultur zu vermitteln."
+    ],
+    [
+     "p",
+     "Die übersetzten Texte werden immer von einem unabhängigen internen Zweitübersetzer überprüft, um die höchste Qualität zu gewährleisten."
+    ],
+    [
+     "p",
+     "Wir garantieren ausreichenden Schutz aller Informationen, die uns durch Vertraulichkeitsvereinbarungen anvertraut werden."
+    ],
+    [
+     "cita",
+     "Nuestra estrategia está basada en las relaciones sostenibles con nuestros clientes y en la mejora continua de nuestros procesos"
+    ]
+   ]
+  },
+  "colaboradores": {
+   "ruta": "de/wer-sind-wir/unsere-mitarbeiter.html",
+   "fuente": "de/wer-sind-wir/unsere-mitarbeiter.html",
+   "titulo": "Unsere Mitarbeiter",
+   "titulo_html": "Unsere Mitarbeiter - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "\"Sprache ist kein Instinkt, sondern ein kultureller Prozess\""
+    ],
+    [
+     "p",
+     "Unser Team besteht aus Linguistikexperten der verschiedenen Bereiche des Übersetzens sowie des Dolmetschens."
+    ],
+    [
+     "p",
+     "Ihre Arbeit erfordert nicht nur einen grossen Wortschatz, sondern auch die Fähigkeit synthaktische Strukturen zu erkennen und sie natürlich im geschriebenen, sowie im gesprochenen Wort umzusetzen."
+    ],
+    [
+     "p",
+     "Unsere Übersetzer schaffen eine Äquivalenz zwischen dem Orginaltext und der Überseztung mit der Sicherheit, dass beide die gleiche Nachricht vermitteln."
+    ]
+   ]
+  },
+  "trabaja": {
+   "ruta": "de/wer-sind-wir/arbeiten-sie-mit-uns.html",
+   "fuente": "de/wer-sind-wir/arbeiten-sie-mit-uns.html",
+   "titulo": "Arbeiten Sie mit uns",
+   "titulo_html": "Arbeiten Sie mit uns - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"de/als-uebersetzer.html\">Als Übersetzer</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"de/als-dolmetscher.html\">Als Dolmetscher</a>"
+    ]
+   ]
+  },
+  "servicios": {
+   "ruta": "de/dienste.html",
+   "fuente": "de/dienste.html",
+   "titulo": "Dienste",
+   "titulo_html": "Dienste - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"de/dienste/uebersetzungen.html\">Fragen Sie nach unsere ÜBERSETZUNGSDIENSTE</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"de/dienste/dolmetschen.html\">Fragen Sie nach unsere DOLMETSCHENDIENSTE</a>"
+    ]
+   ]
+  },
+  "traduccion": {
+   "ruta": "de/dienste/uebersetzungen.html",
+   "fuente": "de/dienste/uebersetzungen.html",
+   "titulo": "Übersetzungen",
+   "titulo_html": "Übersetzungen - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Die Übersetzung ist eine der Künste, die am meisten Einsatz und Talent bedarf, da auch der einfachste Text voll mit Zweideutigkeiten sein kann."
+    ],
+    [
+     "p",
+     "Abhängig von der Art des Textes wählt <strong>BABELTRANS</strong> die Übersetzung, die sich am besten eignet, wobei oft eine allzu lange Übersetzung vermieden wird, um der jeweiligen Sprache gerecht zu werden."
+    ],
+    [
+     "h3",
+     "DIENSTLEISTUNG ÜBERSETZUNGEN"
+    ],
+    [
+     "ul",
+     [
+      "Geschäftlich: Webseiten, Angebote, Bestellungen, Flyer.",
+      "Wirtschaftlich: Berichte, Jahresabschlussberichte.",
+      "Juristisch: alle Arten von juristischen Dokumenten.",
+      "Technisch-wissenschaftlich: Ingenieurwesen, Kraftfahrzeugwesen, Gebrauchsanweisungen, Gesundheitswesen, wissenschaftliche Dokumente.",
+      "Vereidigte Übersetzungen: (Geburts)Urkunde, Zeugnisse, Vollmächte, Auszeichnungen."
+     ]
+    ],
+    [
+     "h3",
+     "KORREKTURLESEN"
+    ],
+    [
+     "ul",
+     [
+      "Alle Übersetzungen werden von einem unabhängigen Übersetzer auf Fehler geprüft.",
+      "Wenn vom Kunden gewünscht, können auch schon übersetzte Texte auf Richtigkeit überprüft werden."
+     ]
+    ],
+    [
+     "h3",
+     "TransKRIPTIONEN"
+    ],
+    [
+     "ul",
+     [
+      "Aufnahmen",
+      "Konferenzen",
+      "Interviews"
+     ]
+    ]
+   ]
+  },
+  "interpretacion": {
+   "ruta": "de/dienste/dolmetschen.html",
+   "fuente": "de/dienste/dolmetschen.html",
+   "titulo": "Dolmetschen",
+   "titulo_html": "Dolmetschen - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Das Dolmetschen ist eine komplexe Arbeit, die grossen Einsatz und Erfahrung erfordert, um gute Resultate zu erzielen."
+    ],
+    [
+     "p",
+     "<strong>BABELTRANS</strong> hat ein hervorragendes Team von Dolmetschern die den Originaltext so wahrheitsgetreu wie möglich zu übersetzen wissen, sowohl hinsichtlich der Bedeutung, als auch des Stils."
+    ],
+    [
+     "p",
+     "Wir passen uns Ihren Wünschen an und bieten Ihnen immer die besten Alternativen hinsichtlich Personal, Technik oder Sonstiges."
+    ],
+    [
+     "h3",
+     "Unsere Arbeit... Ihre Ziele"
+    ],
+    [
+     "h3",
+     "DIENSTLEISTUNG DOLMETSCHEN"
+    ],
+    [
+     "ul",
+     [
+      "Konsekutivdolmetschen: Pressekonferenzen, Geschäftstreffen, Verhandlungen, Vermittlungen.",
+      "Simultanübersetzung: Seminare, Tagungen und Konferenzen.",
+      "Audiokonferenz und Videokonferenz: Business-Konferenzen mit Partnern, Lieferanten, usw.",
+      "Vereidigt: Notare, Gerichte, Prozesse.",
+      "Audio: Sprecherrollen, Tonstudios."
+     ]
+    ]
+   ]
+  },
+  "metodologia": {
+   "ruta": "de/arbeitsweise-und-werkzeuge.html",
+   "fuente": "de/arbeitsweise-und-werkzeuge.html",
+   "titulo": "Arbeitsweise und Werkzeuge",
+   "titulo_html": "Arbeitsweise und Werkzeuge - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Bereits seit 1999 bietet <strong>BABELTRANS</strong> im Bereich Übersetzung und Dolmetschen seine Dienste an. Dabei versuchen wir unsere Methodik ständig weiter zu entwicklen und unseren Arbeitsprozess zu optimieren."
+    ],
+    [
+     "p",
+     "Jeder Auftrag wird exklusiv bearbeitet. Dazu nehmen wir uns die nötige Zeit und arbeiten mit den richtigen Werkzeugen."
+    ],
+    [
+     "p",
+     "Wir versichern Ihnen die Kohärenz der übersetzten Dokumente, einschließlich der best geeigneten Phraseologie, Terminologie und Definitionen."
+    ],
+    [
+     "h3",
+     "ARBEITSWEISE:"
+    ],
+    [
+     "ul",
+     [
+      "Jeder Auftrag wird zunächst analysiert, bevor er (gemäß der konkreten Vorstellungen des Kunden) einem Mitarbeiter zugeteilt wird.",
+      "Jeder Auftrag wird nochmals von einem zweiten Mitarbeiter überprüft.",
+      "Layout entsprechend dem Original oder gemäß der Vorstellung des Kunden."
+     ]
+    ],
+    [
+     "h3",
+     "UNSERE WERKZEUGE:"
+    ],
+    [
+     "ul",
+     [
+      "Übersetzungstools zur Identifizierung von Sprachstrukturen und analogen Terminologien.",
+      "Fachglossare.",
+      "Verwendung des vom Kunden bevorzugten Wortschatzes."
+     ]
+    ]
+   ]
+  },
+  "presupuesto": {
+   "ruta": "de/kostenvoranschlag.html",
+   "fuente": "de/kostenvoranschlag.html",
+   "titulo": "Kostenvoranschlag",
+   "titulo_html": "Kostenvoranschlag - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html\">Übersetzungen</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html\">Dolmetschen</a>"
+    ]
+   ]
+  },
+  "presupuesto-traduccion": {
+   "ruta": "de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html",
+   "fuente": "de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html",
+   "titulo": "",
+   "titulo_html": "Presupuesto traducción - babeltrans",
+   "formulario": {
+    "intro": [
+     "Füllen Sie das folgende Formular aus, um einen unverbindlichen Kostenvoranschlag für eine ÜBERSETZUNG zu beantragen."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Vor- und Nachname"
+     },
+     {
+      "nombre": "Empresa",
+      "tipo": "text",
+      "etiqueta": "Name des Unternehmens"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "Land"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Stadt"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "Email"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Dokumente laden"
+     },
+     {
+      "nombre": "Idioma_partida",
+      "tipo": "text",
+      "etiqueta": "Ausgangssprache"
+     },
+     {
+      "nombre": "Idioma_destino",
+      "tipo": "text",
+      "etiqueta": "Zielsprache"
+     },
+     {
+      "nombre": "Fecha_entrega",
+      "tipo": "text",
+      "etiqueta": "Abgabefrist"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": "Bemerkungen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ich akzeptiere die Datenschutzerklärung"
+     }
+    ],
+    "boton": "Kostenvoranschlag beantragen",
+    "gracias": "Dank für Ihre Kontaktaufnahme."
+   },
+   "bloques": []
+  },
+  "presupuesto-interpretacion": {
+   "ruta": "de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html",
+   "fuente": "de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html",
+   "titulo": "",
+   "titulo_html": "Presupuesto interpretación - babeltrans",
+   "formulario": {
+    "intro": [
+     "Füllen Sie das folgende Formular aus, um einen unverbindlichen Kostenvoranschlag im Bereich DOLMETSCHEN zu beantragen."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Vor- und Nachname"
+     },
+     {
+      "nombre": "Empresa",
+      "tipo": "text",
+      "etiqueta": "Name des Unternehmens"
+     },
+     {
+      "nombre": "Departamento",
+      "tipo": "text",
+      "etiqueta": "Abteilung"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Straße"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "Land"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Stadt"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "Email"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Telefonnummer"
+     },
+     {
+      "nombre": "Tipo_evento",
+      "tipo": "select",
+      "etiqueta": "Art der Veranstaltung",
+      "opciones": [
+       "Typ auswählen",
+       "Besprechung",
+       "Konvention",
+       "Pressekonferenz",
+       "Interview",
+       "Sonstige"
+      ]
+     },
+     {
+      "nombre": "Lugar",
+      "tipo": "text",
+      "etiqueta": "Ort der Veranstaltung"
+     },
+     {
+      "nombre": "Fecha",
+      "tipo": "text",
+      "etiqueta": "Datum"
+     },
+     {
+      "nombre": "Horario",
+      "tipo": "text",
+      "etiqueta": "Zeitplan"
+     },
+     {
+      "nombre": "Tipo_interpretacion",
+      "tipo": "select",
+      "etiqueta": "Art des Dolmetschens",
+      "opciones": [
+       "Typ auswählen",
+       "Konsekutiv",
+       "Geflüsterte Simultanübersetzung"
+      ]
+     },
+     {
+      "nombre": "Precisa_equipos",
+      "tipo": "select",
+      "etiqueta": "Brauchen Sie Dolmetscheinrichtung?",
+      "opciones": [
+       "Nein",
+       "Ja"
+      ]
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Dokumente laden"
+     },
+     {
+      "nombre": "Idioma_partida",
+      "tipo": "text",
+      "etiqueta": "Ausgangssprache"
+     },
+     {
+      "nombre": "Idioma_destino",
+      "tipo": "text",
+      "etiqueta": "Zielsprache"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": "Bemerkungen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ich akzeptiere die Datenschutzerklärung"
+     }
+    ],
+    "boton": "Kostenvoranschlag beantragen",
+    "gracias": "Dank für Ihre Kontaktaufnahme."
+   },
+   "bloques": []
+  },
+  "contacto": {
+   "ruta": "de/kontakt.html",
+   "fuente": "de/kontakt.html",
+   "titulo": "",
+   "titulo_html": "Contacto - babeltrans",
+   "formulario": {
+    "intro": [
+     "Sollten Sie weitere Informationen benötigen, füllen Sie bitte das folgende Formular aus. Sie können sich auch telefonisch oder per Email mit uns in Verbindung setzen.",
+     "BABELTRANS Tel.: +34 913147919 Mail: info@babeltrans.es"
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Persona",
+      "tipo": "text",
+      "etiqueta": "Kontaktperson"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Telefon"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Stadt"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "Email"
+     },
+     {
+      "nombre": "observaciones",
+      "tipo": "textarea",
+      "etiqueta": "Bemerkungen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ich akzeptiere die Datenschutzerklärung"
+     }
+    ],
+    "boton": "Senden",
+    "gracias": "Dank für Ihre Kontaktaufnahme."
+   },
+   "bloques": []
+  },
+  "cv": {
+   "ruta": "de/cv-ingles.html",
+   "fuente": "de/cv-ingles.html",
+   "titulo": "",
+   "titulo_html": "Traducir CV - babeltrans",
+   "formulario": {
+    "intro": [],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre"
+     },
+     {
+      "nombre": "mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Cargar CV"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Enviar",
+    "gracias": ""
+   },
+   "bloques": []
+  },
+  "cp": {
+   "ruta": "de/cp-ingles-aleman.html",
+   "fuente": "de/cp-ingles-aleman.html",
+   "titulo": "",
+   "titulo_html": "CP - babeltrans",
+   "formulario": {
+    "intro": [],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre"
+     },
+     {
+      "nombre": "mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Cargar Carta"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Enviar",
+    "gracias": ""
+   },
+   "bloques": []
+  },
+  "como-traductor": {
+   "ruta": "de/als-uebersetzer.html",
+   "fuente": "de/als-uebersetzer.html",
+   "titulo": "",
+   "titulo_html": "Trabajo traductor - babeltrans",
+   "formulario": {
+    "intro": [
+     "Wenn Sie Teil unseres Übersetzer-Teams werden wollen, füllen Sie bitte folgendes Formular aus."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Vorname"
+     },
+     {
+      "nombre": "Apellidos",
+      "tipo": "text",
+      "etiqueta": "Nachname"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Anschrift"
+     },
+     {
+      "nombre": "CP",
+      "tipo": "text",
+      "etiqueta": "Postleitzahl"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Stadt"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "Land"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Telefonnummer"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "Email"
+     },
+     {
+      "nombre": "Lengua_materna",
+      "tipo": "text",
+      "etiqueta": "Muttersprache"
+     },
+     {
+      "nombre": "Areas_especializacion",
+      "tipo": "textarea",
+      "etiqueta": "Fachgebiet"
+     },
+     {
+      "nombre": "Traduccion_jurada",
+      "tipo": "textarea",
+      "etiqueta": "Vereidigte Übersetzung"
+     },
+     {
+      "nombre": "Combinaciones_linguisticas",
+      "tipo": "textarea",
+      "etiqueta": "Sprach- kombinationen"
+     },
+     {
+      "nombre": "adjuntar_cv",
+      "tipo": "file",
+      "etiqueta": "CV hochladen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ich akzeptiere die Datenschutzerklärung"
+     }
+    ],
+    "boton": "Senden",
+    "gracias": "Dank für Ihre Kontaktaufnahme."
+   },
+   "bloques": []
+  },
+  "como-interprete": {
+   "ruta": "de/als-dolmetscher.html",
+   "fuente": "de/als-dolmetscher.html",
+   "titulo": "",
+   "titulo_html": "Trabajo interprete - babeltrans",
+   "formulario": {
+    "intro": [
+     "Wenn Sie Teil unseres Dolmetscher-Teams werden wollen, füllen Sie bitte folgendes Formular aus."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Vorname"
+     },
+     {
+      "nombre": "Apellidos",
+      "tipo": "text",
+      "etiqueta": "Nachname"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Anschrift"
+     },
+     {
+      "nombre": "CP",
+      "tipo": "text",
+      "etiqueta": "Postleitzahl"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Stadt"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "Land"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Telefonnummer"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "Email"
+     },
+     {
+      "nombre": "Lengua_materna",
+      "tipo": "text",
+      "etiqueta": "Muttersprache"
+     },
+     {
+      "nombre": "Tipos_interpretacion",
+      "tipo": "textarea",
+      "etiqueta": "Art von Dolmetschen"
+     },
+     {
+      "nombre": "Combinaciones_linguisticas",
+      "tipo": "textarea",
+      "etiqueta": "Sprachen- kombinationen"
+     },
+     {
+      "nombre": "adjuntar_cv",
+      "tipo": "file",
+      "etiqueta": "CV hochladen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ich akzeptiere die Datenschutzerklärung"
+     }
+    ],
+    "boton": "Senden",
+    "gracias": "Dank für Ihre Kontaktaufnahme."
+   },
+   "bloques": []
+  },
+  "aviso-legal": {
+   "ruta": "de/rechtliche-hinweise.html",
+   "fuente": "de/rechtliche-hinweise.html",
+   "titulo": "Rechtliche Hinweise",
+   "titulo_html": "Rechtliche Hinweise - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "The use of the domain http://www.babeltrans.es is protected as per the provisions of Act 34/2002, of 11 July, on Information Society Services and Electronic Commerce. Nevertheless, full compliance of the legal terms with the regulations in force as regards Data Protection, E-Commerce, Conditions of Engagement, Intellectual Property and further secondary arrangements should be observed."
+    ],
+    [
+     "h3",
+     "1. Acceptance of the Legal Terms"
+    ],
+    [
+     "p",
+     "Access and use of this web site entails the acceptance of all legal terms. Babeltrans reserves the right to modify them at any time. Therefore, every visitor and/or user is responsible for carefully reading the legal terms that are valid whenever this web site is accessed."
+    ],
+    [
+     "h3",
+     "2. Object"
+    ],
+    [
+     "p",
+     "Through the web site http://www.babeltrans.es/, users have access to a variety of contents, information services and data (the \"Contents\"). Babeltrans reserves the right to modify the presentation, configuration and localization of the web site at any time, including the contents and services of the aforementioned web site."
+    ],
+    [
+     "h3",
+     "3. Access"
+    ],
+    [
+     "p",
+     "Access to the information on the different services available on the web site, as well as browsing it, shall be open and free. Users are therefore not required to register with their personal data or use passwords."
+    ],
+    [
+     "p",
+     "In the event it were necessary to provide personal data in order to gain access to certain contents of services, users guarantee that the information provided is true, exact, authentic and valid. Babeltrans shall process these data automatically, taking into account its nature and purpose, under the terms mentioned in the section \"Privacy Policy\"."
+    ],
+    [
+     "h3",
+     "4. Conditions for use"
+    ],
+    [
+     "p",
+     "The user undertakes to make appropriate and licit use of the web site and its contents and services in agreement with the legislation applicable at all times, the legal terms of the web site, morality and generally accepted good customs as well as public order."
+    ],
+    [
+     "h3",
+     "5. Limited liability"
+    ],
+    [
+     "p",
+     "Use of the web page http://www.babeltrans.es and the contents and information therein is the sole responsibility of the user."
+    ],
+    [
+     "p",
+     "Under no circumstances shall Babeltrans accept liability of any kind, including indirect or secondary liability, for damages that may derive for the user or a third party from the lack of availability, maintenance, incorrect information, inexact information or defective operation, utility, suitability or validity of the page."
+    ],
+    [
+     "p",
+     "Babeltrans assumes no responsibility nor guarantees utilisation of the contents and information published on the web page http://www.babeltrans.es. Babeltrans cannot be held liable for any loss or damage that may affect the user or a third party as a result of accessing and using the page, nor can the Company be held liable in the event of the contents and information published on the web page being processed by a third party."
+    ],
+    [
+     "h3",
+     "Links"
+    ],
+    [
+     "p",
+     "Babeltrans assumes no liability arising from the concession, contents and existing information on third-party web pages which may be linked on http://www.babeltrans.es. Furthermore, Babeltrans cannot prevent the existence of viruses or other elements on third-party web sites that could cause alterations to computer systems (hardware and software), documents or files owned by the user."
+    ],
+    [
+     "h3",
+     "6. Intellectual property"
+    ],
+    [
+     "p",
+     "The contents, texts, photographs, designs, logos, images, computer programmes, source codes and, in general, any intellectual creation that appears on this web site, as well as the entire web site as an artistic multimedia expression, are protected by law as copyright concerning intellectual property. Babeltrans is proprietor of the elements that make up the graphic design of its web site, menus, navigation buttons, HTML code, texts, images, textures, graphics and any other content of the web site. In any event, it owns the corresponding authorization for the use of such elements. The content of this web site may not be reproduced , whether fully or partially, transmitted, recorded by any information retrieval system, in any manner or by any means, unless prior authorisation to do so has been given in writing."
+    ],
+    [
+     "h3",
+     "7. Data Protection"
+    ],
+    [
+     "p",
+     "In order to make use of some of the Services, the User must previously provide certain personal data. To that end, Babeltrans shall automatically process Personal Data in accordance with Act 15/1999, of 13 December, on Personal Data Protection."
+    ],
+    [
+     "h3",
+     "8. Duration and termination"
+    ],
+    [
+     "p",
+     "Initially, the services offered on this web site are for an unlimited period. Babeltrans may, however, consider it to have concluded or suspend any service of the website. If possible, Babeltrans shall give notice of the conclusion or suspension of a certain service."
+    ]
+   ]
+  },
+  "privacidad": {
+   "ruta": "de/datenschutz.html",
+   "fuente": "de/datenschutz.html",
+   "titulo": "Datenschutz",
+   "titulo_html": "Datenschutz - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "All correspondence with Babeltrans, by any means, whether via email or via the forms available on this web site, or to your email address, entails your express consent to have your personal data included and processed in files owned by Babeltrans, domiciled at C/ Villa de Marín 26, 28029 Madrid (Spain)."
+    ],
+    [
+     "p",
+     "This personal data shall be treated according to Act 15/1999, of 13 December, on the Personal Data Protection."
+    ],
+    [
+     "p",
+     "By virtue of this Act, the person concerned may exercise the right to access, rectify, cancel and contest the personal data that forms part of the aforementioned files. At all times, any person has the right to revoke his consent in writing."
+    ],
+    [
+     "p",
+     "In order to do so, please contact us in writing:"
+    ],
+    [
+     "p",
+     "Babeltrans<br> C/ Villa de Marín, 26<br> 28029 Madrid (Spain)<br> Tel.: +34 913147919<br> Mail: Diese E-Mail-Adresse ist gegen Spambots geschützt! JavaScript muss aktiviert werden, damit sie angezeigt werden kann."
+    ]
+   ]
+  },
+  "mapa": {
+   "ruta": "de/sitemap.html",
+   "fuente": "de/sitemap.html",
+   "titulo": "",
+   "titulo_html": "Sitemap - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Sitemap"
+    ],
+    [
+     "ul",
+     [
+      "Home",
+      "<a href=\"de/wer-sind-wir.html\">Wer sind wir</a> <a href=\"de/wer-sind-wir/unsere-mitarbeiter.html\">Unsere Mitarbeiter</a> <a href=\"de/wer-sind-wir/arbeiten-sie-mit-uns.html\">Arbeiten Sie mit uns</a>",
+      "<a href=\"de/wer-sind-wir/unsere-mitarbeiter.html\">Unsere Mitarbeiter</a>",
+      "<a href=\"de/wer-sind-wir/arbeiten-sie-mit-uns.html\">Arbeiten Sie mit uns</a>",
+      "<a href=\"de/dienste.html\">Dienste</a> <a href=\"de/dienste/uebersetzungen.html\">Übersetzungen</a> <a href=\"de/dienste/dolmetschen.html\">Dolmetschen</a>",
+      "<a href=\"de/dienste/uebersetzungen.html\">Übersetzungen</a>",
+      "<a href=\"de/dienste/dolmetschen.html\">Dolmetschen</a>",
+      "<a href=\"de/arbeitsweise-und-werkzeuge.html\">Arbeitsweise und Werkzeuge</a>",
+      "<a href=\"de/kostenvoranschlag.html\">Kostenvoranschlag</a> <a href=\"de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html\">Kostenvoranschlag Übersetzen</a> <a href=\"de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html\">Kostenvoranschlag Dolmetschen</a>",
+      "<a href=\"de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html\">Kostenvoranschlag Übersetzen</a>",
+      "<a href=\"de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html\">Kostenvoranschlag Dolmetschen</a>",
+      "<a href=\"de/kontakt.html\">Kontakt</a>",
+      "<a href=\"de/cv-ingles.html\">CV</a>",
+      "<a href=\"de/cp-ingles-aleman.html\">CP</a>"
+     ]
+    ]
+   ]
+  },
+  "mediacion": {
+   "ruta": "de/home/71.html",
+   "fuente": "de/home/71.html",
+   "titulo": "Vermittlung",
+   "titulo_html": "babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Die Vermittlung oder das Verhandlungsdolmetschen schafft die nötigen Synthesen im Rahmen von Sitzungen, Geschäftreisen oder jedwediger Art von geschäftlicher Zusammenkunft, bei der mit einer mehrsprachigen Beteiligjung gerechnet wird."
+    ],
+    [
+     "p",
+     "In diesen Fällen muss dem Dolmetscher bereits vor der Sitzung ein Höchstmass an Informationen über das Arbeitsfeld und die Ziele des Kunden zur Verfügung gestellt werden."
+    ],
+    [
+     "cita",
+     "Bei BABELTRANS setzen wir auf den Erfolg unserer Kunden und bieten Ihnen zur Sicherung desgleichen weltweit Sprachlösungen an."
+    ]
+   ]
+  },
+  "formacion": {
+   "ruta": "de/home/72.html",
+   "fuente": "de/home/72.html",
+   "titulo": "Beratung Spanisch-Training",
+   "titulo_html": "babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Bei <strong>BABELTRANS</strong> bieten wir kostenlose Spracheinstufungstests an und stellen ein auf die Ausbildungsbedürfnisse Ihrere Führungskräfte ausgerichtetes Sprachtraining zusammen."
+    ],
+    [
+     "h3",
+     "Unsere Seminare in Spanisch in 2011:"
+    ],
+    [
+     "ul",
+     [
+      "Soziale Kompetenzen.",
+      "Team-Management.",
+      "Präsentationstechniken.",
+      "Führungsqualitäten.",
+      "Sonstiges."
+     ]
+    ],
+    [
+     "h3",
+     "<a href=\"de/kontakt.html\">Weitere Informationen anfordern</a> <br>"
+    ]
+   ]
+  }
+ },
+ "menu": [
+  {
+   "texto": "Home",
+   "ruta": "",
+   "hijos": []
+  },
+  {
+   "texto": "Wer sind wir",
+   "ruta": "de/wer-sind-wir.html",
+   "hijos": [
+    {
+     "texto": "Unsere Mitarbeiter",
+     "ruta": "de/wer-sind-wir/unsere-mitarbeiter.html"
+    },
+    {
+     "texto": "Arbeiten Sie mit uns",
+     "ruta": "de/wer-sind-wir/arbeiten-sie-mit-uns.html"
+    }
+   ]
+  },
+  {
+   "texto": "Dienste",
+   "ruta": "de/dienste.html",
+   "hijos": [
+    {
+     "texto": "Übersetzungen",
+     "ruta": "de/dienste/uebersetzungen.html"
+    },
+    {
+     "texto": "Dolmetschen",
+     "ruta": "de/dienste/dolmetschen.html"
+    }
+   ]
+  },
+  {
+   "texto": "Arbeitsweise und Werkzeuge",
+   "ruta": "de/arbeitsweise-und-werkzeuge.html",
+   "hijos": []
+  },
+  {
+   "texto": "Kostenvoranschlag",
+   "ruta": "de/kostenvoranschlag.html",
+   "hijos": [
+    {
+     "texto": "Kostenvoranschlag Übersetzen",
+     "ruta": "de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html"
+    },
+    {
+     "texto": "Kostenvoranschlag Dolmetschen",
+     "ruta": "de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html"
+    }
+   ]
+  },
+  {
+   "texto": "Kontakt",
+   "ruta": "de/kontakt.html",
+   "hijos": []
+  },
+  {
+   "texto": "CV",
+   "ruta": "de/cv-ingles.html",
+   "hijos": []
+  },
+  {
+   "texto": "CP",
+   "ruta": "de/cp-ingles-aleman.html",
+   "hijos": []
+  }
+ ],
+ "pie": [
+  {
+   "texto": "Rechtliche Hinweise",
+   "ruta": "de/rechtliche-hinweise.html"
+  },
+  {
+   "texto": "Datenschutz",
+   "ruta": "de/datenschutz.html"
+  },
+  {
+   "texto": "Sitemap",
+   "ruta": "de/sitemap.html"
+  }
+ ]
+}

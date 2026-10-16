@@ -1,0 +1,1880 @@
+[
+ {
+  "url": "https://babeltrans.es/",
+  "captura": "20250317071605",
+  "mime": "text/html",
+  "fichero": "index.html"
+ },
+ {
+  "url": "https://babeltrans.es//modules/mod_jaslideshow/ja_slideshow/ja.slideshow.js",
+  "captura": "20221006111627",
+  "mime": "application/javascript",
+  "fichero": "modules/mod_jaslideshow/ja_slideshow/ja.slideshow.js"
+ },
+ {
+  "url": "http://babeltrans.es/als-dolmetscher.html",
+  "captura": "20130712112945",
+  "mime": "text/html",
+  "fichero": "als-dolmetscher.html"
+ },
+ {
+  "url": "http://babeltrans.es/als-uebersetzer.html",
+  "captura": "20130712112938",
+  "mime": "text/html",
+  "fichero": "als-uebersetzer.html"
+ },
+ {
+  "url": "http://babeltrans.es/arbeitsweise-und-werkzeuge.html",
+  "captura": "20130712112834",
+  "mime": "text/html",
+  "fichero": "arbeitsweise-und-werkzeuge.html"
+ },
+ {
+  "url": "http://babeltrans.es/aviso-legal.html",
+  "captura": "20170214011855",
+  "mime": "text/html",
+  "fichero": "aviso-legal.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/component/contact/12-contacts/1-fran.html",
+  "captura": "20130713231647",
+  "mime": "text/html",
+  "fichero": "component/contact/12-contacts/1-fran.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/component/contact/12-contacts/2-martijn-naarding.html",
+  "captura": "20130713231730",
+  "mime": "text/html",
+  "fichero": "component/contact/12-contacts/2-martijn-naarding.html"
+ },
+ {
+  "url": "http://babeltrans.es/component/content/article/71.html",
+  "captura": "20170213043026",
+  "mime": "text/html",
+  "fichero": "component/content/article/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/component/content/article/72.html",
+  "captura": "20130712112547",
+  "mime": "text/html",
+  "fichero": "component/content/article/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/components/com_breezingforms/facileforms.js",
+  "captura": "20221006121404",
+  "mime": "application/javascript",
+  "fichero": "components/com_breezingforms/facileforms.js"
+ },
+ {
+  "url": "http://www.babeltrans.es/components/com_breezingforms/images/captcha/refresh-captcha.png",
+  "captura": "20151104112710",
+  "mime": "image/png",
+  "fichero": "components/com_breezingforms/images/captcha/refresh-captcha.png"
+ },
+ {
+  "url": "https://babeltrans.es/components/com_joomfish/images/flags/de.gif",
+  "captura": "20221006111111",
+  "mime": "image/gif",
+  "fichero": "components/com_joomfish/images/flags/de.gif"
+ },
+ {
+  "url": "https://babeltrans.es/components/com_joomfish/images/flags/en.gif",
+  "captura": "20221006114105",
+  "mime": "image/gif",
+  "fichero": "components/com_joomfish/images/flags/en.gif"
+ },
+ {
+  "url": "https://babeltrans.es/components/com_joomfish/images/flags/es.gif",
+  "captura": "20221006111501",
+  "mime": "image/gif",
+  "fichero": "components/com_joomfish/images/flags/es.gif"
+ },
+ {
+  "url": "http://babeltrans.es/components/com_joomfish/images/flags/nl.gif",
+  "captura": "20171003163629",
+  "mime": "image/gif",
+  "fichero": "components/com_joomfish/images/flags/nl.gif"
+ },
+ {
+  "url": "http://babeltrans.es/components/com_xmap/css/xmap.css",
+  "captura": "20160607000746",
+  "mime": "text/css",
+  "fichero": "components/com_xmap/css/xmap.css"
+ },
+ {
+  "url": "http://babeltrans.es/contact.html",
+  "captura": "20130713231657",
+  "mime": "text/html",
+  "fichero": "contact.html"
+ },
+ {
+  "url": "http://babeltrans.es/contacto-traduccion-holandes.html",
+  "captura": "20130711170214",
+  "mime": "text/html",
+  "fichero": "contacto-traduccion-holandes.html"
+ },
+ {
+  "url": "http://babeltrans.es/contacto-traduccion.html",
+  "captura": "20170214011519",
+  "mime": "text/html",
+  "fichero": "contacto-traduccion.html"
+ },
+ {
+  "url": "https://babeltrans.es/cp-ingles-aleman.html",
+  "captura": "20210507094657",
+  "mime": "text/html",
+  "fichero": "cp-ingles-aleman.html"
+ },
+ {
+  "url": "https://babeltrans.es/cv-ingles.html",
+  "captura": "20221005160701",
+  "mime": "text/html",
+  "fichero": "cv-ingles.html"
+ },
+ {
+  "url": "http://babeltrans.es/datenschutz.html",
+  "captura": "20130712113017",
+  "mime": "text/html",
+  "fichero": "datenschutz.html"
+ },
+ {
+  "url": "https://babeltrans.es/de.html",
+  "captura": "20240417014558",
+  "mime": "text/html",
+  "fichero": "de.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/als-dolmetscher.html",
+  "captura": "20240524141702",
+  "mime": "text/html",
+  "fichero": "de/als-dolmetscher.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/als-uebersetzer.html",
+  "captura": "20231208085311",
+  "mime": "text/html",
+  "fichero": "de/als-uebersetzer.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/arbeitsweise-und-werkzeuge.html",
+  "captura": "20231208101438",
+  "mime": "text/html",
+  "fichero": "de/arbeitsweise-und-werkzeuge.html"
+ },
+ {
+  "url": "http://babeltrans.es/de/component/contact/12-contacts.html",
+  "captura": "20130712112928",
+  "mime": "text/html",
+  "fichero": "de/component/contact/12-contacts.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/de/component/contact/12-contacts/1-fran.html",
+  "captura": "20130712113111",
+  "mime": "text/html",
+  "fichero": "de/component/contact/12-contacts/1-fran.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/de/component/contact/12-contacts/2-martijn-naarding.html",
+  "captura": "20130712113121",
+  "mime": "text/html",
+  "fichero": "de/component/contact/12-contacts/2-martijn-naarding.html"
+ },
+ {
+  "url": "http://babeltrans.es/de/component/content/article/71.html",
+  "captura": "20170213015847",
+  "mime": "text/html",
+  "fichero": "de/component/content/article/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/de/component/content/article/72.html",
+  "captura": "20130711170027",
+  "mime": "text/html",
+  "fichero": "de/component/content/article/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/cp-ingles-aleman.html",
+  "captura": "20231208090053",
+  "mime": "text/html",
+  "fichero": "de/cp-ingles-aleman.html"
+ },
+ {
+  "url": "http://babeltrans.es/de/cv-ingles-holandes.html",
+  "captura": "20130614014805",
+  "mime": "text/html",
+  "fichero": "de/cv-ingles-holandes.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/cv-ingles.html",
+  "captura": "20240524140312",
+  "mime": "text/html",
+  "fichero": "de/cv-ingles.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/datenschutz.html",
+  "captura": "20231208095358",
+  "mime": "text/html",
+  "fichero": "de/datenschutz.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/dienste.html",
+  "captura": "20240417025548",
+  "mime": "text/html",
+  "fichero": "de/dienste.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/dienste/dolmetschen.html",
+  "captura": "20240417021128",
+  "mime": "text/html",
+  "fichero": "de/dienste/dolmetschen.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/dienste/uebersetzungen.html",
+  "captura": "20230922005431",
+  "mime": "text/html",
+  "fichero": "de/dienste/uebersetzungen.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/home.html",
+  "captura": "20230922012328",
+  "mime": "text/html",
+  "fichero": "de/home.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/de/home/71.html",
+  "captura": "20130713231325",
+  "mime": "text/html",
+  "fichero": "de/home/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/de/home/72.html",
+  "captura": "20130713231414",
+  "mime": "text/html",
+  "fichero": "de/home/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/kontakt.html",
+  "captura": "20230922015732",
+  "mime": "text/html",
+  "fichero": "de/kontakt.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/kostenvoranschlag.html",
+  "captura": "20240524132517",
+  "mime": "text/html",
+  "fichero": "de/kostenvoranschlag.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html",
+  "captura": "20240524130546",
+  "mime": "text/html",
+  "fichero": "de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html",
+  "captura": "20230922010628",
+  "mime": "text/html",
+  "fichero": "de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/rechtliche-hinweise.html",
+  "captura": "20240417025753",
+  "mime": "text/html",
+  "fichero": "de/rechtliche-hinweise.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/sitemap.html",
+  "captura": "20230922020105",
+  "mime": "text/html",
+  "fichero": "de/sitemap.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/wer-sind-wir.html",
+  "captura": "20230922024224",
+  "mime": "text/html",
+  "fichero": "de/wer-sind-wir.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/wer-sind-wir/arbeiten-sie-mit-uns.html",
+  "captura": "20240417024424",
+  "mime": "text/html",
+  "fichero": "de/wer-sind-wir/arbeiten-sie-mit-uns.html"
+ },
+ {
+  "url": "https://babeltrans.es/de/wer-sind-wir/unsere-mitarbeiter.html",
+  "captura": "20230601021515",
+  "mime": "text/html",
+  "fichero": "de/wer-sind-wir/unsere-mitarbeiter.html"
+ },
+ {
+  "url": "http://babeltrans.es/dienste.html",
+  "captura": "20130712112802",
+  "mime": "text/html",
+  "fichero": "dienste.html"
+ },
+ {
+  "url": "http://babeltrans.es/dienste/dolmetschen.html",
+  "captura": "20130712112826",
+  "mime": "text/html",
+  "fichero": "dienste/dolmetschen.html"
+ },
+ {
+  "url": "http://babeltrans.es/dienste/uebersetzungen.html",
+  "captura": "20130712112811",
+  "mime": "text/html",
+  "fichero": "dienste/uebersetzungen.html"
+ },
+ {
+  "url": "http://babeltrans.es/disclaimer.html",
+  "captura": "20130713231849",
+  "mime": "text/html",
+  "fichero": "disclaimer.html"
+ },
+ {
+  "url": "https://babeltrans.es/en.html",
+  "captura": "20240221005003",
+  "mime": "text/html",
+  "fichero": "en.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/as-a-translator.html",
+  "captura": "20240221013727",
+  "mime": "text/html",
+  "fichero": "en/as-a-translator.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/as-an-interpreter.html",
+  "captura": "20240221003146",
+  "mime": "text/html",
+  "fichero": "en/as-an-interpreter.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/en/component/contact/12-contacts/1-fran.html",
+  "captura": "20130713231655",
+  "mime": "text/html",
+  "fichero": "en/component/contact/12-contacts/1-fran.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/en/component/contact/12-contacts/2-martijn-naarding.html",
+  "captura": "20130713231733",
+  "mime": "text/html",
+  "fichero": "en/component/contact/12-contacts/2-martijn-naarding.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/component/content/article/71.html",
+  "captura": "20240524140404",
+  "mime": "text/html",
+  "fichero": "en/component/content/article/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/en/component/content/article/72.html",
+  "captura": "20130711170133",
+  "mime": "text/html",
+  "fichero": "en/component/content/article/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/contact.html",
+  "captura": "20240221003022",
+  "mime": "text/html",
+  "fichero": "en/contact.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/cp-ingles-aleman.html",
+  "captura": "20240524133314",
+  "mime": "text/html",
+  "fichero": "en/cp-ingles-aleman.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/cv-ingles.html",
+  "captura": "20240417033159",
+  "mime": "text/html",
+  "fichero": "en/cv-ingles.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/disclaimer.html",
+  "captura": "20240221022853",
+  "mime": "text/html",
+  "fichero": "en/disclaimer.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/home.html",
+  "captura": "20211022192558",
+  "mime": "text/html",
+  "fichero": "en/home.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/en/home/71.html",
+  "captura": "20130713231512",
+  "mime": "text/html",
+  "fichero": "en/home/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/en/home/72.html",
+  "captura": "20130713231529",
+  "mime": "text/html",
+  "fichero": "en/home/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/methodology-and-tools.html",
+  "captura": "20240221025045",
+  "mime": "text/html",
+  "fichero": "en/methodology-and-tools.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/privacy-policy.html",
+  "captura": "20240221020539",
+  "mime": "text/html",
+  "fichero": "en/privacy-policy.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/request-a-quote.html",
+  "captura": "20240221012633",
+  "mime": "text/html",
+  "fichero": "en/request-a-quote.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/request-a-quote/interpretation-quote.html",
+  "captura": "20240221021938",
+  "mime": "text/html",
+  "fichero": "en/request-a-quote/interpretation-quote.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/request-a-quote/translation-quote.html",
+  "captura": "20240221005555",
+  "mime": "text/html",
+  "fichero": "en/request-a-quote/translation-quote.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/services.html",
+  "captura": "20240221025929",
+  "mime": "text/html",
+  "fichero": "en/services.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/services/interpreting.html",
+  "captura": "20240221030036",
+  "mime": "text/html",
+  "fichero": "en/services/interpreting.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/services/translation.html",
+  "captura": "20240221004324",
+  "mime": "text/html",
+  "fichero": "en/services/translation.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/webmap.html",
+  "captura": "20240221023614",
+  "mime": "text/html",
+  "fichero": "en/webmap.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/who-we-are.html",
+  "captura": "20240221020736",
+  "mime": "text/html",
+  "fichero": "en/who-we-are.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/who-we-are/our-collaborators.html",
+  "captura": "20240221022724",
+  "mime": "text/html",
+  "fichero": "en/who-we-are/our-collaborators.html"
+ },
+ {
+  "url": "https://babeltrans.es/en/who-we-are/work-with-us.html",
+  "captura": "20240524142614",
+  "mime": "text/html",
+  "fichero": "en/who-we-are/work-with-us.html"
+ },
+ {
+  "url": "https://babeltrans.es/es.html",
+  "captura": "20240417014839",
+  "mime": "text/html",
+  "fichero": "es.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/aviso-legal.html",
+  "captura": "20240221020531",
+  "mime": "text/html",
+  "fichero": "es/aviso-legal.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/component/contact/12-contacts.html",
+  "captura": "20130712112559",
+  "mime": "text/html",
+  "fichero": "es/component/contact/12-contacts.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/component/content/article/71.html",
+  "captura": "20230207115716",
+  "mime": "text/html",
+  "fichero": "es/component/content/article/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/component/content/article/72.html",
+  "captura": "20130711165800",
+  "mime": "text/html",
+  "fichero": "es/component/content/article/72.html"
+ },
+ {
+  "url": "http://www.babeltrans.es:80/es/contacto-traduccion-holandes.html",
+  "captura": "20130901030736",
+  "mime": "text/html",
+  "fichero": "es/contacto-traduccion-holandes.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/contacto-traduccion.html",
+  "captura": "20240221021706",
+  "mime": "text/html",
+  "fichero": "es/contacto-traduccion.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/cp-ingles-aleman.html",
+  "captura": "20240221012937",
+  "mime": "text/html",
+  "fichero": "es/cp-ingles-aleman.html"
+ },
+ {
+  "url": "http://babeltrans.es:80/es/cv-ingles-holandes.html",
+  "captura": "20130619030315",
+  "mime": "text/html",
+  "fichero": "es/cv-ingles-holandes.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/cv-ingles.html",
+  "captura": "20240524132609",
+  "mime": "text/html",
+  "fichero": "es/cv-ingles.html"
+ },
+ {
+  "url": "http://babeltrans.es/es/home-traduccion-holandes.html",
+  "captura": "20130712112726",
+  "mime": "text/html",
+  "fichero": "es/home-traduccion-holandes.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/home-traduccion-holandes/71.html",
+  "captura": "20130712113013",
+  "mime": "text/html",
+  "fichero": "es/home-traduccion-holandes/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/home-traduccion-holandes/72.html",
+  "captura": "20130712113033",
+  "mime": "text/html",
+  "fichero": "es/home-traduccion-holandes/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/home-traducciones.html",
+  "captura": "20221005143852",
+  "mime": "text/html",
+  "fichero": "es/home-traducciones.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/mapa-web.html",
+  "captura": "20240221023240",
+  "mime": "text/html",
+  "fichero": "es/mapa-web.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/metodologia-herramientas-traduccion.html",
+  "captura": "20240221003340",
+  "mime": "text/html",
+  "fichero": "es/metodologia-herramientas-traduccion.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/politica-de-privacidad.html",
+  "captura": "20240221015209",
+  "mime": "text/html",
+  "fichero": "es/politica-de-privacidad.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/quienessomos-traduccion-holandes.html",
+  "captura": "20130711165621",
+  "mime": "text/html",
+  "fichero": "es/quienessomos-traduccion-holandes.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/quienessomos-traduccion-holandes/nuestros-colaboradores.html",
+  "captura": "20130711165626",
+  "mime": "text/html",
+  "fichero": "es/quienessomos-traduccion-holandes/nuestros-colaboradores.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/quienessomos-traduccion-holandes/trabaja-con-nosotros.html",
+  "captura": "20130711165640",
+  "mime": "text/html",
+  "fichero": "es/quienessomos-traduccion-holandes/trabaja-con-nosotros.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/quienessomos-traducciones.html",
+  "captura": "20240221013018",
+  "mime": "text/html",
+  "fichero": "es/quienessomos-traducciones.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html",
+  "captura": "20240417021812",
+  "mime": "text/html",
+  "fichero": "es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html",
+  "captura": "20231208095542",
+  "mime": "text/html",
+  "fichero": "es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/servicios-traduccion-holandes.html",
+  "captura": "20130711165648",
+  "mime": "text/html",
+  "fichero": "es/servicios-traduccion-holandes.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/servicios-traduccion-holandes/interpretacion.html",
+  "captura": "20130711165701",
+  "mime": "text/html",
+  "fichero": "es/servicios-traduccion-holandes/interpretacion.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/es/servicios-traduccion-holandes/traduccion.html",
+  "captura": "20130711165651",
+  "mime": "text/html",
+  "fichero": "es/servicios-traduccion-holandes/traduccion.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/servicios-traducciones.html",
+  "captura": "20240417015259",
+  "mime": "text/html",
+  "fichero": "es/servicios-traducciones.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/servicios-traducciones/interpretacion-holandes.html",
+  "captura": "20240417033402",
+  "mime": "text/html",
+  "fichero": "es/servicios-traducciones/interpretacion-holandes.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/servicios-traducciones/traduccion-tecnica-manuales.html",
+  "captura": "20240221020352",
+  "mime": "text/html",
+  "fichero": "es/servicios-traducciones/traduccion-tecnica-manuales.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/solicite-presupuesto-traduccion.html",
+  "captura": "20240221012323",
+  "mime": "text/html",
+  "fichero": "es/solicite-presupuesto-traduccion.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html",
+  "captura": "20240221023822",
+  "mime": "text/html",
+  "fichero": "es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/solicite-presupuesto-traduccion/presupuesto-traduccion.html",
+  "captura": "20240221025308",
+  "mime": "text/html",
+  "fichero": "es/solicite-presupuesto-traduccion/presupuesto-traduccion.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/trabajar-como-interprete.html",
+  "captura": "20240417014218",
+  "mime": "text/html",
+  "fichero": "es/trabajar-como-interprete.html"
+ },
+ {
+  "url": "https://babeltrans.es/es/trabajar-como-traductor.html",
+  "captura": "20240221020919",
+  "mime": "text/html",
+  "fichero": "es/trabajar-como-traductor.html"
+ },
+ {
+  "url": "https://babeltrans.es/favicon.ico",
+  "captura": "20221006111759",
+  "mime": "image/x-icon",
+  "fichero": "favicon.ico"
+ },
+ {
+  "url": "https://babeltrans.es/ff_secimage.php?option=com_breezingforms&showSecImage=true",
+  "captura": "20220130191112",
+  "mime": "image/png",
+  "fichero": "ff_secimage.php__option_com_breezingforms_showSecImage_true"
+ },
+ {
+  "url": "http://www.babeltrans.es/home.html",
+  "captura": "20130713231310",
+  "mime": "text/html",
+  "fichero": "home.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/home/72.html",
+  "captura": "20130713231800",
+  "mime": "text/html",
+  "fichero": "home/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/images/banners/static_230x192%20copia.jpg",
+  "captura": "20221006113347",
+  "mime": "image/jpeg",
+  "fichero": "images/banners/static_230x192%20copia.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/resized/images/stories/imagenes/interpretacion1_50_50.jpg",
+  "captura": "20171003155109",
+  "mime": "image/jpeg",
+  "fichero": "images/resized/images/stories/imagenes/interpretacion1_50_50.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/resized/images/stories/imagenes/traduccion1_50_50.jpg",
+  "captura": "20171003164233",
+  "mime": "image/jpeg",
+  "fichero": "images/resized/images/stories/imagenes/traduccion1_50_50.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/Equipo.jpg",
+  "captura": "20171003160316",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/Equipo.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/Gracias%202.png",
+  "captura": "20181128123657",
+  "mime": "image/png",
+  "fichero": "images/stories/imagenes/Gracias%202.png"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/Mediacin.jpg",
+  "captura": "20160607025440",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/Mediacin.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/cabecera1.jpg",
+  "captura": "20160606233646",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/cabecera1.jpg"
+ },
+ {
+  "url": "https://babeltrans.es/images/stories/imagenes/cabecera2.jpg",
+  "captura": "20221006113058",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/cabecera2.jpg"
+ },
+ {
+  "url": "https://babeltrans.es/images/stories/imagenes/cabecera3.jpg",
+  "captura": "20221006141608",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/cabecera3.jpg"
+ },
+ {
+  "url": "https://babeltrans.es/images/stories/imagenes/colaborador_traductor.jpg",
+  "captura": "20221006124031",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/colaborador_traductor.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/colaboradores.jpg",
+  "captura": "20150820153609",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/colaboradores.jpg"
+ },
+ {
+  "url": "https://babeltrans.es/images/stories/imagenes/colaboradores2.jpg",
+  "captura": "20221006121804",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/colaboradores2.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/cp.png",
+  "captura": "20160607030029",
+  "mime": "image/png",
+  "fichero": "images/stories/imagenes/cp.png"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/cursos1.jpg",
+  "captura": "20161229053337",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/cursos1.jpg"
+ },
+ {
+  "url": "http://www.babeltrans.es/images/stories/imagenes/cva3.png",
+  "captura": "20151104075134",
+  "mime": "image/png",
+  "fichero": "images/stories/imagenes/cva3.png"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/excelente2.jpg",
+  "captura": "20171003164314",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/excelente2.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/excelente5.jpg",
+  "captura": "20130729063847",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/excelente5.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/gracias%201.png",
+  "captura": "20150820181046",
+  "mime": "image/png",
+  "fichero": "images/stories/imagenes/gracias%201.png"
+ },
+ {
+  "url": "http://www.babeltrans.es/images/stories/imagenes/gracias.png",
+  "captura": "20151104064807",
+  "mime": "image/png",
+  "fichero": "images/stories/imagenes/gracias.png"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/interpretacion1.jpg",
+  "captura": "20160607015032",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/interpretacion1.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/interpretacion2.jpg",
+  "captura": "20160607001535",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/interpretacion2.jpg"
+ },
+ {
+  "url": "https://babeltrans.es/images/stories/imagenes/metodologa1.jpg",
+  "captura": "20221006113332",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/metodologa1.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/metodologia1.jpg",
+  "captura": "20160607010100",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/metodologia1.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/metodologia2.jpg",
+  "captura": "20181129031706",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/metodologia2.jpg"
+ },
+ {
+  "url": "https://babeltrans.es/images/stories/imagenes/mpresupuesto1.jpg",
+  "captura": "20221006111113",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/mpresupuesto1.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/mpresupuesto2.jpg",
+  "captura": "20171003162449",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/mpresupuesto2.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/quienes-somos.jpg",
+  "captura": "20181128172252",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/quienes-somos.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/servicios1.jpg",
+  "captura": "20160610055318",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/servicios1.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/servicios2.jpg",
+  "captura": "20160610062822",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/servicios2.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/trabaja1.jpg",
+  "captura": "20181129060011",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/trabaja1.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/trabaja2.jpg",
+  "captura": "20170101054229",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/trabaja2.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/imagenes/traduccion1.jpg",
+  "captura": "20181129033023",
+  "mime": "image/jpeg",
+  "fichero": "images/stories/imagenes/traduccion1.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/slideshow/p1.png",
+  "captura": "20171003160051",
+  "mime": "image/png",
+  "fichero": "images/stories/slideshow/p1.png"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/slideshow/s2.png",
+  "captura": "20130729063841",
+  "mime": "image/png",
+  "fichero": "images/stories/slideshow/s2.png"
+ },
+ {
+  "url": "http://babeltrans.es/images/stories/slideshowhol/s1%20hol.png",
+  "captura": "20161229045016",
+  "mime": "image/png",
+  "fichero": "images/stories/slideshowhol/s1%20hol.png"
+ },
+ {
+  "url": "https://babeltrans.es/index.php",
+  "captura": "20240417023548",
+  "mime": "text/html",
+  "fichero": "index.php"
+ },
+ {
+  "url": "http://babeltrans.es/index.php?raw=true&option=com_breezingforms&bfCaptcha=true&Itemid=74",
+  "captura": "20181129193150",
+  "mime": "image/png",
+  "fichero": "index.php__raw_true_option_com_breezingforms_bfCaptcha_true_Itemid_74"
+ },
+ {
+  "url": "http://babeltrans.es/index.php?raw=true&option=com_breezingforms&bfCaptcha=true&Itemid=82",
+  "captura": "20181129075541",
+  "mime": "image/png",
+  "fichero": "index.php__raw_true_option_com_breezingforms_bfCaptcha_true_Itemid_82"
+ },
+ {
+  "url": "http://babeltrans.es/index.php?raw=true&option=com_breezingforms&bfCaptcha=true&Itemid=83",
+  "captura": "20181128163413",
+  "mime": "image/png",
+  "fichero": "index.php__raw_true_option_com_breezingforms_bfCaptcha_true_Itemid_83"
+ },
+ {
+  "url": "http://babeltrans.es/index.php?raw=true&option=com_breezingforms&bfCaptcha=true&Itemid=84",
+  "captura": "20181129202029",
+  "mime": "image/png",
+  "fichero": "index.php__raw_true_option_com_breezingforms_bfCaptcha_true_Itemid_84"
+ },
+ {
+  "url": "http://babeltrans.es/index.php?raw=true&option=com_breezingforms&bfCaptcha=true&Itemid=85",
+  "captura": "20181129173253",
+  "mime": "image/png",
+  "fichero": "index.php__raw_true_option_com_breezingforms_bfCaptcha_true_Itemid_85"
+ },
+ {
+  "url": "http://babeltrans.es/index.php?raw=true&option=com_breezingforms&bfCaptcha=true&Itemid=86",
+  "captura": "20181129205444",
+  "mime": "image/png",
+  "fichero": "index.php__raw_true_option_com_breezingforms_bfCaptcha_true_Itemid_86"
+ },
+ {
+  "url": "http://babeltrans.es/index.php?raw=true&option=com_breezingforms&bfCaptcha=true&Itemid=87",
+  "captura": "20181128090555",
+  "mime": "image/png",
+  "fichero": "index.php__raw_true_option_com_breezingforms_bfCaptcha_true_Itemid_87"
+ },
+ {
+  "url": "http://www.babeltrans.es/index.php?raw=true&option=com_breezingforms&bfCaptcha=true?",
+  "captura": "20130711165447",
+  "mime": "image/png",
+  "fichero": "index.php__raw_true_option_com_breezingforms_bfCaptcha_true_"
+ },
+ {
+  "url": "http://babeltrans.es/kontakt.html",
+  "captura": "20130712112907",
+  "mime": "text/html",
+  "fichero": "kontakt.html"
+ },
+ {
+  "url": "http://babeltrans.es/kostenvoranschlag.html",
+  "captura": "20130712112842",
+  "mime": "text/html",
+  "fichero": "kostenvoranschlag.html"
+ },
+ {
+  "url": "http://babeltrans.es/kostenvoranschlag/kostenvoranschlag-dolmetschen.html",
+  "captura": "20130712112858",
+  "mime": "text/html",
+  "fichero": "kostenvoranschlag/kostenvoranschlag-dolmetschen.html"
+ },
+ {
+  "url": "http://babeltrans.es/kostenvoranschlag/kostenvoranschlag-uebersetzen.html",
+  "captura": "20130712112849",
+  "mime": "text/html",
+  "fichero": "kostenvoranschlag/kostenvoranschlag-uebersetzen.html"
+ },
+ {
+  "url": "http://babeltrans.es/mapa-web.html",
+  "captura": "20130712112711",
+  "mime": "text/html",
+  "fichero": "mapa-web.html"
+ },
+ {
+  "url": "https://babeltrans.es/media/system/js/caption.js",
+  "captura": "20221006111125",
+  "mime": "application/javascript",
+  "fichero": "media/system/js/caption.js"
+ },
+ {
+  "url": "https://babeltrans.es/media/system/js/mootools.js",
+  "captura": "20221006121928",
+  "mime": "application/javascript",
+  "fichero": "media/system/js/mootools.js"
+ },
+ {
+  "url": "http://babeltrans.es/media/system/js/validate.js",
+  "captura": "20160607000950",
+  "mime": "application/javascript",
+  "fichero": "media/system/js/validate.js"
+ },
+ {
+  "url": "http://babeltrans.es/methodologie-en-werktuigen.html",
+  "captura": "20130713231547",
+  "mime": "text/html",
+  "fichero": "methodologie-en-werktuigen.html"
+ },
+ {
+  "url": "http://babeltrans.es/methodology-and-tools.html",
+  "captura": "20130713232059",
+  "mime": "text/html",
+  "fichero": "methodology-and-tools.html"
+ },
+ {
+  "url": "http://babeltrans.es/metodologia-herramientas-traduccion.html",
+  "captura": "20170201193638",
+  "mime": "text/html",
+  "fichero": "metodologia-herramientas-traduccion.html"
+ },
+ {
+  "url": "http://babeltrans.es/modules/mod_jasidenews/assets/style.css",
+  "captura": "20171003161528",
+  "mime": "text/css",
+  "fichero": "modules/mod_jasidenews/assets/style.css"
+ },
+ {
+  "url": "http://babeltrans.es/modules/mod_jaslideshow/ja_slideshow/img/circle-active.png",
+  "captura": "20171022231056",
+  "mime": "image/png",
+  "fichero": "modules/mod_jaslideshow/ja_slideshow/img/circle-active.png"
+ },
+ {
+  "url": "http://babeltrans.es/modules/mod_jaslideshow/ja_slideshow/img/circle.png",
+  "captura": "20171022230439",
+  "mime": "image/png",
+  "fichero": "modules/mod_jaslideshow/ja_slideshow/img/circle.png"
+ },
+ {
+  "url": "https://babeltrans.es/modules/mod_jaslideshow/ja_slideshow/ja.slideshow.css",
+  "captura": "20221006111431",
+  "mime": "text/css",
+  "fichero": "modules/mod_jaslideshow/ja_slideshow/ja.slideshow.css"
+ },
+ {
+  "url": "http://babeltrans.es/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css",
+  "captura": "20171003165000",
+  "mime": "text/css",
+  "fichero": "modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+ },
+ {
+  "url": "https://babeltrans.es/nl.html",
+  "captura": "20240417032602",
+  "mime": "text/html",
+  "fichero": "nl.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/nl/component/contact/12-contacts/1-fran.html",
+  "captura": "20130713231651",
+  "mime": "text/html",
+  "fichero": "nl/component/contact/12-contacts/1-fran.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/nl/component/contact/12-contacts/2-martijn-naarding.html",
+  "captura": "20130713231721",
+  "mime": "text/html",
+  "fichero": "nl/component/contact/12-contacts/2-martijn-naarding.html"
+ },
+ {
+  "url": "http://babeltrans.es/nl/component/content/article/71.html",
+  "captura": "20130713231355",
+  "mime": "text/html",
+  "fichero": "nl/component/content/article/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/nl/component/content/article/72.html",
+  "captura": "20130712112551",
+  "mime": "text/html",
+  "fichero": "nl/component/content/article/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/contact.html",
+  "captura": "20240417030925",
+  "mime": "text/html",
+  "fichero": "nl/contact.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/cp-ingles-aleman.html",
+  "captura": "20240417015210",
+  "mime": "text/html",
+  "fichero": "nl/cp-ingles-aleman.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/disclaimer.html",
+  "captura": "20240417023951",
+  "mime": "text/html",
+  "fichero": "nl/disclaimer.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/home.html",
+  "captura": "20230601012703",
+  "mime": "text/html",
+  "fichero": "nl/home.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/nl/home/71.html",
+  "captura": "20130713231508",
+  "mime": "text/html",
+  "fichero": "nl/home/71.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/nl/home/72.html",
+  "captura": "20130713231525",
+  "mime": "text/html",
+  "fichero": "nl/home/72.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/methodologie-en-werktuigen.html",
+  "captura": "20240524122458",
+  "mime": "text/html",
+  "fichero": "nl/methodologie-en-werktuigen.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/onze-diensten.html",
+  "captura": "20240417024648",
+  "mime": "text/html",
+  "fichero": "nl/onze-diensten.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/onze-diensten/tolken.html",
+  "captura": "20240417025154",
+  "mime": "text/html",
+  "fichero": "nl/onze-diensten/tolken.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/onze-diensten/vertalen.html",
+  "captura": "20240221013431",
+  "mime": "text/html",
+  "fichero": "nl/onze-diensten/vertalen.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/over-ons.html",
+  "captura": "20240417015431",
+  "mime": "text/html",
+  "fichero": "nl/over-ons.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/over-ons/bij-ons-werken.html",
+  "captura": "20240221030002",
+  "mime": "text/html",
+  "fichero": "nl/over-ons/bij-ons-werken.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/over-ons/onze-medewerkers.html",
+  "captura": "20240417014713",
+  "mime": "text/html",
+  "fichero": "nl/over-ons/onze-medewerkers.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/privacyverklaring.html",
+  "captura": "20240417014416",
+  "mime": "text/html",
+  "fichero": "nl/privacyverklaring.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/sitemap.html",
+  "captura": "20240417023314",
+  "mime": "text/html",
+  "fichero": "nl/sitemap.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/vertalen-cv.html",
+  "captura": "20240524135535",
+  "mime": "text/html",
+  "fichero": "nl/vertalen-cv.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/vrijblijvende-offerte.html",
+  "captura": "20240417020726",
+  "mime": "text/html",
+  "fichero": "nl/vrijblijvende-offerte.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/vrijblijvende-offerte/tolkofferte.html",
+  "captura": "20240417022523",
+  "mime": "text/html",
+  "fichero": "nl/vrijblijvende-offerte/tolkofferte.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/vrijblijvende-offerte/vertaalofferte.html",
+  "captura": "20240417031818",
+  "mime": "text/html",
+  "fichero": "nl/vrijblijvende-offerte/vertaalofferte.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/werken-als-tolk.html",
+  "captura": "20240417022330",
+  "mime": "text/html",
+  "fichero": "nl/werken-als-tolk.html"
+ },
+ {
+  "url": "https://babeltrans.es/nl/werken-als-vertaler.html",
+  "captura": "20240417031651",
+  "mime": "text/html",
+  "fichero": "nl/werken-als-vertaler.html"
+ },
+ {
+  "url": "http://babeltrans.es/onze-diensten.html",
+  "captura": "20130713231451",
+  "mime": "text/html",
+  "fichero": "onze-diensten.html"
+ },
+ {
+  "url": "http://babeltrans.es/onze-diensten/tolken.html",
+  "captura": "20130713231524",
+  "mime": "text/html",
+  "fichero": "onze-diensten/tolken.html"
+ },
+ {
+  "url": "http://babeltrans.es/onze-diensten/vertalen.html",
+  "captura": "20130713231507",
+  "mime": "text/html",
+  "fichero": "onze-diensten/vertalen.html"
+ },
+ {
+  "url": "http://babeltrans.es/over-ons/bij-ons-werken.html",
+  "captura": "20130712113048",
+  "mime": "text/html",
+  "fichero": "over-ons/bij-ons-werken.html"
+ },
+ {
+  "url": "http://babeltrans.es/over-ons/onze-medewerkers.html",
+  "captura": "20130712113042",
+  "mime": "text/html",
+  "fichero": "over-ons/onze-medewerkers.html"
+ },
+ {
+  "url": "https://babeltrans.es/plugins/content/ja_tabs/ja_tabs.css",
+  "captura": "20221006111252",
+  "mime": "text/css",
+  "fichero": "plugins/content/ja_tabs/ja_tabs.css"
+ },
+ {
+  "url": "http://babeltrans.es/plugins/content/ja_tabs/ja_tabs.js",
+  "captura": "20171003164044",
+  "mime": "application/javascript",
+  "fichero": "plugins/content/ja_tabs/ja_tabs.js"
+ },
+ {
+  "url": "http://babeltrans.es/plugins/content/ja_tabs/themes/seleni/style.css",
+  "captura": "20171003164543",
+  "mime": "text/css",
+  "fichero": "plugins/content/ja_tabs/themes/seleni/style.css"
+ },
+ {
+  "url": "http://babeltrans.es/plugins/system/jwupf/ultimatepngfix_bg.js",
+  "captura": "20171003162437",
+  "mime": "application/javascript",
+  "fichero": "plugins/system/jwupf/ultimatepngfix_bg.js"
+ },
+ {
+  "url": "http://babeltrans.es/plugins/system/jwupf/ultimatepngfix_inline.js",
+  "captura": "20171003154838",
+  "mime": "application/javascript",
+  "fichero": "plugins/system/jwupf/ultimatepngfix_inline.js"
+ },
+ {
+  "url": "http://babeltrans.es/politica-de-privacidad.html",
+  "captura": "20170213015251",
+  "mime": "text/html",
+  "fichero": "politica-de-privacidad.html"
+ },
+ {
+  "url": "http://babeltrans.es/privacyverklaring.html",
+  "captura": "20130713231859",
+  "mime": "text/html",
+  "fichero": "privacyverklaring.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/quienessomos-traduccion-holandes.html",
+  "captura": "20130711170214",
+  "mime": "text/html",
+  "fichero": "quienessomos-traduccion-holandes.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/quienessomos-traduccion-holandes/nuestros-colaboradores.html",
+  "captura": "20130711170221",
+  "mime": "text/html",
+  "fichero": "quienessomos-traduccion-holandes/nuestros-colaboradores.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/quienessomos-traduccion-holandes/trabaja-con-nosotros.html",
+  "captura": "20130711170227",
+  "mime": "text/html",
+  "fichero": "quienessomos-traduccion-holandes/trabaja-con-nosotros.html"
+ },
+ {
+  "url": "http://babeltrans.es/quienessomos-traducciones.html",
+  "captura": "20170201001506",
+  "mime": "text/html",
+  "fichero": "quienessomos-traducciones.html"
+ },
+ {
+  "url": "http://babeltrans.es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html",
+  "captura": "20170213054114",
+  "mime": "text/html",
+  "fichero": "quienessomos-traducciones/trabaja-con-nosotros-traducciones.html"
+ },
+ {
+  "url": "http://babeltrans.es/rechtliche-hinweise.html",
+  "captura": "20130712113004",
+  "mime": "text/html",
+  "fichero": "rechtliche-hinweise.html"
+ },
+ {
+  "url": "http://babeltrans.es/request-a-quote.html",
+  "captura": "20130713232121",
+  "mime": "text/html",
+  "fichero": "request-a-quote.html"
+ },
+ {
+  "url": "http://babeltrans.es/request-a-quote/interpretation-quote.html",
+  "captura": "20130713232151",
+  "mime": "text/html",
+  "fichero": "request-a-quote/interpretation-quote.html"
+ },
+ {
+  "url": "http://babeltrans.es/request-a-quote/translation-quote.html",
+  "captura": "20130713232133",
+  "mime": "text/html",
+  "fichero": "request-a-quote/translation-quote.html"
+ },
+ {
+  "url": "https://babeltrans.es/robots.txt",
+  "captura": "20220211230040",
+  "mime": "text/plain",
+  "fichero": "robots.txt"
+ },
+ {
+  "url": "http://babeltrans.es/services.html",
+  "captura": "20130713231958",
+  "mime": "text/html",
+  "fichero": "services.html"
+ },
+ {
+  "url": "http://babeltrans.es/services/interpreting.html",
+  "captura": "20130713232038",
+  "mime": "text/html",
+  "fichero": "services/interpreting.html"
+ },
+ {
+  "url": "http://babeltrans.es/services/translation.html",
+  "captura": "20130713232013",
+  "mime": "text/html",
+  "fichero": "services/translation.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/servicios-traduccion-holandes.html",
+  "captura": "20130711170235",
+  "mime": "text/html",
+  "fichero": "servicios-traduccion-holandes.html"
+ },
+ {
+  "url": "http://babeltrans.es/servicios-traduccion-holandes/interpretacion.html",
+  "captura": "20130711170135",
+  "mime": "text/html",
+  "fichero": "servicios-traduccion-holandes/interpretacion.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/servicios-traduccion-holandes/traduccion.html",
+  "captura": "20130711170242",
+  "mime": "text/html",
+  "fichero": "servicios-traduccion-holandes/traduccion.html"
+ },
+ {
+  "url": "http://babeltrans.es/servicios-traducciones/interpretacion-holandes.html",
+  "captura": "20170131225955",
+  "mime": "text/html",
+  "fichero": "servicios-traducciones/interpretacion-holandes.html"
+ },
+ {
+  "url": "http://babeltrans.es/servicios-traducciones/traduccion-tecnica-manuales.html",
+  "captura": "20170213111351",
+  "mime": "text/html",
+  "fichero": "servicios-traducciones/traduccion-tecnica-manuales.html"
+ },
+ {
+  "url": "http://babeltrans.es/sitemap.html",
+  "captura": "20130713231906",
+  "mime": "text/html",
+  "fichero": "sitemap.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/solicite-presupuesto-traduccion.html",
+  "captura": "20130712112457",
+  "mime": "text/html",
+  "fichero": "solicite-presupuesto-traduccion.html"
+ },
+ {
+  "url": "https://babeltrans.es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html",
+  "captura": "20230601012520",
+  "mime": "text/html",
+  "fichero": "solicite-presupuesto-traduccion/presupuesto-interpretacion.html"
+ },
+ {
+  "url": "http://babeltrans.es/solicite-presupuesto-traduccion/presupuesto-traduccion.html",
+  "captura": "20170214011904",
+  "mime": "text/html",
+  "fichero": "solicite-presupuesto-traduccion/presupuesto-traduccion.html"
+ },
+ {
+  "url": "https://babeltrans.es/templates/ja_seleni/css/addons.css",
+  "captura": "20221006111053",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/addons.css"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/css/colors/default.css",
+  "captura": "20171003165726",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/colors/default.css"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/css/ie.css",
+  "captura": "20171003154700",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/ie.css"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/css/ie7minus.css",
+  "captura": "20171003163256",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/ie7minus.css"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/css/layout.css",
+  "captura": "20171003155816",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/layout.css"
+ },
+ {
+  "url": "https://babeltrans.es/templates/ja_seleni/css/menu/moo.css",
+  "captura": "20220114075755",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/menu/moo.css"
+ },
+ {
+  "url": "https://babeltrans.es/templates/ja_seleni/css/mod_jasidenews.css",
+  "captura": "20221006120144",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/mod_jasidenews.css"
+ },
+ {
+  "url": "https://babeltrans.es/templates/ja_seleni/css/template.css",
+  "captura": "20221006131957",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/template.css"
+ },
+ {
+  "url": "https://babeltrans.es/templates/ja_seleni/css/typo.css",
+  "captura": "20221006115305",
+  "mime": "text/css",
+  "fichero": "templates/ja_seleni/css/typo.css"
+ },
+ {
+  "url": "https://babeltrans.es/templates/ja_seleni/favicon.ico",
+  "captura": "20221006112604",
+  "mime": "image/x-icon",
+  "fichero": "templates/ja_seleni/favicon.ico"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/arrow.png",
+  "captura": "20171022224710",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/arrow.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/arrow2.png",
+  "captura": "20171022225719",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/arrow2.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/arrow3.png",
+  "captura": "20171022230629",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/arrow3.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/arrow4.png",
+  "captura": "20171022231321",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/arrow4.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/bubble-d.png",
+  "captura": "20171022231409",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/bubble-d.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/bubble-hl.png",
+  "captura": "20171022231137",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/bubble-hl.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/bubble-l.png",
+  "captura": "20171022231351",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/bubble-l.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/bullet.gif",
+  "captura": "20171022230303",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/bullet.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/bullet2.png",
+  "captura": "20171022230930",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/bullet2.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/dot-grey.gif",
+  "captura": "20171022223434",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/dot-grey.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/dot-line.gif",
+  "captura": "20171022225916",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/dot-line.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/dot.gif",
+  "captura": "20171022230100",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/dot.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/dot2.gif",
+  "captura": "20171022225725",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/dot2.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/dot3.gif",
+  "captura": "20171022230640",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/dot3.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/grad1.gif",
+  "captura": "20171022230446",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/grad1.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/h-line.gif",
+  "captura": "20171022225404",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/h-line.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/h3-bg.gif",
+  "captura": "20171022224600",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/h3-bg.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/header-mask.png",
+  "captura": "20171022230824",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/header-mask.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-badge.png",
+  "captura": "20171022224955",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/icon-badge.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-date.gif",
+  "captura": "20171022230416",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/icon-date.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-hide.png",
+  "captura": "20171022225941",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/icon-hide.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-ie.jpg",
+  "captura": "20171022230829",
+  "mime": "image/jpeg",
+  "fichero": "templates/ja_seleni/images/icon-ie.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-mover.gif",
+  "captura": "20171022230209",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/icon-mover.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-search.gif",
+  "captura": "20171022223742",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/icon-search.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-setting.gif",
+  "captura": "20171022224658",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/icon-setting.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-show.png",
+  "captura": "20171022230333",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/icon-show.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icon-user.gif",
+  "captura": "20171022224613",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/icon-user.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icons/download-big.png",
+  "captura": "20171022230907",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/icons/download-big.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icons/icon-author.gif",
+  "captura": "20171022224013",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/icons/icon-author.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icons/icon-folder.gif",
+  "captura": "20171022224130",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/icons/icon-folder.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icons/icons-sprites-silk.png",
+  "captura": "20171022230634",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/icons/icons-sprites-silk.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/icons/sticky-big.png",
+  "captura": "20171022225151",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/icons/sticky-big.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/logo.png",
+  "captura": "20171022224815",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/logo.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/numberlist-bg.png",
+  "captura": "20171022223850",
+  "mime": "image/png",
+  "fichero": "templates/ja_seleni/images/numberlist-bg.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/sc-q.gif",
+  "captura": "20171022230617",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/sc-q.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/images/so-q.gif",
+  "captura": "20171022223424",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/images/so-q.gif"
+ },
+ {
+  "url": "https://babeltrans.es/templates/ja_seleni/js/ja.ddmod.js",
+  "captura": "20221006115135",
+  "mime": "application/javascript",
+  "fichero": "templates/ja_seleni/js/ja.ddmod.js"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/js/ja.script.js",
+  "captura": "20171003162617",
+  "mime": "application/javascript",
+  "fichero": "templates/ja_seleni/js/ja.script.js"
+ },
+ {
+  "url": "https://babeltrans.es/templates/ja_seleni/js/menu/moo.js",
+  "captura": "20221006111240",
+  "mime": "application/javascript",
+  "fichero": "templates/ja_seleni/js/menu/moo.js"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/layouts/blocks/ie6/close-hover.gif",
+  "captura": "20171022223706",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/layouts/blocks/ie6/close-hover.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/layouts/blocks/ie6/close.gif",
+  "captura": "20171022224855",
+  "mime": "image/gif",
+  "fichero": "templates/ja_seleni/layouts/blocks/ie6/close.gif"
+ },
+ {
+  "url": "http://babeltrans.es/templates/ja_seleni/layouts/blocks/ie6/icon_brwoser.jpg",
+  "captura": "20171022224832",
+  "mime": "image/jpeg",
+  "fichero": "templates/ja_seleni/layouts/blocks/ie6/icon_brwoser.jpg"
+ },
+ {
+  "url": "http://babeltrans.es/templates/system/css/general.css",
+  "captura": "20171003161742",
+  "mime": "text/css",
+  "fichero": "templates/system/css/general.css"
+ },
+ {
+  "url": "https://babeltrans.es/templates/system/css/system.css",
+  "captura": "20221006114404",
+  "mime": "text/css",
+  "fichero": "templates/system/css/system.css"
+ },
+ {
+  "url": "http://babeltrans.es/templates/system/images/calendar.png",
+  "captura": "20171022225825",
+  "mime": "image/png",
+  "fichero": "templates/system/images/calendar.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/system/images/j_button2_blank.png",
+  "captura": "20171022224418",
+  "mime": "image/png",
+  "fichero": "templates/system/images/j_button2_blank.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/system/images/j_button2_image.png",
+  "captura": "20171022224026",
+  "mime": "image/png",
+  "fichero": "templates/system/images/j_button2_image.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/system/images/j_button2_left.png",
+  "captura": "20171022231233",
+  "mime": "image/png",
+  "fichero": "templates/system/images/j_button2_left.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/system/images/j_button2_pagebreak.png",
+  "captura": "20171022223415",
+  "mime": "image/png",
+  "fichero": "templates/system/images/j_button2_pagebreak.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/system/images/j_button2_readmore.png",
+  "captura": "20171022223454",
+  "mime": "image/png",
+  "fichero": "templates/system/images/j_button2_readmore.png"
+ },
+ {
+  "url": "http://babeltrans.es/templates/system/images/selector-arrow.png",
+  "captura": "20171022230753",
+  "mime": "image/png",
+  "fichero": "templates/system/images/selector-arrow.png"
+ },
+ {
+  "url": "http://babeltrans.es/trabajar-como-interprete.html",
+  "captura": "20170131071211",
+  "mime": "text/html",
+  "fichero": "trabajar-como-interprete.html"
+ },
+ {
+  "url": "http://babeltrans.es/trabajar-como-traductor.html",
+  "captura": "20170214011524",
+  "mime": "text/html",
+  "fichero": "trabajar-como-traductor.html"
+ },
+ {
+  "url": "http://babeltrans.es/vertalen-cv.html",
+  "captura": "20130713231710",
+  "mime": "text/html",
+  "fichero": "vertalen-cv.html"
+ },
+ {
+  "url": "http://babeltrans.es/vrijblijvende-offerte.html",
+  "captura": "20130713231604",
+  "mime": "text/html",
+  "fichero": "vrijblijvende-offerte.html"
+ },
+ {
+  "url": "http://babeltrans.es/vrijblijvende-offerte/tolkofferte.html",
+  "captura": "20130713231644",
+  "mime": "text/html",
+  "fichero": "vrijblijvende-offerte/tolkofferte.html"
+ },
+ {
+  "url": "http://babeltrans.es/vrijblijvende-offerte/vertaalofferte.html",
+  "captura": "20130713231622",
+  "mime": "text/html",
+  "fichero": "vrijblijvende-offerte/vertaalofferte.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/wer-sind-wir.html",
+  "captura": "20130712112736",
+  "mime": "text/html",
+  "fichero": "wer-sind-wir.html"
+ },
+ {
+  "url": "http://babeltrans.es/wer-sind-wir/arbeiten-sie-mit-uns.html",
+  "captura": "20130712112745",
+  "mime": "text/html",
+  "fichero": "wer-sind-wir/arbeiten-sie-mit-uns.html"
+ },
+ {
+  "url": "http://www.babeltrans.es/wer-sind-wir/unsere-mitarbeiter.html",
+  "captura": "20130712112743",
+  "mime": "text/html",
+  "fichero": "wer-sind-wir/unsere-mitarbeiter.html"
+ },
+ {
+  "url": "http://babeltrans.es/werken-als-tolk.html",
+  "captura": "20130713231816",
+  "mime": "text/html",
+  "fichero": "werken-als-tolk.html"
+ },
+ {
+  "url": "http://babeltrans.es/werken-als-vertaler.html",
+  "captura": "20130713231807",
+  "mime": "text/html",
+  "fichero": "werken-als-vertaler.html"
+ },
+ {
+  "url": "http://babeltrans.es/who-we-are/our-collaborators.html",
+  "captura": "20130713231936",
+  "mime": "text/html",
+  "fichero": "who-we-are/our-collaborators.html"
+ },
+ {
+  "url": "http://babeltrans.es/who-we-are/work-with-us.html",
+  "captura": "20130713231946",
+  "mime": "text/html",
+  "fichero": "who-we-are/work-with-us.html"
+ }
+]

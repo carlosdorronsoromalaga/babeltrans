@@ -1,0 +1,1131 @@
+{
+ "idioma": "nl",
+ "paginas": {
+  "home": {
+   "ruta": "nl.html",
+   "fuente": "nl.html",
+   "titulo": "",
+   "titulo_html": "babeltrans",
+   "home": {
+    "titulos": [
+     "Traducciones Técnicas y Especializadas",
+     "Technische en gespecialiseerde vertalingen van hoogwaardige kwaliteit:",
+     "Babeltrans"
+    ],
+    "lista": [
+     "Architectuur, bouwkunde, industrie...",
+     "Wetenschappelijke en medische teksten, gebruiksaanwijzingen, handleidingen...",
+     "Juridische teksten, wet- en regelgeving, beëdigde en gelegaliseerde vertalingen...",
+     "Websites, marketing en reclame, jaarverslagen..."
+    ],
+    "fuertes": [
+     "Technische en gespecialiseerde vertalingen van hoogwaardige kwaliteit:",
+     "Architectuur, bouwkunde, industrie...",
+     "Wetenschappelijke en medische teksten, gebruiksaanwijzingen, handleidingen...",
+     "Juridische teksten, wet- en regelgeving, beëdigde en gelegaliseerde vertalingen...",
+     "Websites, marketing en reclame, jaarverslagen...",
+     "VERTROUWELIJKHEID GEGARANDEERD",
+     "Tolken is een van de beste manifestaties van een taal",
+     "Alles wat werkelijk uitmuntend is, kan worden vertaald",
+     "Wij bemiddelen zodat onze klanten kunnen groeien"
+    ],
+    "frases": [
+     "Tolken is een van de beste manifestaties van een taal",
+     "Alles wat werkelijk uitmuntend is, kan worden vertaald",
+     "Wij bemiddelen zodat onze klanten kunnen groeien"
+    ],
+    "derecha": [
+     "Vrijblijvende offerte",
+     "Contact",
+     "Vraag offerte aan!",
+     "Naam:",
+     "Telefoon:",
+     "E-mail:",
+     "Opmerkingen:",
+     "Vul de karakters in:",
+     "Diensten",
+     "Tolkendiensten",
+     "Tolken is een complexe bezigheid die veel inspanning en ervaring vergt om tot een bevredigend result...",
+     "Vertaaldiensten",
+     "Vertalen is een kunst waarvoor veel toewijding en talent nodig is, omdat zelfs de meest eenv...",
+     "Campañas"
+    ],
+    "modulos": [
+     {
+      "titulo": "Onze medewerkers",
+      "texto": [
+       "Professionele kwaliteit ..."
+      ]
+     },
+     {
+      "titulo": "Onze medewerkers",
+      "texto": [
+       "Professionele kwaliteit ..."
+      ]
+     },
+     {
+      "titulo": "Seminars in het Engels",
+      "texto": []
+     },
+     {
+      "titulo": "Seminars in het Engels",
+      "texto": []
+     },
+     {
+      "titulo": "Wat zijn uw behoeftes",
+      "texto": [
+       "Bij BABELTRANS maken we seminars op maat",
+       "Meer zelfvertrouwen betekent een groter succes"
+      ]
+     },
+     {
+      "titulo": "Wat zijn uw behoeftes",
+      "texto": [
+       "Bij BABELTRANS maken we seminars op maat",
+       "Meer zelfvertrouwen betekent een groter succes"
+      ]
+     },
+     {
+      "titulo": "Methodologie en werktuigen",
+      "texto": [
+       "Wij passen ons aan uw behoeftes aan ..."
+      ]
+     },
+     {
+      "titulo": "Methodologie en werktuigen",
+      "texto": [
+       "Wij passen ons aan uw behoeftes aan ..."
+      ]
+     }
+    ],
+    "copyright": "Copyright © 2024 babeltrans. Alle rechten voorbehouden."
+   }
+  },
+  "quienes": {
+   "ruta": "nl/over-ons.html",
+   "fuente": "nl/over-ons.html",
+   "titulo": "Over ons",
+   "titulo_html": "Over ons - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "<strong>BABELTRANS</strong> is een wereldwijde organisatie die haar taaldiensten over de hele wereld aanbiedt en zich met name richt op tolken en vertalen."
+    ],
+    [
+     "p",
+     "Dankzij onze praktijkervaring die wij sinds 1999 hebben opgedaan, nemen wij een bijzondere plaats in als dienstverlener van taaloplossingen op maat."
+    ],
+    [
+     "p",
+     "Bij <strong>Babeltrans</strong> tonen we een groot gevoel voor taal. Vandaar dat al onze projecten aan de strengste kwaliteitseisen moeten voldoen en de uiteindelijke revisie altijd door een onafhankelijke professional wordt gedaan."
+    ],
+    [
+     "p",
+     "Al onze medewerkers zijn experts die uitsluitend naar hun moedertaal vertalen. Zo garanderen wij de kwaliteit van onze dienstverlening."
+    ],
+    [
+     "p",
+     "Aangezien onze professionals volgens onze ethische code en bedrijfsvoering geworven en opgeleid worden, garanderen we de vertrouwelijkheid van alle informatie die u met ons deelt."
+    ],
+    [
+     "p",
+     "Wij tolken en vertalen van en naar verschillende talen en bieden deze diensten voor een breed spectrum specialismen aan."
+    ],
+    [
+     "cita",
+     "Nuestra estrategia está basada en las relaciones sostenibles con nuestros clientes y en la mejora continua de nuestros procesos"
+    ]
+   ]
+  },
+  "colaboradores": {
+   "ruta": "nl/over-ons/onze-medewerkers.html",
+   "fuente": "nl/over-ons/onze-medewerkers.html",
+   "titulo": "Onze medewerkers",
+   "titulo_html": "Onze medewerkers - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "\"Taal is niet instinctief, maar een cultureel proces\""
+    ],
+    [
+     "p",
+     "We beschikken over vakkundige vertalers met ruime ervaring in hun specialisatie zowel op het gebied van de vertaling als het tolken."
+    ],
+    [
+     "p",
+     "Voor hun werk moeten professionals niet alleen de juiste woorden weten te vinden maar ook qua zinsbouw structuren kunnen aanleggen zodat geschreven en gesproken tekst natuurlijk overkomen."
+    ],
+    [
+     "p",
+     "Al onze vertalers zoeken de beste equivalenten tussen de bron -en doeltekst zodat met zekerheid kan worden gesteld dat beide dezelfde boodschap overbrengen."
+    ]
+   ]
+  },
+  "trabaja": {
+   "ruta": "nl/over-ons/bij-ons-werken.html",
+   "fuente": "nl/over-ons/bij-ons-werken.html",
+   "titulo": "Bij ons werken",
+   "titulo_html": "Bij ons werken - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"nl/werken-als-vertaler.html\">Vertalers</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"nl/werken-als-tolk.html\">Tolken</a>"
+    ]
+   ]
+  },
+  "servicios": {
+   "ruta": "nl/onze-diensten.html",
+   "fuente": "nl/onze-diensten.html",
+   "titulo": "Diensten",
+   "titulo_html": "Diensten - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"nl/onze-diensten/vertalen.html\">Raadpleeg onze VERTAALDIENSTEN</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"nl/onze-diensten/tolken.html\">Raadpleeg onze TOLKENDIENSTEN</a>"
+    ]
+   ]
+  },
+  "traduccion": {
+   "ruta": "nl/onze-diensten/vertalen.html",
+   "fuente": "nl/onze-diensten/vertalen.html",
+   "titulo": "Vertaaldiensten",
+   "titulo_html": "Vertaaldiensten - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Vertalen is een kunst waarvoor veel toewijding en talent nodig is, omdat zelfs de meest eenvoudige tekst vol met dubbelzinnigheden kan zitten."
+    ],
+    [
+     "p",
+     "Bij <strong>BABELTRANS</strong> wordt afhankelijk van de tekst de meest gepaste vertaling gekozen, zodat vaak een te letterlijke vertaling wordt vermeden die soms getuige is van te weinig taalgevoel."
+    ],
+    [
+     "h3",
+     "VERTALINGEN"
+    ],
+    [
+     "ul",
+     [
+      "Commercieel: websites, offertes, opdrachten, promotiemateriaal.",
+      "Economisch: rapporten, jaarverslagen.",
+      "Juridisch: processen, vonnissen, algemene voorwaarden.",
+      "Technisch/wetenschappelijk: bouwkunde, auto/motor, technische handleidingen, gebruiksaanwijzingen.",
+      "Medisch: bijsluiters",
+      "Beëdigd: notariële akten, uittreksels uit het geboorteregister, certificaten, volmachten, diploma's."
+     ]
+    ],
+    [
+     "h3",
+     "RevisiE VAN TEKSTEN"
+    ],
+    [
+     "ul",
+     [
+      "Alle vertalingen worden aan een laatste revisie onderworpen die altijd door een onafhankelijke professional worden gedaan.",
+      "Revisie van originele teksten op verzoek van de klant."
+     ]
+    ],
+    [
+     "h3",
+     "TranscripTIES"
+    ],
+    [
+     "ul",
+     [
+      "Opnames",
+      "Conferenties",
+      "Interviews"
+     ]
+    ]
+   ]
+  },
+  "interpretacion": {
+   "ruta": "nl/onze-diensten/tolken.html",
+   "fuente": "nl/onze-diensten/tolken.html",
+   "titulo": "Tolkendiensten",
+   "titulo_html": "Tolkendiensten - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Tolken is een complexe bezigheid die veel inspanning en ervaring vergt om tot een bevredigend resultaat te komen."
+    ],
+    [
+     "p",
+     "Bij <strong>BABELTRANS</strong> beschikken we over een uitstekend tolkenteam dat in staat is de brontaal zo exact en natuurlijk mogelijk om te zetten, niet alleen wat de betekenis betreft maar ook aangaande de stijl."
+    ],
+    [
+     "p",
+     "Wij houden altijd uw behoeftes voor ogen en hebben we verschillende alternatieven achter de hand."
+    ],
+    [
+     "h3",
+     "Uw doelstellingen zijn ook de onze"
+    ],
+    [
+     "h3",
+     "TOLKENDIENSTEN"
+    ],
+    [
+     "ul",
+     [
+      "Consecutief: persconferenties, bedrijfsbijeenkomsten, onderhandelingen,bemiddelingen.",
+      "Simultaan: seminars, vergaderingen, conferenties.",
+      "Telefoon -of vergadergesprekken: gesprekken tussen bedrijven en partners, leveranciers.",
+      "Beëdigd: notarissen, gerechtshoven, rechtszaken.",
+      "Voice-over: opnames in studio."
+     ]
+    ]
+   ]
+  },
+  "metodologia": {
+   "ruta": "nl/methodologie-en-werktuigen.html",
+   "fuente": "nl/methodologie-en-werktuigen.html",
+   "titulo": "Methodologie en werktuigen",
+   "titulo_html": "Methodologie en werktuigen - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Sinds 1999 biedt <strong>BABELTRANS</strong> volgens een unieke methode een een proces van voortdurende verbetering vertaal -en tolkdiensten aan.<br>We beschouwen iedere opdracht als een exclusief project waaraan veel tijd een aandacht wordt besteed.<br>Wij letten op de consistentie van de vertaalde documenten waarbij extra aandacht wordt besteed aan algemene definities, verwoordingen en terminologie."
+    ],
+    [
+     "h3",
+     "MetHOdologIE:"
+    ],
+    [
+     "ul",
+     [
+      "Voordat we een project aan een of meerdere professionals toekennen wordt het aan de hand van de behoeftes van de klant geanalyseerd.",
+      "Alle projecten worden aan een laatste revisie door een onafhankelijke professional onderworpen.",
+      "Opmaak volgens het originele document of anders indien de klant dat wenst."
+     ]
+    ],
+    [
+     "h3",
+     "WERKTUIGEN:"
+    ],
+    [
+     "ul",
+     [
+      "Vertaalgeheugens waarmee taalpatronen en gemeenschappelijke terminologie kunnen worden vastgesteld.",
+      "Glossaar van ieder specifiek specialisme.",
+      "Gebruik van door de klant geleverd voorkeursvocabulair."
+     ]
+    ]
+   ]
+  },
+  "presupuesto": {
+   "ruta": "nl/vrijblijvende-offerte.html",
+   "fuente": "nl/vrijblijvende-offerte.html",
+   "titulo": "Vrijblijvende offerte",
+   "titulo_html": "Vrijblijvende offerte - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"nl/vrijblijvende-offerte/vertaalofferte.html\">Vertalen</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"nl/vrijblijvende-offerte/tolkofferte.html\">Tolken</a>"
+    ]
+   ]
+  },
+  "presupuesto-traduccion": {
+   "ruta": "nl/vrijblijvende-offerte/vertaalofferte.html",
+   "fuente": "nl/vrijblijvende-offerte/vertaalofferte.html",
+   "titulo": "",
+   "titulo_html": "Presupuesto traducción - babeltrans",
+   "formulario": {
+    "intro": [],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Voor -en achternaam"
+     },
+     {
+      "nombre": "Empresa",
+      "tipo": "text",
+      "etiqueta": "Naam van onderneming"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "Land"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Plaats"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-mail"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Documenten uploaden"
+     },
+     {
+      "nombre": "Idioma_partida",
+      "tipo": "text",
+      "etiqueta": "Brontaal"
+     },
+     {
+      "nombre": "Idioma_destino",
+      "tipo": "text",
+      "etiqueta": "Doeltaal"
+     },
+     {
+      "nombre": "Fecha_entrega",
+      "tipo": "text",
+      "etiqueta": "Gewenste leverdatum"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": "Opmerkingen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ik ga akkoord met de Privacyverklaring"
+     }
+    ],
+    "boton": "Vrijblijvende Offerte",
+    "gracias": ""
+   },
+   "bloques": []
+  },
+  "presupuesto-interpretacion": {
+   "ruta": "nl/vrijblijvende-offerte/tolkofferte.html",
+   "fuente": "nl/vrijblijvende-offerte/tolkofferte.html",
+   "titulo": "",
+   "titulo_html": "Presupuesto interpretación - babeltrans",
+   "formulario": {
+    "intro": [
+     "Vul onderstaand formulier in voor een gratis en vrijblijvende tolkofferte."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Voor -en achternaam"
+     },
+     {
+      "nombre": "Empresa",
+      "tipo": "text",
+      "etiqueta": "Naam van onderneming"
+     },
+     {
+      "nombre": "Departamento",
+      "tipo": "text",
+      "etiqueta": "Afdeling"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Adres"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "Land"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Plaats"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-mail"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Telefoonnummer"
+     },
+     {
+      "nombre": "Tipo_evento",
+      "tipo": "select",
+      "etiqueta": "Soort evenement",
+      "opciones": [
+       "Selecteer type",
+       "Bedrijfsbijeenkomst",
+       "Conventie",
+       "Persconferentie",
+       "Interview",
+       "Anders"
+      ]
+     },
+     {
+      "nombre": "Lugar",
+      "tipo": "text",
+      "etiqueta": "Locatie evenement"
+     },
+     {
+      "nombre": "Fecha",
+      "tipo": "text",
+      "etiqueta": "Datum"
+     },
+     {
+      "nombre": "Horario",
+      "tipo": "text",
+      "etiqueta": "Tijdstip"
+     },
+     {
+      "nombre": "Tipo_interpretacion",
+      "tipo": "select",
+      "etiqueta": "Soort tolkendienst",
+      "opciones": [
+       "Selecteer type",
+       "Consecutief",
+       "Simultaan chuchotage"
+      ]
+     },
+     {
+      "nombre": "Precisa_equipos",
+      "tipo": "select",
+      "etiqueta": "Behoefte aan apparatuur",
+      "opciones": [
+       "Nee",
+       "Ja"
+      ]
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Documenten uploaden"
+     },
+     {
+      "nombre": "Idioma_partida",
+      "tipo": "text",
+      "etiqueta": "Brontaal"
+     },
+     {
+      "nombre": "Idioma_destino",
+      "tipo": "text",
+      "etiqueta": "Doeltaal"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": "Opmerkingen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ik ga akkoord met de Privacyverklaring"
+     }
+    ],
+    "boton": "Vrijblijvende Offerte",
+    "gracias": "Gracias por ponerse en contacto con nosotros."
+   },
+   "bloques": []
+  },
+  "contacto": {
+   "ruta": "nl/contact.html",
+   "fuente": "nl/contact.html",
+   "titulo": "",
+   "titulo_html": "Contacto - babeltrans",
+   "formulario": {
+    "intro": [
+     "Vul voor meer informatie onderstaand formulier in. U kunt natuurlijk ook per e-mail met ons contact opnemen."
+    ],
+    "datos": [
+     "BABELTRANS",
+     "info@babeltrans.es"
+    ],
+    "campos": [
+     {
+      "nombre": "Persona",
+      "tipo": "text",
+      "etiqueta": "Contactpersoon"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Telefoon"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Plaats"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-mail"
+     },
+     {
+      "nombre": "observaciones",
+      "tipo": "textarea",
+      "etiqueta": "Opmerkingen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ik ga akkoord met de Privacyverklaring"
+     }
+    ],
+    "boton": "Verzenden",
+    "gracias": "Gracias por ponerse en contacto con nosotros."
+   },
+   "bloques": []
+  },
+  "cv": {
+   "ruta": "nl/vertalen-cv.html",
+   "fuente": "nl/vertalen-cv.html",
+   "titulo": "",
+   "titulo_html": "Traducir CV - babeltrans",
+   "formulario": {
+    "intro": [],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "nombre",
+      "tipo": "text",
+      "etiqueta": "Naam"
+     },
+     {
+      "nombre": "mail",
+      "tipo": "text",
+      "etiqueta": "E-mail"
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Cargar CV"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ik ga akkoord met de privacyverklaring"
+     }
+    ],
+    "boton": "Verzenden",
+    "gracias": "Bedankt voor je aanvraag. We nemen z.s.m. contact op."
+   },
+   "bloques": []
+  },
+  "cp": {
+   "ruta": "nl/cp-ingles-aleman.html",
+   "fuente": "nl/cp-ingles-aleman.html",
+   "titulo": "",
+   "titulo_html": "CP - babeltrans",
+   "formulario": {
+    "intro": [],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre"
+     },
+     {
+      "nombre": "mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Cargar Carta"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Enviar",
+    "gracias": ""
+   },
+   "bloques": []
+  },
+  "como-traductor": {
+   "ruta": "nl/werken-als-vertaler.html",
+   "fuente": "nl/werken-als-vertaler.html",
+   "titulo": "",
+   "titulo_html": "Trabajo traductor - babeltrans",
+   "formulario": {
+    "intro": [
+     "Wil je deel uitmaken van ons vertalersteam? Vul dan onderstaand formulier in."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Naam"
+     },
+     {
+      "nombre": "Apellidos",
+      "tipo": "text",
+      "etiqueta": "Achternaam"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Adres"
+     },
+     {
+      "nombre": "CP",
+      "tipo": "text",
+      "etiqueta": "Postcode"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Plaats"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "Land"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Telefoon"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-mail"
+     },
+     {
+      "nombre": "Lengua_materna",
+      "tipo": "text",
+      "etiqueta": "Moedertaal"
+     },
+     {
+      "nombre": "Areas_especializacion",
+      "tipo": "textarea",
+      "etiqueta": "Specialisaties"
+     },
+     {
+      "nombre": "Traduccion_jurada",
+      "tipo": "textarea",
+      "etiqueta": "Beëdigd vertaler"
+     },
+     {
+      "nombre": "Combinaciones_linguisticas",
+      "tipo": "textarea",
+      "etiqueta": "Talencombinaties"
+     },
+     {
+      "nombre": "adjuntar_cv",
+      "tipo": "file",
+      "etiqueta": "CV bijvoegen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ik ga akkoord met de Privacyverklaring"
+     }
+    ],
+    "boton": "Verzenden",
+    "gracias": "Dankjewel! We hebben je formulier goed ontvangen."
+   },
+   "bloques": []
+  },
+  "como-interprete": {
+   "ruta": "nl/werken-als-tolk.html",
+   "fuente": "nl/werken-als-tolk.html",
+   "titulo": "",
+   "titulo_html": "Trabajo interprete - babeltrans",
+   "formulario": {
+    "intro": [
+     "Wil je deel uitmaken van ons tolkenteam? Vul dan onderstaand formulier in."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Voornaam"
+     },
+     {
+      "nombre": "Apellidos",
+      "tipo": "text",
+      "etiqueta": "Achternaam"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Adres"
+     },
+     {
+      "nombre": "CP",
+      "tipo": "text",
+      "etiqueta": "Postcode"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Plaats"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "Land"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Telefoon"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-mail"
+     },
+     {
+      "nombre": "Lengua_materna",
+      "tipo": "text",
+      "etiqueta": "Moedertaal"
+     },
+     {
+      "nombre": "Tipos_interpretacion",
+      "tipo": "textarea",
+      "etiqueta": "Soorten tolken"
+     },
+     {
+      "nombre": "Combinaciones_linguisticas",
+      "tipo": "textarea",
+      "etiqueta": "Talencombinaties"
+     },
+     {
+      "nombre": "adjuntar_cv",
+      "tipo": "file",
+      "etiqueta": "CV bijvoegen"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "Ik ga akkoord met de Privacyverklaring"
+     }
+    ],
+    "boton": "Verzenden",
+    "gracias": "Danjewel! Je formulier is goed ontvangen."
+   },
+   "bloques": []
+  },
+  "aviso-legal": {
+   "ruta": "nl/disclaimer.html",
+   "fuente": "nl/disclaimer.html",
+   "titulo": "Disclaimer",
+   "titulo_html": "Disclaimer - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "The use of the domain http://www.babeltrans.es is protected as per the provisions of Act 34/2002, of 11 July, on Information Society Services and Electronic Commerce. Nevertheless, full compliance of the legal terms with the regulations in force as regards Data Protection, E-Commerce, Conditions of Engagement, Intellectual Property and further secondary arrangements should be observed."
+    ],
+    [
+     "h3",
+     "1. Acceptance of the Legal Terms"
+    ],
+    [
+     "p",
+     "Access and use of this web site entails the acceptance of all legal terms. Babeltrans reserves the right to modify them at any time. Therefore, every visitor and/or user is responsible for carefully reading the legal terms that are valid whenever this web site is accessed."
+    ],
+    [
+     "h3",
+     "2. Object"
+    ],
+    [
+     "p",
+     "Through the web site http://www.babeltrans.es/, users have access to a variety of contents, information services and data (the \"Contents\"). Babeltrans reserves the right to modify the presentation, configuration and localization of the web site at any time, including the contents and services of the aforementioned web site."
+    ],
+    [
+     "h3",
+     "3. Access"
+    ],
+    [
+     "p",
+     "Access to the information on the different services available on the web site, as well as browsing it, shall be open and free. Users are therefore not required to register with their personal data or use passwords."
+    ],
+    [
+     "p",
+     "In the event it were necessary to provide personal data in order to gain access to certain contents of services, users guarantee that the information provided is true, exact, authentic and valid. Babeltrans shall process these data automatically, taking into account its nature and purpose, under the terms mentioned in the section \"Privacy Policy\"."
+    ],
+    [
+     "h3",
+     "4. Conditions for use"
+    ],
+    [
+     "p",
+     "The user undertakes to make appropriate and licit use of the web site and its contents and services in agreement with the legislation applicable at all times, the legal terms of the web site, morality and generally accepted good customs as well as public order."
+    ],
+    [
+     "h3",
+     "5. Limited liability"
+    ],
+    [
+     "p",
+     "Use of the web page http://www.babeltrans.es and the contents and information therein is the sole responsibility of the user."
+    ],
+    [
+     "p",
+     "Under no circumstances shall Babeltrans accept liability of any kind, including indirect or secondary liability, for damages that may derive for the user or a third party from the lack of availability, maintenance, incorrect information, inexact information or defective operation, utility, suitability or validity of the page."
+    ],
+    [
+     "p",
+     "Babeltrans assumes no responsibility nor guarantees utilisation of the contents and information published on the web page http://www.babeltrans.es. Babeltrans cannot be held liable for any loss or damage that may affect the user or a third party as a result of accessing and using the page, nor can the Company be held liable in the event of the contents and information published on the web page being processed by a third party."
+    ],
+    [
+     "h3",
+     "Links"
+    ],
+    [
+     "p",
+     "Babeltrans assumes no liability arising from the concession, contents and existing information on third-party web pages which may be linked on http://www.babeltrans.es. Furthermore, Babeltrans cannot prevent the existence of viruses or other elements on third-party web sites that could cause alterations to computer systems (hardware and software), documents or files owned by the user."
+    ],
+    [
+     "h3",
+     "6. Intellectual property"
+    ],
+    [
+     "p",
+     "The contents, texts, photographs, designs, logos, images, computer programmes, source codes and, in general, any intellectual creation that appears on this web site, as well as the entire web site as an artistic multimedia expression, are protected by law as copyright concerning intellectual property. Babeltrans is proprietor of the elements that make up the graphic design of its web site, menus, navigation buttons, HTML code, texts, images, textures, graphics and any other content of the web site. In any event, it owns the corresponding authorization for the use of such elements. The content of this web site may not be reproduced , whether fully or partially, transmitted, recorded by any information retrieval system, in any manner or by any means, unless prior authorisation to do so has been given in writing."
+    ],
+    [
+     "h3",
+     "7. Data Protection"
+    ],
+    [
+     "p",
+     "In order to make use of some of the Services, the User must previously provide certain personal data. To that end, Babeltrans shall automatically process Personal Data in accordance with Act 15/1999, of 13 December, on Personal Data Protection."
+    ],
+    [
+     "h3",
+     "8. Duration and termination"
+    ],
+    [
+     "p",
+     " Initially, the services offered on this web site are for an unlimited period. Babeltrans may, however, consider it to have concluded or suspend any service of the website. If possible, Babeltrans shall give notice of the conclusion or suspension of a certain service. "
+    ]
+   ]
+  },
+  "privacidad": {
+   "ruta": "nl/privacyverklaring.html",
+   "fuente": "nl/privacyverklaring.html",
+   "titulo": "Privacyverklaring",
+   "titulo_html": "Privacyverklaring - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "All correspondence with Babeltrans, by any means, whether via email or via the forms available on this web site, or to your email address, entails your express consent to have your personal data included and processed in files owned by Babeltrans, domiciled at C/ Villa de Marín 26, 28029 Madrid (Spain)."
+    ],
+    [
+     "p",
+     "This personal data shall be treated according to Act 15/1999, of 13 December, on the Personal Data Protection."
+    ],
+    [
+     "p",
+     "By virtue of this Act, the person concerned may exercise the right to access, rectify, cancel and contest the personal data that forms part of the aforementioned files. At all times, any person has the right to revoke his consent in writing."
+    ],
+    [
+     "p",
+     "In order to do so, please contact us in writing:"
+    ],
+    [
+     "p",
+     "Babeltrans<br> C/ Villa de Marín, 26<br> 28029 Madrid (Spain)<br> Tel.: +34 913147919<br> Mail: Dit e-mailadres is beschermd tegen spambots. U heeft Javascript nodig om het te kunnen zien."
+    ]
+   ]
+  },
+  "mapa": {
+   "ruta": "nl/sitemap.html",
+   "fuente": "nl/sitemap.html",
+   "titulo": "",
+   "titulo_html": "Sitemap - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Sitemap"
+    ],
+    [
+     "ul",
+     [
+      "Home",
+      "<a href=\"nl/over-ons.html\">Over ons</a> <a href=\"nl/over-ons/onze-medewerkers.html\">Onze medewerkers</a> <a href=\"nl/over-ons/bij-ons-werken.html\">Bij ons werken</a>",
+      "<a href=\"nl/over-ons/onze-medewerkers.html\">Onze medewerkers</a>",
+      "<a href=\"nl/over-ons/bij-ons-werken.html\">Bij ons werken</a>",
+      "<a href=\"nl/onze-diensten.html\">Onze diensten</a> <a href=\"nl/onze-diensten/vertalen.html\">Vertalen</a> <a href=\"nl/onze-diensten/tolken.html\">Tolken</a>",
+      "<a href=\"nl/onze-diensten/vertalen.html\">Vertalen</a>",
+      "<a href=\"nl/onze-diensten/tolken.html\">Tolken</a>",
+      "<a href=\"nl/methodologie-en-werktuigen.html\">Methodologie en werktuigen</a>",
+      "<a href=\"nl/vrijblijvende-offerte.html\">Vrijblijvende offerte</a> <a href=\"nl/vrijblijvende-offerte/vertaalofferte.html\">Vertaalofferte</a> <a href=\"nl/vrijblijvende-offerte/tolkofferte.html\">Tolkofferte</a>",
+      "<a href=\"nl/vrijblijvende-offerte/vertaalofferte.html\">Vertaalofferte</a>",
+      "<a href=\"nl/vrijblijvende-offerte/tolkofferte.html\">Tolkofferte</a>",
+      "<a href=\"nl/contact.html\">Contact</a>",
+      "<a href=\"nl/vertalen-cv.html\">CV vertalen</a>",
+      "<a href=\"nl/cp-ingles-aleman.html\">CP</a>"
+     ]
+    ]
+   ]
+  },
+  "mediacion": {
+   "ruta": "nl/home/71.html",
+   "fuente": "nl/home/71.html",
+   "titulo": "Bemiddeling",
+   "titulo_html": "babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Via bemiddeling (gesprekstolken) kunt u de nodige banden creëren voor de ontwikkeling van uw onderneming middels bijeenkomsten, reizen of andere handelingen waarbij meerdere personen die een andere taal spreken aanwezig zijn."
+    ],
+    [
+     "p",
+     "In deze gevallen moet de tolk voordat de ontmoeting plaatsvindt,zo veel mogelijk informatie ontvangen over de achtergrond van het werk en de doelstellingen van de klant."
+    ],
+    [
+     "cita",
+     "Bij BABELTRANS geloven we in het succes van onze klanten. Daarom bieden wij ze internationale taaloplossingen aan die hen zullen bijstaan bij het behalen van hun doelstellingen"
+    ]
+   ]
+  },
+  "formacion": {
+   "ruta": "nl/home/72.html",
+   "fuente": "nl/home/72.html",
+   "titulo": "Seminars in het Engels",
+   "titulo_html": "babeltrans",
+   "bloques": [
+    [
+     "p",
+     "En <strong>BABELTRANS</strong> prestamos servicios de auditorias lingüísticas gratuitas, evaluando conjuntamente con las empresas las necesidades de formación de sus directivos."
+    ],
+    [
+     "h3",
+     "Nuestros seminarios en inglés:"
+    ],
+    [
+     "ul",
+     [
+      "Capacidad de interactuar socialmente.",
+      "Dirección de equipos.",
+      "Las mejores técnicas para presentaciones.",
+      "Habilidades directivas."
+     ]
+    ],
+    [
+     "h3",
+     "<a href=\"nl/contact.html\">Solicita más información</a> <br>"
+    ]
+   ]
+  }
+ },
+ "menu": [
+  {
+   "texto": "Home",
+   "ruta": "",
+   "hijos": []
+  },
+  {
+   "texto": "Over ons",
+   "ruta": "nl/over-ons.html",
+   "hijos": [
+    {
+     "texto": "Onze medewerkers",
+     "ruta": "nl/over-ons/onze-medewerkers.html"
+    },
+    {
+     "texto": "Bij ons werken",
+     "ruta": "nl/over-ons/bij-ons-werken.html"
+    }
+   ]
+  },
+  {
+   "texto": "Onze diensten",
+   "ruta": "nl/onze-diensten.html",
+   "hijos": [
+    {
+     "texto": "Vertalen",
+     "ruta": "nl/onze-diensten/vertalen.html"
+    },
+    {
+     "texto": "Tolken",
+     "ruta": "nl/onze-diensten/tolken.html"
+    }
+   ]
+  },
+  {
+   "texto": "Methodologie en werktuigen",
+   "ruta": "nl/methodologie-en-werktuigen.html",
+   "hijos": []
+  },
+  {
+   "texto": "Vrijblijvende offerte",
+   "ruta": "nl/vrijblijvende-offerte.html",
+   "hijos": [
+    {
+     "texto": "Vertaalofferte",
+     "ruta": "nl/vrijblijvende-offerte/vertaalofferte.html"
+    },
+    {
+     "texto": "Tolkofferte",
+     "ruta": "nl/vrijblijvende-offerte/tolkofferte.html"
+    }
+   ]
+  },
+  {
+   "texto": "Contact",
+   "ruta": "nl/contact.html",
+   "hijos": []
+  },
+  {
+   "texto": "CV vertalen",
+   "ruta": "nl/vertalen-cv.html",
+   "hijos": []
+  },
+  {
+   "texto": "CP",
+   "ruta": "nl/cp-ingles-aleman.html",
+   "hijos": []
+  }
+ ],
+ "pie": [
+  {
+   "texto": "Disclaimer",
+   "ruta": "nl/disclaimer.html"
+  },
+  {
+   "texto": "Privacyverklaring",
+   "ruta": "nl/privacyverklaring.html"
+  },
+  {
+   "texto": "Sitemap",
+   "ruta": "nl/sitemap.html"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+# Babel Translations — configuración de Apache (Webempresa usa Apache/LiteSpeed)
+
+# Siempre por https y con www, como la web original
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.babeltrans.es%{REQUEST_URI} [L,R=301]
+
+# La portada en castellano tenía dos direcciones; se queda una
+RedirectMatch 301 ^/es\.html$ /
+RedirectMatch 301 ^/index\.php$ /
+
+DirectoryIndex index.html
+ErrorDocument 404 /index.html
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml
+</IfModule>

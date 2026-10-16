@@ -1,0 +1,1131 @@
+{
+ "idioma": "es",
+ "paginas": {
+  "home": {
+   "ruta": "es.html",
+   "fuente": "es.html",
+   "titulo": "",
+   "titulo_html": "babeltrans",
+   "home": {
+    "titulos": [
+     "Traducciones Técnicas y Especializadas",
+     "Traducciones Técnicas y Especializadas de Alta Calidad:",
+     "Traducción e Interpretación"
+    ],
+    "lista": [
+     "Proyectos de Arquitectura, Ingeniería, Industrias...",
+     "Textos Científicos, Médicos, Manuales de Instrucciones...",
+     "Textos Jurídicos, Reglamentos, Traducciones Juradas y Legalizadas...",
+     "Páginas Web, Textos Comerciales, Informes Empresas..."
+    ],
+    "fuertes": [
+     "Traducciones Técnicas y Especializadas de Alta Calidad:",
+     "Proyectos de Arquitectura, Ingeniería, Industrias...",
+     "Textos Científicos, Médicos, Manuales de Instrucciones...",
+     "Textos Jurídicos, Reglamentos, Traducciones Juradas y Legalizadas...",
+     "Páginas Web, Textos Comerciales, Informes Empresas...",
+     "GARANTIZAMOS CONFIDENCIALIDAD",
+     "La interpretación es una de las mejores manifestaciones del lenguaje",
+     "Todo lo verdaderamente excelente es traducible",
+     "Mediamos para que nuestros clientes se hagan más grandes"
+    ],
+    "frases": [
+     "La interpretación es una de las mejores manifestaciones del lenguaje",
+     "Todo lo verdaderamente excelente es traducible",
+     "Mediamos para que nuestros clientes se hagan más grandes"
+    ],
+    "derecha": [
+     "Presupuesto",
+     "Contacto Rápido",
+     "¡",
+     "Solicite Presupuesto!",
+     "RESPUESTA INMEDIATA",
+     "Tel. 91 504 77 74",
+     "Nombre:",
+     "Teléfono:",
+     "E-Mail:",
+     "Comentarios:",
+     "Introduzca los números:",
+     "Servicios",
+     "Servicios de interpretación",
+     "La interpretación es una actividad compleja que requiere un gran esfuerzo y experiencia para cons...",
+     "Traducciones: todos los IDIOMAS",
+     "La traducción es una de las artes que más dedicación y talento requiere ya que hasta ...",
+     "Campañas"
+    ],
+    "modulos": [
+     {
+      "titulo": "Nuestros colaboradores",
+      "texto": [
+       "Calidad profesional ..."
+      ]
+     },
+     {
+      "titulo": "Nuestros colaboradores",
+      "texto": [
+       "Calidad profesional ..."
+      ]
+     },
+     {
+      "titulo": "Consultoría de formación en inglés",
+      "texto": []
+     },
+     {
+      "titulo": "Consultoría de formación en inglés",
+      "texto": []
+     },
+     {
+      "titulo": "Defina sus necesidades",
+      "texto": [
+       "Seminarios en inglés a su medida",
+       "Con mayor confianza conseguirá mayores éxitos"
+      ]
+     },
+     {
+      "titulo": "Defina sus necesidades",
+      "texto": [
+       "Seminarios en inglés a su medida",
+       "Con mayor confianza conseguirá mayores éxitos"
+      ]
+     },
+     {
+      "titulo": "Metodología y herramientas",
+      "texto": [
+       "Nos ajustamos a sus",
+       "necesidades ..."
+      ]
+     },
+     {
+      "titulo": "Metodología y herramientas",
+      "texto": [
+       "Nos ajustamos a sus",
+       "necesidades ..."
+      ]
+     }
+    ],
+    "copyright": "Copyright © 2024 babeltrans. Todos los derechos reservados."
+   }
+  },
+  "quienes": {
+   "ruta": "es/quienessomos-traducciones.html",
+   "fuente": "es/quienessomos-traducciones.html",
+   "titulo": "Quiénes somos",
+   "titulo_html": "Quiénes somos - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "<strong>BABELTRANS</strong> es un proveedor global de servicios lingüísticos especializado en la <strong>traducción e interpretación</strong> en cualquier área de especialización y en la mayoría de los idiomas."
+    ],
+    [
+     "p",
+     "Nuestra experiencia profesional, proporcionando soluciones lingüísticas desde 1999, nos ha posicionado en un lugar destacado como socio estratégico en la <strong>internacionalización</strong> de muchas empresas españolas."
+    ],
+    [
+     "p",
+     "En <strong>BABELTRANS</strong> mostramos una gran sensibilidad por el idioma, por ello todos nuestros colaboradores son expertos que sólo traducen a su idioma materno imprimiendo en cada proyecto los matices propios de su <strong>cultura</strong>."
+    ],
+    [
+     "p",
+     "Los textos traducidos son revisados por profesionales indepedientes para asegurarles la <strong>máxima calidad</strong>."
+    ],
+    [
+     "p",
+     "Garantizamos la protección adecuada de toda la información que nos confían a través de acuerdos de <strong>confidencialidad</strong>."
+    ],
+    [
+     "cita",
+     "Nuestra estrategia está basada en las relaciones sostenibles con nuestros clientes y en la mejora continua de nuestros procesos"
+    ]
+   ]
+  },
+  "colaboradores": {
+   "ruta": "es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html",
+   "fuente": "es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html",
+   "titulo": "Nuestros colaboradores",
+   "titulo_html": "Nuestros colaboradores - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "\"El lenguaje no es instintivo, se debe a un proceso cultural\""
+    ],
+    [
+     "p",
+     "Contamos con el mejor equipo de lingüistas expertos en las diferentes áreas tanto de traducción como de interpretación."
+    ],
+    [
+     "p",
+     "Son profesionales cuya actividad no sólo implica un gran dominio del campo léxico, sino que además detectan calcos de estructuras sintácticas proporcionando naturalidad tanto en el texto traducido como en la conversación."
+    ],
+    [
+     "p",
+     "Nuestros traductores crean la relación de equivalencia entre el texto origen y el texto traducido con la seguridad de que ambos comunican el mismo mensaje."
+    ]
+   ]
+  },
+  "trabaja": {
+   "ruta": "es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html",
+   "fuente": "es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html",
+   "titulo": "Trabaja con nosotros",
+   "titulo_html": "Trabaja con nosotros - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"es/trabajar-como-traductor.html\">Como traductor</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"es/trabajar-como-interprete.html\">Como intérprete</a>"
+    ]
+   ]
+  },
+  "servicios": {
+   "ruta": "es/servicios-traducciones.html",
+   "fuente": "es/servicios-traducciones.html",
+   "titulo": "Servicios",
+   "titulo_html": "Servicios - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"es/servicios-traducciones/traduccion-tecnica-manuales.html\">Servicios de TRADUCCIÓN</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"es/servicios-traducciones/interpretacion-holandes.html\">Servicios de INTERPRETACIÓN</a>"
+    ]
+   ]
+  },
+  "traduccion": {
+   "ruta": "es/servicios-traducciones/traduccion-tecnica-manuales.html",
+   "fuente": "es/servicios-traducciones/traduccion-tecnica-manuales.html",
+   "titulo": "Traducciones: todos los IDIOMAS",
+   "titulo_html": "Traducciones: todos los IDIOMAS - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "La traducción es una de las artes que más dedicación y talento requiere ya que hasta el texto más sencillo puede estar plagado de ambigüedades."
+    ],
+    [
+     "p",
+     "En <strong>BABELTRANS</strong> dependiendo del tipo de texto seleccionamos la traducción más idónea, evitando en ocasiones traducciones demasiado literales que atestiguan muy poca sensibilidad ante la lengua."
+    ],
+    [
+     "h3",
+     "TraduccioneS"
+    ],
+    [
+     "ul",
+     [
+      "Comerciales: páginas web, ofertas, pedidos, folletos promocionales.",
+      "Económicos: informes, cuentas anuales.",
+      "Jurídicos: cualquier texto legal.",
+      "Técnicos - científicos: ingeniería, automoción, manuales técnicos, instrucciones de montaje, textos sanitarios, científicos.",
+      "Juradas: escrituras, partidas de nacimiento, certificados, poderes, títulos."
+     ]
+    ],
+    [
+     "h3",
+     "Revisiones de Textos"
+    ],
+    [
+     "ul",
+     [
+      "Todas las traducciones llevan incluida una revisión final, realizada siempre por un traductor independiente.",
+      "Revisión de textos originales cuando lo solicita el cliente."
+     ]
+    ],
+    [
+     "h3",
+     "Transcripciones"
+    ],
+    [
+     "ul",
+     [
+      "Grabaciones",
+      "Conferencias",
+      "Entrevistas"
+     ]
+    ]
+   ]
+  },
+  "interpretacion": {
+   "ruta": "es/servicios-traducciones/interpretacion-holandes.html",
+   "fuente": "es/servicios-traducciones/interpretacion-holandes.html",
+   "titulo": "Servicios de interpretación",
+   "titulo_html": "Servicios de interpretación - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "La interpretación es una actividad compleja que requiere un gran esfuerzo y experiencia para conseguir un buen resultado."
+    ],
+    [
+     "p",
+     "En <strong>BABELTRANS</strong> contamos con el mejor equipo de intérpretes capaces de utilizar los equivalentes más próximos y naturales a la lengua original, tanto en lo que se refiere al sentido como en lo que atañe al estilo."
+    ],
+    [
+     "p",
+     "Nos adaptamos a sus necesidades ofreciéndoles siempre las mejores alternativas en recursos humanos, técnicos y de cualquier índole."
+    ],
+    [
+     "h3",
+     "Nuestras metas ... sus objetivos"
+    ],
+    [
+     "h3",
+     "Servicios de Interpretación"
+    ],
+    [
+     "ul",
+     [
+      "Interpretación Consecutiva: ruedas de prensa, convenciones empresariales, negociaciones, mediaciones.",
+      "Interpretación Simultánea: seminarios, reuniones, conferencias.",
+      "Interpretación por Teleconferencia y Videoconferencia: conferencias empresariales con socios, proveedores.",
+      "Interpretación Jurada: notarías, tribunales, juicios.",
+      "Locuciones: grabaciones en estudios."
+     ]
+    ]
+   ]
+  },
+  "metodologia": {
+   "ruta": "es/metodologia-herramientas-traduccion.html",
+   "fuente": "es/metodologia-herramientas-traduccion.html",
+   "titulo": "Metodología y herramientas",
+   "titulo_html": "Metodología y herramientas - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Desde 1999 <strong>BABELTRANS</strong> realiza servicios de traducción e interpretación siguiendo una metodología única y en continuo proceso de mejora.<br> Cada trabajo lo consideramos un proyecto exclusivo, dedicando el tiempo y los medios necesarios.<br> Aseguramos consistencia en los documentos traducidos, incluyendo la fraseología, terminología y definiciones comunes más adecuadas."
+    ],
+    [
+     "h3",
+     "Metodología:"
+    ],
+    [
+     "ul",
+     [
+      "Cada proyecto es analizado antes de ser asignado a un profesional de acuerdo con las necesidades concretas del cliente.",
+      "Todos los proyectos son revisados por un profesional independiente.",
+      "Maquetación según documento original o solicitud del cliente."
+     ]
+    ],
+    [
+     "h3",
+     "Herramientas:"
+    ],
+    [
+     "ul",
+     [
+      "Memorias de traducción que permiten identificar patrones lingüísticos y terminológicos comunes.",
+      "Glosarios de cada campo específico.",
+      "Uso de vocabulario preferente del cliente"
+     ]
+    ]
+   ]
+  },
+  "presupuesto": {
+   "ruta": "es/solicite-presupuesto-traduccion.html",
+   "fuente": "es/solicite-presupuesto-traduccion.html",
+   "titulo": "Solicite presupuesto",
+   "titulo_html": "Solicite presupuesto - babeltrans",
+   "bloques": [
+    [
+     "h3",
+     "<a href=\"es/solicite-presupuesto-traduccion/presupuesto-traduccion.html\">Para traducción</a>"
+    ],
+    [
+     "h3",
+     "<a href=\"es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html\">Para interpretación</a>"
+    ]
+   ]
+  },
+  "presupuesto-traduccion": {
+   "ruta": "es/solicite-presupuesto-traduccion/presupuesto-traduccion.html",
+   "fuente": "es/solicite-presupuesto-traduccion/presupuesto-traduccion.html",
+   "titulo": "",
+   "titulo_html": "Presupuesto traducción - babeltrans",
+   "formulario": {
+    "intro": [
+     "Rellene el siguiente formulario para recibir un PRESUPUESTO RÁPIDO Y SIN COMPROMISO."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre y apellidos"
+     },
+     {
+      "nombre": "Empresa",
+      "tipo": "text",
+      "etiqueta": "Empresa"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "País"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Población"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Cargar documentos"
+     },
+     {
+      "nombre": "Idioma_partida",
+      "tipo": "text",
+      "etiqueta": "Idioma de partida"
+     },
+     {
+      "nombre": "Idioma_destino",
+      "tipo": "text",
+      "etiqueta": "Idioma de destino"
+     },
+     {
+      "nombre": "Fecha_entrega",
+      "tipo": "text",
+      "etiqueta": "Fecha de entrega"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": "Comentarios"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Solicitar Presupuesto",
+    "gracias": ""
+   },
+   "bloques": []
+  },
+  "presupuesto-interpretacion": {
+   "ruta": "es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html",
+   "fuente": "es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html",
+   "titulo": "",
+   "titulo_html": "Presupuesto interpretación - babeltrans",
+   "formulario": {
+    "intro": [
+     "Rellene el siguiente formulario para recibir un presupuesto RÁPIDO Y SIN COMPROMISO."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre y apellidos"
+     },
+     {
+      "nombre": "Empresa",
+      "tipo": "text",
+      "etiqueta": "Nombre de la empresa"
+     },
+     {
+      "nombre": "Departamento",
+      "tipo": "text",
+      "etiqueta": "Departamento"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Dirección de la empresa"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "País"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Población"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Teléfono"
+     },
+     {
+      "nombre": "Tipo_evento",
+      "tipo": "select",
+      "etiqueta": "Tipo de evento con intérprete",
+      "opciones": [
+       "Seleccione tipo",
+       "reunión de empresa",
+       "convención",
+       "conferencia de prensa",
+       "entrevista",
+       "otros"
+      ]
+     },
+     {
+      "nombre": "Lugar",
+      "tipo": "text",
+      "etiqueta": "Lugar del evento"
+     },
+     {
+      "nombre": "Fecha",
+      "tipo": "text",
+      "etiqueta": "Fecha"
+     },
+     {
+      "nombre": "Horario",
+      "tipo": "text",
+      "etiqueta": "Horario"
+     },
+     {
+      "nombre": "Tipo_interpretacion",
+      "tipo": "select",
+      "etiqueta": "Tipos de interpretación",
+      "opciones": [
+       "Seleccione tipo",
+       "Consecutiva",
+       "Simultánea susurrada"
+      ]
+     },
+     {
+      "nombre": "Precisa_equipos",
+      "tipo": "select",
+      "etiqueta": "Precisa equipos de interpretación",
+      "opciones": [
+       "No",
+       "Sí"
+      ]
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Cargar documentos"
+     },
+     {
+      "nombre": "Idioma_partida",
+      "tipo": "text",
+      "etiqueta": "Idioma de partida"
+     },
+     {
+      "nombre": "Idioma_destino",
+      "tipo": "text",
+      "etiqueta": "Idioma de destino"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": "Comentarios"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Solicitar Presupuesto",
+    "gracias": ""
+   },
+   "bloques": []
+  },
+  "contacto": {
+   "ruta": "es/contacto-traduccion.html",
+   "fuente": "es/contacto-traduccion.html",
+   "titulo": "",
+   "titulo_html": "Contacto - babeltrans",
+   "formulario": {
+    "intro": [
+     "Para solicitar información, rellene el siguiente formulario. Si lo prefiere, también puede ponerse en contacto con nosotros a través del teléfono o enviándonos un e-mail a info@babeltrans.es",
+     "BABELTRANS Tel.: +34 915047774 Mail: info@babeltrans.es"
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Persona",
+      "tipo": "text",
+      "etiqueta": "Persona contacto"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Teléfono"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Población"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "observaciones",
+      "tipo": "textarea",
+      "etiqueta": "Observaciones"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Enviar",
+    "gracias": "Gracias por ponerse en contacto con nosotros."
+   },
+   "bloques": []
+  },
+  "cv": {
+   "ruta": "es/cv-ingles.html",
+   "fuente": "es/cv-ingles.html",
+   "titulo": "",
+   "titulo_html": "Traducir CV - babeltrans",
+   "formulario": {
+    "intro": [],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre"
+     },
+     {
+      "nombre": "mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Cargar CV"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Enviar",
+    "gracias": ""
+   },
+   "bloques": []
+  },
+  "cp": {
+   "ruta": "es/cp-ingles-aleman.html",
+   "fuente": "es/cp-ingles-aleman.html",
+   "titulo": "",
+   "titulo_html": "CP - babeltrans",
+   "formulario": {
+    "intro": [],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre"
+     },
+     {
+      "nombre": "mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "adjuntar_documento",
+      "tipo": "file",
+      "etiqueta": "Cargar Carta"
+     },
+     {
+      "nombre": "Comentarios",
+      "tipo": "textarea",
+      "etiqueta": ""
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Enviar",
+    "gracias": ""
+   },
+   "bloques": []
+  },
+  "como-traductor": {
+   "ruta": "es/trabajar-como-traductor.html",
+   "fuente": "es/trabajar-como-traductor.html",
+   "titulo": "",
+   "titulo_html": "Trabajo traductor - babeltrans",
+   "formulario": {
+    "intro": [
+     "Si deseas formar parte de nuestro equipo de trabajo como traductor, rellena el siguiente formulario."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre"
+     },
+     {
+      "nombre": "Apellidos",
+      "tipo": "text",
+      "etiqueta": "Apellidos"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Dirección"
+     },
+     {
+      "nombre": "CP",
+      "tipo": "text",
+      "etiqueta": "Código postal"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Población"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "País"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Teléfono"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "Lengua_materna",
+      "tipo": "text",
+      "etiqueta": "Lengua materna"
+     },
+     {
+      "nombre": "Areas_especializacion",
+      "tipo": "textarea",
+      "etiqueta": "Áreas de especialización"
+     },
+     {
+      "nombre": "Traduccion_jurada",
+      "tipo": "textarea",
+      "etiqueta": "Traducción jurada"
+     },
+     {
+      "nombre": "Combinaciones_linguisticas",
+      "tipo": "textarea",
+      "etiqueta": "Combinaciones lingüísticas"
+     },
+     {
+      "nombre": "adjuntar_cv",
+      "tipo": "file",
+      "etiqueta": "Adjuntar CV"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Enviar",
+    "gracias": "Gracias por ponerse en contacto con nosotros."
+   },
+   "bloques": []
+  },
+  "como-interprete": {
+   "ruta": "es/trabajar-como-interprete.html",
+   "fuente": "es/trabajar-como-interprete.html",
+   "titulo": "",
+   "titulo_html": "Trabajo interprete - babeltrans",
+   "formulario": {
+    "intro": [
+     "Si deseas formar parte de nuestro equipo de trabajo como intérprete, rellena el siguiente formulario."
+    ],
+    "datos": [],
+    "campos": [
+     {
+      "nombre": "Nombre",
+      "tipo": "text",
+      "etiqueta": "Nombre"
+     },
+     {
+      "nombre": "Apellidos",
+      "tipo": "text",
+      "etiqueta": "Apellidos"
+     },
+     {
+      "nombre": "Direccion",
+      "tipo": "text",
+      "etiqueta": "Dirección"
+     },
+     {
+      "nombre": "CP",
+      "tipo": "text",
+      "etiqueta": "Código postal"
+     },
+     {
+      "nombre": "poblacion",
+      "tipo": "text",
+      "etiqueta": "Población"
+     },
+     {
+      "nombre": "Pais",
+      "tipo": "text",
+      "etiqueta": "País"
+     },
+     {
+      "nombre": "Telefono",
+      "tipo": "text",
+      "etiqueta": "Teléfono"
+     },
+     {
+      "nombre": "Mail",
+      "tipo": "text",
+      "etiqueta": "E-Mail"
+     },
+     {
+      "nombre": "Lengua_materna",
+      "tipo": "text",
+      "etiqueta": "Lengua materna"
+     },
+     {
+      "nombre": "Tipos_interpretacion",
+      "tipo": "textarea",
+      "etiqueta": "Tipos de interpretación"
+     },
+     {
+      "nombre": "Combinaciones_linguisticas",
+      "tipo": "textarea",
+      "etiqueta": "Combinaciones lingüísticas"
+     },
+     {
+      "nombre": "adjuntar_cv",
+      "tipo": "file",
+      "etiqueta": "Adjuntar CV"
+     },
+     {
+      "nombre": "Privacidad",
+      "tipo": "checkbox",
+      "etiqueta": "He leído y acepto la Política de privacidad"
+     }
+    ],
+    "boton": "Enviar",
+    "gracias": "Gracias por ponerse en contacto con nosotros."
+   },
+   "bloques": []
+  },
+  "aviso-legal": {
+   "ruta": "es/aviso-legal.html",
+   "fuente": "es/aviso-legal.html",
+   "titulo": "Aviso legal",
+   "titulo_html": "Aviso legal - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "La utilización del nombre de dominio http://www.babeltrans.es se encuentra, con todas las garantías, tal y como dispone en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico. No obstante, se pone de manifiesto la plena adecuación de los presentes Términos Legales a la normativa vigente en materia de Protección de Datos, Comercio Electrónico, Condiciones Contratación, Propiedad Intelectual y demás disposiciones subsidiarias."
+    ],
+    [
+     "h3",
+     "1. Aceptación de los términos legales"
+    ],
+    [
+     "p",
+     "El acceso a este sitio Web o su utilización en cualquier forma implica la aceptación de todos los Términos Legales presentes, reservándose BABELTRANS el derecho a modificarlos en cualquier momento. Por ello, será responsabilidad de todo visitante y/o usuario, la atenta lectura de los Términos Legales de uso vigente en cada una de las ocasiones en que acceda a este sitio Web."
+    ],
+    [
+     "h3",
+     "2. Objeto"
+    ],
+    [
+     "p",
+     "Por medio de la Web http://www.babeltrans.es/ se facilita a los Usuarios el acceso a diversos contenidos, servicios, información y datos (los \"contenidos\"), puestos a su disposición. BABELTRANS se reserva el derecho de modificar en cualquier momento la presentación, configuración y localización de la página Web, así como los contenidos y servicios en ella dispuestos."
+    ],
+    [
+     "h3",
+     "3. Acceso"
+    ],
+    [
+     "p",
+     "El acceso a la información de los distintos servicios existentes en el sitio Web, así como su navegación será libre y gratuita no exigiéndose por tanto a los Usuarios el registro con la consecuente entrega de sus datos personales, ni la utilización de claves o contraseñas."
+    ],
+    [
+     "p",
+     "Cuando para el acceso a determinados contenidos o servicios sea necesario facilitar datos de carácter personal, los Usuarios garantizarán su veracidad, exactitud, autenticidad y vigencia. BABELTRANS dará a dichos datos el tratamiento automatizado que corresponda en función de su naturaleza o finalidad, en los términos indicados en la sección de Política de Privacidad."
+    ],
+    [
+     "h3",
+     "4. Condiciones de utilización"
+    ],
+    [
+     "p",
+     "El Usuario se compromete a hacer un uso adecuado y lícito del sitio Web así como de los contenidos y servicios, de conformidad con la legislación aplicable en cada momento, los Términos Legales del sitio Web, la moral y buenas costumbres generalmente aceptadas y el orden público."
+    ],
+    [
+     "h3",
+     "5. Exclusión de garantías y responsabilidad"
+    ],
+    [
+     "p",
+     "El uso de la página http://www.babeltrans.es, así como de los contenidos e información publicados en la misma, se realiza bajo la exclusiva responsabilidad del usuario."
+    ],
+    [
+     "p",
+     "BABELTRANS no asume en ningún caso responsabilidad alguna ni siquiera indirecta o subsidiaria por aquellos daños y perjuicios que pudieran derivarse para el usuario o para un tercero como consecuencia de la falta de disponibilidad, mantenimiento, incorrección, inexactitud o funcionamiento, utilidad, adecuación o validez de la página."
+    ],
+    [
+     "p",
+     "BABELTRANS no asume ningún tipo de responsabilidad ni garantiza el aprovechamiento de los contenidos e información publicada en la página http://www.babeltrans.es, no siendo responsable por las pérdidas o daños que pudieran ocasionarse al usuario o a un tercero como consecuencia del acceso y uso de la página, así como tampoco se responsabiliza en caso de manipulación del contenido e información publicada en la misma en el supuesto de que sea manipulada por un tercero."
+    ],
+    [
+     "h3",
+     "Enlaces"
+    ],
+    [
+     "p",
+     "BABELTRANS no asume ningún tipo de responsabilidad que pueda derivarse de la concesión, contenidos e información existente en páginas propiedad de terceros a las que se pueda hacer referencia en la página http://www.babeltrans.es así como tampoco puede garantizar la existencia de virus o cualquier otro elemento en las páginas propiedad de terceros que pudieran producir alteraciones en el sistema informático (hardware y software), documentos o ficheros propiedad del usuario."
+    ],
+    [
+     "h3",
+     "6. Propiedad intelectual"
+    ],
+    [
+     "p",
+     "Los contenidos, textos, fotografías, diseños, logotipos, imágenes, programas de ordenador, códigos fuente y, en general, cualquier creación intelectual existente en este sitio, así como el propio sitio en su conjunto, como obra artística multimedia, están protegidos como derechos de autor por la legislación en materia de propiedad intelectual. BABELTRANS es titular de los elementos que integran el diseño gráfico de su página web, los menús, botones de navegación, el código HTML, los textos, imágenes, texturas, gráficos y cualquier otro contenido de la página web o, en cualquier caso dispone de la correspondiente autorización para la utilización de dichos elementos. El contenido dispuesto en dicha web no podrá ser reproducido ni en todo ni en parte, ni transmitido, ni registrado por ningún sistema de recuperación de información, en ninguna forma ni en ningún medio, a menos que se cuente con la autorización previa, por escrito, de la citada Entidad."
+    ],
+    [
+     "h3",
+     "7. Protección de datos"
+    ],
+    [
+     "p",
+     "Para utilizar algunos de los Servicios, los Usuarios deben proporcionar previamente ciertos datos de carácter personal. Para ello, BABELTRANS tratará automatizadamente los Datos Personales en cumplimiento con la Ley Orgánica 15/1999 de 13 de diciembre de Protección de Datos de Carácter Personal."
+    ],
+    [
+     "h3",
+     "8. Duración y terminación"
+    ],
+    [
+     "p",
+     "La prestación del servicio del presente sitio web y los demás servicios tienen en principio una duración indefinida. No obstante, BABELTRANS podrá dar por terminada o suspender cualquiera de los servicios del portal. Cuando sea ello posible, BABELTRANS anunciará la terminación o suspensión de la prestación del servicio determinado."
+    ]
+   ]
+  },
+  "privacidad": {
+   "ruta": "es/politica-de-privacidad.html",
+   "fuente": "es/politica-de-privacidad.html",
+   "titulo": "Política de privacidad",
+   "titulo_html": "Política de privacidad - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Toda comunicación con <strong>BABELTRANS</strong> por cualquier medio o a través de su dirección de correo electrónico, o de los formularios presentes en este 'web site' o a su 'e-mail', supone el consentimiento expreso para que sus datos personales sean incorporados a ficheros titularidad de <strong>BABELTRANS</strong>, cuya dirección es C/ Villa de Marín 26, 28029 Madrid (España)."
+    ],
+    [
+     "p",
+     "Estos datos de carácter personal serán tratados conforme a lo dispuesto en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal."
+    ],
+    [
+     "p",
+     "Por tanto, el interesado podrá ejercer derecho de acceso, rectificación, cancelación y oposición con respecto a los datos personales que consten en los expresados ficheros, pudiendo revocar su consentimiento por escrito en cualquier momento."
+    ],
+    [
+     "p",
+     "Para ello lo podrán hacer mediante comunicación escrita dirigida a:"
+    ],
+    [
+     "p",
+     "<strong>BABELTRANS</strong><br> C/ Luis Martínez Feduchi, 74<br> 28055 Madrid (España)<br> Tel.: +34 915047774<br> Mail: Esta dirección electrónica esta protegida contra spam bots. Necesita activar JavaScript para visualizarla"
+    ]
+   ]
+  },
+  "mapa": {
+   "ruta": "es/mapa-web.html",
+   "fuente": "es/mapa-web.html",
+   "titulo": "",
+   "titulo_html": "Mapa web - babeltrans",
+   "bloques": [
+    [
+     "p",
+     "Mapa web"
+    ],
+    [
+     "ul",
+     [
+      "Inicio",
+      "<a href=\"es/quienessomos-traducciones.html\">Quiénes somos</a> <a href=\"es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html\">Nuestros colaboradores</a> <a href=\"es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html\">Trabaja con nosotros</a>",
+      "<a href=\"es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html\">Nuestros colaboradores</a>",
+      "<a href=\"es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html\">Trabaja con nosotros</a>",
+      "<a href=\"es/servicios-traducciones.html\">Servicios</a> <a href=\"es/servicios-traducciones/traduccion-tecnica-manuales.html\">Traducción</a> <a href=\"es/servicios-traducciones/interpretacion-holandes.html\">Interpretación</a>",
+      "<a href=\"es/servicios-traducciones/traduccion-tecnica-manuales.html\">Traducción</a>",
+      "<a href=\"es/servicios-traducciones/interpretacion-holandes.html\">Interpretación</a>",
+      "<a href=\"es/metodologia-herramientas-traduccion.html\">Metodología y herramientas</a>",
+      "<a href=\"es/solicite-presupuesto-traduccion.html\">Solicite presupuesto</a> <a href=\"es/solicite-presupuesto-traduccion/presupuesto-traduccion.html\">Presupuesto traducción</a> <a href=\"es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html\">Presupuesto interpretación</a>",
+      "<a href=\"es/solicite-presupuesto-traduccion/presupuesto-traduccion.html\">Presupuesto traducción</a>",
+      "<a href=\"es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html\">Presupuesto interpretación</a>",
+      "<a href=\"es/contacto-traduccion.html\">Contacto</a>",
+      "<a href=\"es/cv-ingles.html\">CV</a>",
+      "<a href=\"es/cp-ingles-aleman.html\">CP</a>"
+     ]
+    ]
+   ]
+  },
+  "mediacion": {
+   "ruta": "es/home-traducciones/71.html",
+   "fuente": "es/home-traduccion-holandes/71.html",
+   "titulo": "Mediación",
+   "titulo_html": "babeltrans",
+   "bloques": [
+    [
+     "p",
+     "La mediación o interpretación de enlace le permitirá establecer los vínculos necesarios para el desarrollo de su negocio a través de reuniones, viajes o cualquier tipo de encuentro que requiera la participación de personas que hablan idiomas diferentes."
+    ],
+    [
+     "p",
+     "En estos casos el intérprete debe conocer, antes de que se produzca el encuentro, la máxima información posible sobre el contexto de trabajo y los objetivos del cliente."
+    ],
+    [
+     "cita",
+     "En BABELTRANS apostamos por el éxito de nuestros clientes ofreciéndoles soluciones lingüísticas globales que contribuyen a la mejora de su negocio"
+    ]
+   ]
+  },
+  "formacion": {
+   "ruta": "es/home-traducciones/72.html",
+   "fuente": "es/home-traduccion-holandes/72.html",
+   "titulo": "Consultoría de formación en inglés",
+   "titulo_html": "babeltrans",
+   "bloques": [
+    [
+     "p",
+     "En <strong>BABELTRANS</strong> prestamos servicios de auditorias lingüísticas gratuitas, evaluando conjuntamente con las empresas las necesidades de formación de sus directivos."
+    ],
+    [
+     "h3",
+     "Nuestros seminarios en inglés:"
+    ],
+    [
+     "ul",
+     [
+      "Capacidad de interactuar socialmente.",
+      "Dirección de equipos.",
+      "Las mejores técnicas para presentaciones.",
+      "Habilidades directivas."
+     ]
+    ],
+    [
+     "h3",
+     "Solicita más información <br>"
+    ]
+   ]
+  }
+ },
+ "menu": [
+  {
+   "texto": "Inicio",
+   "ruta": "",
+   "hijos": []
+  },
+  {
+   "texto": "Quiénes somos",
+   "ruta": "es/quienessomos-traducciones.html",
+   "hijos": [
+    {
+     "texto": "Nuestros colaboradores",
+     "ruta": "es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html"
+    },
+    {
+     "texto": "Trabaja con nosotros",
+     "ruta": "es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html"
+    }
+   ]
+  },
+  {
+   "texto": "Servicios",
+   "ruta": "es/servicios-traducciones.html",
+   "hijos": [
+    {
+     "texto": "Traducción",
+     "ruta": "es/servicios-traducciones/traduccion-tecnica-manuales.html"
+    },
+    {
+     "texto": "Interpretación",
+     "ruta": "es/servicios-traducciones/interpretacion-holandes.html"
+    }
+   ]
+  },
+  {
+   "texto": "Metodología y herramientas",
+   "ruta": "es/metodologia-herramientas-traduccion.html",
+   "hijos": []
+  },
+  {
+   "texto": "Solicite presupuesto",
+   "ruta": "es/solicite-presupuesto-traduccion.html",
+   "hijos": [
+    {
+     "texto": "Presupuesto traducción",
+     "ruta": "es/solicite-presupuesto-traduccion/presupuesto-traduccion.html"
+    },
+    {
+     "texto": "Presupuesto interpretación",
+     "ruta": "es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html"
+    }
+   ]
+  },
+  {
+   "texto": "Contacto",
+   "ruta": "es/contacto-traduccion.html",
+   "hijos": []
+  },
+  {
+   "texto": "CV",
+   "ruta": "es/cv-ingles.html",
+   "hijos": []
+  },
+  {
+   "texto": "CP",
+   "ruta": "es/cp-ingles-aleman.html",
+   "hijos": []
+  }
+ ],
+ "pie": [
+  {
+   "texto": "Aviso legal",
+   "ruta": "es/aviso-legal.html"
+  },
+  {
+   "texto": "Política de privacidad",
+   "ruta": "es/politica-de-privacidad.html"
+  },
+  {
+   "texto": "Mapa web",
+   "ruta": "es/mapa-web.html"
+  }
+ ]
+}

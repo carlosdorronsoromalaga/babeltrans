@@ -1,0 +1,123 @@
+# Babel Translations — configuración de Apache (Webempresa usa Apache/LiteSpeed)
+
+# Siempre por https y con www, como la web original
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.babeltrans.es%{REQUEST_URI} [L,R=301]
+
+# La portada en castellano tenía dos direcciones; se queda una
+RedirectMatch 301 ^/es\.html$ /
+RedirectMatch 301 ^/index\.php$ /
+
+DirectoryIndex index.html
+ErrorDocument 404 /index.html
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml
+</IfModule>
+
+# Rutas de la web vieja (generado por scripts/construir.py)
+RedirectMatch 301 ^/als\-dolmetscher\.html$ /de/als-dolmetscher.html
+RedirectMatch 301 ^/als\-uebersetzer\.html$ /de/als-uebersetzer.html
+RedirectMatch 301 ^/arbeitsweise\-und\-werkzeuge\.html$ /de/arbeitsweise-und-werkzeuge.html
+RedirectMatch 301 ^/aviso\-legal\.html$ /es/aviso-legal.html
+RedirectMatch 301 ^/component/content/article/71\.html$ /es/home-traducciones/71.html
+RedirectMatch 301 ^/component/content/article/72\.html$ /nl/home/72.html
+RedirectMatch 301 ^/contact\.html$ /nl/contact.html
+RedirectMatch 301 ^/contacto\-traduccion\-holandes\.html$ /es/contacto-traduccion.html
+RedirectMatch 301 ^/contacto\-traduccion\.html$ /es/contacto-traduccion.html
+RedirectMatch 301 ^/cp\-ingles\-aleman\.html$ /es/cp-ingles-aleman.html
+RedirectMatch 301 ^/cv\-ingles\.html$ /es/cv-ingles.html
+RedirectMatch 301 ^/datenschutz\.html$ /de/datenschutz.html
+RedirectMatch 301 ^/de/component/content/article/71\.html$ /de/home/71.html
+RedirectMatch 301 ^/de/component/content/article/72\.html$ /de/home/72.html
+RedirectMatch 301 ^/de/cv\-ingles\-holandes\.html$ /de/cv-ingles.html
+RedirectMatch 301 ^/de/home\.html$ /de.html
+RedirectMatch 301 ^/dienste\.html$ /de/dienste.html
+RedirectMatch 301 ^/dienste/dolmetschen\.html$ /de/dienste/dolmetschen.html
+RedirectMatch 301 ^/dienste/uebersetzungen\.html$ /de/dienste/uebersetzungen.html
+RedirectMatch 301 ^/disclaimer\.html$ /nl/disclaimer.html
+RedirectMatch 301 ^/en/component/content/article/71\.html$ /en/home/71.html
+RedirectMatch 301 ^/en/component/content/article/72\.html$ /en/home/72.html
+RedirectMatch 301 ^/en/home\.html$ /en.html
+RedirectMatch 301 ^/es/component/content/article/71\.html$ /es/home-traducciones/71.html
+RedirectMatch 301 ^/es/component/content/article/72\.html$ /es/home-traducciones/72.html
+RedirectMatch 301 ^/es/contacto\-traduccion\-holandes\.html$ /es/contacto-traduccion.html
+RedirectMatch 301 ^/es/cv\-ingles\-holandes\.html$ /es/cv-ingles.html
+RedirectMatch 301 ^/es/home\-traduccion\-holandes\.html$ /
+RedirectMatch 301 ^/es/home\-traduccion\-holandes/71\.html$ /es/home-traducciones/71.html
+RedirectMatch 301 ^/es/home\-traduccion\-holandes/72\.html$ /es/home-traducciones/72.html
+RedirectMatch 301 ^/es/home\-traducciones\.html$ /
+RedirectMatch 301 ^/es/quienessomos\-traduccion\-holandes\.html$ /es/quienessomos-traducciones.html
+RedirectMatch 301 ^/es/quienessomos\-traduccion\-holandes/nuestros\-colaboradores\.html$ /es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html
+RedirectMatch 301 ^/es/quienessomos\-traduccion\-holandes/trabaja\-con\-nosotros\.html$ /es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html
+RedirectMatch 301 ^/es/servicios\-traduccion\-holandes\.html$ /es/servicios-traducciones.html
+RedirectMatch 301 ^/es/servicios\-traduccion\-holandes/interpretacion\.html$ /es/servicios-traducciones/interpretacion-holandes.html
+RedirectMatch 301 ^/es/servicios\-traduccion\-holandes/traduccion\.html$ /es/servicios-traducciones/traduccion-tecnica-manuales.html
+RedirectMatch 301 ^/home\.html$ /nl.html
+RedirectMatch 301 ^/home/72\.html$ /nl/home/72.html
+RedirectMatch 301 ^/kontakt\.html$ /de/kontakt.html
+RedirectMatch 301 ^/kostenvoranschlag\.html$ /de/kostenvoranschlag.html
+RedirectMatch 301 ^/kostenvoranschlag/kostenvoranschlag\-dolmetschen\.html$ /de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html
+RedirectMatch 301 ^/kostenvoranschlag/kostenvoranschlag\-uebersetzen\.html$ /de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html
+RedirectMatch 301 ^/mapa\-web\.html$ /es/mapa-web.html
+RedirectMatch 301 ^/methodologie\-en\-werktuigen\.html$ /nl/methodologie-en-werktuigen.html
+RedirectMatch 301 ^/methodology\-and\-tools\.html$ /en/methodology-and-tools.html
+RedirectMatch 301 ^/metodologia\-herramientas\-traduccion\.html$ /es/metodologia-herramientas-traduccion.html
+RedirectMatch 301 ^/nl/component/content/article/71\.html$ /nl/home/71.html
+RedirectMatch 301 ^/nl/component/content/article/72\.html$ /nl/home/72.html
+RedirectMatch 301 ^/nl/home\.html$ /nl.html
+RedirectMatch 301 ^/onze\-diensten\.html$ /nl/onze-diensten.html
+RedirectMatch 301 ^/onze\-diensten/tolken\.html$ /nl/onze-diensten/tolken.html
+RedirectMatch 301 ^/onze\-diensten/vertalen\.html$ /nl/onze-diensten/vertalen.html
+RedirectMatch 301 ^/over\-ons/bij\-ons\-werken\.html$ /nl/over-ons/bij-ons-werken.html
+RedirectMatch 301 ^/over\-ons/onze\-medewerkers\.html$ /nl/over-ons/onze-medewerkers.html
+RedirectMatch 301 ^/politica\-de\-privacidad\.html$ /es/politica-de-privacidad.html
+RedirectMatch 301 ^/privacyverklaring\.html$ /nl/privacyverklaring.html
+RedirectMatch 301 ^/quienessomos\-traduccion\-holandes\.html$ /es/quienessomos-traducciones.html
+RedirectMatch 301 ^/quienessomos\-traduccion\-holandes/nuestros\-colaboradores\.html$ /es/quienessomos-traducciones/nuestros-colaboradores-traducciones.html
+RedirectMatch 301 ^/quienessomos\-traduccion\-holandes/trabaja\-con\-nosotros\.html$ /es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html
+RedirectMatch 301 ^/quienessomos\-traducciones\.html$ /es/quienessomos-traducciones.html
+RedirectMatch 301 ^/quienessomos\-traducciones/trabaja\-con\-nosotros\-traducciones\.html$ /es/quienessomos-traducciones/trabaja-con-nosotros-traducciones.html
+RedirectMatch 301 ^/rechtliche\-hinweise\.html$ /de/rechtliche-hinweise.html
+RedirectMatch 301 ^/request\-a\-quote\.html$ /en/request-a-quote.html
+RedirectMatch 301 ^/request\-a\-quote/interpretation\-quote\.html$ /en/request-a-quote/interpretation-quote.html
+RedirectMatch 301 ^/request\-a\-quote/translation\-quote\.html$ /en/request-a-quote/translation-quote.html
+RedirectMatch 301 ^/services\.html$ /en/services.html
+RedirectMatch 301 ^/services/interpreting\.html$ /en/services/interpreting.html
+RedirectMatch 301 ^/servicios\-traduccion\-holandes\.html$ /es/servicios-traducciones.html
+RedirectMatch 301 ^/servicios\-traduccion\-holandes/interpretacion\.html$ /es/servicios-traducciones/interpretacion-holandes.html
+RedirectMatch 301 ^/servicios\-traduccion\-holandes/traduccion\.html$ /es/servicios-traducciones/traduccion-tecnica-manuales.html
+RedirectMatch 301 ^/servicios\-traducciones/interpretacion\-holandes\.html$ /es/servicios-traducciones/interpretacion-holandes.html
+RedirectMatch 301 ^/servicios\-traducciones/traduccion\-tecnica\-manuales\.html$ /es/servicios-traducciones/traduccion-tecnica-manuales.html
+RedirectMatch 301 ^/sitemap\.html$ /nl/sitemap.html
+RedirectMatch 301 ^/solicite\-presupuesto\-traduccion\.html$ /es/solicite-presupuesto-traduccion.html
+RedirectMatch 301 ^/solicite\-presupuesto\-traduccion/presupuesto\-interpretacion\.html$ /es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html
+RedirectMatch 301 ^/solicite\-presupuesto\-traduccion/presupuesto\-traduccion\.html$ /es/solicite-presupuesto-traduccion/presupuesto-traduccion.html
+RedirectMatch 301 ^/trabajar\-como\-interprete\.html$ /es/trabajar-como-interprete.html
+RedirectMatch 301 ^/trabajar\-como\-traductor\.html$ /es/trabajar-como-traductor.html
+RedirectMatch 301 ^/vertalen\-cv\.html$ /nl/vertalen-cv.html
+RedirectMatch 301 ^/vrijblijvende\-offerte\.html$ /nl/vrijblijvende-offerte.html
+RedirectMatch 301 ^/vrijblijvende\-offerte/tolkofferte\.html$ /nl/vrijblijvende-offerte/tolkofferte.html
+RedirectMatch 301 ^/vrijblijvende\-offerte/vertaalofferte\.html$ /nl/vrijblijvende-offerte/vertaalofferte.html
+RedirectMatch 301 ^/wer\-sind\-wir\.html$ /de/wer-sind-wir.html
+RedirectMatch 301 ^/wer\-sind\-wir/arbeiten\-sie\-mit\-uns\.html$ /de/wer-sind-wir/arbeiten-sie-mit-uns.html
+RedirectMatch 301 ^/wer\-sind\-wir/unsere\-mitarbeiter\.html$ /de/wer-sind-wir/unsere-mitarbeiter.html
+RedirectMatch 301 ^/werken\-als\-tolk\.html$ /nl/werken-als-tolk.html
+RedirectMatch 301 ^/werken\-als\-vertaler\.html$ /nl/werken-als-vertaler.html
+RedirectMatch 301 ^/who\-we\-are/our\-collaborators\.html$ /en/who-we-are/our-collaborators.html
+RedirectMatch 301 ^/who\-we\-are/work\-with\-us\.html$ /en/who-we-are/work-with-us.html
