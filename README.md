@@ -54,6 +54,16 @@ lanzar `construir.py`. Los pocos rótulos que no venían de la web vieja
   como entradas de diccionario y las páginas interiores tienen forma de página
   de libro, con notas al margen. Tinta azul sobre papel y el rojo del corrector.
   Tipografías Literata y Public Sans, alojadas en la propia web (licencia OFL).
+- **Tres piezas del oficio** (v3):
+  - *Alineación*: en la frase de la portada, al señalar una palabra se
+    iluminan sus equivalentes en los otros tres idiomas, como en una
+    herramienta de traducción asistida. En el móvil, con un toque.
+  - *Literal frente a traducido*: un modismo traducido palabra por palabra,
+    tachado en rojo, con la buena traducción corregida encima. Ilustra la frase
+    de la propia web sobre evitar las traducciones demasiado literales. Está en
+    la portada y en la página de traducción.
+  - *La torre de Babel*: «traducción» en 36 idiomas y alfabetos, en pisos cada
+    vez más anchos. Al señalar una palabra se ve el nombre del idioma.
 - **Se ve bien en el móvil.** La vieja tenía una «versión móvil» aparte.
 - **Las mismas direcciones (URL).** `es/servicios-traducciones.html` sigue
   siendo `es/servicios-traducciones.html`: Google y los enlaces de otras webs
@@ -88,7 +98,11 @@ sería cambiar el contenido, pero conviene decidirlas antes de publicar:
    Habría que actualizarlos.
 5. **CV y CP.** Hay dos páginas en el menú, «CV» y «CP», que son formularios
    para subir un currículum y una carta para traducirlos. ¿Siguen ofreciéndose?
-6. **Correo del remitente.** `enviar.php` manda los mensajes desde
+6. **Contenido nuevo para revisar.** Los modismos de «literal frente a
+   traducido» y las palabras de la torre de Babel no estaban en la web vieja.
+   Están en `scripts/textos_ui.py` (`MODISMOS`, `TORRE`) para cambiarlos o
+   quitarlos. Conviene que un nativo revise los de alemán y holandés.
+7. **Correo del remitente.** `enviar.php` manda los mensajes desde
    `web@babeltrans.es`. Conviene que esa dirección exista, o cambiarla por
    otra del dominio, para que los correos no acaben en spam.
 

@@ -15,7 +15,7 @@ Uso:  python3 scripts/construir.py        (solo biblioteca estándar)
 import datetime, html, json, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from textos_ui import UI, UI2, ENTRADAS, RETOQUES  # noqa: E402
+from textos_ui import UI, UI2, UI3, ENTRADAS, RETOQUES, ALINEACION, MODISMOS, TORRE  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -305,6 +305,58 @@ def entrada(todo, lang, pid, titulo_como="h3", completa=True):
 </article>"""
 
 
+# --------------------------------------------------------------- piezas de traducción (v3)
+
+def frase_alineada(lang):
+    """La frase con cada trozo marcado para iluminar sus equivalentes."""
+    def trozo(m):
+        return f'<span class="seg" data-a="{m.group(2)}" tabindex="0">{esc(m.group(1))}</span>'
+    partes = re.split(r"(\[[^|\]]+\|\d\])", ALINEACION[lang])
+    return "".join(re.sub(r"\[([^|\]]+)\|(\d)\]", trozo, x) if x.startswith("[") else esc(x) for x in partes)
+
+
+def paralelo(todo, lang):
+    orden = [lang] + [l for l in IDIOMAS if l != lang]
+    lineas = "".join(
+        f'<li{" class=actual" if l == lang else ""}>'
+        f'<a class="codigo" href="{ruta_en(todo, l, "home")}" hreflang="{l}" title="{UI[l]["idioma"]}"'
+        f'{" aria-current=true" if l == lang else ""}>{l}</a>'
+        f'<span class="frase" lang="{l}">{frase_alineada(l)}</span></li>'
+        for l in orden)
+    u = UI3[lang]
+    return (f'<figure class="paralelo" data-alinear><ul>{lineas}</ul>'
+            f'<figcaption class="pista"><span class="pista-raton">{esc(u["alinear"])}</span>'
+            f'<span class="pista-tactil">{esc(u["alinear_tactil"])}</span></figcaption></figure>')
+
+
+def modismo(d, lang):
+    """Traducción literal tachada y la buena encima, como la corregiría un revisor."""
+    u = UI3[lang]
+    ejemplos = MODISMOS[lang]
+    datos = esc(json.dumps(ejemplos, ensure_ascii=False))
+    origen, orig, literal, bien = ejemplos[0]
+    return f"""<figure class="modismo" data-modismos="{datos}">
+  <p class="modismo-orig"><span class="codigo">{origen}</span> <q lang="{origen}">{esc(orig)}</q></p>
+  <p class="modismo-fila"><span class="etq">{esc(u["literal"])}</span> <del lang="{lang}">{esc(literal)}</del></p>
+  <p class="modismo-fila"><span class="etq">{esc(u["bien"])}</span> <ins lang="{lang}">{esc(bien)}</ins></p>
+  <button type="button" class="modismo-otro">{esc(u["otro"])}</button>
+</figure>"""
+
+
+def torre(lang):
+    """La torre de Babel: «traducción» en 36 idiomas, con el de la página en la cima."""
+    pisos = [list(p) for p in TORRE]
+    propio = next((i, j) for i, p in enumerate(pisos) for j, (l, _) in enumerate(p) if l == lang)
+    pisos[0][0], pisos[propio[0]][propio[1]] = pisos[propio[0]][propio[1]], pisos[0][0]
+    html_pisos = "".join(
+        '<ul class="piso">' + "".join(
+            f'<li><span lang="{l}" dir="auto" tabindex="0" data-idioma="{l}">{esc(w)}</span></li>' for l, w in p)
+        + "</ul>" for p in pisos)
+    u = UI3[lang]
+    return (f'<div class="torre" data-torre>{html_pisos}</div>'
+            f'<p class="torre-pie" aria-live="polite" data-pie="{esc(u["torre_pie"])}">{esc(u["torre_pie"])}</p>')
+
+
 # --------------------------------------------------------------- tipos de página
 
 HUBS = {"servicios": ["traduccion", "interpretacion"],
@@ -345,6 +397,7 @@ def pag_articulo(todo, lang, pid):
   <aside class="margen">{"" if legal else notas_margen(d, pid)}</aside>
   <article class="prosa{" prosa-legal" if legal else ""}">
 {bloques_html(p["bloques"], lang, pid)}
+{modismo(d, lang) if pid == "traduccion" else ""}
   </article>
 </section>"""
     return pagina(todo, lang, pid, cuerpo, f"{retoca(titulo)} · Babel Translations",
@@ -444,17 +497,10 @@ def pag_home(todo, lang):
     # castellano); su subtítulo sí estaba en holandés y hace de título.
     h1 = titulos[1].rstrip(":") if lang == "nl" else titulos[0]
     intro_lista = titulos[1].rstrip(":") if lang != "nl" and len(titulos) > 1 and titulos[1] != "Babeltrans" else ""
-    confid = next((x for x in h["fuertes"] if x.isupper() and len(x) > 12), "")
+    # La frase de confidencialidad es la ÚLTIMA en mayúsculas (en inglés, la
+    # primera era «SUPERB TECHNICAL AND SPECIALISED TRANSLATIONS:»)
+    confid = next((x for x in reversed(h["fuertes"]) if x.isupper() and len(x) > 12 and not x.endswith(":")), "")
     confid = confid[:1] + confid[1:].lower()
-
-    # La edición paralela: la misma frase de la web en los cuatro idiomas,
-    # empezando por el de la página. Cada línea lleva a ese idioma.
-    orden = [lang] + [l for l in IDIOMAS if l != lang]
-    paralelo = "".join(
-        f'<li{" class=actual" if l == lang else ""}><a href="{ruta_en(todo, l, "home")}" hreflang="{l}" lang="{l}"'
-        f'{" aria-current=true" if l == lang else ""}><span class="codigo">{l}</span>'
-        f'<span class="frase">{esc(todo[l]["paginas"]["home"]["home"]["frases"][1])}</span></a></li>'
-        for l in orden)
 
     q = [sin_tags(x) for x in parrafos(d, "quienes")]
     lema = q[0] if q else ""
@@ -468,6 +514,8 @@ def pag_home(todo, lang):
     met_intro = parrafos(d, "metodologia")
     met_intro = sin_tags(met_intro[1]) if len(met_intro) > 1 else ""
 
+    lit = parrafos(d, "traduccion")
+    lit = sin_tags(lit[1]) if len(lit) > 1 else ""
     cita_colab = next((sin_tags(c).strip('"“” ') for t, c in P["colaboradores"]["bloques"]
                        if sin_tags(c)[:1] in "\"“"), "")
     campos = "".join(f"<li>{esc(t.rstrip('.… ').rstrip('.'))}</li>" for t in h["lista"])
@@ -483,9 +531,7 @@ def pag_home(todo, lang):
         {f'<a class="boton boton-sec" href="tel:{tel}">{tel_bonito(tel)}</a>' if tel else f'<a class="boton boton-sec" href="mailto:{mail}">{mail}</a>'}
       </div>
     </div>
-    <figure class="paralelo">
-      <ul>{paralelo}</ul>
-    </figure>
+    {paralelo(todo, lang)}
   </div>
 </section>
 
@@ -503,6 +549,13 @@ def pag_home(todo, lang):
   <div class="env libro">
     <h2 class="margen tit-margen"><a href="{url(P["servicios"]["ruta"])}">{esc(nombre_pagina(d, "servicios"))}</a></h2>
     <div class="entradas">{entrada(todo, lang, "traduccion")}{entrada(todo, lang, "interpretacion")}</div>
+  </div>
+</section>
+
+<section class="bloque bloque-modismo">
+  <div class="env libro">
+    <p class="margen nota-margen">{esc(lit)}</p>
+    <div>{modismo(d, lang)}</div>
   </div>
 </section>
 
@@ -544,6 +597,13 @@ def pag_home(todo, lang):
         <a class="enlace" href="{url(P["formacion"]["ruta"])}">{esc(ui["leer"])}</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="bloque bloque-torre">
+  <div class="env">
+    <h2 class="tit-torre">{esc(UI3[lang]["torre"])}</h2>
+    {torre(lang)}
   </div>
 </section>
 

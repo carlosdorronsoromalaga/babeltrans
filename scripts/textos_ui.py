@@ -80,3 +80,69 @@ UI2 = {
     "nl": {"ver": "Bekijk de dienst", "en_seccion": "In dit onderdeel", "metodo": "Zo werken wij",
            "herramientas": "Werktuigen", "llame": "Bel of mail ons"},
 }
+
+# ---------------------------------------------------------------- v3
+# Alineación de la frase de la portada, como en una herramienta de traducción
+# asistida: cada [trozo|n] se ilumina junto a los trozos con el mismo n en los
+# otros idiomas. Lo que queda fuera de corchetes no tiene equivalente (el «is»
+# inglés y holandés), y se ve así a propósito: es lo que pasa al traducir.
+ALINEACION = {
+    "es": "[Todo lo|1] [verdaderamente|2] [excelente|3] [es traducible|4]",
+    "en": "[All that|1] is [truly|2] [excellent|3] [can be translated|4]",
+    "de": "[Alles|1] [wirklich|2] [Herausragende|3] [ist übersetzbar|4]",
+    "nl": "[Alles wat|1] [werkelijk|2] [uitmuntend|3] is, [kan worden vertaald|4]",
+}
+
+# Modismos: el original, la traducción palabra por palabra (tachada) y la buena.
+# CONTENIDO NUEVO, no estaba en la web vieja: ilustra su frase «evitando
+# traducciones demasiado literales». Martijn puede cambiarlos o quitarlos.
+MODISMOS = {
+    "es": [("en", "It’s raining cats and dogs.", "Llueven gatos y perros.", "Llueve a cántaros."),
+           ("de", "Ich verstehe nur Bahnhof.", "Solo entiendo estación.", "Me suena a chino."),
+           ("nl", "Nu komt de aap uit de mouw.", "Ahora sale el mono de la manga.", "Ahora se descubre el pastel.")],
+    "en": [("es", "Me suena a chino.", "It sounds Chinese to me.", "It’s all Greek to me."),
+           ("de", "Das ist nicht mein Bier.", "That’s not my beer.", "That’s not my problem."),
+           ("nl", "Nu komt de aap uit de mouw.", "Now the monkey comes out of the sleeve.", "Now the cat is out of the bag.")],
+    "de": [("en", "It’s raining cats and dogs.", "Es regnet Katzen und Hunde.", "Es gießt in Strömen."),
+           ("es", "Me estás tomando el pelo.", "Du nimmst mir die Haare.", "Du nimmst mich auf den Arm."),
+           ("nl", "Nu komt de aap uit de mouw.", "Jetzt kommt der Affe aus dem Ärmel.", "Jetzt ist die Katze aus dem Sack.")],
+    "nl": [("en", "It’s raining cats and dogs.", "Het regent katten en honden.", "Het regent pijpenstelen."),
+           ("es", "Me estás tomando el pelo.", "Je neemt mijn haar.", "Je houdt me voor de gek."),
+           ("de", "Ich verstehe nur Bahnhof.", "Ik begrijp alleen station.", "Ik snap er geen snars van.")],
+}
+
+# La torre de Babel: «traducción» en otros idiomas, de la cima a la base. Los
+# pisos están repartidos para que cada uno sea más ancho que el de encima
+# (medido en pantalla el 17/10/2026: 292, 420, 473, 531, 535, 636, 672, 774 px).
+TORRE = [
+    [("es", "traducción")],
+    [("en", "translation"), ("de", "Übersetzung")],
+    [("nl", "vertaling"), ("fr", "traduction"), ("it", "traduzione")],
+    [("pt", "tradução"), ("ca", "traducció"), ("eu", "itzulpena"), ("gl", "tradución")],
+    [("el", "μετάφραση"), ("ru", "перевод"), ("pl", "tłumaczenie"), ("ar", "ترجمة"), ("zh", "翻译")],
+    [("ja", "翻訳"), ("ko", "번역"), ("hi", "अनुवाद"), ("he", "תרגום"), ("tr", "çeviri"), ("da", "oversættelse"),
+     ("fa", "ترجمه"), ("sw", "tafsiri")],
+    [("fi", "käännös"), ("hu", "fordítás"), ("cs", "překlad"), ("ro", "traducere"), ("uk", "переклад"),
+     ("sv", "översättning")],
+    [("vi", "bản dịch"), ("id", "terjemahan"), ("bn", "অনুবাদ"), ("bg", "превод"), ("no", "oversettelse"),
+     ("ga", "aistriúchán"), ("th", "การแปล")],
+]
+
+UI3 = {
+    "es": {"alinear": "Pase el cursor por una palabra para ver su equivalente.",
+           "alinear_tactil": "Toque una palabra para ver su equivalente.",
+           "literal": "Palabra por palabra", "bien": "Traducido", "otro": "Otro ejemplo",
+           "torre": "Todos los idiomas", "torre_pie": "«Traducción» en 36 idiomas."},
+    "en": {"alinear": "Hover over a word to see its equivalent.",
+           "alinear_tactil": "Tap a word to see its equivalent.",
+           "literal": "Word for word", "bien": "Translated", "otro": "Another example",
+           "torre": "All languages", "torre_pie": "“Translation” in 36 languages."},
+    "de": {"alinear": "Fahren Sie über ein Wort, um seine Entsprechung zu sehen.",
+           "alinear_tactil": "Tippen Sie auf ein Wort, um seine Entsprechung zu sehen.",
+           "literal": "Wort für Wort", "bien": "Übersetzt", "otro": "Noch ein Beispiel",
+           "torre": "Alle Sprachen", "torre_pie": "„Übersetzung“ in 36 Sprachen."},
+    "nl": {"alinear": "Beweeg over een woord om het equivalent te zien.",
+           "alinear_tactil": "Tik op een woord om het equivalent te zien.",
+           "literal": "Woord voor woord", "bien": "Vertaald", "otro": "Nog een voorbeeld",
+           "torre": "Alle talen", "torre_pie": "‘Vertaling’ in 36 talen."},
+}

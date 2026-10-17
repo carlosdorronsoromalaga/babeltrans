@@ -95,19 +95,27 @@ p { margin: 0 0 1em; }
 .portada h1 { font-size: clamp(42px, 5.4vw, 66px); font-weight: 450; letter-spacing: -.02em; line-height: 1.05; margin-bottom: 28px; }
 .portada-lema { font-size: 21px; line-height: 1.55; color: var(--lapiz); max-width: 36em; margin-bottom: 36px; }
 
-/* La edición paralela: misma frase, cuatro idiomas, código al margen */
+/* La edición paralela: misma frase, cuatro idiomas, código al margen.
+   Cada trozo está alineado con sus equivalentes, como en una herramienta de
+   traducción asistida: al señalar uno se iluminan los otros tres. */
 .paralelo { margin: 0; padding: 8px 0; border-left: 1px solid var(--tinta); }
 .paralelo ul { list-style: none; margin: 0; padding: 0; }
+.paralelo li { display: grid; grid-template-columns: 56px 1fr; align-items: baseline; color: var(--lapiz); }
 .paralelo li + li { margin-top: 22px; }
-.paralelo a { display: grid; grid-template-columns: 56px 1fr; align-items: baseline; text-decoration: none; color: var(--lapiz); transition: color .2s; }
-.paralelo .codigo { font: 500 13px/1 var(--sans); color: var(--lapiz); padding-left: 18px; }
+.paralelo .codigo { font: 500 13px/1 var(--sans); color: var(--lapiz); padding-left: 18px; text-decoration: none; }
+.paralelo .codigo:hover { color: var(--azul); text-decoration: underline; }
 .paralelo .frase { font-size: 22px; line-height: 1.3; font-style: italic; }
-.paralelo a:hover { color: var(--tinta); }
-.paralelo a:hover .frase { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
-.paralelo .actual a { color: var(--tinta); }
-.paralelo .actual .frase { font-size: clamp(30px, 3.2vw, 40px); font-style: normal; font-weight: 400; letter-spacing: -.015em; line-height: 1.15; }
+.paralelo .actual { color: var(--tinta); margin-bottom: 34px; }
+.paralelo .actual .frase { font-size: clamp(30px, 3.2vw, 40px); font-style: normal; font-weight: 400; letter-spacing: -.015em; line-height: 1.2; }
 .paralelo .actual .codigo { color: var(--rojo); }
-.paralelo .actual { margin-bottom: 34px; }
+.seg { cursor: default; border-radius: 2px; transition: background-color .18s, color .18s, box-shadow .18s; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.seg:focus { outline: none; }
+.seg:focus-visible { outline: 1px dotted var(--azul); outline-offset: 2px; }
+.alineando .frase { color: #a5a9b8; }
+.alineando .seg.on { color: var(--azul-hondo); background: rgba(43, 68, 168, .1); box-shadow: 0 2px 0 var(--azul); }
+.pista { margin: 26px 0 0 74px; font: 400 14px/1.4 var(--sans); color: var(--lapiz); }
+.pista-tactil { display: none; }
+@media (hover: none) { .pista-raton { display: none; } .pista-tactil { display: inline; } }
 
 /* El único movimiento de la web: las versiones van apareciendo, como si se
    estuvieran traduciendo. */
@@ -183,6 +191,49 @@ p { margin: 0 0 1em; }
 .indice-pequeno li { border-color: rgba(255, 255, 255, .2) !important; }
 .indice-pequeno a { font: 500 17px var(--sans); padding: 14px 0; color: #fff; }
 .final .indice-pequeno a:hover { color: #fff; }
+
+/* Modismos: la traducción literal tachada y la buena encima, en el rojo del
+   revisor. */
+.bloque-modismo { padding-top: 72px; padding-bottom: 72px; }
+.modismo { margin: 0; max-width: 40em; }
+.modismo-orig { font-size: clamp(28px, 3.4vw, 42px); line-height: 1.2; letter-spacing: -.015em; margin: 0 0 26px; display: flex; gap: 18px; align-items: baseline; }
+.modismo-orig .codigo { font: 500 13px/1 var(--sans); color: var(--lapiz); flex: none; width: 24px; }
+.modismo-orig q { quotes: none; font-style: italic; }
+.modismo-fila { display: grid; grid-template-columns: 170px 1fr; gap: 16px; align-items: baseline; margin: 0; padding: 14px 0; border-top: 1px solid var(--linea); }
+.modismo-fila .etq { font: 400 14px/1.3 var(--sans); color: var(--lapiz); }
+.modismo del, .modismo ins { justify-self: start; }
+.modismo del { position: relative; text-decoration: none; font-size: 22px; color: var(--lapiz); }
+.modismo del::after { content: ""; position: absolute; left: -2px; right: -2px; top: 54%; height: 2px; background: var(--rojo); transform-origin: left center; }
+.modismo ins { text-decoration: none; font-size: 22px; font-style: italic; color: var(--rojo); }
+.modismo ins::before { content: "‸"; font-style: normal; font-size: 1.15em; margin-right: 5px; }
+.modismo-otro { margin-top: 18px; padding: 0; background: none; border: 0; font: 500 15px var(--sans); color: var(--azul); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.modismo-otro:hover { color: var(--azul-hondo); text-decoration-thickness: 2px; }
+@media (prefers-reduced-motion: no-preference) {
+  .modismo.corrigiendo del::after { animation: tachar .45s .35s cubic-bezier(.6, 0, .3, 1) both; }
+  .modismo.corrigiendo ins { animation: corregir .5s .85s ease both; }
+  .modismo.corrigiendo .modismo-orig q, .modismo.corrigiendo del { animation: corregir .35s ease both; }
+  @keyframes tachar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes corregir { from { opacity: 0; } to { opacity: 1; } }
+}
+.prosa .modismo { margin-top: 3em; padding-top: 2em; border-top: 1px solid var(--linea); }
+.prosa .modismo-orig { font-size: 28px; }
+
+/* La torre de Babel: cada piso más ancho que el de encima */
+.bloque-torre { padding: 88px 0 96px; text-align: center; }
+.tit-torre { font-size: 23px; font-style: italic; font-weight: 400; margin-bottom: 44px; }
+.torre { display: flex; flex-direction: column; align-items: center; }
+.piso { list-style: none; margin: 0; padding: 0 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; border-bottom: 1px solid var(--tinta); }
+.piso + .piso { padding-top: 6px; }
+.piso li { padding: 6px 0; }
+.piso span { display: inline-block; color: var(--lapiz); cursor: default; transition: color .15s; }
+.piso span:hover, .piso span:focus-visible { color: var(--azul); outline: none; }
+.piso:nth-child(1) span { font-size: 52px; color: var(--tinta); letter-spacing: -.02em; line-height: 1.1; }
+.piso:nth-child(2) span { font-size: 32px; }
+.piso:nth-child(3) span { font-size: 27px; }
+.piso:nth-child(4) span { font-size: 24px; }
+.piso:nth-child(5) span { font-size: 22px; }
+.piso:nth-child(n+6) span { font-size: 20px; }
+.torre-pie { margin: 26px 0 0; font: 400 15px/1.4 var(--sans); color: var(--lapiz); min-height: 1.4em; }
 
 /* ---------- páginas interiores ---------- */
 .titulo-pagina { padding: 64px 0 44px; border-bottom: 1px solid var(--linea); }
@@ -308,7 +359,6 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
   .portada-lema { font-size: 19px; }
   .paralelo .actual .frase { font-size: 28px; }
   .paralelo .frase { font-size: 19px; }
-  .paralelo a { grid-template-columns: 44px 1fr; }
   .paralelo .codigo { padding-left: 14px; }
   .campos-lista, .entradas, .metodo, .dos, .campos { grid-template-columns: 1fr; }
   .campos-lista li { font-size: 20px; }
@@ -323,4 +373,18 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
   .mapa { columns: 1; }
   .pie-copy { grid-column: auto; }
   .botones .boton { flex: 1 1 auto; text-align: center; }
+  .paralelo li { grid-template-columns: 44px 1fr; }
+  .pista { margin-left: 58px; }
+  .modismo-fila { grid-template-columns: 1fr; gap: 4px; }
+  .modismo-orig { font-size: 28px; gap: 12px; }
+  /* En el móvil los pisos encogen para no partirse; solo la base, más
+     ancha que la pantalla, ocupa dos líneas. */
+  .piso { gap: 0 10px; padding: 0 4px; }
+  .piso li { padding: 4px 0; }
+  .piso:nth-child(1) span { font-size: 36px; }
+  .piso:nth-child(2) span { font-size: 21px; }
+  .piso:nth-child(3) span { font-size: 17px; }
+  .piso:nth-child(4) span { font-size: 15px; }
+  .piso:nth-child(5) span { font-size: 13.5px; }
+  .piso:nth-child(n+6) span { font-size: 13.5px; }
 }

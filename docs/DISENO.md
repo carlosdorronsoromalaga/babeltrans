@@ -62,3 +62,21 @@ Etiquetas en mayúsculas sobre cada título, una palabra resaltada en otro color
 dentro del titular, numeraciones 01/02/03 que no son una secuencia, flechas en
 los botones, tarjetas idénticas con sombra, degradados de adorno, animaciones
 en cada bloque, crema con terracota y negro con verde ácido.
+
+## v3 (17/10/2026): tres piezas del oficio
+
+Carlos pidió «cosas chulas y específicas de traducción». Se añadieron tres,
+todas sacadas de herramientas o situaciones reales del trabajo de un traductor:
+
+1. **Alineación** en la frase de la portada: es lo que muestran las herramientas
+   de traducción asistida (Trados, memoQ) al alinear un original con su
+   traducción. Las palabras sin equivalente («is» en inglés y holandés) se
+   quedan sin iluminar a propósito: también eso es traducir.
+2. **Literal frente a traducido**: el modismo palabra por palabra, tachado, y la
+   corrección encima en el rojo del revisor, con el signo ‸ de inserción de las
+   marcas de corrección. «Otro ejemplo» vuelve a tachar y corregir. Ese es el
+   único movimiento además del de la portada, y solo ocurre al pulsar.
+3. **La torre de Babel**, por el nombre de la empresa: «traducción» en 36
+   idiomas, cada piso más ancho que el de encima. Los nombres de los idiomas
+   salen de `Intl.DisplayNames`, del propio navegador y en el idioma de la
+   página, sin traducirlos a mano.
