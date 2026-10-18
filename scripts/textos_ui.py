@@ -146,3 +146,69 @@ UI3 = {
            "literal": "Woord voor woord", "bien": "Vertaald", "otro": "Nog een voorbeeld",
            "torre": "Alle talen", "torre_pie": "‘Vertaling’ in 36 talen."},
 }
+
+# ---------------------------------------------------------------- v4
+# Primera capa de información de privacidad bajo cada formulario (RGPD art. 13;
+# la AEPD recomienda dar lo básico junto al formulario y el resto en la
+# política). Dos variantes: solicitudes (presupuesto, contacto) y candidaturas.
+INFO_FORM = {
+    "es": {
+        "tit": "Información básica sobre protección de datos",
+        "responsable": "Responsable", "finalidad": "Finalidad", "legitimacion": "Legitimación",
+        "destinatarios": "Destinatarios", "derechos": "Derechos", "mas": "Más información",
+        "fin_solicitud": "responder a su solicitud y, en su caso, preparar el presupuesto y realizar el encargo.",
+        "leg_solicitud": "su propia solicitud (medidas precontractuales).",
+        "fin_candidatura": "valorar su candidatura como colaborador. Se conserva un año.",
+        "leg_candidatura": "su consentimiento.",
+        "dest": "no se ceden datos a terceros, salvo obligación legal.",
+        "der": "acceder, rectificar y suprimir sus datos, y otros derechos, escribiendo a",
+        "ver": "en la Política de privacidad",
+    },
+    "en": {
+        "tit": "Basic data protection information",
+        "responsable": "Controller", "finalidad": "Purpose", "legitimacion": "Legal basis",
+        "destinatarios": "Recipients", "derechos": "Rights", "mas": "More information",
+        "fin_solicitud": "to answer your request and, where applicable, prepare the quote and carry out the job.",
+        "leg_solicitud": "your own request (pre-contractual steps).",
+        "fin_candidatura": "to assess your application as a collaborator. Kept for one year.",
+        "leg_candidatura": "your consent.",
+        "dest": "no data is passed on to third parties unless required by law.",
+        "der": "access, rectify and erase your data, among other rights, by writing to",
+        "ver": "in the Privacy policy",
+    },
+    "de": {
+        "tit": "Basisinformationen zum Datenschutz",
+        "responsable": "Verantwortlicher", "finalidad": "Zweck", "legitimacion": "Rechtsgrundlage",
+        "destinatarios": "Empfänger", "derechos": "Rechte", "mas": "Weitere Informationen",
+        "fin_solicitud": "Beantwortung Ihrer Anfrage und gegebenenfalls Kostenvoranschlag und Ausführung des Auftrags.",
+        "leg_solicitud": "Ihre Anfrage (vorvertragliche Maßnahmen).",
+        "fin_candidatura": "Prüfung Ihrer Bewerbung als Mitarbeiter. Speicherung für ein Jahr.",
+        "leg_candidatura": "Ihre Einwilligung.",
+        "dest": "keine Weitergabe an Dritte, außer bei gesetzlicher Verpflichtung.",
+        "der": "Auskunft, Berichtigung, Löschung und weitere Rechte per E-Mail an",
+        "ver": "in der Datenschutzerklärung",
+    },
+    "nl": {
+        "tit": "Basisinformatie over gegevensbescherming",
+        "responsable": "Verantwoordelijke", "finalidad": "Doel", "legitimacion": "Grondslag",
+        "destinatarios": "Ontvangers", "derechos": "Rechten", "mas": "Meer informatie",
+        "fin_solicitud": "uw aanvraag beantwoorden en zo nodig de offerte opstellen en de opdracht uitvoeren.",
+        "leg_solicitud": "uw eigen aanvraag (precontractuele maatregelen).",
+        "fin_candidatura": "uw sollicitatie als medewerker beoordelen. Wordt een jaar bewaard.",
+        "leg_candidatura": "uw toestemming.",
+        "dest": "geen verstrekking aan derden, tenzij wettelijk verplicht.",
+        "der": "inzage, rectificatie, verwijdering en andere rechten, via",
+        "ver": "in de privacyverklaring",
+    },
+}
+
+UI4 = {
+    "es": {"trabaja_txt": "Buscamos traductores e intérpretes profesionales que traduzcan a su lengua materna.",
+           "error404": "Esta página no existe", "error404_txt": "Puede que la dirección haya cambiado con la web nueva. Estas son las secciones principales:"},
+    "en": {"trabaja_txt": "We are looking for professional translators and interpreters who translate into their mother tongue.",
+           "error404": "This page does not exist", "error404_txt": "The address may have changed with the new website. These are the main sections:"},
+    "de": {"trabaja_txt": "Wir suchen professionelle Übersetzer und Dolmetscher, die in ihre Muttersprache übersetzen.",
+           "error404": "Diese Seite gibt es nicht", "error404_txt": "Vielleicht hat sich die Adresse mit der neuen Website geändert. Das sind die wichtigsten Bereiche:"},
+    "nl": {"trabaja_txt": "We zoeken professionele vertalers en tolken die naar hun moedertaal vertalen.",
+           "error404": "Deze pagina bestaat niet", "error404_txt": "Misschien is het adres veranderd met de nieuwe website. Dit zijn de belangrijkste onderdelen:"},
+}

@@ -11,7 +11,7 @@ RedirectMatch 301 ^/es\.html$ /
 RedirectMatch 301 ^/index\.php$ /
 
 DirectoryIndex index.html
-ErrorDocument 404 /index.html
+ErrorDocument 404 /404.html
 
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
@@ -30,6 +30,16 @@ ErrorDocument 404 /index.html
   AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml
 </IfModule>
 
+# Páginas retiradas en la web nueva (CV y CP)
+RedirectMatch 301 ^/es/cv\-ingles\.html$ /es/solicite-presupuesto-traduccion/presupuesto-traduccion.html
+RedirectMatch 301 ^/es/cp\-ingles\-aleman\.html$ /es/solicite-presupuesto-traduccion/presupuesto-traduccion.html
+RedirectMatch 301 ^/en/cv\-ingles\.html$ /en/request-a-quote/translation-quote.html
+RedirectMatch 301 ^/en/cp\-ingles\-aleman\.html$ /en/request-a-quote/translation-quote.html
+RedirectMatch 301 ^/de/cv\-ingles\.html$ /de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html
+RedirectMatch 301 ^/de/cp\-ingles\-aleman\.html$ /de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html
+RedirectMatch 301 ^/nl/vertalen\-cv\.html$ /nl/vrijblijvende-offerte/vertaalofferte.html
+RedirectMatch 301 ^/nl/cp\-ingles\-aleman\.html$ /nl/vrijblijvende-offerte/vertaalofferte.html
+
 # Rutas de la web vieja (generado por scripts/construir.py)
 RedirectMatch 301 ^/als\-dolmetscher\.html$ /de/als-dolmetscher.html
 RedirectMatch 301 ^/als\-uebersetzer\.html$ /de/als-uebersetzer.html
@@ -40,12 +50,9 @@ RedirectMatch 301 ^/component/content/article/72\.html$ /nl/home/72.html
 RedirectMatch 301 ^/contact\.html$ /nl/contact.html
 RedirectMatch 301 ^/contacto\-traduccion\-holandes\.html$ /es/contacto-traduccion.html
 RedirectMatch 301 ^/contacto\-traduccion\.html$ /es/contacto-traduccion.html
-RedirectMatch 301 ^/cp\-ingles\-aleman\.html$ /es/cp-ingles-aleman.html
-RedirectMatch 301 ^/cv\-ingles\.html$ /es/cv-ingles.html
 RedirectMatch 301 ^/datenschutz\.html$ /de/datenschutz.html
 RedirectMatch 301 ^/de/component/content/article/71\.html$ /de/home/71.html
 RedirectMatch 301 ^/de/component/content/article/72\.html$ /de/home/72.html
-RedirectMatch 301 ^/de/cv\-ingles\-holandes\.html$ /de/cv-ingles.html
 RedirectMatch 301 ^/de/home\.html$ /de.html
 RedirectMatch 301 ^/dienste\.html$ /de/dienste.html
 RedirectMatch 301 ^/dienste/dolmetschen\.html$ /de/dienste/dolmetschen.html
@@ -57,7 +64,6 @@ RedirectMatch 301 ^/en/home\.html$ /en.html
 RedirectMatch 301 ^/es/component/content/article/71\.html$ /es/home-traducciones/71.html
 RedirectMatch 301 ^/es/component/content/article/72\.html$ /es/home-traducciones/72.html
 RedirectMatch 301 ^/es/contacto\-traduccion\-holandes\.html$ /es/contacto-traduccion.html
-RedirectMatch 301 ^/es/cv\-ingles\-holandes\.html$ /es/cv-ingles.html
 RedirectMatch 301 ^/es/home\-traduccion\-holandes\.html$ /
 RedirectMatch 301 ^/es/home\-traduccion\-holandes/71\.html$ /es/home-traducciones/71.html
 RedirectMatch 301 ^/es/home\-traduccion\-holandes/72\.html$ /es/home-traducciones/72.html
@@ -110,7 +116,6 @@ RedirectMatch 301 ^/solicite\-presupuesto\-traduccion/presupuesto\-interpretacio
 RedirectMatch 301 ^/solicite\-presupuesto\-traduccion/presupuesto\-traduccion\.html$ /es/solicite-presupuesto-traduccion/presupuesto-traduccion.html
 RedirectMatch 301 ^/trabajar\-como\-interprete\.html$ /es/trabajar-como-interprete.html
 RedirectMatch 301 ^/trabajar\-como\-traductor\.html$ /es/trabajar-como-traductor.html
-RedirectMatch 301 ^/vertalen\-cv\.html$ /nl/vertalen-cv.html
 RedirectMatch 301 ^/vrijblijvende\-offerte\.html$ /nl/vrijblijvende-offerte.html
 RedirectMatch 301 ^/vrijblijvende\-offerte/tolkofferte\.html$ /nl/vrijblijvende-offerte/tolkofferte.html
 RedirectMatch 301 ^/vrijblijvende\-offerte/vertaalofferte\.html$ /nl/vrijblijvende-offerte/vertaalofferte.html

@@ -1,0 +1,57 @@
+=== aviso-legal
+Impressum und rechtliche Hinweise
+## Betreiber der Website
+Gemäß Artikel 10 des spanischen Gesetzes 34/2002 über Dienste der Informationsgesellschaft und den elektronischen Geschäftsverkehr (LSSI-CE) ist Betreiber von www.babeltrans.es:
+- Inhaber: {{titular}}
+- Steuernummer (NIF): {{nif}}
+- Anschrift: {{domicilio}}
+- Telefon: {{telefono}}
+- E-Mail: {{email}}
+{{registro}}
+## Zweck
+Diese Website informiert über die Übersetzungs- und Dolmetschdienste von BABELTRANS. Sie können hier einen Kostenvoranschlag anfordern, uns kontaktieren und sich als Mitarbeiter bewerben. Die Nutzung ist kostenlos und erfordert keine Registrierung.
+## Nutzung der Website
+Besucher verpflichten sich, die Website rechtmäßig zu nutzen und sie nicht zu verwenden, um BABELTRANS oder Dritten zu schaden oder schädliche Programme oder Dateien einzuschleusen. Die über die Formulare gesendeten Angaben müssen wahrheitsgemäß sein.
+## Geistiges und gewerbliches Eigentum
+Texte, Logo, Gestaltung und Code dieser Website gehören BABELTRANS oder werden mit Genehmigung verwendet. Sie dürfen ohne schriftliche Erlaubnis weder vervielfältigt noch verbreitet oder verändert werden, außer zum persönlichen und privaten Gebrauch.
+## Haftung
+BABELTRANS bemüht sich, die Informationen auf dieser Website richtig und aktuell zu halten, kann aber weder Fehlerfreiheit noch ständige Verfügbarkeit garantieren. Für jeden Auftrag gelten das Angebot und die Bedingungen, die schriftlich mit dem Kunden vereinbart werden.
+## Datenschutz
+Personenbezogene Daten, die wir über diese Website erhalten, werden wie in der Datenschutzerklärung beschrieben verarbeitet.
+## Cookies
+Diese Website verwendet keine Cookies und keine Analyse- oder Tracking-Werkzeuge und lädt keine Inhalte von Dritten: Die Schriften werden vom eigenen Server geladen. Deshalb gibt es keinen Cookie-Hinweis.
+## Anwendbares Recht
+Es gilt spanisches Recht. Ist der Nutzer Verbraucher, sind die Gerichte an seinem Wohnsitz zuständig.
+
+=== privacidad
+Datenschutzerklärung
+## Verantwortlicher
+- Verantwortlicher: {{titular}}
+- Steuernummer (NIF): {{nif}}
+- Anschrift: {{domicilio}}
+- E-Mail: {{email}}
+- Telefon: {{telefono}}
+## Welche Daten wir verarbeiten
+Die Daten, die Sie uns mitteilen, wenn Sie uns schreiben oder ein Formular auf dieser Website ausfüllen: Name, Unternehmen, Kontaktdaten, die Angaben Ihrer Anfrage und beigefügte Dokumente. Bei Bewerbungen zusätzlich die Daten Ihres Lebenslaufs.
+## Wozu und auf welcher Rechtsgrundlage
+- Kostenvoranschläge, Anfragen und Aufträge: um Ihre Anfrage zu beantworten, ein Angebot zu erstellen und den Auftrag auszuführen, wenn Sie es annehmen. Rechtsgrundlage sind vorvertragliche Maßnahmen auf Ihre Anfrage und die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).
+- Dokumente zum Übersetzen oder Dolmetschen: werden nur zur Erbringung des beauftragten Dienstes verwendet und streng vertraulich behandelt.
+- Bewerbungen: um Ihr Profil als freiberuflicher Übersetzer oder Dolmetscher zu prüfen. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit widerrufen können.
+Wir treffen keine automatisierten Entscheidungen, erstellen keine Profile und verwenden Ihre Daten nicht für Werbung.
+## Wie lange wir sie speichern
+- Anfragen, aus denen kein Auftrag wird: ein Jahr.
+- Kunden: für die Dauer der Geschäftsbeziehung und danach für die gesetzlichen Fristen (zum Beispiel sechs Jahre für Buchhaltungsunterlagen).
+- Auftragsdokumente: so lange, wie es für den Auftrag und mögliche Korrekturen nötig ist.
+- Bewerbungen: ein Jahr, sofern Sie nicht vorher die Löschung verlangen.
+## Wer sie erhält
+Wir geben Ihre Daten nicht an Dritte weiter, es sei denn, wir sind gesetzlich dazu verpflichtet. Zugriff haben nur, soweit erforderlich und mit Vertraulichkeitsvereinbarung:
+- Die Übersetzer und Dolmetscher, die Ihren Auftrag ausführen.
+- Unser Anbieter für Webhosting und E-Mail ({{hosting}}), mit Servern {{servidores}}.
+Sollte ein Auftrag einen Mitarbeiter außerhalb des Europäischen Wirtschaftsraums erfordern, werden Sie vorher informiert, und es gelten die Garantien der DSGVO.
+## Ihre Rechte
+Sie können Auskunft, Berichtigung oder Löschung Ihrer Daten verlangen, der Verarbeitung widersprechen oder sie einschränken lassen und die Übertragung Ihrer Daten verlangen. Schreiben Sie dazu an {{email}} oder an unsere Anschrift. Sie können außerdem Beschwerde bei der spanischen Datenschutzbehörde einlegen (www.aepd.es).
+## Sicherheit
+Die Website nutzt eine verschlüsselte Verbindung (https). Formulare werden per E-Mail an BABELTRANS gesendet und nicht auf dem Webserver gespeichert.
+## Cookies
+Diese Website verwendet keine Cookies und keine Analyse- oder Tracking-Werkzeuge.
+Letzte Aktualisierung: {{actualizado}}.

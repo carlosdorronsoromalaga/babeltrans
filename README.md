@@ -43,7 +43,9 @@ cd sitio && python3 -m http.server 8765          # y abrir http://localhost:8765
 el hosting.)
 
 **Para cambiar un texto:** se edita en `contenido/<idioma>.json` y se vuelve a
-lanzar `construir.py`. Los pocos rótulos que no venían de la web vieja
+lanzar `construir.py`. Los textos legales están en `contenido/legal/` y los
+datos de la empresa en `contenido/empresa.json`. Para publicar:
+`./scripts/empaquetar.sh`. Los pocos rótulos que no venían de la web vieja
 («Leer más», «Menú»…) están en `scripts/textos_ui.py`.
 
 ## Qué cambia respecto a la original
@@ -80,40 +82,9 @@ lanzar `construir.py`. Los pocos rótulos que no venían de la web vieja
 - **Sin cookies ni servicios de terceros**: las fuentes están en la propia web
   y no hay analítica, así que no hace falta banner de cookies.
 
-## Pendiente de revisar con Martijn
+## Pendiente y publicación
 
-Estas cosas son **así en la web original**. No las he tocado porque cambiarlas
-sería cambiar el contenido, pero conviene decidirlas antes de publicar:
-
-1. **Dos teléfonos distintos.** En castellano sale el **91 504 77 74** y en
-   inglés y alemán el **91 314 79 19**. En holandés no sale ninguno. ¿Cuál es el
-   bueno?
-2. **Textos sin traducir.** La portada holandesa tenía el título en castellano
-   (se usa el subtítulo holandés en su lugar), y la página de formación en
-   holandés («Seminars in het Engels») tiene todo el texto en castellano.
-3. **Fechas viejas.** Los seminarios en inglés y alemán dicen «throughout
-   2011» e «in 2011».
-4. **Textos legales anticuados.** El aviso legal y la política de privacidad
-   citan la Ley 15/1999 (LOPD), sustituida por el RGPD y la LOPDGDD de 2018.
-   Habría que actualizarlos.
-5. **CV y CP.** Hay dos páginas en el menú, «CV» y «CP», que son formularios
-   para subir un currículum y una carta para traducirlos. ¿Siguen ofreciéndose?
-6. **Contenido nuevo para revisar.** Los modismos de «literal frente a
-   traducido» y las palabras de la torre de Babel no estaban en la web vieja.
-   Están en `scripts/textos_ui.py` (`MODISMOS`, `TORRE`) para cambiarlos o
-   quitarlos. Conviene que un nativo revise los de alemán y holandés.
-7. **Correo del remitente.** `enviar.php` manda los mensajes desde
-   `web@babeltrans.es`. Conviene que esa dirección exista, o cambiarla por
-   otra del dominio, para que los correos no acaben en spam.
-
-## Cómo se publica (Webempresa)
-
-1. **Copia de seguridad** de lo que hay ahora en el hosting (desde cPanel:
-   ficheros y base de datos). Así no se pierde nada.
-2. Dejar el PHP en **8.2 o superior** (el actual 8.5 vale). Ya no hace falta
-   el PHP Legacy Addon.
-3. Mover la web vieja a una carpeta aparte (p. ej. `public_html/_joomla_viejo/`)
-   y subir **el contenido** de `sitio/` a `public_html/`, incluido el
-   `.htaccess` (es un fichero oculto).
-4. Probar un formulario de verdad y comprobar que llega el correo.
-5. Cuando todo funcione, borrar la carpeta de Joomla y su base de datos.
+- **Qué falta y qué está decidido:** [`docs/PENDIENTES.md`](docs/PENDIENTES.md). La
+  web no se empaqueta mientras falten los datos legales de `contenido/empresa.json`.
+- **Cómo se sube al hosting y quién hace qué:** [`docs/PUBLICAR.md`](docs/PUBLICAR.md).
+- **Por qué tiene este aspecto:** [`docs/DISENO.md`](docs/DISENO.md).

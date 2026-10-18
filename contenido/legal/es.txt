@@ -1,0 +1,57 @@
+=== aviso-legal
+Aviso legal
+## Quién es el titular de esta web
+En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos del titular de www.babeltrans.es:
+- Titular: {{titular}}
+- NIF: {{nif}}
+- Domicilio: {{domicilio}}
+- Teléfono: {{telefono}}
+- Correo electrónico: {{email}}
+{{registro}}
+## Objeto
+Esta web informa de los servicios de traducción e interpretación de BABELTRANS y permite pedir presupuesto, contactar y enviar una candidatura para colaborar. Navegar por ella es libre y gratuito, y no exige registrarse.
+## Uso de la web
+Quien la visita se compromete a usarla de forma lícita y a no emplearla para dañar a BABELTRANS ni a terceros, ni para introducir programas o archivos maliciosos. Los datos que se envíen por los formularios deben ser veraces.
+## Propiedad intelectual e industrial
+Los textos, el logotipo, el diseño y el código de esta web son de BABELTRANS o se usan con autorización. No se pueden reproducir, distribuir ni transformar sin permiso por escrito, salvo para uso personal y privado.
+## Responsabilidad
+BABELTRANS procura que la información de esta web sea correcta y esté actualizada, pero no garantiza que no contenga errores ni que la web esté disponible en todo momento. Los presupuestos y las condiciones de cada encargo son los que se acuerden por escrito con cada cliente.
+## Protección de datos
+Los datos personales que se reciben a través de esta web se tratan como se explica en la Política de privacidad.
+## Cookies
+Esta web no usa cookies ni herramientas de análisis o seguimiento, y no carga contenidos de terceros: las tipografías se sirven desde el propio servidor. Por eso no muestra un aviso de cookies.
+## Legislación aplicable
+Este aviso se rige por la legislación española. Si quien usa la web es un consumidor, serán competentes los juzgados de su domicilio.
+
+=== privacidad
+Política de privacidad
+## Responsable del tratamiento
+- Responsable: {{titular}}
+- NIF: {{nif}}
+- Domicilio: {{domicilio}}
+- Correo electrónico: {{email}}
+- Teléfono: {{telefono}}
+## Qué datos tratamos
+Los que usted nos facilita al escribirnos o al rellenar un formulario de esta web: nombre, empresa, datos de contacto, la información de su solicitud y los documentos que adjunte. En las candidaturas, además, los datos de su currículum.
+## Para qué los usamos y con qué base legal
+- Presupuestos, contacto y encargos: para responder a su solicitud, prepararle un presupuesto y, si lo acepta, realizar el trabajo. La base legal es la aplicación de medidas precontractuales a petición suya y la ejecución del contrato (artículo 6.1.b del RGPD).
+- Documentos para traducir o interpretar: solo se usan para prestar el servicio encargado y se tratan con estricta confidencialidad.
+- Candidaturas: para valorar su perfil como traductor o intérprete colaborador. La base legal es su consentimiento (artículo 6.1.a del RGPD), que puede retirar en cualquier momento.
+No tomamos decisiones automatizadas ni elaboramos perfiles con sus datos, y no los usamos para enviarle publicidad.
+## Cuánto tiempo los conservamos
+- Solicitudes que no llegan a convertirse en encargo: un año.
+- Clientes: mientras dure la relación y, después, durante los plazos que exige la ley (por ejemplo, seis años para la documentación contable).
+- Documentos de un encargo: el tiempo necesario para realizarlo y atender posibles revisiones.
+- Candidaturas: un año, salvo que antes nos pida borrarlas.
+## A quién se comunican
+No cedemos sus datos a terceros, salvo obligación legal. Tienen acceso a ellos, solo en la medida necesaria y con contrato de confidencialidad:
+- Los traductores e intérpretes que realizan su encargo.
+- Nuestro proveedor de alojamiento web y correo electrónico ({{hosting}}), con servidores {{servidores}}.
+Si para un encargo fuera necesario un colaborador fuera del Espacio Económico Europeo, se le informará antes y se aplicarán las garantías que exige el RGPD.
+## Sus derechos
+Puede pedirnos acceder a sus datos, rectificarlos o suprimirlos, oponerse a su tratamiento o limitarlo, y solicitar su portabilidad, escribiendo a {{email}} o a nuestro domicilio. Si considera que no hemos atendido bien su solicitud, puede presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).
+## Seguridad
+La web funciona por conexión cifrada (https). Los formularios se envían por correo electrónico a BABELTRANS y no se guardan en el servidor de la web.
+## Cookies
+Esta web no usa cookies ni herramientas de análisis o seguimiento.
+Última actualización: {{actualizado}}.

@@ -1,0 +1,17 @@
+{
+  "_que_es": "Datos legales de la empresa. Los usan el aviso legal, la política de privacidad y la información de los formularios. Un null sale en la web como [PENDIENTE] y bloquea 'construir.py --publicar'. Los rellena Martijn; ver docs/PENDIENTES.md.",
+  "titular": null,
+  "_titular": "Nombre fiscal: el de la persona si es autónomo, o la razón social si es sociedad (p. ej. 'Babel Translations, S.L.')",
+  "nif": null,
+  "domicilio": null,
+  "_domicilio": "La web vieja daba DOS direcciones: C/ Villa de Marín 26, 28029 Madrid y C/ Luis Martínez Feduchi 74, 28055 Madrid. ¿Cuál es la buena?",
+  "registro": "",
+  "_registro": "Solo si es sociedad: 'Inscrita en el Registro Mercantil de Madrid, tomo X, folio Y, hoja M-Z'. Si es autónomo, dejar vacío.",
+  "telefono": null,
+  "_telefono": "Un solo teléfono para toda la web. La vieja tenía +34 915047774 en castellano y +34 913147919 en inglés y alemán. Formato: +34915047774",
+  "email": "info@babeltrans.es",
+  "hosting": "Webempresa",
+  "servidores": null,
+  "_servidores": "Dónde están los servidores del hosting (preguntar a Webempresa; p. ej. 'en la Unión Europea'). Va en la política de privacidad.",
+  "actualizado": "18/10/2026"
+}

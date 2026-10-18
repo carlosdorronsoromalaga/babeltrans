@@ -11,7 +11,7 @@ RedirectMatch 301 ^/es\.html$ /
 RedirectMatch 301 ^/index\.php$ /
 
 DirectoryIndex index.html
-ErrorDocument 404 /index.html
+ErrorDocument 404 /404.html
 
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"

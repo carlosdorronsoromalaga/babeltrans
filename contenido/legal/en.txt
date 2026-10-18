@@ -1,0 +1,57 @@
+=== aviso-legal
+Legal notice
+## Website owner
+In accordance with article 10 of Spanish Law 34/2002 on Information Society Services and Electronic Commerce (LSSI-CE), the owner of www.babeltrans.es is:
+- Owner: {{titular}}
+- Tax ID (NIF): {{nif}}
+- Address: {{domicilio}}
+- Telephone: {{telefono}}
+- Email: {{email}}
+{{registro}}
+## Purpose
+This website describes the translation and interpreting services of BABELTRANS and lets you request a quote, contact us and apply to work with us. Browsing it is free and does not require registration.
+## Use of the website
+Visitors agree to use it lawfully and not to use it to harm BABELTRANS or third parties, or to introduce malicious software or files. Information sent through the forms must be accurate.
+## Intellectual and industrial property
+The texts, logo, design and code of this website belong to BABELTRANS or are used with permission. They may not be reproduced, distributed or modified without written permission, except for personal and private use.
+## Liability
+BABELTRANS strives to keep the information on this website accurate and up to date, but cannot guarantee that it is free of errors or that the website is always available. The quote and terms of each job are those agreed in writing with each client.
+## Data protection
+Personal data received through this website is processed as explained in the Privacy policy.
+## Cookies
+This website does not use cookies or analytics or tracking tools, and does not load third-party content: fonts are served from our own server. That is why it shows no cookie notice.
+## Applicable law
+This notice is governed by Spanish law. If the user is a consumer, the courts of their place of residence will have jurisdiction.
+
+=== privacidad
+Privacy policy
+## Data controller
+- Controller: {{titular}}
+- Tax ID (NIF): {{nif}}
+- Address: {{domicilio}}
+- Email: {{email}}
+- Telephone: {{telefono}}
+## What data we process
+The data you give us when you write to us or fill in a form on this website: name, company, contact details, the details of your request and any documents you attach. For job applications, also the data in your CV.
+## Why we use it and on what legal basis
+- Quotes, enquiries and jobs: to answer your request, prepare a quote and, if you accept it, carry out the work. The legal basis is taking steps at your request before entering into a contract, and performing the contract (article 6.1.b GDPR).
+- Documents for translation or interpreting: used only to provide the service ordered and handled in strict confidence.
+- Job applications: to assess your profile as a freelance translator or interpreter. The legal basis is your consent (article 6.1.a GDPR), which you may withdraw at any time.
+We do not make automated decisions or profile you, and we do not use your data for advertising.
+## How long we keep it
+- Requests that do not become a job: one year.
+- Clients: for the duration of the relationship and then for the periods required by law (for example, six years for accounting records).
+- Documents of a job: for as long as needed to carry it out and handle any revisions.
+- Job applications: one year, unless you ask us to delete them sooner.
+## Who receives it
+We do not pass your data on to third parties unless required by law. Only the following have access, as far as necessary and under a confidentiality agreement:
+- The translators and interpreters who carry out your job.
+- Our web hosting and email provider ({{hosting}}), with servers {{servidores}}.
+If a job requires a collaborator outside the European Economic Area, you will be told beforehand and the safeguards required by the GDPR will apply.
+## Your rights
+You may ask to access, rectify or erase your data, to object to or restrict its processing, and to receive it in a portable format, by writing to {{email}} or to our address. If you believe we have not handled your request properly, you may lodge a complaint with the Spanish Data Protection Agency (www.aepd.es).
+## Security
+The website uses an encrypted connection (https). Forms are sent by email to BABELTRANS and are not stored on the web server.
+## Cookies
+This website does not use cookies or analytics or tracking tools.
+Last updated: {{actualizado}}.

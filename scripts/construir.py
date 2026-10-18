@@ -15,7 +15,8 @@ Uso:  python3 scripts/construir.py        (solo biblioteca estándar)
 import datetime, html, json, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from textos_ui import UI, UI2, UI3, ENTRADAS, RETOQUES, ALINEACION, MODISMOS, TORRE  # noqa: E402
+from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS, TORRE,  # noqa: E402
+                       INFO_FORM)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -28,8 +29,41 @@ ANIO = datetime.date.today().year
 esc = html.escape
 
 
+# Páginas que se retiran (18/10/2026): «CV» y «CP» eran una campaña de hacia
+# 2015 para traducir currículums y cartas de presentación, con su propio
+# formulario. Ya no tenían sentido como apartados del menú: sus direcciones
+# redirigen al presupuesto de traducción, que cubre lo mismo.
+RETIRADAS = {"cv": "presupuesto-traduccion", "cp": "presupuesto-traduccion"}
+
+EMPRESA = json.load(open(os.path.join(CONT, "empresa.json"), encoding="utf-8"))
+PENDIENTES = set()
+
+
+def dato(clave):
+    """Un dato legal de la empresa, o una marca [PENDIENTE] bien visible."""
+    v = EMPRESA.get(clave)
+    if v is None:
+        PENDIENTES.add(clave)
+        return f'<mark class="pendiente">[PENDIENTE: {clave}]</mark>'
+    if clave == "telefono":
+        return f'<a href="tel:{v}">{tel_bonito(v)}</a>'
+    if clave == "email":
+        return f'<a href="mailto:{v}">{v}</a>'
+    return esc(v)
+
+
+def rellena(texto):
+    return re.sub(r"\{\{(\w+)\}\}", lambda m: dato(m.group(1)), texto)
+
+
 def carga():
-    return {l: json.load(open(os.path.join(CONT, f"{l}.json"), encoding="utf-8")) for l in IDIOMAS}
+    todo = {l: json.load(open(os.path.join(CONT, f"{l}.json"), encoding="utf-8")) for l in IDIOMAS}
+    for d in todo.values():
+        rutas_fuera = {d["paginas"][pid]["ruta"] for pid in RETIRADAS}
+        d["menu"] = [it for it in d["menu"] if it["ruta"] not in rutas_fuera]
+        for pid in RETIRADAS:
+            d["paginas"].pop(pid)
+    return todo
 
 
 def retoca(t):
@@ -52,7 +86,10 @@ def enlaces(html_txt):
 
 
 def contacto(d):
-    """Teléfono y e-mail tal y como aparecían en la página de contacto de ese idioma."""
+    """Teléfono y e-mail. Si empresa.json ya tiene teléfono, ese para toda la
+    web; si no, el que aparecía en la página de contacto de ese idioma."""
+    if EMPRESA.get("telefono"):
+        return EMPRESA["telefono"], EMPRESA.get("email") or "info@babeltrans.es"
     f = d["paginas"]["contacto"]["formulario"]
     texto = " ".join(f["intro"] + f["datos"])
     tel = re.search(r"Tel\.?:?\s*([+\d][\d ]{8,})", texto)
@@ -163,7 +200,9 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
         f'<li><a href="{ruta_en(todo, l, pid)}" hreflang="{l}" lang="{l}"'
         f'{" aria-current=true" if l == lang else ""} title="{UI[l]["idioma"]}">{l}</a></li>'
         for l in IDIOMAS)
-    pie_links = "".join(f'<li><a href="{url(x["ruta"])}">{esc(x["texto"])}</a></li>' for x in d["pie"])
+    trabaja = d["paginas"]["trabaja"]
+    pie_links = (f'<li><a href="{url(trabaja["ruta"])}">{esc(nombre_pagina(d, "trabaja"))}</a></li>'
+                 + "".join(f'<li><a href="{url(x["ruta"])}">{esc(x["texto"])}</a></li>' for x in d["pie"]))
     copy = d["paginas"]["home"]["home"]["copyright"].replace("2024", str(ANIO))
     canon = DOMINIO + ruta_en(todo, lang, pid)
     lema = '<span class="marca-lema">Expertos en Traducción e Interpretación</span>' if lang == "es" else ""
@@ -179,8 +218,9 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
 <meta property="og:title" content="{esc(titulo)}">
 <meta property="og:description" content="{esc(descripcion)}">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#fcfcfa">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1a1f36">
+{datos_estructurados(d, lang) if pid == "home" else ""}
+<link rel="icon" href="/favicon.ico" sizes="16x16">
 <link rel="preload" href="/fuentes/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/estilos.css">
 <script src="/web.js" defer></script>
@@ -189,11 +229,19 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
 <a class="saltar" href="#contenido">{ui["saltar"]}</a>
 <header class="cabecera">
   <div class="env cabecera-in">
-    <a class="marca" href="{home_url(d)}"><span class="marca-nombre">Babel <i>Translations</i></span>{lema}</a>
+    <a class="marca" href="{home_url(d)}">
+      <picture>
+        <source media="(max-width: 560px)" srcset="/img/logo-corto.png">
+        <img src="/img/logo.png" width="640" height="73" alt="Babel Translations · Expertos en Traducción e Interpretación">
+      </picture>
+    </a>
+    <ul class="idiomas idiomas-arriba" aria-label="{ui["idiomas"]}">{idiomas}</ul>
     <button class="menu-abrir" aria-expanded="false" aria-controls="nav">{ui["menu"]}</button>
-    <div class="nav-caja" id="nav">
+  </div>
+  <div class="nav-caja" id="nav">
+    <div class="env nav-in">
       <nav class="nav" aria-label="{ui["menu"]}"><ul class="nav-lista">{menu_html(d, ruta)}</ul></nav>
-      <ul class="idiomas" aria-label="{ui["idiomas"]}">{idiomas}</ul>
+      <ul class="idiomas idiomas-menu" aria-label="{ui["idiomas"]}">{idiomas}</ul>
     </div>
   </div>
 </header>
@@ -202,7 +250,7 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
 </main>
 <footer class="pie">
   <div class="env pie-in">
-    <p class="pie-marca">Babel <i>Translations</i></p>
+    <p class="pie-marca">Babel Translations</p>
     <address class="pie-contacto">
       {f'<a href="tel:{tel}">{tel_bonito(tel)}</a>' if tel else ''}
       <a href="mailto:{mail}">{mail}</a>
@@ -227,6 +275,8 @@ def seccion_de(d, pid):
 
 def cabecera_pagina(d, pid, titulo, sub=""):
     sec = seccion_de(d, pid)
+    if sec is None and pid == "mediacion":
+        sec = seccion_de(d, "servicios")
     cab = (f'<a class="cabecera-seccion" href="{url(sec["ruta"])}">{esc(sec["texto"])}</a>'
            if sec and sec["ruta"] != d["paginas"][pid]["ruta"] else "")
     return (f'<header class="titulo-pagina"><div class="env libro">'
@@ -242,6 +292,10 @@ def notas_margen(d, pid, con_presupuesto=True, con_contacto=True):
     sec = seccion_de(d, pid)
     if sec and sec["hijos"]:
         items = [sec] + sec["hijos"]
+        if sec["ruta"] == P["servicios"]["ruta"]:
+            # Mediación solo se enlazaba desde la portada vieja; sin esto se
+            # quedaría huérfana.
+            items = items + [{"ruta": P["mediacion"]["ruta"], "texto": P["mediacion"]["titulo"]}]
         lis = "".join(
             f'<li><a href="{url(x["ruta"])}"{" aria-current=page" if x["ruta"] == P[pid]["ruta"] else ""}>{esc(x["texto"])}</a></li>'
             for x in items)
@@ -384,6 +438,52 @@ def pag_hub(todo, lang, pid):
     return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations", f"{titulo} · Babel Translations")
 
 
+def legal(lang, pid):
+    """Título y bloques de un texto legal de contenido/legal/<idioma>.txt."""
+    texto = open(os.path.join(CONT, "legal", f"{lang}.txt"), encoding="utf-8").read()
+    trozo = texto.split(f"=== {pid}\n", 1)[1].split("\n=== ", 1)[0].strip().splitlines()
+    titulo, bloques, lista = trozo[0], [], []
+    for linea in trozo[1:] + [""]:
+        linea = linea.strip()
+        if linea.startswith("- "):
+            lista.append(rellena(esc(linea[2:])))
+            continue
+        if lista:
+            bloques.append(("ul", lista)); lista = []
+        if not linea:
+            continue
+        if linea.startswith("## "):
+            bloques.append(("h2", esc(linea[3:])))
+        else:
+            bloques.append(("p", rellena(esc(linea))))
+    return titulo, bloques
+
+
+def bloques_legal(bloques):
+    sal = []
+    for t, c in bloques:
+        if t == "ul":
+            sal.append('<ul class="lista">' + "".join(f"<li>{x}</li>" for x in c) + "</ul>")
+        elif t == "h2":
+            sal.append(f"<h2>{c}</h2>")
+        elif c.strip():
+            sal.append(f"<p>{c}</p>")
+    return "\n".join(sal)
+
+
+def pag_legal(todo, lang, pid):
+    d = todo[lang]
+    titulo, bloques = legal(lang, pid)
+    cuerpo = cabecera_pagina(d, pid, titulo) + f"""
+<section class="env libro cuerpo-pagina">
+  <aside class="margen"></aside>
+  <article class="prosa prosa-legal">
+{bloques_legal(bloques)}
+  </article>
+</section>"""
+    return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations", titulo)
+
+
 def pag_articulo(todo, lang, pid):
     d = todo[lang]; p = d["paginas"][pid]
     titulo = p["titulo"] or nombre_pagina(d, pid)
@@ -470,11 +570,56 @@ def pag_formulario(todo, lang, pid):
 {campos}
       </div>
       <button class="boton" type="submit">{esc(boton)}</button>
+      {info_privacidad(d, lang, pid)}
     </form>
   </div>
 </section>"""
     return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations",
                   intro[0][:155] if intro else f"{titulo} · Babel Translations")
+
+
+def info_privacidad(d, lang, pid):
+    i = INFO_FORM[lang]
+    cand = pid in ("como-traductor", "como-interprete")
+    filas = [
+        (i["responsable"], dato("titular")),
+        (i["finalidad"], esc(i["fin_candidatura" if cand else "fin_solicitud"])),
+        (i["legitimacion"], esc(i["leg_candidatura" if cand else "leg_solicitud"])),
+        (i["destinatarios"], esc(i["dest"])),
+        (i["derechos"], f'{esc(i["der"])} {dato("email")}.'),
+        (i["mas"], f'<a href="{url(d["paginas"]["privacidad"]["ruta"])}">{esc(i["ver"])}</a>.'),
+    ]
+    return (f'<details class="info-datos"><summary>{esc(i["tit"])}</summary><dl>'
+            + "".join(f"<dt>{a}</dt><dd>{b}</dd>" for a, b in filas) + "</dl></details>")
+
+
+def datos_estructurados(d, lang):
+    """schema.org para que Google entienda qué es y cómo contactar."""
+    tel, mail = contacto(d)
+    datos = {"@context": "https://schema.org", "@type": "ProfessionalService",
+             "name": "Babel Translations", "alternateName": "BABELTRANS",
+             "url": DOMINIO + "/", "logo": DOMINIO + "/img/logo.png", "email": mail,
+             "foundingDate": "1999", "availableLanguage": ["es", "en", "de", "nl"],
+             "description": sin_tags(d["paginas"]["home"]["home"]["titulos"][0])}
+    if tel:
+        datos["telephone"] = tel
+    if EMPRESA.get("domicilio"):
+        datos["address"] = EMPRESA["domicilio"]
+    return f'<script type="application/ld+json">{json.dumps(datos, ensure_ascii=False)}</script>'
+
+
+def pag_404(todo):
+    """Página de «no existe» en castellano con las secciones de cada idioma."""
+    d = todo["es"]; u = UI4["es"]
+    listas = "".join(
+        f'<li lang="{l}"><a href="{ruta_en(todo, l, "home")}">{UI[l]["idioma"]}</a>: '
+        + ", ".join(f'<a href="{url(it["ruta"])}">{esc(it["texto"])}</a>' for it in todo[l]["menu"][1:])
+        + "</li>" for l in IDIOMAS)
+    cuerpo = (f'<header class="titulo-pagina"><div class="env libro"><div class="margen"></div>'
+              f'<div><h1>{esc(u["error404"])}</h1></div></div></header>'
+              f'<section class="env libro cuerpo-pagina"><div class="margen"></div><div class="prosa">'
+              f'<p>{esc(u["error404_txt"])}</p><ul class="lista">{listas}</ul></div></section>')
+    return pagina(todo, "es", "home", cuerpo, u["error404"] + " · Babel Translations", u["error404"])
 
 
 def pag_mapa(todo, lang, pid):
@@ -592,9 +737,12 @@ def pag_home(todo, lang):
         <p>{esc(primer_parrafo(d, "colaboradores"))}</p>
       </div>
       <div>
-        <h2 class="tit-pequeno"><a href="{url(P["formacion"]["ruta"])}">{esc(P["formacion"]["titulo"])}</a></h2>
-        <p>{esc(primer_parrafo(d, "formacion"))}</p>
-        <a class="enlace" href="{url(P["formacion"]["ruta"])}">{esc(ui["leer"])}</a>
+        <h2 class="tit-pequeno"><a href="{url(P["trabaja"]["ruta"])}">{esc(nombre_pagina(d, "trabaja"))}</a></h2>
+        <p>{esc(UI4[lang]["trabaja_txt"])}</p>
+        <ul class="indice indice-mini">
+          <li><a href="{url(P["como-traductor"]["ruta"])}">{esc(sin_tags(P["trabaja"]["bloques"][0][1]))}</a></li>
+          <li><a href="{url(P["como-interprete"]["ruta"])}">{esc(sin_tags(P["trabaja"]["bloques"][1][1]))}</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -687,6 +835,8 @@ def main():
         for pid, p in d["paginas"].items():
             if pid == "home":
                 html_txt = pag_home(todo, lang)
+            elif pid in ("aviso-legal", "privacidad"):
+                html_txt = pag_legal(todo, lang, pid)
             elif pid in HUBS:
                 html_txt = pag_hub(todo, lang, pid)
             elif pid == "mapa":
@@ -699,13 +849,42 @@ def main():
             if pid == "home" and lang == "es":
                 escribe("index.html", html_txt)
             urls.append(DOMINIO + ("/" if (pid == "home" and lang == "es") else url(p["ruta"])))
+    escribe("404.html", pag_404(todo))
     hoy = datetime.date.today().isoformat()
     escribe("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             + "".join(f"  <url><loc>{u}</loc><lastmod>{hoy}</lastmod></url>\n" for u in urls) + "</urlset>\n")
     escribe("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
     ht = open(os.path.join(PLANT, ".htaccess"), encoding="utf-8").read() if os.path.exists(os.path.join(PLANT, ".htaccess")) else ""
-    escribe(".htaccess", ht + "\n# Rutas de la web vieja (generado por scripts/construir.py)\n" + "\n".join(redirecciones(todo)) + "\n")
+    retiradas = []
+    for l in IDIOMAS:
+        crudo = json.load(open(os.path.join(CONT, f"{l}.json"), encoding="utf-8"))
+        for pid, destino in RETIRADAS.items():
+            retiradas.append(f"RedirectMatch 301 ^/{re.escape(crudo['paginas'][pid]['ruta'])}$ "
+                             f"{url(todo[l]['paginas'][destino]['ruta'])}")
+    escribe(".htaccess", ht + "\n# Páginas retiradas en la web nueva (CV y CP)\n" + "\n".join(retiradas)
+            + "\n\n# Rutas de la web vieja (generado por scripts/construir.py)\n"
+            + "\n".join(r for r in redirecciones(todo) if r not in retiradas) + "\n")
+    comprueba(urls)
     print(len(urls), "páginas en", SALIDA)
+
+
+def comprueba(urls):
+    """Lo que no puede llegar a la web publicada."""
+    prohibido = ["spam bots", "activar JavaScript", "15/1999", "Mail: Esta"]
+    malos = []
+    for raiz, _, ficheros in os.walk(SALIDA):
+        for f in ficheros:
+            if f.endswith(".html"):
+                t = open(os.path.join(raiz, f), encoding="utf-8").read()
+                malos += [f"{os.path.relpath(os.path.join(raiz, f), SALIDA)}: «{x}»" for x in prohibido if x in t]
+    if malos:
+        print("ERROR: texto de la web vieja que no debe publicarse:\n  " + "\n  ".join(malos))
+        sys.exit(1)
+    if PENDIENTES:
+        print("AVISO: faltan datos en contenido/empresa.json:", ", ".join(sorted(PENDIENTES)))
+        if "--publicar" in sys.argv:
+            print("No se puede publicar con datos pendientes (salen como [PENDIENTE] en la web).")
+            sys.exit(1)
 
 
 if __name__ == "__main__":

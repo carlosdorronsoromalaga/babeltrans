@@ -1,0 +1,57 @@
+=== aviso-legal
+Disclaimer en wettelijke informatie
+## Eigenaar van de website
+Volgens artikel 10 van de Spaanse wet 34/2002 inzake diensten van de informatiemaatschappij en elektronische handel (LSSI-CE) is de eigenaar van www.babeltrans.es:
+- Eigenaar: {{titular}}
+- Fiscaal nummer (NIF): {{nif}}
+- Adres: {{domicilio}}
+- Telefoon: {{telefono}}
+- E-mail: {{email}}
+{{registro}}
+## Doel
+Deze website informeert over de vertaal- en tolkdiensten van BABELTRANS. U kunt er een offerte aanvragen, contact met ons opnemen en solliciteren als medewerker. Het gebruik is gratis en vereist geen registratie.
+## Gebruik van de website
+Bezoekers gebruiken de website op een rechtmatige manier en niet om BABELTRANS of derden te schaden of om schadelijke programma's of bestanden te verspreiden. De gegevens die via de formulieren worden verstuurd, moeten juist zijn.
+## Intellectueel en industrieel eigendom
+De teksten, het logo, het ontwerp en de code van deze website zijn eigendom van BABELTRANS of worden met toestemming gebruikt. Zonder schriftelijke toestemming mogen ze niet worden verveelvoudigd, verspreid of gewijzigd, behalve voor persoonlijk en privégebruik.
+## Aansprakelijkheid
+BABELTRANS streeft ernaar de informatie op deze website juist en actueel te houden, maar kan niet garanderen dat ze foutloos is of dat de website altijd beschikbaar is. Voor elke opdracht gelden de offerte en de voorwaarden die schriftelijk met de klant zijn overeengekomen.
+## Gegevensbescherming
+Persoonsgegevens die we via deze website ontvangen, worden verwerkt zoals beschreven in de privacyverklaring.
+## Cookies
+Deze website gebruikt geen cookies en geen analyse- of trackinghulpmiddelen en laadt geen inhoud van derden: de lettertypen komen van onze eigen server. Daarom is er geen cookiemelding.
+## Toepasselijk recht
+Op deze informatie is het Spaanse recht van toepassing. Is de gebruiker een consument, dan is de rechter van zijn woonplaats bevoegd.
+
+=== privacidad
+Privacyverklaring
+## Verwerkingsverantwoordelijke
+- Verantwoordelijke: {{titular}}
+- Fiscaal nummer (NIF): {{nif}}
+- Adres: {{domicilio}}
+- E-mail: {{email}}
+- Telefoon: {{telefono}}
+## Welke gegevens we verwerken
+De gegevens die u ons geeft wanneer u ons schrijft of een formulier op deze website invult: naam, bedrijf, contactgegevens, de inhoud van uw aanvraag en de documenten die u bijvoegt. Bij sollicitaties ook de gegevens uit uw cv.
+## Waarvoor en op welke grondslag
+- Offertes, vragen en opdrachten: om uw aanvraag te beantwoorden, een offerte op te stellen en, als u die aanvaardt, het werk uit te voeren. De grondslag is het nemen van precontractuele maatregelen op uw verzoek en de uitvoering van de overeenkomst (artikel 6, lid 1, onder b, AVG).
+- Documenten om te vertalen of te tolken: worden alleen gebruikt voor de opdracht en strikt vertrouwelijk behandeld.
+- Sollicitaties: om uw profiel als freelance vertaler of tolk te beoordelen. De grondslag is uw toestemming (artikel 6, lid 1, onder a, AVG), die u op elk moment kunt intrekken.
+We nemen geen geautomatiseerde besluiten, stellen geen profielen op en gebruiken uw gegevens niet voor reclame.
+## Hoe lang we ze bewaren
+- Aanvragen die geen opdracht worden: een jaar.
+- Klanten: zolang de relatie duurt en daarna gedurende de wettelijke termijnen (bijvoorbeeld zes jaar voor de boekhouding).
+- Documenten van een opdracht: zolang als nodig is om die uit te voeren en eventuele correcties te verwerken.
+- Sollicitaties: een jaar, tenzij u ons vraagt ze eerder te verwijderen.
+## Wie ze ontvangt
+We geven uw gegevens niet aan derden, tenzij de wet dat verplicht. Alleen de volgende partijen hebben toegang, voor zover nodig en met een geheimhoudingsovereenkomst:
+- De vertalers en tolken die uw opdracht uitvoeren.
+- Onze aanbieder van webhosting en e-mail ({{hosting}}), met servers {{servidores}}.
+Als een opdracht een medewerker buiten de Europese Economische Ruimte vereist, wordt u vooraf geïnformeerd en gelden de waarborgen van de AVG.
+## Uw rechten
+U kunt ons vragen om inzage in, rectificatie of verwijdering van uw gegevens, bezwaar maken tegen de verwerking of die laten beperken, en uw gegevens overdraagbaar laten maken. Schrijf daarvoor naar {{email}} of naar ons adres. U kunt ook een klacht indienen bij de Spaanse toezichthouder (www.aepd.es).
+## Beveiliging
+De website gebruikt een versleutelde verbinding (https). Formulieren worden per e-mail naar BABELTRANS verstuurd en niet op de webserver opgeslagen.
+## Cookies
+Deze website gebruikt geen cookies en geen analyse- of trackinghulpmiddelen.
+Laatst bijgewerkt: {{actualizado}}.
