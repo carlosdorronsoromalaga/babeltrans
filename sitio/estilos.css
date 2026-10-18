@@ -64,8 +64,32 @@ p { margin: 0 0 1em; }
 .nav-in { display: flex; align-items: center; min-height: 52px; }
 .nav-lista { margin-left: -10px !important; }
 .idiomas-menu { display: none !important; }
-.marca { display: block; flex-shrink: 0; margin-right: auto; line-height: 0; }
-.marca img { width: 520px; height: auto; }
+.marca { --d: 59px; text-decoration: none; display: flex; align-items: center; flex-shrink: 0; margin-right: auto; line-height: 0; }
+.marca img { height: var(--d); width: auto; }
+.marca-lema { display: flex; align-items: center; gap: 7px; margin-left: 6px; padding-top: calc(var(--d) * .05);
+  font: 400 calc(var(--d) * .185)/1 Arial, "Helvetica Neue", Helvetica, sans-serif; color: #fff; white-space: nowrap; }
+.marca-lema::before, .marca-lema::after { content: ""; width: 2px; height: calc(var(--d) * .24); background: #d7b017; }
+
+/* Los dos mundos del logo original, girando. El texto es el del logo de
+   siempre; los globos son dos esferas con el mapamundi de la NASA que se
+   desplaza dentro de un círculo, con el brillo y la sombra de los originales.
+   Giran en sentidos contrarios: dos idiomas que se encuentran. */
+.globos { position: relative; flex: none; width: calc(var(--d) * 1.66); height: var(--d); margin-right: calc(var(--d) * .07); }
+.globo { position: absolute; top: 0; width: var(--d); height: var(--d); border-radius: 50%; overflow: hidden;
+  background: #0d3b74 url("img/mundo.jpg") 0 50% / auto 100% repeat-x;
+  box-shadow: inset calc(var(--d) * -.1) calc(var(--d) * -.07) calc(var(--d) * .18) rgba(0, 12, 40, .55),
+              inset calc(var(--d) * .04) calc(var(--d) * .03) calc(var(--d) * .08) rgba(210, 230, 255, .45); }
+.globo::after { content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: radial-gradient(circle at 33% 27%, rgba(255, 255, 255, .7) 0, rgba(255, 255, 255, .18) 16%, transparent 38%),
+              radial-gradient(circle at 50% 50%, transparent 58%, rgba(2, 20, 60, .4) 100%); }
+.globo-1 { left: 0; }
+.globo-2 { left: calc(var(--d) * .66); }
+@media (prefers-reduced-motion: no-preference) {
+  .globo { animation: girar 40s linear infinite; }
+  .globo-2 { animation-duration: 52s; animation-direction: reverse; animation-delay: -19s; }  /* que no enseñen la misma cara */
+  .marca:hover .globo { animation-duration: 8s; }
+  @keyframes girar { from { background-position-x: 0; } to { background-position-x: calc(var(--d) * -2); } }
+}
 .nav-lista, .idiomas, .sub { list-style: none; margin: 0; padding: 0; }
 .nav-lista { display: flex; gap: 2px; }
 .nav-lista > li { position: relative; display: flex; align-items: center; }
@@ -124,11 +148,11 @@ p { margin: 0 0 1em; }
 /* El único movimiento de la web: las versiones van apareciendo, como si se
    estuvieran traduciendo. */
 @media (prefers-reduced-motion: no-preference) {
-  .paralelo li { animation: aparece .7s cubic-bezier(.2, .6, .2, 1) both; }
+  .paralelo li { animation: aparece .5s cubic-bezier(.2, .6, .2, 1) both; }
   .paralelo li:nth-child(1) { animation-delay: .1s; }
-  .paralelo li:nth-child(2) { animation-delay: .55s; }
-  .paralelo li:nth-child(3) { animation-delay: .8s; }
-  .paralelo li:nth-child(4) { animation-delay: 1.05s; }
+  .paralelo li:nth-child(2) { animation-delay: .35s; }
+  .paralelo li:nth-child(3) { animation-delay: .5s; }
+  .paralelo li:nth-child(4) { animation-delay: .65s; }
   @keyframes aparece { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
 }
 
@@ -342,7 +366,7 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
   .sub-abrir { color: var(--tinta) !important; }
   .idiomas a { color: var(--lapiz); }
   .idiomas a[aria-current] { color: var(--tinta); }
-  .marca img { width: 400px; }
+  .marca { --d: 50px; }
   .menu-abierto .nav-caja { display: block; }
   .nav-lista { flex-direction: column; }
   .nav-lista > li { flex-wrap: wrap; border-bottom: 1px solid var(--linea); }
@@ -375,7 +399,8 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
   .cabecera-seccion { padding: 0 0 6px; font-size: 17px; }
   .cuerpo-pagina { padding-top: 36px; padding-bottom: 64px; }
   .bloque, .final { padding: 56px 0; }
-  .marca img { width: 230px; }
+  .marca { --d: 40px; }
+  .marca-lema { display: none; }
   .info-datos dl { grid-template-columns: 1fr; gap: 2px; }
   .info-datos dd { margin-bottom: 8px; }
   .cabecera-in { min-height: 68px; gap: 16px; }

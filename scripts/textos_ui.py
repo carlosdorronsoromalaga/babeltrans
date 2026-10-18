@@ -212,3 +212,13 @@ UI4 = {
     "nl": {"trabaja_txt": "We zoeken professionele vertalers en tolken die naar hun moedertaal vertalen.",
            "error404": "Deze pagina bestaat niet", "error404_txt": "Misschien is het adres veranderd met de nieuwe website. Dit zijn de belangrijkste onderdelen:"},
 }
+
+# El lema del logo original, «| Expertos en Traducción e Interpretación |». En
+# el logo era parte de la imagen y salía en castellano en todos los idiomas;
+# ahora es texto, con la letra y las barras doradas del original.
+LEMA = {
+    "es": "Expertos en Traducción e Interpretación",
+    "en": "Experts in Translation and Interpreting",
+    "de": "Experten für Übersetzen und Dolmetschen",
+    "nl": "Experts in vertalen en tolken",
+}

@@ -16,7 +16,7 @@ import datetime, html, json, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS, TORRE,  # noqa: E402
-                       INFO_FORM)
+                       INFO_FORM, LEMA)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -34,6 +34,13 @@ esc = html.escape
 # formulario. Ya no tenían sentido como apartados del menú: sus direcciones
 # redirigen al presupuesto de traducción, que cubre lo mismo.
 RETIRADAS = {"cv": "presupuesto-traduccion", "cp": "presupuesto-traduccion"}
+
+# Huella de cada fichero en su URL (?v=...): sin ella, el navegador sigue
+# usando la hoja de estilos vieja que tiene guardada y la web se ve rota
+# (pasó el 18/10/2026: cabecera clara con el logo blanco encima).
+import hashlib  # noqa: E402
+VERSION = {f: hashlib.sha1(open(os.path.join(PLANT, f), "rb").read()).hexdigest()[:8]
+           for f in ("estilos.css", "web.js")}
 
 EMPRESA = json.load(open(os.path.join(CONT, "empresa.json"), encoding="utf-8"))
 PENDIENTES = set()
@@ -222,18 +229,17 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
 {datos_estructurados(d, lang) if pid == "home" else ""}
 <link rel="icon" href="/favicon.ico" sizes="16x16">
 <link rel="preload" href="/fuentes/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/estilos.css">
-<script src="/web.js" defer></script>
+<link rel="stylesheet" href="/estilos.css?v={VERSION["estilos.css"]}">
+<script src="/web.js?v={VERSION["web.js"]}" defer></script>
 </head>
 <body class="{clase}">
 <a class="saltar" href="#contenido">{ui["saltar"]}</a>
 <header class="cabecera">
   <div class="env cabecera-in">
     <a class="marca" href="{home_url(d)}">
-      <picture>
-        <source media="(max-width: 560px)" srcset="/img/logo-corto.png">
-        <img src="/img/logo.png" width="640" height="73" alt="Babel Translations · Expertos en Traducción e Interpretación">
-      </picture>
+      <span class="globos" aria-hidden="true"><span class="globo globo-1"></span><span class="globo globo-2"></span></span>
+      <img class="marca-nombre" src="/img/logo-texto-corto.png" width="226" height="73" alt="Babel Translations">
+      <span class="marca-lema">{esc(LEMA[lang])}</span>
     </a>
     <ul class="idiomas idiomas-arriba" aria-label="{ui["idiomas"]}">{idiomas}</ul>
     <button class="menu-abrir" aria-expanded="false" aria-controls="nav">{ui["menu"]}</button>

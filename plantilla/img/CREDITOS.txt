@@ -1,0 +1,5 @@
+logo.png, logo-corto.png, logo-texto*.png: logotipo original de Babel Translations
+  (web de 2008), sin retocar; los «texto» son el mismo logo recortado sin los globos.
+mundo.jpg: NASA Visible Earth, «Blue Marble: Land Surface, Shallow Water, and
+  Shaded Topography» (land_shallow_topo_2048.jpg). Dominio público (NASA).
+  Reducido a 480×240 y con un poco más de color y luz.

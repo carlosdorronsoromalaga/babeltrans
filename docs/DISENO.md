@@ -80,3 +80,21 @@ todas sacadas de herramientas o situaciones reales del trabajo de un traductor:
    idiomas, cada piso más ancho que el de encima. Los nombres de los idiomas
    salen de `Intl.DisplayNames`, del propio navegador y en el idioma de la
    página, sin traducirlos a mano.
+
+## v4 (18/10/2026): el logo original, con vida
+
+Martijn quiere conservar el logo de siempre. Va tal cual en una cabecera oscura
+(era blanco, pensado para fondo oscuro), con dos cambios que no lo alteran:
+
+- **Los dos globos giran.** En vez de la imagen plana de los globos (60 px), dos
+  esferas con el mapamundi de la NASA (dominio público) que se desplaza dentro
+  de cada círculo, con brillo y sombra como los originales y el mar aclarado
+  al azul del logo. Giran en sentidos contrarios y a distinto ritmo, como dos
+  idiomas que se encuentran; al pasar el ratón por el logo aceleran. Con
+  movimiento reducido activado, se quedan quietos.
+- **El lema es texto, no imagen**: con la letra, el blanco y las barras doradas
+  (#d7b017) del original, pero en el idioma de la página. En la imagen salía
+  «Expertos en Traducción e Interpretación» también en las páginas en inglés,
+  alemán y holandés.
+
+«BABEL TRANSLATIONS» sigue siendo la imagen original recortada.

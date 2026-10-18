@@ -36,7 +36,7 @@ python3 scripts/construir.py                     # contenido/ + plantilla/ -> si
 Para verla en local:
 
 ```bash
-cd sitio && python3 -m http.server 8765          # y abrir http://localhost:8765
+python3 scripts/servir.py                        # y abrir http://localhost:8765 (sin caché)
 ```
 
 (Los formularios no funcionan en local: necesitan PHP y correo, que sí hay en

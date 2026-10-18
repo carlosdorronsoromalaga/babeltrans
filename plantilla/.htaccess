@@ -19,6 +19,14 @@ ErrorDocument 404 /404.html
   Header set X-Frame-Options "SAMEORIGIN"
 </IfModule>
 
+# El HTML se revalida siempre; CSS y JS llevan su huella en la URL (?v=...),
+# así que pueden guardarse mucho tiempo sin riesgo de servir una versión vieja.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css "access plus 1 month"
