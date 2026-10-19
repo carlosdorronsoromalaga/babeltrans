@@ -2,3 +2,15 @@
 __pycache__/
 .DS_Store
 babeltrans-web-*.zip
+
+# Material de terceros de la web vieja (plantilla comercial de JoomlArt, fotos
+# de banco de imágenes, scripts de Joomla): no se redistribuye en un repositorio
+# público. Se vuelve a bajar con scripts/descargar_wayback.py si hiciera falta.
+original/templates/
+original/images/
+original/media/
+original/plugins/
+original/components/
+original/modules/
+original/favicon.ico
+original/robots.txt
