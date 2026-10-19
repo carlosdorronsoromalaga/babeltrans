@@ -41,12 +41,16 @@ ErrorDocument 404 /404.html
 # Páginas retiradas en la web nueva (CV y CP)
 RedirectMatch 301 ^/es/cv\-ingles\.html$ /es/solicite-presupuesto-traduccion/presupuesto-traduccion.html
 RedirectMatch 301 ^/es/cp\-ingles\-aleman\.html$ /es/solicite-presupuesto-traduccion/presupuesto-traduccion.html
+RedirectMatch 301 ^/es/mapa\-web\.html$ /
 RedirectMatch 301 ^/en/cv\-ingles\.html$ /en/request-a-quote/translation-quote.html
 RedirectMatch 301 ^/en/cp\-ingles\-aleman\.html$ /en/request-a-quote/translation-quote.html
+RedirectMatch 301 ^/en/webmap\.html$ /en.html
 RedirectMatch 301 ^/de/cv\-ingles\.html$ /de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html
 RedirectMatch 301 ^/de/cp\-ingles\-aleman\.html$ /de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html
+RedirectMatch 301 ^/de/sitemap\.html$ /de.html
 RedirectMatch 301 ^/nl/vertalen\-cv\.html$ /nl/vrijblijvende-offerte/vertaalofferte.html
 RedirectMatch 301 ^/nl/cp\-ingles\-aleman\.html$ /nl/vrijblijvende-offerte/vertaalofferte.html
+RedirectMatch 301 ^/nl/sitemap\.html$ /nl.html
 
 # Rutas de la web vieja (generado por scripts/construir.py)
 RedirectMatch 301 ^/als\-dolmetscher\.html$ /de/als-dolmetscher.html
@@ -88,7 +92,6 @@ RedirectMatch 301 ^/kontakt\.html$ /de/kontakt.html
 RedirectMatch 301 ^/kostenvoranschlag\.html$ /de/kostenvoranschlag.html
 RedirectMatch 301 ^/kostenvoranschlag/kostenvoranschlag\-dolmetschen\.html$ /de/kostenvoranschlag/kostenvoranschlag-dolmetschen.html
 RedirectMatch 301 ^/kostenvoranschlag/kostenvoranschlag\-uebersetzen\.html$ /de/kostenvoranschlag/kostenvoranschlag-uebersetzen.html
-RedirectMatch 301 ^/mapa\-web\.html$ /es/mapa-web.html
 RedirectMatch 301 ^/methodologie\-en\-werktuigen\.html$ /nl/methodologie-en-werktuigen.html
 RedirectMatch 301 ^/methodology\-and\-tools\.html$ /en/methodology-and-tools.html
 RedirectMatch 301 ^/metodologia\-herramientas\-traduccion\.html$ /es/metodologia-herramientas-traduccion.html
@@ -118,7 +121,6 @@ RedirectMatch 301 ^/servicios\-traduccion\-holandes/interpretacion\.html$ /es/se
 RedirectMatch 301 ^/servicios\-traduccion\-holandes/traduccion\.html$ /es/servicios-traducciones/traduccion-tecnica-manuales.html
 RedirectMatch 301 ^/servicios\-traducciones/interpretacion\-holandes\.html$ /es/servicios-traducciones/interpretacion-holandes.html
 RedirectMatch 301 ^/servicios\-traducciones/traduccion\-tecnica\-manuales\.html$ /es/servicios-traducciones/traduccion-tecnica-manuales.html
-RedirectMatch 301 ^/sitemap\.html$ /nl/sitemap.html
 RedirectMatch 301 ^/solicite\-presupuesto\-traduccion\.html$ /es/solicite-presupuesto-traduccion.html
 RedirectMatch 301 ^/solicite\-presupuesto\-traduccion/presupuesto\-interpretacion\.html$ /es/solicite-presupuesto-traduccion/presupuesto-interpretacion.html
 RedirectMatch 301 ^/solicite\-presupuesto\-traduccion/presupuesto\-traduccion\.html$ /es/solicite-presupuesto-traduccion/presupuesto-traduccion.html

@@ -15,8 +15,8 @@ Uso:  python3 scripts/construir.py        (solo biblioteca estándar)
 import datetime, html, json, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS, TORRE,  # noqa: E402
-                       INFO_FORM, LEMA)
+from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS,  # noqa: E402
+                       INFO_FORM, LEMA, PALABRAS_TORRE, NOMBRES_IDIOMA, UI5, SEO)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -33,7 +33,9 @@ esc = html.escape
 # 2015 para traducir currículums y cartas de presentación, con su propio
 # formulario. Ya no tenían sentido como apartados del menú: sus direcciones
 # redirigen al presupuesto de traducción, que cubre lo mismo.
-RETIRADAS = {"cv": "presupuesto-traduccion", "cp": "presupuesto-traduccion"}
+RETIRADAS = {"cv": "presupuesto-traduccion", "cp": "presupuesto-traduccion", "mapa": "home"}
+# «Mapa web» (19/10/2026): Google y los asistentes usan sitemap.xml; la página
+# HTML solo repetía el menú.
 
 # Huella de cada fichero en su URL (?v=...): sin ella, el navegador sigue
 # usando la hoja de estilos vieja que tiene guardada y la web se ve rota
@@ -68,6 +70,7 @@ def carga():
     for d in todo.values():
         rutas_fuera = {d["paginas"][pid]["ruta"] for pid in RETIRADAS}
         d["menu"] = [it for it in d["menu"] if it["ruta"] not in rutas_fuera]
+        d["pie"] = [x for x in d["pie"] if x["ruta"] not in rutas_fuera]
         for pid in RETIRADAS:
             d["paginas"].pop(pid)
     return todo
@@ -196,23 +199,53 @@ def ruta_en(todo, l, pid):
     return "/" if (l == "es" and pid == "home") else url(todo[l]["paginas"][pid]["ruta"])
 
 
-def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
+def selector_idioma(todo, lang, pid):
+    """Selector de idioma desplegable. Escala solo: sale de IDIOMAS."""
+    opciones = "".join(
+        f'<li><a href="{ruta_en(todo, l, pid)}" hreflang="{l}" lang="{l}" data-idioma="{l}"'
+        f'{" aria-current=true" if l == lang else ""}><span class="sel-nombre">{NOMBRES_IDIOMA[l]}</span>'
+        f'<span class="sel-codigo">{l}</span></a></li>' for l in IDIOMAS)
+    return (f'<div class="selector" data-selector>'
+            f'<button class="selector-boton" type="button" aria-expanded="false" aria-haspopup="true" '
+            f'aria-label="{esc(UI5[lang]["idioma"])}: {NOMBRES_IDIOMA[lang]}">'
+            f'<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/>'
+            f'<path d="M2 10h16M10 2c2.5 2.2 3.8 5 3.8 8s-1.3 5.8-3.8 8M10 2C7.5 4.2 6.2 7 6.2 10s1.3 5.8 3.8 8"/></svg>'
+            f'<span class="selector-actual">{NOMBRES_IDIOMA[lang]}</span>'
+            f'<svg class="selector-flecha" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>'
+            f'</button><ul class="selector-lista">{opciones}</ul></div>')
+
+
+# Barrido de traducción al cambiar de idioma (View Transitions entre páginas).
+# Va en línea en el <head> porque «pagereveal» salta antes del primer pintado:
+# un script diferido llegaría tarde. Solo anima si se vino desde el selector.
+SCRIPT_BARRIDO = """<script>
+addEventListener("pagereveal", function (e) {
+  var de = null;
+  try { de = sessionStorage.getItem("traduciendo"); sessionStorage.removeItem("traduciendo"); } catch (x) {}
+  if (!e.viewTransition) return;
+  if (!de || matchMedia("(prefers-reduced-motion: reduce)").matches) { e.viewTransition.skipTransition(); return; }
+  var r = document.documentElement;
+  r.classList.add("traduciendo");
+  r.style.setProperty("--ruta", JSON.stringify(de + " \u2192 " + r.lang));
+  e.viewTransition.finished.finally(function () { r.classList.remove("traduciendo"); });
+});
+</script>"""
+
+
+def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase="", indexar=True, extra_head=""):
     d = todo[lang]
     ui = UI[lang]
     ruta = d["paginas"][pid]["ruta"]
     tel, mail = contacto(d)
     alternas = "".join(f'<link rel="alternate" hreflang="{l}" href="{DOMINIO}{ruta_en(todo, l, pid)}">'
                        for l in IDIOMAS)
-    idiomas = "".join(
-        f'<li><a href="{ruta_en(todo, l, pid)}" hreflang="{l}" lang="{l}"'
-        f'{" aria-current=true" if l == lang else ""} title="{UI[l]["idioma"]}">{l}</a></li>'
-        for l in IDIOMAS)
+    alternas += f'<link rel="alternate" hreflang="x-default" href="{DOMINIO}{ruta_en(todo, "es", pid)}">'
     trabaja = d["paginas"]["trabaja"]
     pie_links = (f'<li><a href="{url(trabaja["ruta"])}">{esc(nombre_pagina(d, "trabaja"))}</a></li>'
                  + "".join(f'<li><a href="{url(x["ruta"])}">{esc(x["texto"])}</a></li>' for x in d["pie"]))
     copy = d["paginas"]["home"]["home"]["copyright"].replace("2024", str(ANIO))
     canon = DOMINIO + ruta_en(todo, lang, pid)
-    lema = '<span class="marca-lema">Expertos en Traducción e Interpretación</span>' if lang == "es" else ""
+    og_locale = {"es": "es_ES", "en": "en_GB", "de": "de_DE", "nl": "nl_NL"}
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -220,35 +253,43 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(titulo)}</title>
 <meta name="description" content="{esc(descripcion)}">
+{'' if indexar else '<meta name="robots" content="noindex, follow">'}
 <link rel="canonical" href="{canon}">
 {alternas}
+<meta property="og:site_name" content="Babel Translations">
 <meta property="og:title" content="{esc(titulo)}">
 <meta property="og:description" content="{esc(descripcion)}">
 <meta property="og:type" content="website">
+<meta property="og:url" content="{canon}">
+<meta property="og:locale" content="{og_locale[lang]}">
+<meta property="og:image" content="{DOMINIO}/img/compartir.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1a1f36">
-{datos_estructurados(d, lang) if pid == "home" else ""}
+{datos_estructurados(todo, lang, pid)}
+{extra_head}
 <link rel="icon" href="/favicon.ico" sizes="16x16">
 <link rel="preload" href="/fuentes/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/estilos.css?v={VERSION["estilos.css"]}">
+{SCRIPT_BARRIDO}
 <script src="/web.js?v={VERSION["web.js"]}" defer></script>
 </head>
 <body class="{clase}">
 <a class="saltar" href="#contenido">{ui["saltar"]}</a>
+<div class="linea-traduccion" aria-hidden="true"><span>{esc(UI5[lang]["traduciendo"])}</span></div>
 <header class="cabecera">
   <div class="env cabecera-in">
     <a class="marca" href="{home_url(d)}">
       <span class="globos" aria-hidden="true"><span class="globo globo-1"></span><span class="globo globo-2"></span></span>
-      <img class="marca-nombre" src="/img/logo-texto-corto.png" width="226" height="73" alt="Babel Translations">
-      <span class="marca-lema">{esc(LEMA[lang])}</span>
+      <span class="marca-textos">
+        <img class="marca-nombre" src="/img/logo-nombre.png" width="222" height="20" alt="Babel Translations">
+        <span class="marca-lema">{esc(LEMA[lang])}</span>
+      </span>
     </a>
-    <ul class="idiomas idiomas-arriba" aria-label="{ui["idiomas"]}">{idiomas}</ul>
+    <nav class="nav" id="nav" aria-label="{ui["menu"]}"><ul class="nav-lista">{menu_html(d, ruta)}</ul></nav>
+    {selector_idioma(todo, lang, pid)}
     <button class="menu-abrir" aria-expanded="false" aria-controls="nav">{ui["menu"]}</button>
-  </div>
-  <div class="nav-caja" id="nav">
-    <div class="env nav-in">
-      <nav class="nav" aria-label="{ui["menu"]}"><ul class="nav-lista">{menu_html(d, ruta)}</ul></nav>
-      <ul class="idiomas idiomas-menu" aria-label="{ui["idiomas"]}">{idiomas}</ul>
-    </div>
   </div>
 </header>
 <main id="contenido">
@@ -403,18 +444,68 @@ def modismo(d, lang):
 </figure>"""
 
 
+# Ancho de cada palabra de la torre en Literata, en centésimas de em (medido en
+# Chrome el 19/10/2026). Con esto los pisos se reparten solos.
+ANCHOS = {"es": 508, "en": 515, "de": 594, "nl": 421, "fr": 497, "it": 509, "pt": 417, "ca": 445, "eu": 438,
+          "gl": 459, "la": 453, "el": 509, "ru": 376, "pl": 567, "ar": 199, "zh": 200, "ja": 200, "ko": 200,
+          "hi": 272, "he": 265, "tr": 263, "da": 578, "fa": 199, "sw": 283, "fi": 392, "hu": 366, "cs": 357,
+          "ro": 453, "uk": 434, "sv": 589, "vi": 403, "id": 540, "bn": 289, "bg": 327, "no": 550, "ga": 535,
+          "th": 340, "hr": 389, "sk": 361, "sl": 327, "lt": 408, "lv": 475, "et": 232, "is": 320, "mt": 537,
+          "cy": 497, "sq": 441, "hy": 829, "ka": 484, "ur": 211, "ta": 658, "tl": 493, "eo": 374, "am": 331,
+          "zu": 617}
+TORRE_LETRA = [52, 30, 25, 22, 20, 19, 18, 18, 17, 17, 17, 17]  # px por piso; debe casar con estilos.css
+TORRE_HUECO = 22
+
+
+def _ancho_piso(i, p):
+    letra = TORRE_LETRA[min(i, len(TORRE_LETRA) - 1)]
+    return sum(ANCHOS.get(l, 450) * letra / 100 for l, _ in p) + TORRE_HUECO * (len(p) - 1)
+
+
+def _reparte(lang, inicio, paso):
+    cima = next(x for x in PALABRAS_TORRE if x[0] == lang)
+    resto = [x for x in PALABRAS_TORRE if x[0] != lang]
+    pisos, i = [[cima]], 1
+    while resto:
+        letra = TORRE_LETRA[min(i, len(TORRE_LETRA) - 1)]
+        piso, ancho = [], 0
+        for x in list(resto):
+            w = ANCHOS.get(x[0], 450) * letra / 100 + (TORRE_HUECO if piso else 0)
+            if not piso or ancho + w <= inicio + paso * i:
+                piso.append(x); ancho += w; resto.remove(x)
+        pisos.append(piso); i += 1
+    return pisos
+
+
+def pisos_torre(lang, maximo=1080):
+    """Reparte las palabras en pisos con la del idioma de la página en la cima.
+    Prueba varios anchos de partida y de crecimiento y se queda con el reparto
+    en que cada piso es más ancho que el de encima y la base cabe en la página
+    (si ninguno lo cumple del todo, el que menos se aparta)."""
+    mejor, nota_mejor = None, None
+    for inicio in range(240, 420, 20):
+        for paso in range(50, 130, 5):
+            pisos = _reparte(lang, inicio, paso)
+            anchos = [_ancho_piso(i, p) for i, p in enumerate(pisos)]
+            fallos = sum(max(0, anchos[k - 1] - anchos[k] + 20) for k in range(2, len(anchos)))
+            nota = (fallos + 10 * max(0, max(anchos) - maximo), abs(len(pisos) - 9))
+            if nota_mejor is None or nota < nota_mejor:
+                mejor, nota_mejor = pisos, nota
+    return mejor
+
+
 def torre(lang):
-    """La torre de Babel: «traducción» en 36 idiomas, con el de la página en la cima."""
-    pisos = [list(p) for p in TORRE]
-    propio = next((i, j) for i, p in enumerate(pisos) for j, (l, _) in enumerate(p) if l == lang)
-    pisos[0][0], pisos[propio[0]][propio[1]] = pisos[propio[0]][propio[1]], pisos[0][0]
+    """La torre de Babel: «traducción» en muchos idiomas."""
+    pisos = pisos_torre(lang)
     html_pisos = "".join(
-        '<ul class="piso">' + "".join(
+        f'<ul class="piso" style="--t:{TORRE_LETRA[min(i, len(TORRE_LETRA) - 1)]}">' + "".join(
             f'<li><span lang="{l}" dir="auto" tabindex="0" data-idioma="{l}">{esc(w)}</span></li>' for l, w in p)
-        + "</ul>" for p in pisos)
+        + "</ul>" for i, p in enumerate(pisos))
+    total = sum(len(p) for p in pisos)
     u = UI3[lang]
+    pie = re.sub(r"\d+", str(total), u["torre_pie"])
     return (f'<div class="torre" data-torre>{html_pisos}</div>'
-            f'<p class="torre-pie" aria-live="polite" data-pie="{esc(u["torre_pie"])}">{esc(u["torre_pie"])}</p>')
+            f'<p class="torre-pie" aria-live="polite" data-pie="{esc(pie)}">{esc(pie)}</p>')
 
 
 # --------------------------------------------------------------- tipos de página
@@ -441,7 +532,13 @@ def pag_hub(todo, lang, pid):
   <aside class="margen">{notas_margen(d, pid, pid != "presupuesto")}</aside>
   <div>{dentro}</div>
 </section>"""
-    return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations", f"{titulo} · Babel Translations")
+    if pid == "servicios":
+        desc = SEO[lang]["home"][1]
+    elif pid == "presupuesto":
+        desc = SEO[lang]["presupuesto-traduccion"][1]
+    else:
+        desc = UI4[lang]["trabaja_txt"]
+    return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations", desc, indexar=pid == "servicios")
 
 
 def legal(lang, pid):
@@ -487,7 +584,14 @@ def pag_legal(todo, lang, pid):
 {bloques_legal(bloques)}
   </article>
 </section>"""
-    return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations", titulo)
+    desc = next((sin_tags(c) for t, c in bloques if t == "p" and "PENDIENTE" not in c and len(sin_tags(c)) > 60), titulo)
+    desc = desc[:155].rsplit(" ", 1)[0] + "…" if len(desc) > 155 else desc
+    return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations", desc)
+
+
+def seo(lang, pid, titulo, descripcion):
+    """Título y descripción de SEO si la página los tiene; si no, los de siempre."""
+    return SEO.get(lang, {}).get(pid, (titulo, descripcion))
 
 
 def pag_articulo(todo, lang, pid):
@@ -506,8 +610,8 @@ def pag_articulo(todo, lang, pid):
 {modismo(d, lang) if pid == "traduccion" else ""}
   </article>
 </section>"""
-    return pagina(todo, lang, pid, cuerpo, f"{retoca(titulo)} · Babel Translations",
-                  descripcion_de(p["bloques"], retoca(titulo)))
+    return pagina(todo, lang, pid, cuerpo, *seo(lang, pid, f"{retoca(titulo)} · Babel Translations",
+                                                descripcion_de(p["bloques"], retoca(titulo))))
 
 
 def campo_html(c, ui, privacidad_url):
@@ -580,8 +684,8 @@ def pag_formulario(todo, lang, pid):
     </form>
   </div>
 </section>"""
-    return pagina(todo, lang, pid, cuerpo, f"{titulo} · Babel Translations",
-                  intro[0][:155] if intro else f"{titulo} · Babel Translations")
+    return pagina(todo, lang, pid, cuerpo, *seo(lang, pid, f"{titulo} · Babel Translations",
+                                                intro[0][:155] if intro else f"{titulo} · Babel Translations"))
 
 
 def info_privacidad(d, lang, pid):
@@ -599,18 +703,50 @@ def info_privacidad(d, lang, pid):
             + "".join(f"<dt>{a}</dt><dd>{b}</dd>" for a, b in filas) + "</dl></details>")
 
 
-def datos_estructurados(d, lang):
-    """schema.org para que Google entienda qué es y cómo contactar."""
+SERVICIOS_SCHEMA = {
+    "traduccion": ["Traducción técnica", "Traducción jurídica", "Traducción jurada", "Traducción comercial",
+                   "Traducción económica", "Revisión de textos", "Transcripciones"],
+    "interpretacion": ["Interpretación consecutiva", "Interpretación simultánea", "Interpretación jurada",
+                       "Interpretación por videoconferencia", "Locuciones"],
+}
+
+
+def datos_estructurados(todo, lang, pid):
+    """schema.org: quién es el negocio (en todas las páginas), qué servicio es
+    (en traducción e interpretación) y dónde está la página (migas). Es lo que
+    leen Google y los asistentes de IA para entender y citar la web."""
+    d = todo[lang]; P = d["paginas"]
     tel, mail = contacto(d)
-    datos = {"@context": "https://schema.org", "@type": "ProfessionalService",
-             "name": "Babel Translations", "alternateName": "BABELTRANS",
-             "url": DOMINIO + "/", "logo": DOMINIO + "/img/logo.png", "email": mail,
-             "foundingDate": "1999", "availableLanguage": ["es", "en", "de", "nl"],
-             "description": sin_tags(d["paginas"]["home"]["home"]["titulos"][0])}
+    negocio = {"@type": "ProfessionalService", "@id": DOMINIO + "/#negocio",
+               "name": "Babel Translations", "alternateName": "BABELTRANS",
+               "url": DOMINIO + "/", "logo": DOMINIO + "/img/logo.png", "image": DOMINIO + "/img/compartir.png",
+               "email": mail, "foundingDate": "1999",
+               "description": SEO["es"]["home"][1],
+               "knowsLanguage": [l for l, _ in PALABRAS_TORRE[:11]],
+               "areaServed": "Worldwide",
+               "address": {"@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES"},
+               "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Servicios lingüísticos",
+                                   "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": n}}
+                                                       for v in SERVICIOS_SCHEMA.values() for n in v]}}
     if tel:
-        datos["telephone"] = tel
+        negocio["telephone"] = tel
     if EMPRESA.get("domicilio"):
-        datos["address"] = EMPRESA["domicilio"]
+        negocio["address"]["streetAddress"] = EMPRESA["domicilio"]
+    grafo = [negocio, {"@type": "WebSite", "@id": DOMINIO + "/#web", "url": DOMINIO + "/",
+                       "name": "Babel Translations", "inLanguage": IDIOMAS, "publisher": {"@id": DOMINIO + "/#negocio"}}]
+    if pid in SERVICIOS_SCHEMA:
+        grafo.append({"@type": "Service", "name": sin_tags(retoca(P[pid]["titulo"])),
+                      "serviceType": SERVICIOS_SCHEMA[pid], "provider": {"@id": DOMINIO + "/#negocio"},
+                      "areaServed": "Worldwide", "url": DOMINIO + url(P[pid]["ruta"]), "inLanguage": lang})
+    if pid != "home" and pid in P:
+        migas = [("Babel Translations", DOMINIO + home_url(d))]
+        sec = seccion_de(d, pid)
+        if sec and sec["ruta"] != P[pid]["ruta"]:
+            migas.append((sec["texto"], DOMINIO + url(sec["ruta"])))
+        migas.append((nombre_pagina(d, pid), DOMINIO + url(P[pid]["ruta"])))
+        grafo.append({"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(migas)]})
+    datos = {"@context": "https://schema.org", "@graph": grafo}
     return f'<script type="application/ld+json">{json.dumps(datos, ensure_ascii=False)}</script>'
 
 
@@ -773,8 +909,8 @@ def pag_home(todo, lang):
     </div>
   </div>
 </section>"""
-    titulo = f"Babel Translations · {h1}"
-    return pagina(todo, lang, "home", cuerpo, titulo, lema[:155], "portada-pagina")
+    titulo, desc = seo(lang, "home", f"Babel Translations · {h1}", lema[:155])
+    return pagina(todo, lang, "home", cuerpo, titulo, desc, "portada-pagina")
 
 
 # --------------------------------------------------------------- redirecciones
@@ -845,8 +981,6 @@ def main():
                 html_txt = pag_legal(todo, lang, pid)
             elif pid in HUBS:
                 html_txt = pag_hub(todo, lang, pid)
-            elif pid == "mapa":
-                html_txt = pag_mapa(todo, lang, pid)
             elif "formulario" in p:
                 html_txt = pag_formulario(todo, lang, pid)
             else:
@@ -857,9 +991,15 @@ def main():
             urls.append(DOMINIO + ("/" if (pid == "home" and lang == "es") else url(p["ruta"])))
     escribe("404.html", pag_404(todo))
     hoy = datetime.date.today().isoformat()
-    escribe("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            + "".join(f"  <url><loc>{u}</loc><lastmod>{hoy}</lastmod></url>\n" for u in urls) + "</urlset>\n")
-    escribe("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
+    escribe("sitemap.xml", mapa_xml(todo, hoy))
+    # Robots: todo abierto, también a los rastreadores de los asistentes de IA
+    # (GEO: que ChatGPT, Claude, Perplexity o Gemini puedan leer y citar la web).
+    escribe("robots.txt", "User-agent: *\nAllow: /\n\n"
+            + "".join(f"User-agent: {b}\nAllow: /\n\n" for b in
+                      ("GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot",
+                       "PerplexityBot", "Google-Extended", "Applebot-Extended"))
+            + f"Sitemap: {DOMINIO}/sitemap.xml\n")
+    escribe("llms.txt", llms_txt(todo))
     ht = open(os.path.join(PLANT, ".htaccess"), encoding="utf-8").read() if os.path.exists(os.path.join(PLANT, ".htaccess")) else ""
     retiradas = []
     for l in IDIOMAS:
@@ -874,6 +1014,52 @@ def main():
     print(len(urls), "páginas en", SALIDA)
 
 
+NO_INDEXAR = {"presupuesto", "trabaja"}  # dos enlaces cada una: contenido fino
+
+
+def mapa_xml(todo, hoy):
+    """sitemap.xml con las versiones de cada página en los otros idiomas."""
+    filas = []
+    for l in IDIOMAS:
+        for pid in todo[l]["paginas"]:
+            if pid in NO_INDEXAR:
+                continue
+            alt = "".join(f'<xhtml:link rel="alternate" hreflang="{x}" href="{DOMINIO}{ruta_en(todo, x, pid)}"/>'
+                          for x in IDIOMAS if pid in todo[x]["paginas"])
+            prio = "1.0" if pid == "home" else "0.8" if pid in ("traduccion", "interpretacion", "presupuesto-traduccion") else "0.5"
+            filas.append(f"  <url><loc>{DOMINIO}{ruta_en(todo, l, pid)}</loc><lastmod>{hoy}</lastmod>"
+                         f"<priority>{prio}</priority>{alt}</url>")
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(filas) + "\n</urlset>\n")
+
+
+def llms_txt(todo):
+    """/llms.txt: resumen en texto llano para asistentes de IA (propuesta
+    llmstxt.org). Es lo primero que leen para responder «¿quién traduce
+    documentos jurados en Madrid?» y citar la web."""
+    d = todo["es"]; P = d["paginas"]; tel, mail = contacto(d)
+    def enlace(l, pid, txt=None):
+        return f"- [{txt or nombre_pagina(todo[l], pid)}]({DOMINIO}{ruta_en(todo, l, pid)})"
+    servicios = [sin_tags(retoca(x)) for t, c in P["traduccion"]["bloques"] if t == "ul" for x in c][:5]
+    interp = [sin_tags(x) for t, c in P["interpretacion"]["bloques"] if t == "ul" for x in c][:5]
+    return "\n".join([
+        "# Babel Translations (BABELTRANS)", "",
+        "> " + SEO["es"]["home"][1], "",
+        "Agencia de traducción e interpretación con sede en Madrid (España), desde 1999. Trabaja en todos los "
+        "idiomas con traductores que solo traducen a su lengua materna; cada traducción la revisa un traductor "
+        "independiente y toda la información se trata con confidencialidad. Web en castellano, inglés, alemán y neerlandés.",
+        "", f"Contacto: {mail}" + (f" · {tel_bonito(tel)}" if tel else ""), "",
+        "## Traducción", *[f"- {x}" for x in servicios], "",
+        "## Interpretación", *[f"- {x}" for x in interp], "",
+        "## Páginas principales",
+        enlace("es", "traduccion"), enlace("es", "interpretacion"), enlace("es", "metodologia"),
+        enlace("es", "quienes"), enlace("es", "presupuesto-traduccion"), enlace("es", "presupuesto-interpretacion"),
+        enlace("es", "contacto"), "",
+        "## Other languages",
+        *[enlace(l, "home", f"{NOMBRES_IDIOMA[l]}") for l in IDIOMAS if l != "es"], "",
+    ])
+
+
 def comprueba(urls):
     """Lo que no puede llegar a la web publicada."""
     prohibido = ["spam bots", "activar JavaScript", "15/1999", "Mail: Esta"]
@@ -883,8 +1069,18 @@ def comprueba(urls):
             if f.endswith(".html"):
                 t = open(os.path.join(raiz, f), encoding="utf-8").read()
                 malos += [f"{os.path.relpath(os.path.join(raiz, f), SALIDA)}: «{x}»" for x in prohibido if x in t]
+    # SEO: cada página indexable con título <=70, descripción 50-165 y un h1
+    for raiz, _, ficheros in os.walk(SALIDA):
+        for f in ficheros:
+            if f.endswith(".html") and f != "404.html":
+                t = open(os.path.join(raiz, f), encoding="utf-8").read()
+                tit = re.search(r"<title>(.*?)</title>", t).group(1)
+                desc = re.search(r'name="description" content="(.*?)"', t).group(1)
+                if len(html.unescape(tit)) > 70 or not 50 <= len(html.unescape(desc)) <= 165 or t.count("<h1") != 1:
+                    malos.append(f"{os.path.relpath(os.path.join(raiz, f), SALIDA)}: SEO (título {len(tit)}, "
+                                 f"descripción {len(desc)}, h1 {t.count('<h1')})")
     if malos:
-        print("ERROR: texto de la web vieja que no debe publicarse:\n  " + "\n  ".join(malos))
+        print("ERROR: lo siguiente no puede publicarse:\n  " + "\n  ".join(malos))
         sys.exit(1)
     if PENDIENTES:
         print("AVISO: faltan datos en contenido/empresa.json:", ", ".join(sorted(PENDIENTES)))

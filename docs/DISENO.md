@@ -98,3 +98,25 @@ Martijn quiere conservar el logo de siempre. Va tal cual en una cabecera oscura
   alemán y holandés.
 
 «BABEL TRANSLATIONS» sigue siendo la imagen original recortada.
+
+## v5 (19/10/2026): cabecera, selector y traducción al cambiar de idioma
+
+- **Cabecera en una fila**: logo (globos + nombre, con el lema debajo y
+  alineado con el nombre, barra dorada), menú y selector de idioma. Fija al
+  hacer scroll.
+- **Globos más fieles al original**: Blue Marble *con nubes*, desaturada, mar
+  claro, luz amplia y bordes oscuros. **Giran hacia dentro**: la cara visible
+  de cada uno avanza hacia el otro, al mismo ritmo.
+- **Selector de idioma** desplegable con el nombre de cada idioma en su lengua
+  (sin banderas: un idioma no es un país). Sale de `IDIOMAS`: añadir francés o
+  italiano no toca el diseño.
+- **Barrido de traducción**: al cambiar de idioma, la página nueva baja sobre
+  la vieja con una línea azul que lleva «Traduciendo · es → en». Usa View
+  Transitions entre páginas (Chrome, Edge y Safari recientes); en Firefox, el
+  cambio es normal. Respeta «reducir movimiento». Se descartó traducir
+  palabra por palabra: obligaría a cargar las dos versiones a la vez y a
+  emparejar cada frase, frágil y lento para poco más efecto.
+- **Sin rojo al seleccionar texto** (ahora azul suave) y **comillas
+  completas** en las citas, en gris.
+- **Más refranes** (6-7 por idioma) y **torre con 55 idiomas**, repartida sola
+  en pisos cada vez más anchos.

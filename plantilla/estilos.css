@@ -42,7 +42,7 @@ body {
   font-optical-sizing: auto; font-kerning: normal; text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; overflow-x: clip;
 }
-::selection { background: var(--rojo); color: #fff; }
+::selection { background: rgba(43, 68, 168, .2); color: var(--tinta); }
 a { color: var(--azul); text-decoration-thickness: 1px; text-underline-offset: .18em; }
 a:hover { color: var(--azul-hondo); text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--azul); outline-offset: 3px; }
@@ -56,58 +56,89 @@ p { margin: 0 0 1em; }
 .libro { display: grid; grid-template-columns: var(--margen) minmax(0, 1fr); column-gap: var(--hueco); }
 
 /* ---------- cabecera ----------
-   Franja de tinta: el logo original (2008) es blanco y está pensado para fondo
-   oscuro, y se usa tal cual, sin retocar (decisión de Martijn, 18/10/2026). */
-.cabecera { background: var(--tinta); color: #e6e8f0; position: relative; z-index: 20; }
-.cabecera-in { display: flex; align-items: center; gap: 32px; min-height: 96px; }
-.nav-caja { border-top: 1px solid rgba(255, 255, 255, .12); }
-.nav-in { display: flex; align-items: center; min-height: 52px; }
-.nav-lista { margin-left: -10px !important; }
-.idiomas-menu { display: none !important; }
-.marca { --d: 59px; text-decoration: none; display: flex; align-items: center; flex-shrink: 0; margin-right: auto; line-height: 0; }
-.marca img { height: var(--d); width: auto; }
-.marca-lema { display: flex; align-items: center; gap: 7px; margin-left: 6px; padding-top: calc(var(--d) * .05);
-  font: 400 calc(var(--d) * .185)/1 Arial, "Helvetica Neue", Helvetica, sans-serif; color: #fff; white-space: nowrap; }
-.marca-lema::before, .marca-lema::after { content: ""; width: 2px; height: calc(var(--d) * .24); background: #d7b017; }
+   Una sola franja de tinta (v5, 19/10/2026): logo a la izquierda, menú y
+   selector de idioma a la derecha. El logo es el original: el nombre en su
+   imagen de 2008 y, debajo, el lema en texto, alineado con el nombre. */
+.cabecera { background: var(--tinta); color: #e6e8f0; position: sticky; top: 0; z-index: 30; }
+.cabecera-in { display: flex; align-items: center; gap: 28px; min-height: 78px; }
+.marca { --d: 50px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-right: auto; text-decoration: none; }
+.marca-textos { display: flex; flex-direction: column; gap: 7px; }
+.marca-nombre { display: block; height: 19px; width: auto; }
+.marca-lema { display: flex; align-items: center; gap: 7px; font: 400 11.5px/1 Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #dfe3ec; letter-spacing: .015em; white-space: nowrap; }
+.marca-lema::before { content: ""; flex: none; width: 2px; height: 11px; background: #d7b017; }
 
-/* Los dos mundos del logo original, girando. El texto es el del logo de
-   siempre; los globos son dos esferas con el mapamundi de la NASA que se
-   desplaza dentro de un círculo, con el brillo y la sombra de los originales.
-   Giran en sentidos contrarios: dos idiomas que se encuentran. */
-.globos { position: relative; flex: none; width: calc(var(--d) * 1.66); height: var(--d); margin-right: calc(var(--d) * .07); }
+/* Los dos mundos del logo original, girando hacia dentro: la cara visible de
+   cada uno avanza hacia el otro, como dos idiomas que se encuentran. Textura:
+   Blue Marble de la NASA con nubes, desaturada y con el mar aclarado para
+   parecerse a los globos de 2008; luz amplia arriba a la izquierda y bordes
+   oscuros, como en el original. */
+.globos { position: relative; flex: none; width: calc(var(--d) * 1.66); height: var(--d); }
 .globo { position: absolute; top: 0; width: var(--d); height: var(--d); border-radius: 50%; overflow: hidden;
-  background: #0d3b74 url("img/mundo.jpg") 0 50% / auto 100% repeat-x;
-  box-shadow: inset calc(var(--d) * -.1) calc(var(--d) * -.07) calc(var(--d) * .18) rgba(0, 12, 40, .55),
-              inset calc(var(--d) * .04) calc(var(--d) * .03) calc(var(--d) * .08) rgba(210, 230, 255, .45); }
+  background: #3b6db0 url("img/mundo.jpg") 0 50% / auto 100% repeat-x;
+  box-shadow: inset calc(var(--d) * -.08) calc(var(--d) * -.06) calc(var(--d) * .16) rgba(10, 30, 80, .6),
+              inset calc(var(--d) * .06) calc(var(--d) * .02) calc(var(--d) * .1) rgba(20, 50, 120, .35); }
 .globo::after { content: ""; position: absolute; inset: 0; border-radius: 50%;
-  background: radial-gradient(circle at 33% 27%, rgba(255, 255, 255, .7) 0, rgba(255, 255, 255, .18) 16%, transparent 38%),
-              radial-gradient(circle at 50% 50%, transparent 58%, rgba(2, 20, 60, .4) 100%); }
+  background: radial-gradient(ellipse 60% 55% at 40% 38%, rgba(255, 255, 255, .42) 0, rgba(255, 255, 255, .12) 45%, transparent 70%),
+              radial-gradient(circle at 50% 50%, transparent 60%, rgba(15, 35, 90, .45) 100%); }
 .globo-1 { left: 0; }
 .globo-2 { left: calc(var(--d) * .66); }
 @media (prefers-reduced-motion: no-preference) {
-  .globo { animation: girar 40s linear infinite; }
-  .globo-2 { animation-duration: 52s; animation-direction: reverse; animation-delay: -19s; }  /* que no enseñen la misma cara */
-  .marca:hover .globo { animation-duration: 8s; }
-  @keyframes girar { from { background-position-x: 0; } to { background-position-x: calc(var(--d) * -2); } }
+  .globo-1 { animation: hacia-derecha 36s linear infinite; }
+  .globo-2 { animation: hacia-izquierda 36s linear infinite; animation-delay: -12s; }
+  .marca:hover .globo { animation-duration: 9s; }
+  @keyframes hacia-derecha { from { background-position-x: 0; } to { background-position-x: calc(var(--d) * 2); } }
+  @keyframes hacia-izquierda { from { background-position-x: 0; } to { background-position-x: calc(var(--d) * -2); } }
 }
-.nav-lista, .idiomas, .sub { list-style: none; margin: 0; padding: 0; }
+
+.nav-lista, .sub, .selector-lista { list-style: none; margin: 0; padding: 0; }
 .nav-lista { display: flex; gap: 2px; }
 .nav-lista > li { position: relative; display: flex; align-items: center; }
 .nav-lista a { display: block; padding: 8px 10px; font: 450 15px/1.2 var(--sans); color: #e6e8f0; text-decoration: none; white-space: nowrap; }
-.nav-lista a:hover { color: #fff; text-decoration: underline; text-decoration-thickness: 1px; }
-.nav-lista > li.activo > a { color: #fff; text-decoration: underline; text-decoration-color: var(--rojo); text-decoration-thickness: 2px; text-underline-offset: 8px; }
+.nav-lista a:hover { color: #fff; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.nav-lista > li.activo > a { color: #fff; text-decoration: underline; text-decoration-color: #d7b017; text-decoration-thickness: 2px; text-underline-offset: 8px; }
 .sub-abrir { display: none; }
-.sub { position: absolute; top: 100%; left: 0; min-width: 230px; padding: 8px 0; background: var(--papel); border: 1px solid var(--linea); opacity: 0; visibility: hidden; transition: opacity .15s, visibility .15s; }
+.sub { position: absolute; top: calc(100% + 6px); left: 0; min-width: 230px; padding: 8px 0; background: var(--papel); border: 1px solid var(--linea); border-radius: 3px; box-shadow: 0 12px 30px rgba(10, 14, 30, .18); opacity: 0; visibility: hidden; transition: opacity .15s, visibility .15s; }
 .nav-lista > li:hover > .sub, .nav-lista > li:focus-within > .sub { opacity: 1; visibility: visible; }
-.sub a { padding: 8px 16px; color: var(--tinta); }
-.sub a:hover { color: var(--azul); }
-.sub a[aria-current] { color: var(--azul); }
-.idiomas { display: flex; gap: 4px; }
-.idiomas a { display: block; padding: 6px 7px; font: 500 14px/1 var(--sans); color: #a9aec2; text-decoration: none; }
-.idiomas a:hover { color: #fff; }
-.idiomas a[aria-current] { color: #fff; box-shadow: inset 0 -2px 0 var(--rojo); }
+.sub a { padding: 9px 16px; color: var(--tinta); }
+.sub a:hover, .sub a[aria-current] { color: var(--azul); }
 .menu-abrir { display: none; }
 .cabecera :focus-visible { outline-color: #fff; }
+
+/* Selector de idioma: nombre del idioma en su lengua, sin banderas (un idioma
+   no es un país). Sale de IDIOMAS en construir.py: añadir uno no toca esto. */
+.selector { position: relative; }
+.selector-boton { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: transparent; color: #fff;
+  border: 1px solid rgba(255, 255, 255, .28); border-radius: 3px; font: 500 14.5px/1 var(--sans); cursor: pointer; }
+.selector-boton:hover, .selector-boton[aria-expanded=true] { border-color: #fff; }
+.selector-boton svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.3; }
+.selector-boton .selector-flecha { width: 11px; height: 11px; stroke-width: 1.6; transition: transform .2s; }
+.selector-boton[aria-expanded=true] .selector-flecha { transform: rotate(180deg); }
+.selector-lista { position: absolute; right: 0; top: calc(100% + 8px); min-width: 210px; padding: 6px; background: var(--papel);
+  border: 1px solid var(--linea); border-radius: 3px; box-shadow: 0 12px 30px rgba(10, 14, 30, .2);
+  opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .15s, transform .15s, visibility .15s; }
+.selector.abierto .selector-lista { opacity: 1; visibility: visible; transform: none; }
+.selector-lista a { display: flex; align-items: baseline; gap: 16px; padding: 10px 12px; border-radius: 2px;
+  color: var(--tinta); text-decoration: none; font: 450 16px var(--serif); }
+.selector-lista a:hover { background: var(--calco); }
+.selector-lista a[aria-current] { font-weight: 600; box-shadow: inset 2px 0 0 var(--azul); }
+.sel-codigo { font: 500 12px var(--sans); color: var(--lapiz); margin-left: auto; }
+
+/* Barrido de traducción al cambiar de idioma: la página nueva baja sobre la
+   vieja con una línea en el borde, como un escáner que va traduciendo.
+   Navegadores sin View Transitions entre páginas (Firefox): cambio normal. */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+:root.traduciendo::view-transition-new(root) { animation: barrido 1.1s cubic-bezier(.65, 0, .35, 1) both; }
+@keyframes barrido { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+.linea-traduccion { display: none; }
+:root.traduciendo .linea-traduccion { display: block; position: fixed; left: 0; right: 0; top: 0; height: 2px; z-index: 100;
+  background: var(--azul); box-shadow: 0 0 18px 2px rgba(43, 68, 168, .45); pointer-events: none;
+  animation: baja 1.1s cubic-bezier(.65, 0, .35, 1) both; }
+.linea-traduccion span { position: absolute; right: 24px; bottom: 6px; padding: 5px 10px; border-radius: 2px; background: var(--azul);
+  color: #fff; font: 500 12px/1 var(--sans); letter-spacing: .02em; white-space: nowrap; }
+.linea-traduccion span::after { content: " " var(--ruta, ""); }
+@keyframes baja { from { transform: translateY(0); } to { transform: translateY(100vh); } }
 
 /* ---------- botones y enlaces ---------- */
 .boton { display: inline-block; padding: 14px 24px; border-radius: 3px; background: var(--azul); color: #fff; border: 1px solid var(--azul); font: 500 16px/1.2 var(--sans); text-decoration: none; cursor: pointer; transition: background .15s; }
@@ -255,12 +286,8 @@ p { margin: 0 0 1em; }
 .piso li { padding: 6px 0; }
 .piso span { display: inline-block; color: var(--lapiz); cursor: default; transition: color .15s; }
 .piso span:hover, .piso span:focus-visible { color: var(--azul); outline: none; }
-.piso:nth-child(1) span { font-size: 52px; color: var(--tinta); letter-spacing: -.02em; line-height: 1.1; }
-.piso:nth-child(2) span { font-size: 32px; }
-.piso:nth-child(3) span { font-size: 27px; }
-.piso:nth-child(4) span { font-size: 24px; }
-.piso:nth-child(5) span { font-size: 22px; }
-.piso:nth-child(n+6) span { font-size: 20px; }
+.piso { font-size: calc(var(--t) * 1px * var(--tf, 1)); }
+.piso:first-child span { color: var(--tinta); letter-spacing: -.02em; line-height: 1.1; }
 .torre-pie { margin: 26px 0 0; font: 400 15px/1.4 var(--sans); color: var(--lapiz); min-height: 1.4em; }
 
 /* ---------- páginas interiores ---------- */
@@ -297,7 +324,8 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
 /* Cita con las comillas colgadas en el margen, en rojo corrector */
 .cita { margin: 2em 0; padding: 0; position: relative; }
 .cita p { font-size: 27px; line-height: 1.4; font-style: italic; margin: 0; }
-.cita p::before { content: "“"; position: absolute; left: -.55em; top: -.05em; color: var(--rojo); font-size: 1.6em; line-height: 1; font-style: normal; }
+.cita p::before { content: "“"; position: absolute; left: -.55em; top: -.05em; color: var(--lapiz); font-size: 1.6em; line-height: 1; font-style: normal; }
+.cita p::after { content: "”"; color: var(--lapiz); }
 .cita-pequena p { font-size: 21px; }
 .cita-pequena p::before { left: -.5em; }
 
@@ -353,35 +381,25 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 
 /* ---------- pantallas medianas ---------- */
-@media (max-width: 1180px) {
+@media (max-width: 1140px) {
   :root { --margen: 180px; --hueco: 40px; }
-  .menu-abrir { display: block; font: 500 15px var(--sans); color: #fff; background: none; border: 1px solid rgba(255, 255, 255, .5); border-radius: 3px; padding: 9px 14px; cursor: pointer; }
-  .nav-caja { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--papel); border-bottom: 1px solid var(--linea); border-top: 0; max-height: calc(100dvh - 96px); overflow-y: auto; }
-  .nav-in { flex-direction: column; align-items: stretch; gap: 20px; padding-top: 8px; padding-bottom: 28px; }
-  .nav-lista { margin-left: 0 !important; }
-  .idiomas-arriba { display: none; }
-  .idiomas-menu { display: flex !important; }
-  .nav-lista a, .nav-lista > li.activo > a { color: var(--tinta); }
-  .nav-lista > li.activo > a { text-decoration-color: var(--rojo); }
-  .sub-abrir { color: var(--tinta) !important; }
-  .idiomas a { color: var(--lapiz); }
-  .idiomas a[aria-current] { color: var(--tinta); }
-  .marca { --d: 50px; }
-  .menu-abierto .nav-caja { display: block; }
+  .cabecera-in { gap: 14px; }
+  .menu-abrir { display: block; font: 500 15px var(--sans); color: #fff; background: none; border: 1px solid rgba(255, 255, 255, .5); border-radius: 3px; padding: 8px 13px; cursor: pointer; }
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--papel); border-bottom: 1px solid var(--linea);
+    max-height: calc(100dvh - 78px); overflow-y: auto; padding: 8px 32px 28px; }
+  .menu-abierto .nav { display: block; }
   .nav-lista { flex-direction: column; }
   .nav-lista > li { flex-wrap: wrap; border-bottom: 1px solid var(--linea); }
+  .nav-lista a, .nav-lista > li.activo > a { color: var(--tinta); }
   .nav-lista > li > a { flex: 1; padding: 15px 0; font-size: 18px; }
   .nav-lista > li.activo > a { text-underline-offset: 6px; }
   .sub-abrir { display: block; background: none; border: 0; padding: 12px; color: var(--tinta); cursor: pointer; }
   .sub-abrir svg { width: 14px; height: 14px; transition: transform .2s; }
   .sub-abrir[aria-expanded=true] svg { transform: rotate(180deg); }
-  .sub { position: static; width: 100%; opacity: 1; visibility: visible; border: 0; padding: 0 0 10px 14px; display: none; }
-  .sub.abierta { display: block; }
+  .sub { position: static; width: 100%; opacity: 1; visibility: visible; border: 0; box-shadow: none; padding: 0 0 10px 14px; display: none; background: none; }
+  .sub.abierta, .nav-lista > li > .sub.abierta { display: block; }
   .nav-lista > li:hover > .sub { display: none; }
-  .nav-lista > li > .sub.abierta { display: block; }
   .sub a { padding: 8px 0; font-size: 16px; color: var(--lapiz); }
-  .idiomas { border: 0; padding: 0; }
-  .idiomas a { font-size: 16px; padding: 8px 10px 8px 0; }
   .portada-in { grid-template-columns: 1fr; gap: 56px; }
   .portada { padding: 64px 0 72px; }
 }
@@ -399,11 +417,18 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
   .cabecera-seccion { padding: 0 0 6px; font-size: 17px; }
   .cuerpo-pagina { padding-top: 36px; padding-bottom: 64px; }
   .bloque, .final { padding: 56px 0; }
-  .marca { --d: 40px; }
-  .marca-lema { display: none; }
+  .marca { --d: 34px; gap: 7px; }
+  .marca-textos { gap: 5px; }
+  .marca-nombre { height: 13px; }
+  .marca-lema { font-size: 8.4px; gap: 4px; letter-spacing: 0; }
+  .marca-lema::before { height: 8px; }
+  .selector-boton { padding: 7px 8px; }
+  .selector-actual, .selector-boton .selector-flecha { display: none; }
+  .menu-abrir { padding: 7px 10px; font-size: 14px; }
+  .nav { padding: 4px 20px 24px; }
   .info-datos dl { grid-template-columns: 1fr; gap: 2px; }
   .info-datos dd { margin-bottom: 8px; }
-  .cabecera-in { min-height: 68px; gap: 16px; }
+  .cabecera-in { min-height: 66px; gap: 10px; }
   .portada h1 { font-size: 40px; }
   .portada-lema { font-size: 19px; }
   .paralelo .actual .frase { font-size: 28px; }
@@ -430,10 +455,5 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
      ancha que la pantalla, ocupa dos líneas. */
   .piso { gap: 0 10px; padding: 0 4px; }
   .piso li { padding: 4px 0; }
-  .piso:nth-child(1) span { font-size: 36px; }
-  .piso:nth-child(2) span { font-size: 21px; }
-  .piso:nth-child(3) span { font-size: 17px; }
-  .piso:nth-child(4) span { font-size: 15px; }
-  .piso:nth-child(5) span { font-size: 13.5px; }
-  .piso:nth-child(n+6) span { font-size: 13.5px; }
+  .piso { --tf: .62; }
 }

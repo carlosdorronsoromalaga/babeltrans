@@ -88,3 +88,4 @@ datos de la empresa en `contenido/empresa.json`. Para publicar:
   web no se empaqueta mientras falten los datos legales de `contenido/empresa.json`.
 - **Cómo se sube al hosting y quién hace qué:** [`docs/PUBLICAR.md`](docs/PUBLICAR.md).
 - **Por qué tiene este aspecto:** [`docs/DISENO.md`](docs/DISENO.md).
+- **SEO y GEO (la prioridad):** [`docs/SEO.md`](docs/SEO.md).

@@ -17,6 +17,29 @@
     });
   });
 
+  // Selector de idioma: se abre con clic o teclado, se cierra fuera o con Esc.
+  // Al elegir idioma se deja una marca para que la página nueva haga el
+  // barrido de traducción (ver SCRIPT_BARRIDO en construir.py).
+  document.querySelectorAll("[data-selector]").forEach(function (sel) {
+    var b = sel.querySelector(".selector-boton");
+    function abre(si) { sel.classList.toggle("abierto", si); b.setAttribute("aria-expanded", si); }
+    b.addEventListener("click", function (e) { e.stopPropagation(); abre(!sel.classList.contains("abierto")); });
+    document.addEventListener("click", function (e) { if (!sel.contains(e.target)) abre(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { abre(false); b.focus(); } });
+    sel.querySelectorAll("a[data-idioma]").forEach(function (a) {
+      a.addEventListener("click", function () {
+        if (a.getAttribute("aria-current")) return;
+        try { sessionStorage.setItem("traduciendo", document.documentElement.lang); } catch (x) {}
+      });
+    });
+  });
+  // Las líneas de la edición paralela también cambian de idioma: mismo barrido.
+  document.querySelectorAll(".paralelo .codigo").forEach(function (a) {
+    a.addEventListener("click", function () {
+      try { sessionStorage.setItem("traduciendo", document.documentElement.lang); } catch (x) {}
+    });
+  });
+
   // enviar.php vuelve con ?enviado=ok o ?enviado=error
   var m = location.search.match(/[?&]enviado=(ok|error)/);
   if (m) {

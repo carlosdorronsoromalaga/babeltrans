@@ -97,18 +97,31 @@ ALINEACION = {
 # CONTENIDO NUEVO, no estaba en la web vieja: ilustra su frase «evitando
 # traducciones demasiado literales». Martijn puede cambiarlos o quitarlos.
 MODISMOS = {
-    "es": [("en", "It’s raining cats and dogs.", "Llueven gatos y perros.", "Llueve a cántaros."),
-           ("de", "Ich verstehe nur Bahnhof.", "Solo entiendo estación.", "Me suena a chino."),
-           ("nl", "Nu komt de aap uit de mouw.", "Ahora sale el mono de la manga.", "Ahora se descubre el pastel.")],
+    "es": [("de", "Ich verstehe nur Bahnhof.", "Solo entiendo estación.", "Me suena a chino."),
+           ("en", "It’s raining cats and dogs.", "Llueven gatos y perros.", "Llueve a cántaros."),
+           ("fr", "Poser un lapin.", "Poner un conejo.", "Dar plantón."),
+           ("nl", "Nu komt de aap uit de mouw.", "Ahora sale el mono de la manga.", "Ahora se descubre el pastel."),
+           ("it", "In bocca al lupo!", "¡En la boca del lobo!", "¡Mucha suerte!"),
+           ("en", "It’s a piece of cake.", "Es un trozo de pastel.", "Está chupado."),
+           ("en", "You’re pulling my leg.", "Me estás tirando de la pierna.", "Me estás tomando el pelo.")],
     "en": [("es", "Me suena a chino.", "It sounds Chinese to me.", "It’s all Greek to me."),
            ("de", "Das ist nicht mein Bier.", "That’s not my beer.", "That’s not my problem."),
-           ("nl", "Nu komt de aap uit de mouw.", "Now the monkey comes out of the sleeve.", "Now the cat is out of the bag.")],
+           ("fr", "Poser un lapin.", "To put down a rabbit.", "To stand someone up."),
+           ("nl", "Nu komt de aap uit de mouw.", "Now the monkey comes out of the sleeve.", "Now the cat is out of the bag."),
+           ("it", "In bocca al lupo!", "In the mouth of the wolf!", "Break a leg!"),
+           ("es", "Es pan comido.", "It’s eaten bread.", "It’s a piece of cake.")],
     "de": [("en", "It’s raining cats and dogs.", "Es regnet Katzen und Hunde.", "Es gießt in Strömen."),
            ("es", "Me estás tomando el pelo.", "Du nimmst mir die Haare.", "Du nimmst mich auf den Arm."),
-           ("nl", "Nu komt de aap uit de mouw.", "Jetzt kommt der Affe aus dem Ärmel.", "Jetzt ist die Katze aus dem Sack.")],
+           ("fr", "Poser un lapin.", "Ein Kaninchen hinstellen.", "Jemanden versetzen."),
+           ("nl", "Nu komt de aap uit de mouw.", "Jetzt kommt der Affe aus dem Ärmel.", "Jetzt ist die Katze aus dem Sack."),
+           ("it", "In bocca al lupo!", "In den Mund des Wolfes!", "Hals- und Beinbruch!"),
+           ("es", "Es pan comido.", "Es ist gegessenes Brot.", "Das ist ein Kinderspiel.")],
     "nl": [("en", "It’s raining cats and dogs.", "Het regent katten en honden.", "Het regent pijpenstelen."),
            ("es", "Me estás tomando el pelo.", "Je neemt mijn haar.", "Je houdt me voor de gek."),
-           ("de", "Ich verstehe nur Bahnhof.", "Ik begrijp alleen station.", "Ik snap er geen snars van.")],
+           ("de", "Ich verstehe nur Bahnhof.", "Ik begrijp alleen station.", "Ik snap er geen snars van."),
+           ("fr", "Poser un lapin.", "Een konijn neerzetten.", "Iemand laten zitten."),
+           ("it", "In bocca al lupo!", "In de bek van de wolf!", "Veel succes!"),
+           ("es", "Es pan comido.", "Het is gegeten brood.", "Het is een eitje.")],
 }
 
 # La torre de Babel: «traducción» en otros idiomas, de la cima a la base. Los
@@ -221,4 +234,107 @@ LEMA = {
     "en": "Experts in Translation and Interpreting",
     "de": "Experten für Übersetzen und Dolmetschen",
     "nl": "Experts in vertalen en tolken",
+}
+
+# ---------------------------------------------------------------- v5
+# Palabras de la torre de Babel. El reparto en pisos lo calcula construir.py
+# (cada piso más ancho que el de encima), así que añadir un idioma es añadir
+# una línea aquí. La primera es la cima de la versión en castellano.
+PALABRAS_TORRE = [
+    ("es", "traducción"), ("en", "translation"), ("de", "Übersetzung"), ("nl", "vertaling"),
+    ("fr", "traduction"), ("it", "traduzione"), ("pt", "tradução"), ("ca", "traducció"),
+    ("eu", "itzulpena"), ("gl", "tradución"), ("la", "translatio"), ("el", "μετάφραση"),
+    ("ru", "перевод"), ("pl", "tłumaczenie"), ("ar", "ترجمة"), ("zh", "翻译"), ("ja", "翻訳"),
+    ("ko", "번역"), ("hi", "अनुवाद"), ("he", "תרגום"), ("tr", "çeviri"), ("da", "oversættelse"),
+    ("fa", "ترجمه"), ("sw", "tafsiri"), ("fi", "käännös"), ("hu", "fordítás"), ("cs", "překlad"),
+    ("ro", "traducere"), ("uk", "переклад"), ("sv", "översättning"), ("vi", "bản dịch"),
+    ("id", "terjemahan"), ("bn", "অনুবাদ"), ("bg", "превод"), ("no", "oversettelse"),
+    ("ga", "aistriúchán"), ("th", "การแปล"), ("hr", "prijevod"), ("sk", "preklad"), ("sl", "prevod"),
+    ("lt", "vertimas"), ("lv", "tulkojums"), ("et", "tõlge"), ("is", "þýðing"), ("mt", "traduzzjoni"),
+    ("cy", "cyfieithiad"), ("sq", "përkthim"), ("hy", "թարգմանություն"), ("ka", "თარგმანი"),
+    ("ur", "ترجمہ"), ("ta", "மொழிபெயர்ப்பு"), ("tl", "pagsasalin"), ("eo", "traduko"),
+    ("am", "ትርጉም"), ("zu", "ukuhumusha"),
+]
+
+# Nombre de cada idioma en su propia lengua, para el selector. Para añadir un
+# idioma a la web basta con su contenido/<código>.json y una línea aquí.
+NOMBRES_IDIOMA = {"es": "Español", "en": "English", "de": "Deutsch", "nl": "Nederlands"}
+
+UI5 = {
+    "es": {"idioma": "Idioma", "traduciendo": "Traduciendo"},
+    "en": {"idioma": "Language", "traduciendo": "Translating"},
+    "de": {"idioma": "Sprache", "traduciendo": "Übersetzen"},
+    "nl": {"idioma": "Taal", "traduciendo": "Vertalen"},
+}
+
+# SEO: título (<60-65 caracteres) y descripción (<155) de las páginas que más
+# se buscan. Todo lo que dicen sale de la propia web (servicios, «desde 1999»,
+# «todos los idiomas», traductores nativos, revisión independiente) y del
+# domicilio en Madrid. Las páginas que no están aquí usan su título y su primer
+# párrafo.
+SEO = {
+    "es": {
+        "home": ("Agencia de traducción e interpretación en Madrid | Babel Translations",
+                 "Traducciones técnicas, jurídicas, juradas y comerciales e interpretación en todos los idiomas. Traductores nativos y revisión independiente desde 1999."),
+        "traduccion": ("Traducción técnica, jurídica y jurada | Babel Translations",
+                       "Traducciones comerciales, económicas, jurídicas, técnicas y juradas, con revisión final de un traductor independiente. Presupuesto rápido y sin compromiso."),
+        "interpretacion": ("Interpretación consecutiva, simultánea y jurada | Babeltrans",
+                           "Intérpretes para ruedas de prensa, convenciones, negociaciones, conferencias, notarías y juicios, también por videoconferencia. Pida presupuesto."),
+        "presupuesto-traduccion": ("Presupuesto de traducción sin compromiso | Babel Translations",
+                                   "Envíe su documento y reciba un presupuesto de traducción rápido y sin compromiso: técnica, jurídica, jurada o comercial, en todos los idiomas."),
+        "presupuesto-interpretacion": ("Presupuesto de interpretación | Babel Translations",
+                                       "Pida presupuesto de interpretación consecutiva o simultánea para reuniones, convenciones, ruedas de prensa o entrevistas. Rápido y sin compromiso."),
+        "quienes": ("Quiénes somos: traductores nativos desde 1999 | Babel Translations",
+                    "Proveedor global de servicios lingüísticos desde 1999. Traductores que solo traducen a su lengua materna, revisión independiente y confidencialidad."),
+        "contacto": ("Contacto | Babel Translations, traducción e interpretación en Madrid",
+                     "Escríbanos o llámenos para pedir información sobre traducciones e interpretación en todos los idiomas."),
+    },
+    "en": {
+        "home": ("Translation and interpreting agency in Madrid | Babel Translations",
+                 "Technical, legal, sworn and commercial translation and interpreting in all languages. Native translators and independent proofreading since 1999."),
+        "traduccion": ("Technical, legal and sworn translation | Babel Translations",
+                       "Commercial, financial, legal, technical and sworn translations, always checked by an independent translator. Fast, no-obligation quote."),
+        "interpretacion": ("Consecutive, simultaneous and sworn interpreting | Babeltrans",
+                           "Interpreters for press conferences, conventions, negotiations, conferences, notaries and courts, also by videoconference. Request a quote."),
+        "presupuesto-traduccion": ("Free translation quote | Babel Translations",
+                                   "Send us your document and get a fast, no-obligation translation quote: technical, legal, sworn or commercial, in all languages."),
+        "presupuesto-interpretacion": ("Interpreting quote | Babel Translations",
+                                       "Request a quote for consecutive or simultaneous interpreting at meetings, conventions, press conferences or interviews."),
+        "quienes": ("About us: native translators since 1999 | Babel Translations",
+                    "Global provider of language services since 1999. Translators who only work into their mother tongue, independent proofreading and confidentiality."),
+        "contacto": ("Contact | Babel Translations, translation and interpreting in Madrid",
+                     "Write or call us for information about translation and interpreting in all languages."),
+    },
+    "de": {
+        "home": ("Übersetzungs- und Dolmetschbüro in Madrid | Babel Translations",
+                 "Technische, juristische, beglaubigte und Fachübersetzungen sowie Dolmetschen in allen Sprachen. Muttersprachliche Übersetzer seit 1999."),
+        "traduccion": ("Technische, juristische und beglaubigte Übersetzungen | Babeltrans",
+                       "Handels-, Wirtschafts-, Rechts-, technische und beglaubigte Übersetzungen, immer von einem zweiten Übersetzer geprüft. Unverbindlicher Kostenvoranschlag."),
+        "interpretacion": ("Konsekutiv-, Simultan- und beeidigtes Dolmetschen | Babeltrans",
+                           "Dolmetscher für Pressekonferenzen, Tagungen, Verhandlungen, Konferenzen, Notare und Gerichte, auch per Videokonferenz."),
+        "presupuesto-traduccion": ("Kostenvoranschlag für Übersetzungen | Babel Translations",
+                                   "Senden Sie uns Ihr Dokument und erhalten Sie einen schnellen, unverbindlichen Kostenvoranschlag für Ihre Übersetzung."),
+        "presupuesto-interpretacion": ("Kostenvoranschlag für Dolmetschen | Babel Translations",
+                                       "Kostenvoranschlag für Konsekutiv- oder Simultandolmetschen bei Sitzungen, Tagungen, Pressekonferenzen oder Interviews."),
+        "quienes": ("Über uns: muttersprachliche Übersetzer seit 1999 | Babeltrans",
+                    "Sprachdienstleister seit 1999. Übersetzer, die nur in ihre Muttersprache übersetzen, unabhängige Korrektur und Diskretion."),
+        "contacto": ("Kontakt | Babel Translations, Übersetzen und Dolmetschen in Madrid",
+                     "Schreiben Sie uns oder rufen Sie uns an: Übersetzungen und Dolmetschen in allen Sprachen."),
+    },
+    "nl": {
+        "home": ("Vertaal- en tolkbureau in Madrid | Babel Translations",
+                 "Technische, juridische, beëdigde en commerciële vertalingen en tolkdiensten in alle talen. Moedertaalvertalers en onafhankelijke revisie sinds 1999."),
+        "traduccion": ("Technische, juridische en beëdigde vertalingen | Babel Translations",
+                       "Commerciële, economische, juridische, technische en beëdigde vertalingen, altijd nagekeken door een onafhankelijke vertaler. Vrijblijvende offerte."),
+        "interpretacion": ("Consecutief, simultaan en beëdigd tolken | Babel Translations",
+                           "Tolken voor persconferenties, congressen, onderhandelingen, conferenties, notarissen en rechtbanken, ook via videoconferentie."),
+        "presupuesto-traduccion": ("Vrijblijvende vertaalofferte | Babel Translations",
+                                   "Stuur ons uw document en ontvang snel een vrijblijvende offerte voor uw vertaling, in alle talen."),
+        "presupuesto-interpretacion": ("Offerte voor tolkdiensten | Babel Translations",
+                                       "Vraag een offerte aan voor consecutief of simultaan tolken bij vergaderingen, congressen, persconferenties of interviews."),
+        "quienes": ("Over ons: moedertaalvertalers sinds 1999 | Babel Translations",
+                    "Aanbieder van taaldiensten sinds 1999. Vertalers die alleen naar hun moedertaal vertalen, onafhankelijke revisie en vertrouwelijkheid."),
+        "contacto": ("Contact | Babel Translations, vertalen en tolken in Madrid",
+                     "Schrijf of bel ons voor informatie over vertalingen en tolkdiensten in alle talen."),
+    },
 }
