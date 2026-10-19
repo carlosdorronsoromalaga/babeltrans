@@ -82,6 +82,11 @@ datos de la empresa en `contenido/empresa.json`. Para publicar:
 - **Sin cookies ni servicios de terceros**: las fuentes están en la propia web
   y no hay analítica, así que no hace falta banner de cookies.
 
+## Vista previa
+
+https://carlosdorronsoromalaga.github.io/babeltrans/ (se actualiza con
+`python3 scripts/previa.py`; no se indexa en Google).
+
 ## Pendiente y publicación
 
 - **Qué falta y qué está decidido:** [`docs/PENDIENTES.md`](docs/PENDIENTES.md). La

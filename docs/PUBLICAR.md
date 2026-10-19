@@ -1,5 +1,20 @@
 # Cómo se publica la web
 
+## Vista previa (para enseñarla antes de publicar)
+
+**https://carlosdorronsoromalaga.github.io/babeltrans/**, servida por GitHub
+Pages desde la rama `gh-pages` del repositorio público
+`carlosdorronsoromalaga/babeltrans`. Se actualiza con:
+
+```bash
+python3 scripts/previa.py
+```
+
+Es la misma web con tres diferencias: vive en la subcarpeta `/babeltrans/`,
+**no se indexa** (para no competir con babeltrans.es) y los formularios no
+envían (Pages no ejecuta PHP; avisan al pulsar). No es la web definitiva:
+esa va al hosting de Webempresa, como se explica abajo.
+
 ## Quién tiene qué
 
 | Dónde | Qué hay | Qué hace falta |
