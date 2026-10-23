@@ -15,8 +15,36 @@ legal identifique al titular, y la web vieja no lo hacía.
 | NIF | Aviso legal, privacidad | |
 | Domicilio | Aviso legal, privacidad | La web vieja daba **dos**: Villa de Marín 26 (28029) y Luis Martínez Feduchi 74 (28055) |
 | Registro Mercantil | Aviso legal | Solo si es sociedad (tomo, folio, hoja) |
-| Teléfono | Toda la web | La vieja tenía **dos**: 91 504 77 74 (castellano) y 91 314 79 19 (inglés y alemán) |
 | Ubicación de los servidores | Privacidad | Preguntar a Webempresa (¿UE?) |
+
+## Feedback de Martijn (Excel, 23/10/2026)
+
+Hecho, en los cuatro idiomas (capa de correcciones en `scripts/textos_ui.py`,
+sin tocar el contenido extraído):
+- «BABELTRANS» → **«Babel Translations»** en todo el texto. Solo se mantiene
+  «BABELTRANS» como nombre alternativo en los datos para Google y en
+  `llms.txt`, porque hay gente que busca así la empresa.
+- **Teléfono único: 91 504 77 74** en toda la web, también en el pie en
+  holandés, donde faltaba. El 91 314 79 19 de inglés y alemán era el antiguo.
+- Formularios: «Teléfono» (con tilde y traducido: *Telephone*, *Telefon*,
+  *Telefoon*), «Persona de contacto», *accept*, *City*, *Comments*, *Country*
+  y *Ort*.
+- Páginas de candidatura con su título traducido: *As a translator / As an
+  interpreter*, *Als Übersetzer / Als Dolmetscher*, *Als vertaler / Als tolk*.
+
+Sus dos preguntas:
+- **«Política de privacidad: la información que falta, ¿la ponemos al
+  final?»** No al final: tiene que estar antes de publicar, porque la ley
+  obliga a identificar al titular. Basta con mandar una vez los datos de la
+  tabla de arriba: se escriben en un único sitio (`contenido/empresa.json`) y
+  salen solos en el aviso legal, la privacidad y los formularios.
+- **«Fotografías: faltan, ¿cómo hacemos?»** La web está diseñada para no
+  necesitarlas: el protagonista es el texto, como en un libro. Las fotos de la
+  web vieja eran de banco de imágenes, de licencia dudosa, y no se han
+  reutilizado. Si quieren fotos, que sean **propias**: el equipo, la oficina,
+  un intérprete trabajando. Dan confianza y sirven también para el perfil de
+  Google. Irían en «Quiénes somos» y «Nuestros colaboradores». Las de banco
+  de imágenes genéricas restan más de lo que aportan.
 
 ## 2. Decisiones de contenido
 

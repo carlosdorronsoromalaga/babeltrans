@@ -16,7 +16,8 @@ import datetime, html, json, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS,  # noqa: E402
-                       INFO_FORM, LEMA, PALABRAS_TORRE, NOMBRES_IDIOMA, UI5, SEO)
+                       INFO_FORM, LEMA, PALABRAS_TORRE, NOMBRES_IDIOMA, UI5, SEO,
+                       NOMBRE_EMPRESA, ETIQUETAS, ETIQUETAS_VACIAS, NOMBRES_PAGINA)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -66,7 +67,15 @@ def rellena(texto):
 
 
 def carga():
-    todo = {l: json.load(open(os.path.join(CONT, f"{l}.json"), encoding="utf-8")) for l in IDIOMAS}
+    viejo, nuevo = NOMBRE_EMPRESA
+    todo = {l: json.loads(open(os.path.join(CONT, f"{l}.json"), encoding="utf-8").read().replace(viejo, nuevo))
+            for l in IDIOMAS}
+    for l, d in todo.items():
+        for p in d["paginas"].values():
+            for c in p.get("formulario", {}).get("campos", []):
+                c["etiqueta"] = ETIQUETAS[l].get(c["etiqueta"], c["etiqueta"])
+                if not c["etiqueta"]:
+                    c["etiqueta"] = ETIQUETAS_VACIAS[l].get(c["nombre"], "")
     for d in todo.values():
         rutas_fuera = {d["paginas"][pid]["ruta"] for pid in RETIRADAS}
         d["menu"] = [it for it in d["menu"] if it["ruta"] not in rutas_fuera]
@@ -118,6 +127,8 @@ def tel_bonito(tel):
 def nombre_pagina(d, pid):
     """El nombre con el que la página salía en el menú; si no, su título."""
     p = d["paginas"][pid]
+    if pid in NOMBRES_PAGINA.get(d["idioma"], {}):
+        return NOMBRES_PAGINA[d["idioma"]][pid]
     for item in d["menu"]:
         for x in [item] + item["hijos"]:
             if x["ruta"] == p["ruta"]:
@@ -543,7 +554,7 @@ def pag_hub(todo, lang, pid):
 
 def legal(lang, pid):
     """Título y bloques de un texto legal de contenido/legal/<idioma>.txt."""
-    texto = open(os.path.join(CONT, "legal", f"{lang}.txt"), encoding="utf-8").read()
+    texto = open(os.path.join(CONT, "legal", f"{lang}.txt"), encoding="utf-8").read().replace(*NOMBRE_EMPRESA)
     trozo = texto.split(f"=== {pid}\n", 1)[1].split("\n=== ", 1)[0].strip().splitlines()
     titulo, bloques, lista = trozo[0], [], []
     for linea in trozo[1:] + [""]:
@@ -653,7 +664,9 @@ def pag_formulario(todo, lang, pid):
     d = todo[lang]; ui = UI[lang]; p = d["paginas"][pid]; f = p["formulario"]
     tel, mail = contacto(d)
     titulo = nombre_pagina(d, pid)
-    intro = [t for t in f["intro"] if not t.startswith("BABELTRANS")]
+    # Fuera el bloque viejo «BABELTRANS Tel.: … Mail: …» (con el teléfono antiguo
+    # en inglés y alemán): el contacto sale de empresa.json.
+    intro = [t for t in f["intro"] if not re.match(r"(BABELTRANS|Babel Translations)\s+Tel", t)]
     campos = "\n".join(campo_html(c, ui, url(d["paginas"]["privacidad"]["ruta"])) for c in f["campos"])
     gracias = f["gracias"] if f["gracias"] and not (lang != "es" and f["gracias"].startswith("Gracias")) else ui["enviado"]
     boton = f["boton"] if not (lang != "es" and f["boton"] == "Enviar") else ui["enviar"]

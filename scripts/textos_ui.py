@@ -338,3 +338,36 @@ SEO = {
                      "Schrijf of bel ons voor informatie over vertalingen en tolkdiensten in alle talen."),
     },
 }
+
+# ---------------------------------------------------------------- v6
+# Correcciones de Martijn (Excel «Comentarios sobre la página web», 23/10/2026).
+# Se aplican encima del contenido extraído de la web vieja, sin tocarlo.
+
+# Nombre de la empresa: «Babel Translations» en todo el texto, no «BABELTRANS».
+# (El dominio sigue siendo babeltrans.es, y en los datos para Google
+# «BABELTRANS» queda como nombre alternativo, porque así la buscan.)
+NOMBRE_EMPRESA = ("BABELTRANS", "Babel Translations")
+
+# Etiquetas de formulario corregidas o traducidas.
+ETIQUETAS = {
+    "es": {"Persona contacto": "Persona de contacto"},
+    "en": {"I have read and accpet the Privacy policy": "I have read and accept the Privacy policy",
+           "Town": "City", "Commentaries": "Comments", "País": "Country"},
+    "de": {"Stadt": "Ort"},
+    "nl": {},
+}
+# Campos que en la web vieja no tenían etiqueta reconocible: salía el nombre
+# interno del campo («Telefono») en los cuatro idiomas.
+ETIQUETAS_VACIAS = {
+    "es": {"Telefono": "Teléfono"},
+    "en": {"Telefono": "Telephone"},
+    "de": {"Telefono": "Telefon"},
+    "nl": {"Telefono": "Telefoon"},
+}
+# Títulos de página que en la web vieja estaban en castellano en todos los idiomas.
+NOMBRES_PAGINA = {
+    "es": {"como-traductor": "Trabajar como traductor", "como-interprete": "Trabajar como intérprete"},
+    "en": {"como-traductor": "As a translator", "como-interprete": "As an interpreter"},
+    "de": {"como-traductor": "Als Übersetzer", "como-interprete": "Als Dolmetscher"},
+    "nl": {"como-traductor": "Als vertaler", "como-interprete": "Als tolk"},
+}
