@@ -120,3 +120,26 @@ Martijn quiere conservar el logo de siempre. Va tal cual en una cabecera oscura
   completas** en las citas, en gris.
 - **Más refranes** (6-7 por idioma) y **torre con 55 idiomas**, repartida sola
   en pisos cada vez más anchos.
+
+## v6 (24/10/2026): banderas, texto que se traduce y Bruegel
+
+- **Banderas** en lugar del selector desplegable (Carlos): planas y
+  rectangulares, dibujadas en SVG, nunca emojis. España (sin escudo), Reino
+  Unido, Alemania y Países Bajos. La del idioma actual, entera y subrayada en
+  dorado; las demás, atenuadas. En el móvil van dentro del menú.
+- **Al cambiar de idioma, el texto se transforma**: la web descarga la página
+  en el otro idioma, empareja cada texto visible con su equivalente (las cuatro
+  versiones salen de la misma plantilla) y lo cambia palabra a palabra, de
+  arriba abajo, con un instante de letras revueltas en la palabra que está
+  cambiando. Al terminar carga la página nueva, ya idéntica. Sustituye al
+  barrido con línea de la v5. Sin JavaScript o con «reducir movimiento», las
+  banderas son enlaces normales. Usa un temporizador y no
+  `requestAnimationFrame`, que se pausa en pestañas ocultas y dejaba palabras
+  revueltas.
+- **Fuera la aceleración de los globos** al pasar el ratón por el logo.
+- **Torre de Babel sin título ni pie** («Todos los idiomas», «“Traducción” en
+  55 idiomas»). El nombre de cada idioma sale como rótulo emergente.
+- **«La Torre de Babel» de Pieter Bruegel el Viejo (1563)**, de dominio
+  público, en «Quiénes somos» (portada y página). Es la imagen más famosa de
+  la historia de la traducción y lleva el nombre de la empresa. Va con su pie
+  (autor, obra, museo) en cada idioma.

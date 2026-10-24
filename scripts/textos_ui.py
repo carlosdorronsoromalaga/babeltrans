@@ -371,3 +371,16 @@ NOMBRES_PAGINA = {
     "de": {"como-traductor": "Als Übersetzer", "como-interprete": "Als Dolmetscher"},
     "nl": {"como-traductor": "Als vertaler", "como-interprete": "Als tolk"},
 }
+
+# ---------------------------------------------------------------- v7
+# El cuadro de Bruegel (dominio público): pie y texto alternativo.
+CUADRO = {
+    "es": ("Pieter Bruegel el Viejo, <i>La Torre de Babel</i> (1563). Kunsthistorisches Museum, Viena.",
+           "La Torre de Babel de Bruegel: una torre enorme a medio construir junto a un puerto, con obreros y barcos."),
+    "en": ("Pieter Bruegel the Elder, <i>The Tower of Babel</i> (1563). Kunsthistorisches Museum, Vienna.",
+           "Bruegel’s Tower of Babel: a huge half-built tower beside a harbour, with workers and ships."),
+    "de": ("Pieter Bruegel der Ältere, <i>Der Turmbau zu Babel</i> (1563). Kunsthistorisches Museum, Wien.",
+           "Bruegels Turmbau zu Babel: ein riesiger, halb fertiger Turm an einem Hafen, mit Arbeitern und Schiffen."),
+    "nl": ("Pieter Bruegel de Oude, <i>De toren van Babel</i> (1563). Kunsthistorisches Museum, Wenen.",
+           "De toren van Babel van Bruegel: een enorme, half gebouwde toren bij een haven, met arbeiders en schepen."),
+}

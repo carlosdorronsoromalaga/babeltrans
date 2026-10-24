@@ -17,7 +17,7 @@ import datetime, html, json, os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS,  # noqa: E402
                        INFO_FORM, LEMA, PALABRAS_TORRE, NOMBRES_IDIOMA, UI5, SEO,
-                       NOMBRE_EMPRESA, ETIQUETAS, ETIQUETAS_VACIAS, NOMBRES_PAGINA)
+                       NOMBRE_EMPRESA, ETIQUETAS, ETIQUETAS_VACIAS, NOMBRES_PAGINA, CUADRO)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -210,37 +210,49 @@ def ruta_en(todo, l, pid):
     return "/" if (l == "es" and pid == "home") else url(todo[l]["paginas"][pid]["ruta"])
 
 
-def selector_idioma(todo, lang, pid):
-    """Selector de idioma desplegable. Escala solo: sale de IDIOMAS."""
-    opciones = "".join(
-        f'<li><a href="{ruta_en(todo, l, pid)}" hreflang="{l}" lang="{l}" data-idioma="{l}"'
-        f'{" aria-current=true" if l == lang else ""}><span class="sel-nombre">{NOMBRES_IDIOMA[l]}</span>'
-        f'<span class="sel-codigo">{l}</span></a></li>' for l in IDIOMAS)
-    return (f'<div class="selector" data-selector>'
-            f'<button class="selector-boton" type="button" aria-expanded="false" aria-haspopup="true" '
-            f'aria-label="{esc(UI5[lang]["idioma"])}: {NOMBRES_IDIOMA[lang]}">'
-            f'<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/>'
-            f'<path d="M2 10h16M10 2c2.5 2.2 3.8 5 3.8 8s-1.3 5.8-3.8 8M10 2C7.5 4.2 6.2 7 6.2 10s1.3 5.8 3.8 8"/></svg>'
-            f'<span class="selector-actual">{NOMBRES_IDIOMA[lang]}</span>'
-            f'<svg class="selector-flecha" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>'
-            f'</button><ul class="selector-lista">{opciones}</ul></div>')
+# Banderas planas dibujadas en SVG (no emojis, que cambian según el sistema y
+# parecen de plantilla). Petición de Carlos, 24/10/2026. El inglés lleva la del
+# Reino Unido; el castellano, la de España sin escudo (bandera civil).
+def bandera(l, sufijo):
+    if l == "es":
+        dentro = '<rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/>'
+    elif l == "de":
+        dentro = ('<rect width="30" height="20" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/>'
+                  '<rect y="13.33" width="30" height="6.67" fill="#FFCE00"/>')
+    elif l == "nl":
+        dentro = ('<rect width="30" height="20" fill="#AE1C28"/><rect y="6.67" width="30" height="6.67" fill="#fff"/>'
+                  '<rect y="13.33" width="30" height="6.67" fill="#21468B"/>')
+    elif l == "en":
+        c = f"uk{sufijo}"
+        return (f'<svg class="bandera" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
+                f'<clipPath id="{c}"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath>'
+                '<rect width="60" height="30" fill="#012169"/>'
+                '<path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/>'
+                f'<path d="M0,0L60,30M60,0L0,30" clip-path="url(#{c})" stroke="#C8102E" stroke-width="4"/>'
+                '<path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/>'
+                '<path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg>')
+    else:
+        dentro = '<rect width="30" height="20" fill="#ccc"/>'
+    return f'<svg class="bandera" viewBox="0 0 30 20" aria-hidden="true">{dentro}</svg>'
 
 
-# Barrido de traducción al cambiar de idioma (View Transitions entre páginas).
-# Va en línea en el <head> porque «pagereveal» salta antes del primer pintado:
-# un script diferido llegaría tarde. Solo anima si se vino desde el selector.
-SCRIPT_BARRIDO = """<script>
-addEventListener("pagereveal", function (e) {
-  var de = null;
-  try { de = sessionStorage.getItem("traduciendo"); sessionStorage.removeItem("traduciendo"); } catch (x) {}
-  if (!e.viewTransition) return;
-  if (!de || matchMedia("(prefers-reduced-motion: reduce)").matches) { e.viewTransition.skipTransition(); return; }
-  var r = document.documentElement;
-  r.classList.add("traduciendo");
-  r.style.setProperty("--ruta", JSON.stringify(de + " \u2192 " + r.lang));
-  e.viewTransition.finished.finally(function () { r.classList.remove("traduciendo"); });
-});
-</script>"""
+def banderas(todo, lang, pid, sufijo, clase):
+    """Una bandera por idioma; la del idioma de la página, marcada. Escala sola
+    con IDIOMAS (para un idioma nuevo, añadir su bandera arriba)."""
+    items = "".join(
+        f'<li><a href="{ruta_en(todo, l, pid)}" hreflang="{l}" lang="{l}" data-idioma="{l}" '
+        f'title="{NOMBRES_IDIOMA[l]}" aria-label="{NOMBRES_IDIOMA[l]}"'
+        f'{" aria-current=true" if l == lang else ""}>{bandera(l, sufijo + l)}</a></li>' for l in IDIOMAS)
+    return f'<ul class="banderas {clase}" aria-label="{esc(UI5[lang]["idioma"])}">{items}</ul>'
+
+
+def cuadro(lang, clase=""):
+    """«La Torre de Babel» de Bruegel (1563), dominio público."""
+    pie, alt = CUADRO[lang]
+    return (f'<figure class="cuadro {clase}"><img src="/img/torre-babel-1600.jpg" '
+            f'srcset="/img/torre-babel-900.jpg 900w, /img/torre-babel-1600.jpg 1600w" '
+            f'sizes="(max-width: 820px) 100vw, 900px" width="1600" height="1171" loading="lazy" decoding="async" '
+            f'alt="{esc(alt)}"><figcaption>{pie}</figcaption></figure>')
 
 
 def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase="", indexar=True, extra_head=""):
@@ -283,12 +295,10 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase="", indexar=True,
 <link rel="icon" href="/favicon.ico" sizes="16x16">
 <link rel="preload" href="/fuentes/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/estilos.css?v={VERSION["estilos.css"]}">
-{SCRIPT_BARRIDO}
 <script src="/web.js?v={VERSION["web.js"]}" defer></script>
 </head>
 <body class="{clase}">
 <a class="saltar" href="#contenido">{ui["saltar"]}</a>
-<div class="linea-traduccion" aria-hidden="true"><span>{esc(UI5[lang]["traduciendo"])}</span></div>
 <header class="cabecera">
   <div class="env cabecera-in">
     <a class="marca" href="{home_url(d)}">
@@ -298,8 +308,9 @@ def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase="", indexar=True,
         <span class="marca-lema">{esc(LEMA[lang])}</span>
       </span>
     </a>
-    <nav class="nav" id="nav" aria-label="{ui["menu"]}"><ul class="nav-lista">{menu_html(d, ruta)}</ul></nav>
-    {selector_idioma(todo, lang, pid)}
+    <nav class="nav" id="nav" aria-label="{ui["menu"]}"><ul class="nav-lista">{menu_html(d, ruta)}</ul>
+      {banderas(todo, lang, pid, "m", "banderas-menu")}</nav>
+    {banderas(todo, lang, pid, "c", "banderas-cabecera")}
     <button class="menu-abrir" aria-expanded="false" aria-controls="nav">{ui["menu"]}</button>
   </div>
 </header>
@@ -512,11 +523,9 @@ def torre(lang):
         f'<ul class="piso" style="--t:{TORRE_LETRA[min(i, len(TORRE_LETRA) - 1)]}">' + "".join(
             f'<li><span lang="{l}" dir="auto" tabindex="0" data-idioma="{l}">{esc(w)}</span></li>' for l, w in p)
         + "</ul>" for i, p in enumerate(pisos))
-    total = sum(len(p) for p in pisos)
-    u = UI3[lang]
-    pie = re.sub(r"\d+", str(total), u["torre_pie"])
-    return (f'<div class="torre" data-torre>{html_pisos}</div>'
-            f'<p class="torre-pie" aria-live="polite" data-pie="{esc(pie)}">{esc(pie)}</p>')
+    # Sin título ni pie (Carlos, 24/10/2026): al pasar por una palabra, el
+    # nombre del idioma sale como rótulo emergente (web.js).
+    return f'<div class="torre" data-torre>{html_pisos}</div>'
 
 
 # --------------------------------------------------------------- tipos de página
@@ -617,6 +626,7 @@ def pag_articulo(todo, lang, pid):
 <section class="env libro cuerpo-pagina">
   <aside class="margen">{"" if legal else notas_margen(d, pid)}</aside>
   <article class="prosa{" prosa-legal" if legal else ""}">
+{cuadro(lang, "cuadro-pagina") if pid == "quienes" else ""}
 {bloques_html(p["bloques"], lang, pid)}
 {modismo(d, lang) if pid == "traduccion" else ""}
   </article>
@@ -866,6 +876,8 @@ def pag_home(todo, lang):
       <p class="grande">{esc(resto_quienes)}</p>
       {f'<blockquote class="cita"><p>{esc(cita_q)}</p></blockquote>' if cita_q else ''}
     </div>
+    <div class="margen"></div>
+    {cuadro(lang, "cuadro-portada")}
   </div>
 </section>
 
@@ -903,9 +915,8 @@ def pag_home(todo, lang):
   </div>
 </section>
 
-<section class="bloque bloque-torre">
+<section class="bloque bloque-torre" aria-label="{esc(UI3[lang]["torre"])}">
   <div class="env">
-    <h2 class="tit-torre">{esc(UI3[lang]["torre"])}</h2>
     {torre(lang)}
   </div>
 </section>

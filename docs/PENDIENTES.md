@@ -38,7 +38,9 @@ Sus dos preguntas:
   obliga a identificar al titular. Basta con mandar una vez los datos de la
   tabla de arriba: se escriben en un único sitio (`contenido/empresa.json`) y
   salen solos en el aviso legal, la privacidad y los formularios.
-- **«Fotografías: faltan, ¿cómo hacemos?»** La web está diseñada para no
+- **«Fotografías: faltan, ¿cómo hacemos?»** (24/10/2026: puesto ya *La Torre de
+  Babel* de Bruegel, dominio público, en «Quiénes somos»; las fotos propias
+  siguen siendo lo mejor para el resto) La web está diseñada para no
   necesitarlas: el protagonista es el texto, como en un libro. Las fotos de la
   web vieja eran de banco de imágenes, de licencia dudosa, y no se han
   reutilizado. Si quieren fotos, que sean **propias**: el equipo, la oficina,
