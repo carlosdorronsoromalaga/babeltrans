@@ -366,6 +366,15 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 
+/* Texto justificado (Martijn/Carlos, 26/10/2026), como en un libro. Siempre
+   con guionado automático en el idioma de la página (<html lang>): sin él, la
+   justificación abre huecos entre palabras, sobre todo en el móvil. Solo el
+   texto corrido: títulos, menú, botones, formularios y citas, a la izquierda. */
+.prosa p, .prosa li, .portada-lema, .grande, .entrada-def, .acepciones li, .metodo-intro, .pasos li,
+.dos p, .herramientas li, .entradilla, .nota-margen, .info-datos dd {
+  text-align: justify; -webkit-hyphens: auto; hyphens: auto;
+  hyphenate-limit-chars: 7 3 3; text-wrap: pretty; }
+
 /* ---------- pantallas medianas ---------- */
 @media (max-width: 1140px) {
   :root { --margen: 180px; --hueco: 40px; }

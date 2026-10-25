@@ -143,3 +143,11 @@ Martijn quiere conservar el logo de siempre. Va tal cual en una cabecera oscura
   público, en «Quiénes somos» (portada y página). Es la imagen más famosa de
   la historia de la traducción y lleva el nombre de la empresa. Va con su pie
   (autor, obra, museo) en cada idioma.
+
+## v7 (26/10/2026): texto justificado
+
+Todo el texto corrido va justificado (alineado a izquierda y derecha), como en
+un libro, y siempre con guionado automático en el idioma de cada página: sin
+guiones, la justificación abre huecos entre palabras, sobre todo en el móvil y
+en las columnas estrechas. Títulos, menú, botones y formularios siguen a la
+izquierda, que es lo que pide la tipografía.
