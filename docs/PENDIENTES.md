@@ -9,13 +9,16 @@ mejoran la web pero no la bloquean.
 Van en `contenido/empresa.json`. La ley (LSSI, art. 10) obliga a que el aviso
 legal identifique al titular, y la web vieja no lo hacía.
 
-| Dato | Para qué | Nota |
-|---|---|---|
-| Titular | Aviso legal, privacidad, formularios | Nombre fiscal: la persona si es autónomo, o la razón social si es sociedad |
-| NIF | Aviso legal, privacidad | |
-| Domicilio | Aviso legal, privacidad | La web vieja daba **dos**: Villa de Marín 26 (28029) y Luis Martínez Feduchi 74 (28055) |
-| Registro Mercantil | Aviso legal | Solo si es sociedad (tomo, folio, hoja) |
-| Ubicación de los servidores | Privacidad | Preguntar a Webempresa (¿UE?) |
+Martijn contestó el 03/11/2026 y ya están puestos: titular **Martijn
+Naarding** (autónomo, así que sin Registro Mercantil), su NIF y el domicilio
+**C/ Luis Martínez Feduchi 74, 28055 Madrid** (la de Villa de Marín era la
+antigua). El domicilio también va en los datos para Google, con calle y código
+postal por separado.
+
+**Solo falta uno:** dónde tiene Webempresa los servidores (`servidores`), para
+la política de privacidad. Martijn abrió una consulta a Webempresa el
+03/11/2026. Cuando contesten, se escribe en `empresa.json` (por ejemplo, «en la
+Unión Europea») y la web ya se puede empaquetar.
 
 ## Feedback de Martijn (Excel, 23/10/2026)
 
@@ -39,8 +42,9 @@ Sus dos preguntas:
   tabla de arriba: se escriben en un único sitio (`contenido/empresa.json`) y
   salen solos en el aviso legal, la privacidad y los formularios.
 - **«Fotografías: faltan, ¿cómo hacemos?»** (24/10/2026: puesto ya *La Torre de
-  Babel* de Bruegel, dominio público, en «Quiénes somos»; las fotos propias
-  siguen siendo lo mejor para el resto) La web está diseñada para no
+  Babel* de Bruegel, dominio público, en «Quiénes somos». 03/11/2026: a Martijn
+  le gustó la idea de los cuadros y se puso *San Jerónimo en su estudio* de
+  Antonello da Messina en «Traducción»; dice que quizá tenga fotos propias) La web está diseñada para no
   necesitarlas: el protagonista es el texto, como en un libro. Las fotos de la
   web vieja eran de banco de imágenes, de licencia dudosa, y no se han
   reutilizado. Si quieren fotos, que sean **propias**: el equipo, la oficina,

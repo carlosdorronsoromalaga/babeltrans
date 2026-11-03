@@ -173,3 +173,14 @@ portada se repetía la animación de entrada. Ahora:
 - Todo baja de arriba abajo como una ola, en algo más de un segundo. Lo que
   queda fuera de la vista cambia de golpe, sin que nadie lo vea.
 - Con «reducir movimiento», el cambio es instantáneo, también sin recargar.
+
+## v9 (03/11/2026): San Jerónimo
+
+*San Jerónimo en su estudio* de Antonello da Messina (h. 1475, National
+Gallery de Londres, dominio público) en la página de Traducción. Jerónimo
+tradujo la Biblia al latín y es el patrón de los traductores; el pie lo dice,
+porque no todo el mundo lo sabe. Se eligió frente al Caravaggio (la calavera
+no encaja en la web de un negocio) y el grabado de Durero. Es vertical: va a
+la derecha con el texto alrededor, como una lámina en un libro, y en el móvil
+centrado. Junto a ella, las listas van alineadas a la izquierda: en la columna
+estrecha, justificadas abrían huecos.

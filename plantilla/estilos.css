@@ -274,6 +274,15 @@ p { margin: 0 0 1em; }
 .cuadro figcaption i { font-family: var(--serif); font-size: 15px; }
 .cuadro-portada { grid-column: 2; margin-top: 48px; max-width: 900px; }
 .cuadro-pagina { margin: 0 0 2.2em; }
+/* Lámina vertical (San Jerónimo): a la derecha, con el texto alrededor */
+.cuadro-lamina { float: right; width: 270px; margin: .35em 0 1.4em 2em; }
+.cuadro-lamina figcaption { text-align: left; hyphens: manual; }
+/* Al lado de la lámina la columna se estrecha y las listas de frases cortas,
+   justificadas, abrían huecos («Económicos:      informes,»): a la izquierda */
+.cuadro-lamina ~ ul li { text-align: left; }
+@media (max-width: 640px) {
+  .cuadro-lamina { float: none; width: 75%; margin: 0 auto 2em; }
+}
 
 /* ---------- páginas interiores ---------- */
 .titulo-pagina { padding: 64px 0 44px; border-bottom: 1px solid var(--linea); }

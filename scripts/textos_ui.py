@@ -384,3 +384,25 @@ CUADRO = {
     "nl": ("Pieter Bruegel de Oude, <i>De toren van Babel</i> (1563). Kunsthistorisches Museum, Wenen.",
            "De toren van Babel van Bruegel: een enorme, half gebouwde toren bij een haven, met arbeiders en schepen."),
 }
+
+# San Jerónimo, patrón de los traductores, en la página de Traducción. Lo
+# propuso Carlos y le gustó a Martijn (03/11/2026). El pie dice quién es:
+# no todo el mundo lo sabe y es la razón de que esté ahí.
+JERONIMO = {
+    "es": ("Antonello da Messina, <i>San Jerónimo en su estudio</i> (h. 1475). National Gallery, Londres. "
+           "Jerónimo tradujo la Biblia al latín y es el patrón de los traductores.",
+           "San Jerónimo, vestido de rojo, lee sentado en su estudio, un mueble de madera lleno de libros "
+           "dentro de una gran sala de piedra."),
+    "en": ("Antonello da Messina, <i>Saint Jerome in his Study</i> (c. 1475). National Gallery, London. "
+           "Jerome translated the Bible into Latin and is the patron saint of translators.",
+           "Saint Jerome, dressed in red, sits reading in his study, a wooden alcove full of books "
+           "inside a large stone hall."),
+    "de": ("Antonello da Messina, <i>Der heilige Hieronymus im Gehäus</i> (um 1475). National Gallery, London. "
+           "Hieronymus übersetzte die Bibel ins Lateinische und ist der Schutzpatron der Übersetzer.",
+           "Der heilige Hieronymus, in Rot gekleidet, sitzt lesend in seinem Studierzimmer, einem hölzernen "
+           "Gehäus voller Bücher in einer großen Steinhalle."),
+    "nl": ("Antonello da Messina, <i>Sint-Hiëronymus in zijn studeervertrek</i> (ca. 1475). National Gallery, Londen. "
+           "Hiëronymus vertaalde de Bijbel in het Latijn en is de beschermheilige van vertalers.",
+           "Sint-Hiëronymus, in het rood gekleed, zit te lezen in zijn studeervertrek, een houten nis vol boeken "
+           "in een grote stenen hal."),
+}

@@ -10,3 +10,7 @@ torre-babel-*.jpg: Pieter Bruegel el Viejo, «La Torre de Babel» (1563),
   Kunsthistorisches Museum de Viena. Dominio público. Fuente: Wikimedia Commons,
   «Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project -
   edited.jpg» (niveles ajustados por Wikimedia). Reducida a 1600 y 900 px.
+san-jeronimo-*.jpg: Antonello da Messina, «San Jerónimo en su estudio» (h. 1475),
+  National Gallery de Londres. Dominio público. Fuente: Wikimedia Commons,
+  «Antonello da Messina - St Jerome in his study - National Gallery London.jpg».
+  Reducida a 1000 y 600 px de ancho.

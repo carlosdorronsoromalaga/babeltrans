@@ -17,7 +17,8 @@ import datetime, html, json, os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS,  # noqa: E402
                        INFO_FORM, LEMA, PALABRAS_TORRE, NOMBRES_IDIOMA, UI5, SEO,
-                       NOMBRE_EMPRESA, ETIQUETAS, ETIQUETAS_VACIAS, NOMBRES_PAGINA, CUADRO)
+                       NOMBRE_EMPRESA, ETIQUETAS, ETIQUETAS_VACIAS, NOMBRES_PAGINA, CUADRO,
+                       JERONIMO)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -252,6 +253,17 @@ def cuadro(lang, clase=""):
     return (f'<figure class="cuadro {clase}"><img src="/img/torre-babel-1600.jpg" '
             f'srcset="/img/torre-babel-900.jpg 900w, /img/torre-babel-1600.jpg 1600w" '
             f'sizes="(max-width: 820px) 100vw, 900px" width="1600" height="1171" loading="lazy" decoding="async" '
+            f'alt="{esc(alt)}"><figcaption>{pie}</figcaption></figure>')
+
+
+def cuadro_jeronimo(lang):
+    """«San Jerónimo en su estudio» de Antonello da Messina (h. 1475), dominio
+    público. Es vertical: va flotando a la derecha y el texto lo rodea, como
+    una lámina en un libro (en el móvil, centrado y sin rodear)."""
+    pie, alt = JERONIMO[lang]
+    return (f'<figure class="cuadro cuadro-lamina"><img src="/img/san-jeronimo-1000.jpg" '
+            f'srcset="/img/san-jeronimo-600.jpg 600w, /img/san-jeronimo-1000.jpg 1000w" '
+            f'sizes="(max-width: 640px) 75vw, 270px" width="1000" height="1268" loading="lazy" decoding="async" '
             f'alt="{esc(alt)}"><figcaption>{pie}</figcaption></figure>')
 
 
@@ -627,6 +639,7 @@ def pag_articulo(todo, lang, pid):
   <aside class="margen">{"" if legal else notas_margen(d, pid)}</aside>
   <article class="prosa{" prosa-legal" if legal else ""}">
 {cuadro(lang, "cuadro-pagina") if pid == "quienes" else ""}
+{cuadro_jeronimo(lang) if pid == "traduccion" else ""}
 {bloques_html(p["bloques"], lang, pid)}
 {modismo(d, lang) if pid == "traduccion" else ""}
   </article>
@@ -754,7 +767,12 @@ def datos_estructurados(todo, lang, pid):
     if tel:
         negocio["telephone"] = tel
     if EMPRESA.get("domicilio"):
-        negocio["address"]["streetAddress"] = EMPRESA["domicilio"]
+        # «C/ Luis Martínez Feduchi 74, 28055 Madrid»: calle y código postal
+        # por separado, que es como los lee Google
+        m = re.match(r"(.+?),\s*(\d{5})\b", EMPRESA["domicilio"])
+        negocio["address"]["streetAddress"] = m.group(1) if m else EMPRESA["domicilio"]
+        if m:
+            negocio["address"]["postalCode"] = m.group(2)
     grafo = [negocio, {"@type": "WebSite", "@id": DOMINIO + "/#web", "url": DOMINIO + "/",
                        "name": "Babel Translations", "inLanguage": IDIOMAS, "publisher": {"@id": DOMINIO + "/#negocio"}}]
     if pid in SERVICIOS_SCHEMA:
