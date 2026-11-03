@@ -115,11 +115,10 @@ p { margin: 0 0 1em; }
 .bandera { width: 27px; height: 18px; display: block; border-radius: 1.5px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .25); }
 .banderas-menu { display: none; }
 
-/* Sin animación entre páginas: el cambio de idioma ya se ha visto en la página
-   vieja (palabras transformándose); así la nueva aparece sin parpadeo. */
+/* Entre páginas, sin parpadeo blanco ni animación. El cambio de idioma no pasa
+   por aquí: se traduce en el sitio, sin recargar (web.js). */
 @view-transition { navigation: auto; }
 ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
-.traduciendo-texto { color: var(--azul); }
 
 /* ---------- botones y enlaces ---------- */
 .boton { display: inline-block; padding: 14px 24px; border-radius: 3px; background: var(--azul); color: #fff; border: 1px solid var(--azul); font: 500 16px/1.2 var(--sans); text-decoration: none; cursor: pointer; transition: background .15s; }

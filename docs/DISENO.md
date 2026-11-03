@@ -151,3 +151,25 @@ un libro, y siempre con guionado automático en el idioma de cada página: sin
 guiones, la justificación abre huecos entre palabras, sobre todo en el móvil y
 en las columnas estrechas. Títulos, menú, botones y formularios siguen a la
 izquierda, que es lo que pide la tipografía.
+
+## v8 (03/11/2026): el cambio de idioma, en el sitio y sin recargar
+
+La transformación de la v6 se veía brusca (Carlos): las letras revueltas
+parpadeaban, al acabar la página se recargaba y volvía arriba del todo, y en la
+portada se repetía la animación de entrada. Ahora:
+
+- **La página se traduce donde está, sin recargarse.** Se descarga la versión
+  en el otro idioma y se compara pieza a pieza con la que se ve. Al acabar se
+  cambian la dirección (con el historial, así que «atrás» funciona), el título
+  y los datos para buscadores. El scroll, los globos y el menú siguen igual.
+  Comprobado: el resultado es idéntico, texto y HTML, a la página cargada de
+  cero (portada es → en → nl → es, «Quiénes somos» es → en → de).
+- **Las palabras se funden**: la vieja se desenfoca y se desvanece; la nueva
+  aparece desenfocada en el azul tinta de los enlaces y se asienta en su
+  color, una tras otra. Nada de letras al azar.
+- **Donde las dos versiones no tienen la misma forma** (un párrafo que solo
+  existe en un idioma, la edición paralela, que cambia de orden), el bloque
+  entero se funde y su altura se ajusta deslizándose, sin saltos.
+- Todo baja de arriba abajo como una ola, en algo más de un segundo. Lo que
+  queda fuera de la vista cambia de golpe, sin que nadie lo vea.
+- Con «reducir movimiento», el cambio es instantáneo, también sin recargar.
