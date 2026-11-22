@@ -44,7 +44,11 @@ Sus dos preguntas:
 - **«Fotografías: faltan, ¿cómo hacemos?»** (24/10/2026: puesto ya *La Torre de
   Babel* de Bruegel, dominio público, en «Quiénes somos». 03/11/2026: a Martijn
   le gustó la idea de los cuadros y se puso *San Jerónimo en su estudio* de
-  Antonello da Messina en «Traducción»; dice que quizá tenga fotos propias) La web está diseñada para no
+  Antonello da Messina en «Traducción»; dice que quizá tenga fotos propias.
+  22/11/2026: Martijn pidió volver a las fotos de la web vieja; como no
+  gustaban, Carlos eligió 8 equivalentes de licencia libre y sin caras
+  reconocibles, una por página, ver `docs/DISENO.md` v9 y
+  `plantilla/img/CREDITOS.txt`) La web está diseñada para no
   necesitarlas: el protagonista es el texto, como en un libro. Las fotos de la
   web vieja eran de banco de imágenes, de licencia dudosa, y no se han
   reutilizado. Si quieren fotos, que sean **propias**: el equipo, la oficina,

@@ -184,3 +184,33 @@ no encaja en la web de un negocio) y el grabado de Durero. Es vertical: va a
 la derecha con el texto alrededor, como una lámina en un libro, y en el móvil
 centrado. Junto a ella, las listas van alineadas a la izquierda: en la columna
 estrecha, justificadas abrían huecos.
+
+## v9 (22/11/2026): fotos
+
+Martijn pidió volver a poner las fotos de la web vieja (pluma, reunión,
+apretón de manos, libros, teclado, grupo saltando, velero, piedras, ola). A
+él y a Carlos no les gustaban: eran de banco de imágenes y de licencia
+dudosa. Se buscaron equivalentes con los mismos temas, más en la línea de la
+web (luz natural, papel, tinta, nada de poses), y Carlos eligió una por tema
+en una página comparativa (`propuestas/fotos/`, fuera de git):
+
+| Página | Foto |
+|---|---|
+| Portada (bajo la lista de especialidades) | Hokusai, *La gran ola* (CC0) |
+| Quiénes somos (al final; arriba sigue Bruegel) | Velero en mar en calma |
+| Nuestros colaboradores | Mesa de trabajo con notas, sin caras |
+| Trabaja con nosotros | Cuaderno y portátil |
+| Servicios | Piedras distintas en equilibrio (vertical, estrecha) |
+| Interpretación | Consola y micro desde una cabina del Parlamento Europeo |
+| Metodología | Diccionario bilingüe con mapa |
+| Solicite presupuesto | Pluma sobre manuscrito |
+
+- **Sin caras reconocibles.** Se descartaron las fotos con personas: la
+  licencia de la foto no incluye el permiso de quien sale (derecho a la propia
+  imagen, LO 1/1982).
+- **El pie siempre cita** autor y fuente, aunque Unsplash no lo exija; la de la
+  cabina es CC BY-SA 4.0 y ahí es obligatorio (autor y licencia enlazada).
+- Estilo: `.cuadro-pagina` (arriba del texto, como Bruegel) o `.cuadro-suelto`
+  (debajo del contenido, con aire); `.cuadro-estrecho` para la vertical. Datos
+  en `FOTOS` y textos en `FOTOS_TXT` (`scripts/textos_ui.py`).
+

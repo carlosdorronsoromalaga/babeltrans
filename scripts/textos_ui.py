@@ -406,3 +406,92 @@ JERONIMO = {
            "Sint-Hiëronymus, in het rood gekleed, zit te lezen in zijn studeervertrek, een houten nis vol boeken "
            "in een grote stenen hal."),
 }
+
+# ---------------------------------------------------------------- v9
+# Fotos (22/11/2026). Martijn pidió volver a poner fotos como las de la web
+# vieja, pero ni a él ni a Carlos les gustaban esas (banco de imágenes, de
+# licencia dudosa). Carlos eligió estas en propuestas/fotos/ (fuera de git):
+# mismos temas, ninguna con caras reconocibles (la licencia de la foto no
+# cubre el derecho a la propia imagen de quien sale). Origen y licencia de
+# cada una en plantilla/img/CREDITOS.txt.
+#   clave: (archivo, (ancho pequeño, ancho grande), alto del grande, página,
+#           fuente o None, licencia o None)
+_UNSPLASH = "https://unsplash.com/photos/"
+_COMMONS = "https://commons.wikimedia.org/wiki/File:"
+FOTOS = {
+    "velero":      ("velero", (900, 1600), 1199, "quienes", "Daniel Stenholm", _UNSPLASH + "ZGYWhxaiMOc", None),
+    "mesa":        ("mesa", (900, 1600), 918, "colaboradores", "Dylan Gillis", _UNSPLASH + "KdeqA3aTnBY", None),
+    "cuaderno":    ("cuaderno", (900, 1600), 1070, "trabaja", "Vadim Bozhko", _UNSPLASH + "lbO1iCnbTW0", None),
+    "piedras":     ("piedras", (600, 1000), 1332, "servicios", "Riccardo Ginevri", _UNSPLASH + "hUjSO5dZA_E", None),
+    "cabina":      ("cabina", (900, 1600), 1200, "interpretacion", "FrDr",
+                    _COMMONS + "Interpreting_booths_European_parliament_Strasbourg_08.jpg", "by-sa/4.0"),
+    "diccionario": ("diccionario", (900, 1600), 1066, "metodologia", "Waldemar Brandt", _UNSPLASH + "U3Ptj3jafX8", None),
+    "pluma":       ("pluma", (900, 1600), 1054, "presupuesto", "Digital Content Writers India",
+                    _UNSPLASH + "y3Tl-cbU-CU", None),
+    "ola":         ("ola", (900, 1600), 1105, "home", None, None, None),
+}
+
+# Pie de las fotos: «Foto: autor (Unsplash)» o, si la licencia obliga a
+# citar, autor + licencia enlazada (CC BY-SA). El texto que va delante del
+# crédito es opcional y explica qué se ve cuando no es evidente.
+FOTO_PALABRA = {"es": "Foto", "en": "Photo", "de": "Foto", "nl": "Foto"}
+FOTOS_TXT = {
+    "velero": {
+        "es": ("", "Un velero pequeño en un mar en calma, visto desde arriba, con el horizonte al fondo."),
+        "en": ("", "A small sailing boat on a calm sea, seen from above, with the horizon behind."),
+        "de": ("", "Ein kleines Segelboot auf ruhiger See, von oben gesehen, im Hintergrund der Horizont."),
+        "nl": ("", "Een kleine zeilboot op een kalme zee, van bovenaf gezien, met de horizon op de achtergrond."),
+    },
+    "mesa": {
+        "es": ("", "Varias personas trabajan en una mesa larga de madera, con cuadernos y bolígrafos, a la luz de una ventana."),
+        "en": ("", "Several people working at a long wooden table with notebooks and pens, in light from a window."),
+        "de": ("", "Mehrere Menschen arbeiten an einem langen Holztisch mit Notizbüchern und Stiften im Licht eines Fensters."),
+        "nl": ("", "Enkele mensen werken aan een lange houten tafel met notitieboeken en pennen, in het licht van een raam."),
+    },
+    "cuaderno": {
+        "es": ("", "Una persona toma notas en un cuaderno junto a un portátil, en una mesa oscura."),
+        "en": ("", "A person takes notes in a notebook next to a laptop on a dark desk."),
+        "de": ("", "Eine Person macht sich Notizen in einem Heft neben einem Laptop auf einem dunklen Tisch."),
+        "nl": ("", "Iemand maakt aantekeningen in een schrift naast een laptop op een donker bureau."),
+    },
+    "piedras": {
+        "es": ("Piedras distintas, en equilibrio.", "Cinco cantos rodados de colores distintos, uno rojo, apilados en equilibrio."),
+        "en": ("Different stones, in balance.", "Five pebbles of different colours, one of them red, stacked in balance."),
+        "de": ("Verschiedene Steine im Gleichgewicht.", "Fünf verschiedenfarbige Kieselsteine, einer davon rot, im Gleichgewicht gestapelt."),
+        "nl": ("Verschillende stenen, in evenwicht.", "Vijf kiezels in verschillende kleuren, één ervan rood, in evenwicht opgestapeld."),
+    },
+    "cabina": {
+        "es": ("Desde una cabina de interpretación del Parlamento Europeo, en Estrasburgo.",
+               "Micrófono y consola de un intérprete en su cabina, con el hemiciclo vacío al fondo."),
+        "en": ("From an interpreting booth at the European Parliament in Strasbourg.",
+               "An interpreter’s microphone and console in the booth, with the empty chamber beyond."),
+        "de": ("Aus einer Dolmetschkabine des Europäischen Parlaments in Straßburg.",
+               "Mikrofon und Pult eines Dolmetschers in der Kabine, dahinter der leere Plenarsaal."),
+        "nl": ("Vanuit een tolkcabine van het Europees Parlement in Straatsburg.",
+               "Microfoon en tolkenpaneel in de cabine, met de lege vergaderzaal op de achtergrond."),
+    },
+    "diccionario": {
+        "es": ("", "Un diccionario bilingüe abierto junto a un mapa de Inglaterra."),
+        "en": ("", "An open bilingual dictionary next to a map of England."),
+        "de": ("", "Ein aufgeschlagenes zweisprachiges Wörterbuch neben einer Karte von England."),
+        "nl": ("", "Een open tweetalig woordenboek naast een kaart van Engeland."),
+    },
+    "pluma": {
+        "es": ("", "Una pluma estilográfica sobre una hoja escrita a mano con letra antigua."),
+        "en": ("", "A fountain pen resting on a page of old-fashioned handwriting."),
+        "de": ("", "Ein Füllfederhalter auf einem handgeschriebenen Blatt in alter Schrift."),
+        "nl": ("", "Een vulpen op een met de hand beschreven blad in ouderwets handschrift."),
+    },
+    # La ola es un grabado de dominio público (CC0 del Metropolitan): pie como
+    # el de los otros cuadros, sin «Foto:».
+    "ola": {
+        "es": ("Katsushika Hokusai, <i>La gran ola de Kanagawa</i> (h. 1831). Metropolitan Museum of Art, Nueva York.",
+               "La gran ola de Hokusai: una ola enorme de espuma blanca a punto de romper sobre tres barcas, con el monte Fuji al fondo."),
+        "en": ("Katsushika Hokusai, <i>The Great Wave off Kanagawa</i> (c. 1831). Metropolitan Museum of Art, New York.",
+               "Hokusai’s Great Wave: a huge wave with white foam about to break over three boats, with Mount Fuji in the distance."),
+        "de": ("Katsushika Hokusai, <i>Die große Welle vor Kanagawa</i> (um 1831). Metropolitan Museum of Art, New York.",
+               "Hokusais Große Welle: eine riesige Welle mit weißer Gischt kurz vor dem Brechen über drei Booten, im Hintergrund der Fuji."),
+        "nl": ("Katsushika Hokusai, <i>De grote golf bij Kanagawa</i> (ca. 1831). Metropolitan Museum of Art, New York.",
+               "De grote golf van Hokusai: een enorme golf met wit schuim die op het punt staat te breken boven drie boten, met de Fuji op de achtergrond."),
+    },
+}

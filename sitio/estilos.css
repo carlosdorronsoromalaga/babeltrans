@@ -280,8 +280,13 @@ p { margin: 0 0 1em; }
 /* Al lado de la lámina la columna se estrecha y las listas de frases cortas,
    justificadas, abrían huecos («Económicos:      informes,»): a la izquierda */
 .cuadro-lamina ~ ul li { text-align: left; }
+/* Fotos sueltas (v9): debajo del contenido, con aire; la vertical, estrecha */
+.cuadro-suelto { clear: both; margin-top: 56px; max-width: 900px; }
+.cuadro-estrecho { max-width: 340px; }
 @media (max-width: 640px) {
   .cuadro-lamina { float: none; width: 75%; margin: 0 auto 2em; }
+  .cuadro-suelto { margin-top: 40px; }
+  .cuadro-estrecho { max-width: 75%; }
 }
 
 /* ---------- páginas interiores ---------- */

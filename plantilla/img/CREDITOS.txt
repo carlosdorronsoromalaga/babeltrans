@@ -14,3 +14,32 @@ san-jeronimo-*.jpg: Antonello da Messina, «San Jerónimo en su estudio» (h. 14
   National Gallery de Londres. Dominio público. Fuente: Wikimedia Commons,
   «Antonello da Messina - St Jerome in his study - National Gallery London.jpg».
   Reducida a 1000 y 600 px de ancho.
+
+Fotos (22/11/2026). Ninguna con personas reconocibles: la licencia cubre la foto,
+no el derecho a la propia imagen de quien sale. Descargadas a 2000 px o más,
+reducidas a dos anchos y guardadas sin metadatos.
+
+Licencia Unsplash (https://unsplash.com/license): uso comercial libre, sin
+obligación de citar (se cita igual en el pie). Solo prohíbe vender las fotos tal
+cual o montar con ellas otro banco de imágenes. Todas son de la sección gratuita
+(no Unsplash+).
+velero-*.jpg: Daniel Stenholm, Unsplash, https://unsplash.com/photos/ZGYWhxaiMOc
+  (velero frente a Halmstad, Suecia). «Quiénes somos», al final.
+mesa-*.jpg: Dylan Gillis (@mainermedia), Unsplash, https://unsplash.com/photos/KdeqA3aTnBY
+  Recortado el 14 % de arriba para que no se vean las caras. «Nuestros colaboradores».
+cuaderno-*.jpg: Vadim Bozhko (@bozhstudio), Unsplash, https://unsplash.com/photos/lbO1iCnbTW0
+  «Trabaja con nosotros».
+piedras-*.jpg: Riccardo Ginevri (@doctorgyprons), Unsplash, https://unsplash.com/photos/hUjSO5dZA_E
+  Vertical, 1000 y 600 px. «Servicios».
+diccionario-*.jpg: Waldemar Brandt, Unsplash, https://unsplash.com/photos/U3Ptj3jafX8
+  «Metodología y herramientas».
+pluma-*.jpg: Digital Content Writers India, Unsplash, https://unsplash.com/photos/y3Tl-cbU-CU
+  «Solicite presupuesto».
+
+cabina-*.jpg: FrDr, CC BY-SA 4.0, Wikimedia Commons,
+  «Interpreting booths European parliament Strasbourg 08.jpg». OBLIGA a citar autor
+  y licencia con enlace (va en el pie, en los 4 idiomas); las versiones reducidas
+  quedan con la misma licencia. «Interpretación».
+ola-*.jpg: Katsushika Hokusai, «La gran ola de Kanagawa» (h. 1831), Metropolitan
+  Museum of Art (DP141063), CC0 / dominio público. Fuente: Wikimedia Commons.
+  Portada, debajo de la lista de especialidades.

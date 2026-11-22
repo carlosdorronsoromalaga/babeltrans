@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS,  # noqa: E402
                        INFO_FORM, LEMA, PALABRAS_TORRE, NOMBRES_IDIOMA, UI5, SEO,
                        NOMBRE_EMPRESA, ETIQUETAS, ETIQUETAS_VACIAS, NOMBRES_PAGINA, CUADRO,
-                       JERONIMO)
+                       JERONIMO, FOTOS, FOTOS_TXT, FOTO_PALABRA)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -264,6 +264,30 @@ def cuadro_jeronimo(lang):
     return (f'<figure class="cuadro cuadro-lamina"><img src="/img/san-jeronimo-1000.jpg" '
             f'srcset="/img/san-jeronimo-600.jpg 600w, /img/san-jeronimo-1000.jpg 1000w" '
             f'sizes="(max-width: 640px) 75vw, 270px" width="1000" height="1268" loading="lazy" decoding="async" '
+            f'alt="{esc(alt)}"><figcaption>{pie}</figcaption></figure>')
+
+
+def foto(lang, clave, clase="cuadro-pagina"):
+    """Una de las fotos de FOTOS (v9). Pie: qué se ve si hace falta y el
+    crédito; si la licencia es CC BY-SA, autor, licencia enlazada y fuente,
+    que es lo que obliga la licencia."""
+    archivo, (peq, gra), alto, _pag, autor, fuente, lic = FOTOS[clave]
+    txt, alt = FOTOS_TXT[clave][lang]
+    if autor:
+        quien = f'<a href="{fuente}">{esc(autor)}</a>'
+        if lic:
+            nombre = "CC " + lic.split("/")[0].upper() + " " + lic.split("/")[1]
+            credito = (f'{FOTO_PALABRA[lang]}: {quien}, <a rel="license" '
+                       f'href="https://creativecommons.org/licenses/{lic}/deed.{lang}">{nombre}</a>, Wikimedia Commons.')
+        else:
+            credito = f"{FOTO_PALABRA[lang]}: {quien} / Unsplash."
+        pie = f"{txt} {credito}" if txt else credito
+    else:
+        pie = txt
+    tam = "(max-width: 640px) 75vw, 340px" if peq < 900 else "(max-width: 820px) 100vw, 900px"
+    return (f'<figure class="cuadro {clase}"><img src="/img/{archivo}-{gra}.jpg" '
+            f'srcset="/img/{archivo}-{peq}.jpg {peq}w, /img/{archivo}-{gra}.jpg {gra}w" '
+            f'sizes="{tam}" width="{gra}" height="{alto}" loading="lazy" decoding="async" '
             f'alt="{esc(alt)}"><figcaption>{pie}</figcaption></figure>')
 
 
@@ -542,6 +566,11 @@ def torre(lang):
 
 # --------------------------------------------------------------- tipos de página
 
+# Dónde va cada foto (v9). En «Quiénes somos» el velero va al final: arriba
+# sigue La Torre de Babel.
+FOTO_ARRIBA = {"colaboradores": "mesa", "interpretacion": "cabina", "metodologia": "diccionario"}
+FOTO_HUB = {"servicios": "piedras", "presupuesto": "pluma", "trabaja": "cuaderno"}
+
 HUBS = {"servicios": ["traduccion", "interpretacion"],
         "presupuesto": ["presupuesto-traduccion", "presupuesto-interpretacion"],
         "trabaja": ["como-traductor", "como-interprete"]}
@@ -562,7 +591,8 @@ def pag_hub(todo, lang, pid):
     cuerpo = cabecera_pagina(d, pid, titulo) + f"""
 <section class="env libro cuerpo-pagina">
   <aside class="margen">{notas_margen(d, pid, pid != "presupuesto")}</aside>
-  <div>{dentro}</div>
+  <div>{dentro}
+  {foto(lang, FOTO_HUB[pid], "cuadro-suelto" + (" cuadro-estrecho" if pid == "servicios" else ""))}</div>
 </section>"""
     if pid == "servicios":
         desc = SEO[lang]["home"][1]
@@ -640,8 +670,10 @@ def pag_articulo(todo, lang, pid):
   <article class="prosa{" prosa-legal" if legal else ""}">
 {cuadro(lang, "cuadro-pagina") if pid == "quienes" else ""}
 {cuadro_jeronimo(lang) if pid == "traduccion" else ""}
+{foto(lang, FOTO_ARRIBA[pid]) if pid in FOTO_ARRIBA else ""}
 {bloques_html(p["bloques"], lang, pid)}
 {modismo(d, lang) if pid == "traduccion" else ""}
+{foto(lang, "velero", "cuadro-suelto") if pid == "quienes" else ""}
   </article>
 </section>"""
     return pagina(todo, lang, pid, cuerpo, *seo(lang, pid, f"{retoca(titulo)} · Babel Translations",
@@ -869,6 +901,7 @@ def pag_home(todo, lang):
     <div>
       {f'<h2 class="vh">{esc(intro_lista)}</h2>' if intro_lista else ''}
       <ul class="campos-lista">{campos}</ul>
+      {foto(lang, "ola", "cuadro-suelto")}
     </div>
   </div>
 </section>
