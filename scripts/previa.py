@@ -41,6 +41,9 @@ def main():
             t = open(p, encoding="utf-8").read()
             # Rutas absolutas internas -> bajo /babeltrans (no toca //, https:, mailto:)
             t = re.sub(r'((?:href|src|action|content)=")/(?!/)', rf"\1{BASE}/", t)
+            # srcset lleva varias rutas separadas por comas: prefijar cada una
+            t = re.sub(r'srcset="([^"]*)"',
+                       lambda m: 'srcset="' + re.sub(r'(^|,\s*)/(?!/)', rf"\1{BASE}/", m.group(1)) + '"', t)
             t = t.replace('<meta name="robots" content="noindex, follow">', "")
             t = t.replace("<head>", '<head>\n<meta name="robots" content="noindex, nofollow">', 1)
             t = t.replace("</body>", AVISO_FORM + "\n</body>", 1)
