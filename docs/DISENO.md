@@ -200,7 +200,6 @@ en una página comparativa (`propuestas/fotos/`, fuera de git):
 | Quiénes somos (al final; arriba sigue Bruegel) | Velero en mar en calma |
 | Nuestros colaboradores | Mesa de trabajo con notas, sin caras |
 | Trabaja con nosotros | Cuaderno y portátil |
-| Servicios | Piedras distintas en equilibrio (vertical, estrecha) |
 | Interpretación | Consola y micro desde una cabina del Parlamento Europeo |
 | Metodología | Diccionario bilingüe con mapa |
 | Solicite presupuesto | Pluma sobre manuscrito |
@@ -211,7 +210,7 @@ en una página comparativa (`propuestas/fotos/`, fuera de git):
 - **El pie siempre cita** autor y fuente, aunque Unsplash no lo exija; la de la
   cabina es CC BY-SA 4.0 y ahí es obligatorio (autor y licencia enlazada).
 - Estilo: `.cuadro-pagina` (arriba del texto, como Bruegel) o `.cuadro-suelto`
-  (debajo del contenido, con aire); `.cuadro-estrecho` para la vertical. Datos
+  (debajo del contenido, con aire). Datos
   en `FOTOS` y textos en `FOTOS_TXT` (`scripts/textos_ui.py`).
 
 
@@ -223,7 +222,8 @@ en una página comparativa (`propuestas/fotos/`, fuera de git):
   cita por cortesía.
 - **Portada:** la ola de Hokusai pasa al sitio de Bruegel (bloque «Quiénes
   somos» de la portada). Bruegel queda solo en la página «Quiénes somos».
-- **Servicios:** las piedras, centradas.
+- **Servicios:** sin foto. Las piedras se quitaron: no aportaban y,
+  vertical y sola bajo las dos columnas, quedaba mal.
 - **Sin justificar** en columnas estrechas o letra grande: listas de
   servicios de la portada, definiciones, herramientas, entradilla de
   Metodología, notas del margen y lista de créditos. Abrían huecos.

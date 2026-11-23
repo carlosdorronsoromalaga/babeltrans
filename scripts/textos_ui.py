@@ -422,7 +422,6 @@ FOTOS = {
     "velero":      ("velero", (900, 1600), 1199, "quienes", "Daniel Stenholm", _UNSPLASH + "ZGYWhxaiMOc", None),
     "mesa":        ("mesa", (900, 1600), 918, "colaboradores", "Dylan Gillis", _UNSPLASH + "KdeqA3aTnBY", None),
     "cuaderno":    ("cuaderno", (900, 1600), 1070, "trabaja", "Vadim Bozhko", _UNSPLASH + "lbO1iCnbTW0", None),
-    "piedras":     ("piedras", (600, 1000), 1332, "servicios", "Riccardo Ginevri", _UNSPLASH + "hUjSO5dZA_E", None),
     "cabina":      ("cabina", (900, 1600), 1200, "interpretacion", "FrDr",
                     _COMMONS + "Interpreting_booths_European_parliament_Strasbourg_08.jpg", "by-sa/4.0"),
     "diccionario": ("diccionario", (900, 1600), 1066, "metodologia", "Waldemar Brandt", _UNSPLASH + "U3Ptj3jafX8", None),
@@ -453,12 +452,6 @@ FOTOS_TXT = {
         "en": ("", "A person takes notes in a notebook next to a laptop on a dark desk."),
         "de": ("", "Eine Person macht sich Notizen in einem Heft neben einem Laptop auf einem dunklen Tisch."),
         "nl": ("", "Iemand maakt aantekeningen in een schrift naast een laptop op een donker bureau."),
-    },
-    "piedras": {
-        "es": ("Piedras distintas, en equilibrio.", "Cinco cantos rodados de colores distintos, uno rojo, apilados en equilibrio."),
-        "en": ("Different stones, in balance.", "Five pebbles of different colours, one of them red, stacked in balance."),
-        "de": ("Verschiedene Steine im Gleichgewicht.", "Fünf verschiedenfarbige Kieselsteine, einer davon rot, im Gleichgewicht gestapelt."),
-        "nl": ("Verschillende stenen, in evenwicht.", "Vijf kiezels in verschillende kleuren, één ervan rood, in evenwicht opgestapeld."),
     },
     "cabina": {
         "es": ("Desde una cabina de interpretación del Parlamento Europeo, en Estrasburgo.",

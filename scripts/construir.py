@@ -557,7 +557,7 @@ def torre(lang):
 # Dónde va cada foto (v9). En «Quiénes somos» el velero va al final: arriba
 # sigue La Torre de Babel.
 FOTO_ARRIBA = {"colaboradores": "mesa", "interpretacion": "cabina", "metodologia": "diccionario"}
-FOTO_HUB = {"servicios": "piedras", "presupuesto": "pluma", "trabaja": "cuaderno"}
+FOTO_HUB = {"presupuesto": "pluma", "trabaja": "cuaderno"}
 
 HUBS = {"servicios": ["traduccion", "interpretacion"],
         "presupuesto": ["presupuesto-traduccion", "presupuesto-interpretacion"],
@@ -580,7 +580,7 @@ def pag_hub(todo, lang, pid):
 <section class="env libro cuerpo-pagina">
   <aside class="margen">{notas_margen(d, pid, pid != "presupuesto")}</aside>
   <div>{dentro}
-  {foto(lang, FOTO_HUB[pid], "cuadro-suelto" + (" cuadro-estrecho" if pid == "servicios" else ""))}</div>
+  {foto(lang, FOTO_HUB[pid], "cuadro-suelto") if pid in FOTO_HUB else ""}</div>
 </section>"""
     if pid == "servicios":
         desc = SEO[lang]["home"][1]

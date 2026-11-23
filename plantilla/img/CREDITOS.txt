@@ -29,8 +29,6 @@ mesa-*.jpg: Dylan Gillis (@mainermedia), Unsplash, https://unsplash.com/photos/K
   Recortado el 14 % de arriba para que no se vean las caras. «Nuestros colaboradores».
 cuaderno-*.jpg: Vadim Bozhko (@bozhstudio), Unsplash, https://unsplash.com/photos/lbO1iCnbTW0
   «Trabaja con nosotros».
-piedras-*.jpg: Riccardo Ginevri (@doctorgyprons), Unsplash, https://unsplash.com/photos/hUjSO5dZA_E
-  Vertical, 1000 y 600 px. «Servicios».
 diccionario-*.jpg: Waldemar Brandt, Unsplash, https://unsplash.com/photos/U3Ptj3jafX8
   «Metodología y herramientas».
 pluma-*.jpg: Digital Content Writers India, Unsplash, https://unsplash.com/photos/y3Tl-cbU-CU
