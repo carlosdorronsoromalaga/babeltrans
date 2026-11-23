@@ -214,3 +214,16 @@ en una página comparativa (`propuestas/fotos/`, fuera de git):
   (debajo del contenido, con aire); `.cuadro-estrecho` para la vertical. Datos
   en `FOTOS` y textos en `FOTOS_TXT` (`scripts/textos_ui.py`).
 
+
+### Ajustes del 23/11/2026 (Carlos)
+
+- **Sin pies de foto** en ninguna imagen. Todos los créditos van en el aviso
+  legal, sección «Créditos de las imágenes» (`creditos_imagenes()` en
+  `construir.py`). Es obligatorio para la cabina (CC BY-SA 4.0); el resto se
+  cita por cortesía.
+- **Portada:** la ola de Hokusai pasa al sitio de Bruegel (bloque «Quiénes
+  somos» de la portada). Bruegel queda solo en la página «Quiénes somos».
+- **Servicios:** las piedras, centradas.
+- **Sin justificar** en columnas estrechas o letra grande: listas de
+  servicios de la portada, definiciones, herramientas, entradilla de
+  Metodología, notas del margen y lista de créditos. Abrían huecos.

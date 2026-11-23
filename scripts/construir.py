@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from textos_ui import (UI, UI2, UI3, UI4, ENTRADAS, RETOQUES, ALINEACION, MODISMOS,  # noqa: E402
                        INFO_FORM, LEMA, PALABRAS_TORRE, NOMBRES_IDIOMA, UI5, SEO,
                        NOMBRE_EMPRESA, ETIQUETAS, ETIQUETAS_VACIAS, NOMBRES_PAGINA, CUADRO,
-                       JERONIMO, FOTOS, FOTOS_TXT, FOTO_PALABRA)
+                       JERONIMO, FOTOS, FOTOS_TXT)
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONT = os.path.join(RAIZ, "contenido")
@@ -249,46 +249,34 @@ def banderas(todo, lang, pid, sufijo, clase):
 
 def cuadro(lang, clase=""):
     """«La Torre de Babel» de Bruegel (1563), dominio público."""
-    pie, alt = CUADRO[lang]
+    alt = CUADRO[lang][1]
     return (f'<figure class="cuadro {clase}"><img src="/img/torre-babel-1600.jpg" '
             f'srcset="/img/torre-babel-900.jpg 900w, /img/torre-babel-1600.jpg 1600w" '
             f'sizes="(max-width: 820px) 100vw, 900px" width="1600" height="1171" loading="lazy" decoding="async" '
-            f'alt="{esc(alt)}"><figcaption>{pie}</figcaption></figure>')
+            f'alt="{esc(alt)}"></figure>')
 
 
 def cuadro_jeronimo(lang):
     """«San Jerónimo en su estudio» de Antonello da Messina (h. 1475), dominio
     público. Es vertical: va flotando a la derecha y el texto lo rodea, como
     una lámina en un libro (en el móvil, centrado y sin rodear)."""
-    pie, alt = JERONIMO[lang]
+    alt = JERONIMO[lang][1]
     return (f'<figure class="cuadro cuadro-lamina"><img src="/img/san-jeronimo-1000.jpg" '
             f'srcset="/img/san-jeronimo-600.jpg 600w, /img/san-jeronimo-1000.jpg 1000w" '
             f'sizes="(max-width: 640px) 75vw, 270px" width="1000" height="1268" loading="lazy" decoding="async" '
-            f'alt="{esc(alt)}"><figcaption>{pie}</figcaption></figure>')
+            f'alt="{esc(alt)}"></figure>')
 
 
 def foto(lang, clave, clase="cuadro-pagina"):
-    """Una de las fotos de FOTOS (v9). Pie: qué se ve si hace falta y el
-    crédito; si la licencia es CC BY-SA, autor, licencia enlazada y fuente,
-    que es lo que obliga la licencia."""
-    archivo, (peq, gra), alto, _pag, autor, fuente, lic = FOTOS[clave]
-    txt, alt = FOTOS_TXT[clave][lang]
-    if autor:
-        quien = f'<a href="{fuente}">{esc(autor)}</a>'
-        if lic:
-            nombre = "CC " + lic.split("/")[0].upper() + " " + lic.split("/")[1]
-            credito = (f'{FOTO_PALABRA[lang]}: {quien}, <a rel="license" '
-                       f'href="https://creativecommons.org/licenses/{lic}/deed.{lang}">{nombre}</a>, Wikimedia Commons.')
-        else:
-            credito = f"{FOTO_PALABRA[lang]}: {quien} / Unsplash."
-        pie = f"{txt} {credito}" if txt else credito
-    else:
-        pie = txt
+    """Una de las fotos de FOTOS (v9). Sin pie (Carlos, 23/11/2026): los
+    créditos van todos en el aviso legal, ver creditos_imagenes()."""
+    archivo, (peq, gra), alto, *_ = FOTOS[clave]
+    alt = FOTOS_TXT[clave][lang][1]
     tam = "(max-width: 640px) 75vw, 340px" if peq < 900 else "(max-width: 820px) 100vw, 900px"
     return (f'<figure class="cuadro {clase}"><img src="/img/{archivo}-{gra}.jpg" '
             f'srcset="/img/{archivo}-{peq}.jpg {peq}w, /img/{archivo}-{gra}.jpg {gra}w" '
             f'sizes="{tam}" width="{gra}" height="{alto}" loading="lazy" decoding="async" '
-            f'alt="{esc(alt)}"><figcaption>{pie}</figcaption></figure>')
+            f'alt="{esc(alt)}"></figure>')
 
 
 def pagina(todo, lang, pid, cuerpo, titulo, descripcion, clase="", indexar=True, extra_head=""):
@@ -636,6 +624,53 @@ def bloques_legal(bloques):
     return "\n".join(sal)
 
 
+CREDITOS_TXT = {
+    "es": ("Créditos de las imágenes", "Dominio público", "Licencia Unsplash",
+           "Las fotos y cuadros de esta web:"),
+    "en": ("Image credits", "Public domain", "Unsplash License",
+           "The photos and paintings on this website:"),
+    "de": ("Bildnachweis", "Gemeinfrei", "Unsplash-Lizenz",
+           "Die Fotos und Gemälde dieser Website:"),
+    "nl": ("Beeldverantwoording", "Publiek domein", "Unsplash-licentie",
+           "De foto's en schilderijen op deze website:"),
+}
+
+
+def sin_frase_final(t):
+    """«Autor, <i>Obra</i> (h. 1475). Museo, Ciudad. Comentario.» → sin el comentario."""
+    i = t.index(").") + 2
+    return t[:t.index(". ", i) + 1]
+
+
+def creditos_imagenes(d, lang):
+    """Créditos de todas las imágenes, al final del aviso legal (las fotos no
+    llevan pie). La de CC BY-SA obliga a citar autor y licencia con enlace."""
+    tit, dp, unsplash, intro = CREDITOS_TXT[lang]
+    cuadros = [
+        (CUADRO[lang][0], "quienes",
+         "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project_-_edited.jpg", dp),
+        (sin_frase_final(JERONIMO[lang][0]), "traduccion",
+         "https://commons.wikimedia.org/wiki/File:Antonello_da_Messina_-_St_Jerome_in_his_study_-_National_Gallery_London.jpg", dp),
+        (FOTOS_TXT["ola"][lang][0], "home",
+         "https://www.metmuseum.org/art/collection/search/45434", dp + " (CC0)"),
+    ]
+    items = []
+    for texto, pag, fuente, lic in cuadros:
+        items.append(f'{texto} <a href="{fuente}">{lic}</a>.')
+    for clave, (_a, _t, _h, pag, autor, fuente, lic) in FOTOS.items():
+        if not autor:
+            continue
+        if lic:
+            nombre = "CC " + lic.split("/")[0].upper() + " " + lic.split("/")[1]
+            items.append(f'{esc(nombre_pagina(d, pag))}: <a href="{fuente}">{esc(autor)}</a>, '
+                         f'<a rel="license" href="https://creativecommons.org/licenses/{lic}/deed.{lang}">{nombre}</a>, Wikimedia Commons.')
+        else:
+            items.append(f'{esc(nombre_pagina(d, pag))}: <a href="{fuente}">{esc(autor)}</a>, '
+                         f'<a href="https://unsplash.com/license">{unsplash}</a>.')
+    return (f'<h2>{tit}</h2>\n<p>{intro}</p>\n<ul class="lista creditos">'
+            + "".join(f"<li>{x}</li>" for x in items) + "</ul>")
+
+
 def pag_legal(todo, lang, pid):
     d = todo[lang]
     titulo, bloques = legal(lang, pid)
@@ -644,6 +679,7 @@ def pag_legal(todo, lang, pid):
   <aside class="margen"></aside>
   <article class="prosa prosa-legal">
 {bloques_legal(bloques)}
+{creditos_imagenes(d, lang) if pid == "aviso-legal" else ""}
   </article>
 </section>"""
     desc = next((sin_tags(c) for t, c in bloques if t == "p" and "PENDIENTE" not in c and len(sin_tags(c)) > 60), titulo)
@@ -901,7 +937,6 @@ def pag_home(todo, lang):
     <div>
       {f'<h2 class="vh">{esc(intro_lista)}</h2>' if intro_lista else ''}
       <ul class="campos-lista">{campos}</ul>
-      {foto(lang, "ola", "cuadro-suelto")}
     </div>
   </div>
 </section>
@@ -928,7 +963,7 @@ def pag_home(todo, lang):
       {f'<blockquote class="cita"><p>{esc(cita_q)}</p></blockquote>' if cita_q else ''}
     </div>
     <div class="margen"></div>
-    {cuadro(lang, "cuadro-portada")}
+    {foto(lang, "ola", "cuadro-portada")}
   </div>
 </section>
 

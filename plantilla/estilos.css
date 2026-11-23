@@ -282,7 +282,7 @@ p { margin: 0 0 1em; }
 .cuadro-lamina ~ ul li { text-align: left; }
 /* Fotos sueltas (v9): debajo del contenido, con aire; la vertical, estrecha */
 .cuadro-suelto { clear: both; margin-top: 56px; max-width: 900px; }
-.cuadro-estrecho { max-width: 340px; }
+.cuadro-estrecho { max-width: 340px; margin-left: auto; margin-right: auto; }
 @media (max-width: 640px) {
   .cuadro-lamina { float: none; width: 75%; margin: 0 auto 2em; }
   .cuadro-suelto { margin-top: 40px; }
@@ -383,8 +383,12 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
    con guionado automático en el idioma de la página (<html lang>): sin él, la
    justificación abre huecos entre palabras, sobre todo en el móvil. Solo el
    texto corrido: títulos, menú, botones, formularios y citas, a la izquierda. */
-.prosa p, .prosa li, .portada-lema, .grande, .entrada-def, .acepciones li, .metodo-intro, .pasos li,
-.dos p, .herramientas li, .entradilla, .nota-margen, .info-datos dd {
+/* Fuera (Carlos, 23/11/2026): las listas de servicios y herramientas y la
+   entradilla grande de Metodología. Son columnas estrechas o letra grande, con
+   negritas y palabras largas que no se cortan: justificadas abrían huecos.
+   Por lo mismo, las definiciones de la portada y las notas del margen. */
+.prosa p, .prosa li, .portada-lema, .grande, .pasos li,
+.dos p, .entradilla, .info-datos dd {
   text-align: justify; -webkit-hyphens: auto; hyphens: auto;
   hyphenate-limit-chars: 7 3 3; text-wrap: pretty; }
 
@@ -469,3 +473,7 @@ aside.margen { align-self: start; position: sticky; top: 32px; }
   .piso li { padding: 4px 0; }
   .piso { --tf: .62; }
 }
+
+/* Lo que no se justifica sí se sigue cortando con guion al final de línea. */
+.acepciones li, .metodo-intro, .herramientas li, .entrada-def, .nota-margen { -webkit-hyphens: auto; hyphens: auto; text-wrap: pretty; }
+.prosa .creditos li { text-align: left; }
