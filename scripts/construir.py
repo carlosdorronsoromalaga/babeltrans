@@ -708,7 +708,6 @@ def pag_articulo(todo, lang, pid):
 {cuadro_jeronimo(lang) if pid == "traduccion" else ""}
 {foto(lang, FOTO_ARRIBA[pid]) if pid in FOTO_ARRIBA else ""}
 {bloques_html(p["bloques"], lang, pid)}
-{modismo(d, lang) if pid == "traduccion" else ""}
 {foto(lang, "velero", "cuadro-suelto") if pid == "quienes" else ""}
   </article>
 </section>"""

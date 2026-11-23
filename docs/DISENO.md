@@ -227,3 +227,5 @@ en una página comparativa (`propuestas/fotos/`, fuera de git):
 - **Sin justificar** en columnas estrechas o letra grande: listas de
   servicios de la portada, definiciones, herramientas, entradilla de
   Metodología, notas del margen y lista de créditos. Abrían huecos.
+- **Traducción:** fuera el modismo («Llueven gatos y perros»). Ya sale en la
+  portada y no hacía falta repetirlo.
